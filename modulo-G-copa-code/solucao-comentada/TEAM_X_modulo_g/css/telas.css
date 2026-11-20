@@ -1,0 +1,264 @@
+/*
+ * telas.css – um bloco por pacote (P2 Inscrição, P3 Equipes, P4 Chaveamento, P5 Partidas)
+ * ----------------------------------------------------------------------------------------
+ * Cada integrante mexe só no seu bloco: menos conflito na hora de juntar o código.
+ */
+
+/* =========================================================
+   P2 – INSCRIÇÃO
+   ========================================================= */
+.inscricao__grade { display: grid; grid-template-columns: minmax(280px, 1fr) 2fr; gap: 1.25rem; align-items: start; }
+.inscricao fieldset { margin: 0; min-width: 0; display: flex; flex-direction: column; gap: .9rem; }
+.inscricao legend { float: left; width: 100%; padding: 0; margin-bottom: .4rem; font: 700 1.1rem var(--titulo); text-transform: uppercase; letter-spacing: .06em; }
+.inscricao legend small { color: var(--texto-2); font-weight: 500; }
+.linha-2 { display: grid; grid-template-columns: 120px 1fr; gap: .8rem; }
+.previa {
+  display: flex; align-items: center; gap: .9rem; padding: .9rem; border-radius: var(--raio-p);
+  background: var(--fundo); border: 1px dashed var(--borda);
+}
+.previa strong { display: block; font: 700 1.1rem var(--titulo); }
+.previa span { color: var(--texto-2); font-size: .85rem; }
+.previa .selo { transition: background var(--medio); }
+
+.jogadores__lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .6rem; position: relative; }
+.jogador {
+  display: grid; grid-template-columns: 32px 1fr 1.4fr 1fr 92px; gap: .6rem; align-items: start;
+  padding: .7rem; border-radius: var(--raio-p); background: var(--fundo); border: 1px solid transparent;
+}
+.jogador--reserva { border-color: var(--destaque); border-style: dashed; }
+.jogador__n { display: grid; place-items: center; width: 32px; height: 32px; margin-top: 1.6rem; border-radius: 50%; background: var(--superficie-2); font: 700 .9rem var(--titulo); }
+.jogador--reserva .jogador__n { background: var(--destaque); color: #fff; }
+.idade { color: var(--primaria); font-weight: 400; }
+.capitao { display: flex; align-items: center; gap: .4rem; margin-top: 1.9rem; font-size: .85rem; cursor: pointer; }
+.capitao input { width: 18px; min-height: 18px; height: 18px; accent-color: var(--primaria); }
+/* linha do reserva entra e sai */
+.linha-enter-active, .linha-leave-active { transition: opacity var(--medio), transform var(--medio); }
+.linha-enter-from, .linha-leave-to { opacity: 0; transform: translateX(-24px); }
+.linha-leave-active { position: absolute; left: 0; right: 0; }
+.inscricao__enviar { grid-column: 1 / -1; display: flex; justify-content: flex-end; }
+
+.sucesso { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .8rem; padding: 2.5rem 1.5rem; animation: pop .5s cubic-bezier(.2, .9, .3, 1.3); }
+.sucesso:focus { outline: none; }
+.sucesso h2 { font-size: 1.8rem; text-transform: uppercase; }
+.sucesso p { color: var(--texto-2); }
+.sucesso__acoes { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; }
+@keyframes pop { from { opacity: 0; transform: scale(.9); } }
+
+/* =========================================================
+   P3 – EQUIPES
+   ========================================================= */
+.progresso { position: relative; height: 40px; border-radius: 20px; background: var(--superficie); border: 1px solid var(--borda); overflow: hidden; margin-bottom: 1.25rem; }
+.progresso__barra { height: 100%; background: linear-gradient(90deg, #65A30D, var(--primaria)); transition: width .6s cubic-bezier(.2, .8, .2, 1); }
+.progresso__txt { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: .3rem; font-weight: 700; text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+
+.filtros { display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; margin-bottom: .8rem; }
+.campo--busca { flex: 1 1 260px; }
+.filtros select { min-width: 220px; }
+.chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+.chip {
+  min-height: 40px; padding: .4rem .9rem; border-radius: 20px; border: 1px solid var(--borda);
+  background: transparent; color: var(--texto-2); font: inherit; font-size: .9rem; cursor: pointer;
+  transition: background var(--rapido), color var(--rapido), border-color var(--rapido);
+}
+.chip:hover { color: var(--texto); border-color: var(--texto-2); }
+.chip--ativo { background: var(--primaria); border-color: var(--primaria); color: var(--primaria-escura); font-weight: 700; }
+.contador { color: var(--texto-2); font-size: .9rem; margin-bottom: .8rem; }
+
+.grade-equipes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; position: relative; }
+.equipe {
+  --cor: #475569;
+  position: relative; display: flex; flex-direction: column; gap: .7rem; padding: 1.1rem;
+  background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--raio); overflow: hidden;
+  transition: transform var(--rapido), border-color var(--rapido), box-shadow var(--rapido);
+}
+.equipe::before { content: ''; position: absolute; inset: 0 0 auto; height: 4px; background: var(--cor); }
+.equipe:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--cor) 60%, var(--borda)); box-shadow: var(--sombra); }
+.equipe__topo { display: flex; align-items: center; gap: .8rem; }
+.equipe__nome { flex: 1; min-width: 0; }
+.equipe__nome h2 { font-size: 1.2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.equipe__nome p { color: var(--texto-2); font-size: .85rem; }
+.situacao { flex: none; padding: .2rem .6rem; border-radius: 20px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.situacao--confirmed { background: rgba(163, 230, 53, .15); color: var(--primaria); }
+.situacao--registered { background: rgba(250, 204, 21, .12); color: var(--aviso); }
+.equipe__info { color: var(--texto-2); font-size: .85rem; }
+.equipe__abrir {
+  display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 40px; padding: .4rem .7rem;
+  border: 1px solid var(--borda); border-radius: var(--raio-p); background: var(--fundo); color: var(--texto); font: inherit; cursor: pointer;
+}
+.equipe__abrir:hover { border-color: var(--texto-2); }
+.seta { transition: transform var(--medio); }
+.equipe__abrir[aria-expanded="true"] .seta { transform: rotate(180deg); }
+/* acordeão: grid-template-rows 0fr → 1fr anima a altura real do conteúdo */
+.equipe__jogadores { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--medio) ease; }
+.equipe__jogadores.aberto { grid-template-rows: 1fr; }
+.equipe__jogadores > ul { overflow: hidden; list-style: none; margin: 0; padding: 0; }
+.equipe__jogadores li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .5rem; padding: .45rem .2rem; border-bottom: 1px solid var(--borda); font-size: .9rem; }
+.equipe__jogadores li:last-child { border-bottom: 0; }
+.equipe__jogadores li span { color: var(--texto-2); font-size: .8rem; }
+.papel { margin-left: auto; font-style: normal; font-size: .7rem; font-weight: 700; text-transform: uppercase; color: var(--primaria); }
+.papel--reserva { color: var(--destaque); }
+.equipe__acoes { display: flex; justify-content: space-between; gap: .5rem; margin-top: auto; }
+/* cartões entram, saem e se reorganizam quando o filtro muda */
+.cartao-enter-active, .cartao-leave-active { transition: opacity var(--medio), transform var(--medio); }
+.cartao-enter-from, .cartao-leave-to { opacity: 0; transform: scale(.94); }
+.cartao-leave-active { position: absolute; }
+.cartao-move { transition: transform .4s ease; }
+
+/* =========================================================
+   P4 – CHAVEAMENTO
+   ========================================================= */
+.chave { --vao: 2.5rem; overflow-x: auto; padding-bottom: .5rem; }
+.chave__grade { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)) minmax(200px, .8fr); column-gap: var(--vao); min-width: 960px; }
+.chave__coluna { display: flex; flex-direction: column; }
+.chave__fase { margin-bottom: 1rem; color: var(--texto-2); font-size: .9rem; text-transform: uppercase; letter-spacing: .12em; text-align: center; }
+.chave__par { position: relative; flex: 1; display: flex; flex-direction: column; justify-content: space-around; gap: 1rem; padding: .5rem 0; }
+/* conector: colchete à direita do par… */
+.chave__par--duplo::after {
+  content: ''; position: absolute; top: 25%; bottom: 25%; right: calc(var(--vao) / -2); width: calc(var(--vao) / 2);
+  border: 2px solid var(--borda); border-left: 0; border-radius: 0 10px 10px 0;
+}
+/* …e a linha que chega na partida seguinte */
+.chave__coluna--1 .partida-chave::before, .chave__coluna--2 .partida-chave::before, .campeao::before {
+  content: ''; position: absolute; top: 50%; left: calc(var(--vao) / -2 - 2px); width: calc(var(--vao) / 2 + 2px); height: 2px; background: var(--borda);
+}
+.chave__coluna--2 .chave__par::after {
+  content: ''; position: absolute; top: 50%; right: calc(var(--vao) / -2); width: calc(var(--vao) / 2); height: 2px; background: var(--borda);
+}
+.partida-chave {
+  position: relative; display: block; padding: .5rem; border-radius: var(--raio-p);
+  background: var(--superficie); border: 1px solid var(--borda); color: var(--texto); text-decoration: none;
+  transition: border-color var(--rapido), transform var(--rapido);
+}
+.partida-chave:hover { border-color: var(--info); }
+.partida-chave--finished { border-color: color-mix(in srgb, var(--primaria) 35%, var(--borda)); }
+.partida-chave__hora { display: block; padding: 0 .3rem .3rem; color: var(--texto-2); font-size: .75rem; }
+.lado {
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+  padding: .35rem .4rem; border-radius: 6px; transition: background var(--rapido), opacity var(--rapido);
+}
+.lado + .lado { margin-top: 2px; }
+.lado__equipe { display: flex; align-items: center; gap: .5rem; min-width: 0; }
+.lado__equipe > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lado .selo { width: 28px; height: 28px; font-size: .65rem; border-radius: 6px; }
+.lado__placar { flex: none; min-width: 1.6rem; text-align: center; font: 700 1.1rem var(--titulo); }
+.lado.vazio { color: var(--texto-2); font-style: italic; }
+.lado.venceu { background: rgba(163, 230, 53, .12); }
+.lado.venceu .lado__placar { color: var(--primaria); }
+.lado.perdeu { opacity: .55; }
+.lado.caminho { background: rgba(56, 189, 248, .22); box-shadow: inset 3px 0 0 var(--info); opacity: 1; }
+.lado.apagado { opacity: .3; }
+/* equipe nova chegando na próxima fase */
+.chegar-enter-active { transition: opacity .4s, transform .4s cubic-bezier(.2, .9, .3, 1.3); }
+.chegar-leave-active { transition: opacity .15s; }
+.chegar-enter-from { opacity: 0; transform: translateX(-16px); }
+.chegar-leave-to { opacity: 0; }
+
+.chave__coluna--campeao { justify-content: center; }
+.chave__coluna--campeao .chave__fase { margin-bottom: auto; }
+.campeao {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: .6rem; margin-bottom: auto;
+  padding: 1.5rem 1rem; border-radius: var(--raio); border: 2px dashed var(--borda); text-align: center;
+}
+.trofeu { width: 64px; height: 64px; fill: var(--borda); transition: fill .5s; }
+.campeao__espera { color: var(--texto-2); font-size: .9rem; }
+.campeao--definido { border: 2px solid var(--destaque); background: radial-gradient(circle at 50% 0, rgba(240, 56, 154, .25), transparent 70%), var(--superficie); overflow: hidden; }
+.campeao--definido .trofeu { fill: var(--aviso); animation: brilho 2.4s ease-in-out infinite; }
+.campeao--definido strong { font: 700 1.4rem var(--titulo); text-transform: uppercase; }
+@keyframes brilho { 0%, 100% { filter: drop-shadow(0 0 0 transparent); transform: scale(1); } 50% { filter: drop-shadow(0 0 12px rgba(250, 204, 21, .7)); transform: scale(1.06); } }
+.confete {
+  position: absolute; top: -10px; left: var(--x); width: 8px; height: 14px; border-radius: 2px; background: var(--c);
+  animation: cair 2.6s linear var(--d) infinite; pointer-events: none;
+}
+@keyframes cair { 0% { transform: translateY(0) rotate(0); opacity: 1; } 100% { transform: translateY(260px) rotate(540deg); opacity: 0; } }
+
+/* modo telão (Fullscreen API) */
+.chave--telao { display: flex; flex-direction: column; justify-content: center; padding: 2rem 3rem; background: var(--fundo); overflow: auto; }
+.chave--telao .chave__grade { --vao: 4rem; }
+.chave--telao .lado { font-size: 1.2rem; padding: .6rem; }
+.chave--telao .lado .selo { width: 40px; height: 40px; font-size: .85rem; }
+.chave__titulo { margin-bottom: 1.5rem; text-align: center; font: 700 2.6rem var(--titulo); letter-spacing: .2em; color: var(--primaria); }
+
+/* =========================================================
+   P5 – PARTIDAS
+   ========================================================= */
+.contagem {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: .5rem; margin-bottom: 1.5rem;
+  padding: 1.5rem; text-align: center; border-radius: var(--raio); overflow: hidden;
+  background: linear-gradient(135deg, rgba(240, 56, 154, .18), rgba(56, 189, 248, .1)), var(--superficie); border: 1px solid var(--borda);
+}
+.contagem__rotulo { color: var(--texto-2); font-size: .85rem; text-transform: uppercase; letter-spacing: .1em; }
+.contagem__jogo { font: 700 1.6rem var(--titulo); text-transform: uppercase; }
+.contagem__jogo span { color: var(--destaque); margin: 0 .3rem; }
+.contagem__relogio { display: flex; gap: .6rem; }
+.contagem__relogio span { display: flex; flex-direction: column; align-items: center; min-width: 68px; padding: .5rem; border-radius: var(--raio-p); background: var(--fundo); color: var(--texto-2); font-size: .75rem; text-transform: uppercase; }
+.contagem__relogio strong { color: var(--texto); font: 700 2rem/1.1 var(--titulo); font-variant-numeric: tabular-nums; }
+.contagem__vivo { padding: .3rem 1rem; border-radius: 20px; background: var(--destaque); color: #fff; font: 700 1.1rem var(--titulo); letter-spacing: .15em; animation: pulsar 1.2s ease-in-out infinite; }
+@keyframes pulsar { 50% { box-shadow: 0 0 0 10px rgba(240, 56, 154, 0); opacity: .75; } 0% { box-shadow: 0 0 0 0 rgba(240, 56, 154, .6); } }
+.contagem--fim { border-color: var(--destaque); }
+
+.abas { display: flex; gap: .3rem; border-bottom: 1px solid var(--borda); margin-bottom: 1.25rem; overflow-x: auto; }
+.aba {
+  position: relative; flex: none; min-height: 48px; padding: .6rem 1.1rem; border: 0; background: transparent; cursor: pointer;
+  color: var(--texto-2); font: 500 1.05rem var(--titulo); text-transform: uppercase; letter-spacing: .05em;
+}
+.aba small { margin-left: .3rem; padding: .05rem .45rem; border-radius: 10px; background: var(--superficie-2); font: 400 .75rem var(--corpo); }
+.aba::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--primaria); transform: scaleX(0); transition: transform var(--medio); }
+.aba:hover { color: var(--texto); }
+.aba--ativa { color: var(--primaria); }
+.aba--ativa::after { transform: scaleX(1); }
+
+.lista-partidas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; position: relative; }
+.partida { display: flex; flex-direction: column; gap: .8rem; padding: 1.1rem; border-radius: var(--raio); background: var(--superficie); border: 1px solid var(--borda); }
+.partida--finished { border-color: color-mix(in srgb, var(--primaria) 30%, var(--borda)); }
+.partida > .btn { align-self: center; }
+.partida__cab { display: flex; justify-content: space-between; align-items: center; color: var(--texto-2); font-size: .85rem; }
+.estado { padding: .15rem .55rem; border-radius: 20px; font-size: .7rem; font-weight: 700; text-transform: uppercase; }
+.estado--waiting { background: var(--superficie-2); color: var(--texto-2); }
+.estado--scheduled { background: rgba(56, 189, 248, .15); color: var(--info); }
+.estado--finished { background: rgba(163, 230, 53, .15); color: var(--primaria); }
+.partida__placar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .5rem; }
+.partida__lado { display: flex; flex-direction: column; align-items: center; gap: .4rem; text-align: center; transition: opacity var(--medio); }
+.partida__lado:last-of-type { order: 3; }
+.partida__x { order: 2; font: 700 1.6rem var(--titulo); color: var(--texto-2); }
+.partida__x strong { color: var(--texto); font-size: 2.2rem; }
+.partida__nome { font-weight: 700; }
+.partida--finished .partida__lado:not(.venceu) { opacity: .5; }
+.partida__lado.venceu .selo { box-shadow: 0 0 0 3px var(--primaria); }
+
+.opcoes-placar { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+.opcao {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .3rem; padding: .8rem .6rem;
+  border: 1px solid var(--borda); border-radius: var(--raio-p); background: var(--fundo); color: var(--texto); font: inherit; cursor: pointer;
+  transition: border-color var(--rapido), transform var(--rapido);
+}
+.opcao:hover, .opcao:focus-visible { border-color: var(--primaria); transform: translateY(-2px); }
+.opcao strong { font: 700 1.5rem var(--titulo); }
+.opcao span { font: 700 .85rem var(--titulo); color: var(--texto-2); }
+.opcao small { grid-column: 1 / -1; color: var(--primaria); font-size: .75rem; }
+
+/* =========================================================
+   RESPONSIVO DAS TELAS
+   ========================================================= */
+@media (max-width: 960px) {
+  .inscricao__grade { grid-template-columns: 1fr; }
+  .jogador { grid-template-columns: 32px 1fr 1fr; }
+  .jogador .campo:nth-of-type(3) { grid-column: 2; }
+  .capitao { margin-top: 1.9rem; }
+}
+@media (max-width: 600px) {
+  .linha-2 { grid-template-columns: 1fr; }
+  .jogador { grid-template-columns: 28px 1fr; }
+  .jogador .campo, .jogador .campo:nth-of-type(3) { grid-column: 2; }
+  .jogador__n { width: 28px; height: 28px; margin-top: 1.6rem; }
+  .capitao, .capitao--vazio { grid-column: 2; margin-top: 0; }
+  .inscricao__enviar .btn { width: 100%; }
+  .grade-equipes, .lista-partidas { grid-template-columns: 1fr; }
+  .filtros select { min-width: 0; }
+  .filtros > .campo { flex: 1 1 100%; }
+  .contagem__jogo { font-size: 1.25rem; }
+  .contagem__relogio span { min-width: 58px; }
+  .contagem__relogio strong { font-size: 1.5rem; }
+  .opcoes-placar { grid-template-columns: 1fr; }
+  .chave { scroll-snap-type: x mandatory; }
+  .chave__coluna { scroll-snap-align: start; }
+}

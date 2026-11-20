@@ -1,0 +1,4 @@
+# config.php e o SQL não são servidos pelo navegador
+<Files "config.php">
+  Require all denied
+</Files>

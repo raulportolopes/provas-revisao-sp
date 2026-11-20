@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Copa Code: inscrição, chaveamento e partidas do torneio interescolar de e-sports.">
+  <title>Copa Code</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/telas.css">
+</head>
+<body>
+  <!-- Todo o conteúdo é montado pelo Vue dentro de #app.
+       Cada pacote tem seu componente num arquivo próprio em js/. -->
+  <div id="app"></div>
+  <noscript>O Copa Code precisa de JavaScript.</noscript>
+
+  <!-- Vue 3 e Vue Router 4 em arquivo local (sem internet na prova) -->
+  <script src="js/vendor/vue.global.prod.js"></script>
+  <script src="js/vendor/vue-router.global.prod.js"></script>
+  <!-- P5: base -->
+  <script src="js/api.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/componentes.js"></script>
+  <!-- P2, P3, P4, P5: telas -->
+  <script src="js/inscricao.js"></script>
+  <script src="js/equipes.js"></script>
+  <script src="js/chaveamento.js"></script>
+  <script src="js/partidas.js"></script>
+  <!-- P5: monta o app (sempre por último) -->
+  <script src="js/app.js"></script>
+</body>
+</html>
