@@ -1,0 +1,24 @@
+# Publicação em subpasta (http://servidor/XX_modulo_b/) sem mexer na configuração do Apache:
+# o index.php da raiz carrega o public/index.php, e este arquivo esconde as pastas internas.
+Options -Indexes +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Uploads: /XX_modulo_b/storage/... -> public/storage/... (link criado por "php artisan storage:link").
+    # Precisa vir ANTES da regra que bloqueia a pasta storage.
+    RewriteRule ^storage/(.*)$ public/storage/$1 [L]
+
+    # Bloqueia arquivos ocultos (.env!) e as pastas internas do Laravel
+    RewriteRule (^|/)\. - [F,L]
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor)(/|$) - [F,L]
+    RewriteRule ^(artisan|composer\.(json|lock)|package\.json|phpunit\.xml|vite\.config\.js|.*\.md|.*\.sql)$ - [F,L]
+
+    # Arquivos públicos (css, js, imagens)
+    RewriteRule ^(favicon\.ico|robots\.txt)$ public/$1 [L]
+    RewriteRule ^(css|js|img)/(.*)$ public/$1/$2 [L]
+
+    # Todo o resto vai para o Laravel
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
