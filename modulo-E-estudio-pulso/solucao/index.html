@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estúdio Pulso: grade de aulas coletivas com reserva de vaga, planos e montador de treino.">
+  <title>Estúdio Pulso</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Tema aplicado antes do CSS para não "piscar" no F5 -->
+  <script>
+    (function () {
+      try {
+        var p = JSON.parse(localStorage.getItem('pulso:prefs') || '{}');
+        document.documentElement.dataset.tema = p.tema || (matchMedia('(prefers-color-scheme: light)').matches ? 'claro' : 'escuro');
+        if (p.fonte) document.documentElement.style.fontSize = (p.fonte * 100) + '%';
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/estilo.css">
+  <!-- Vue 3 e Vue Router em arquivos locais (a prova é sem internet). Build "global":
+       não precisa de npm nem de Vite; o Vue lê os templates em tempo de execução. -->
+  <script src="js/vendor/vue.global.prod.js"></script>
+  <script src="js/vendor/vue-router.global.prod.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Aparece só se o JavaScript não carregar -->
+    <noscript>Ative o JavaScript para usar o Estúdio Pulso.</noscript>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nome": "Spinning",
+    "cor": "#F43F5E",
+    "intensidade": 3,
+    "descricao": "Pedalada indoor com música alta e intervalos de alta intensidade."
+  },
+  {
+    "id": 2,
+    "nome": "Yoga",
+    "cor": "#14B8A6",
+    "intensidade": 1,
+    "descricao": "Posturas, respiração e alongamento para corpo e mente."
+  },
+  {
+    "id": 3,
+    "nome": "Funcional",
+    "cor": "#F59E0B",
+    "intensidade": 3,
+    "descricao": "Circuitos com peso do corpo, kettlebell e corda naval."
+  },
+  {
+    "id": 4,
+    "nome": "Pilates",
+    "cor": "#8B5CF6",
+    "intensidade": 2,
+    "descricao": "Fortalecimento do core e postura no solo e com acessórios."
+  },
+  {
+    "id": 5,
+    "nome": "Dança",
+    "cor": "#EC4899",
+    "intensidade": 2,
+    "descricao": "Coreografias de ritmos brasileiros para suar se divertindo."
+  },
+  {
+    "id": 6,
+    "nome": "Boxe",
+    "cor": "#3B82F6",
+    "intensidade": 3,
+    "descricao": "Técnica de socos, esquivas e condicionamento no saco de pancada."
+  }
+]

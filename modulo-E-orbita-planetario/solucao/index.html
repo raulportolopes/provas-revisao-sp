@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Órbita – Planetário Paulista: programação das cúpulas, compra de ingressos com escolha de lugares e guia do céu.">
+  <!-- O tema é aplicado ANTES do CSS carregar (script curto e bloqueante),
+       para a página não "piscar" no tema errado ao dar F5. -->
+  <script>
+    (function () {
+      var salvo = localStorage.getItem('orbita:tema');
+      var sistema = matchMedia('(prefers-color-scheme: light)').matches ? 'claro' : 'escuro';
+      document.documentElement.dataset.tema = salvo || sistema;
+    })();
+  </script>
+  <title>Órbita – Planetário Paulista</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo" data-pular>Pular para o conteúdo</a>
+
+  <!-- ===== 1. SPLASH ===== -->
+  <div id="splash" class="splash" aria-hidden="false">
+    <img class="splash__logo" src="img/logo-orbita.svg" alt="Órbita – Planetário Paulista" width="220" height="56">
+    <div class="splash__barra" role="progressbar" aria-label="Carregando o planetário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <span class="splash__preenchimento"></span>
+    </div>
+    <p class="splash__pct"><span id="splash-pct">0</span>%</p>
+    <button type="button" class="splash__pular" id="splash-pular">Pular</button>
+  </div>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="topo">
+    <div class="topo__interno">
+      <a href="#/inicio" class="topo__logo" aria-label="Órbita – página inicial">
+        <img src="img/logo-orbita.svg" alt="" width="176" height="45">
+      </a>
+
+      <!-- Um único <nav>: no celular o CSS fixa este mesmo menu na base da tela
+           (barra inferior). Assim o link ativo é atualizado em um lugar só. -->
+      <nav class="menu" aria-label="Principal">
+        <a href="#/inicio" data-rota="inicio">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v10h-6v-6H9v6H3z"/></svg>
+          <span>Início</span>
+        </a>
+        <a href="#/programacao" data-rota="programacao">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v15H4zM4 9h16M9 3v4M15 3v4"/></svg>
+          <span>Programação</span>
+        </a>
+        <a href="#/reservas" data-rota="reservas">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 0 4v5h18v-5a2 2 0 0 1 0-4V4H3zM14 4v13"/></svg>
+          <span>Reservas</span>
+        </a>
+        <a href="#/ceu" data-rota="ceu">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>
+          <span>Guia do céu</span>
+        </a>
+      </nav>
+
+      <div class="topo__acoes">
+        <!-- Aparece só enquanto existe lugar segurado (cronômetro de 5 minutos). -->
+        <a href="#/programacao" class="cronometro" id="cronometro" hidden aria-live="off">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>
+          <span class="cronometro__rotulo">Lugares reservados por</span> <strong id="cronometro-tempo">05:00</strong>
+        </a>
+        <button type="button" class="botao-tema" id="botao-tema" aria-pressed="false">
+          <svg class="icone-sol" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+          <svg class="icone-lua" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+          <span class="sr-only">Tema claro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- tabindex="-1" para o JS conseguir mover o foco para cá a cada troca de rota
+       (o leitor de tela anuncia a tela nova). -->
+  <main id="conteudo" class="conteudo" tabindex="-1">
+    <div class="estado-carregando" id="carregando">
+      <span class="giro" aria-hidden="true"></span>
+      <p>Carregando a programação…</p>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p>Órbita – Planetário Paulista é um projeto fictício de treino para a ocupação 17 Tecnologias Web. Ilustrações originais.</p>
+    <p>Horário: terça a domingo, das 10h às 22h. Segunda-feira fechado.</p>
+  </footer>
+
+  <!-- Camada do modal (preenchida pelo js/modal.js). -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__fundo" data-fechar></div>
+    <div class="modal__caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" tabindex="-1">
+      <button type="button" class="modal__fechar" data-fechar aria-label="Fechar">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="modal__corpo" id="modal-corpo"></div>
+    </div>
+  </div>
+
+  <!-- Avisos rápidos (toasts). aria-live faz o leitor de tela ler cada aviso novo. -->
+  <div class="avisos" id="avisos" aria-live="polite" aria-atomic="false"></div>
+</body>
+</html>

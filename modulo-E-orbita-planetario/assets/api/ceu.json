@@ -1,0 +1,185 @@
+{
+  "planetas": [
+    {
+      "nome": "Mercúrio",
+      "cor": "#B8A99A",
+      "magnitude": -0.4,
+      "melhor_horario": "Logo após o pôr do sol",
+      "visibilidade": [
+        10,
+        35,
+        60,
+        20,
+        5,
+        30,
+        55,
+        25,
+        10,
+        40,
+        65,
+        30
+      ],
+      "descricao": "Difícil de ver: nunca se afasta muito do Sol."
+    },
+    {
+      "nome": "Vênus",
+      "cor": "#F2D49B",
+      "magnitude": -4.3,
+      "melhor_horario": "Antes do nascer do sol",
+      "visibilidade": [
+        90,
+        85,
+        80,
+        70,
+        60,
+        50,
+        40,
+        30,
+        45,
+        60,
+        75,
+        88
+      ],
+      "descricao": "O ponto mais brilhante do céu depois da Lua."
+    },
+    {
+      "nome": "Marte",
+      "cor": "#E2704B",
+      "magnitude": 0.6,
+      "melhor_horario": "Meia-noite",
+      "visibilidade": [
+        70,
+        65,
+        55,
+        40,
+        25,
+        15,
+        10,
+        20,
+        35,
+        50,
+        62,
+        72
+      ],
+      "descricao": "Avermelhado e fácil de reconhecer."
+    },
+    {
+      "nome": "Júpiter",
+      "cor": "#E8B98A",
+      "magnitude": -2.7,
+      "melhor_horario": "Começo da noite",
+      "visibilidade": [
+        95,
+        90,
+        80,
+        60,
+        35,
+        15,
+        10,
+        25,
+        50,
+        70,
+        85,
+        98
+      ],
+      "descricao": "Com binóculos dá para ver quatro luas."
+    },
+    {
+      "nome": "Saturno",
+      "cor": "#D9C27C",
+      "magnitude": 0.7,
+      "melhor_horario": "Começo da noite",
+      "visibilidade": [
+        40,
+        25,
+        10,
+        15,
+        35,
+        55,
+        75,
+        90,
+        95,
+        85,
+        70,
+        55
+      ],
+      "descricao": "Os anéis aparecem em qualquer telescópio pequeno."
+    }
+  ],
+  "constelacoes": [
+    {
+      "nome": "Cruzeiro do Sul",
+      "estacao": "O ano todo",
+      "estrelas": 5,
+      "historia": "A menor das 88 constelações e a mais famosa do Hemisfério Sul. Aparece na bandeira do Brasil e aponta para o polo sul celeste."
+    },
+    {
+      "nome": "Órion",
+      "estacao": "Verão",
+      "estrelas": 7,
+      "historia": "O caçador com as Três Marias no cinturão. No verão paulista ela aparece de cabeça para baixo no começo da noite."
+    },
+    {
+      "nome": "Escorpião",
+      "estacao": "Inverno",
+      "estrelas": 18,
+      "historia": "Antares, a estrela vermelha do coração do escorpião, é 700 vezes maior que o Sol."
+    },
+    {
+      "nome": "Ema (tupi-guarani)",
+      "estacao": "Junho e julho",
+      "estrelas": 0,
+      "historia": "Formada pelas manchas escuras da Via Láctea perto do Cruzeiro do Sul. Quando aparece inteira ao anoitecer, começa o inverno no Sul do Brasil."
+    },
+    {
+      "nome": "Homem Velho (tupi-guarani)",
+      "estacao": "Dezembro",
+      "estrelas": 0,
+      "historia": "Reúne Órion e Touro. Sua chegada ao anoitecer marca o início do verão e a época das chuvas."
+    }
+  ],
+  "lua": [
+    {
+      "data": "2026-12-08",
+      "fase": "Quarto crescente",
+      "iluminacao": 50
+    },
+    {
+      "data": "2026-12-15",
+      "fase": "Lua cheia",
+      "iluminacao": 100
+    },
+    {
+      "data": "2026-12-23",
+      "fase": "Quarto minguante",
+      "iluminacao": 50
+    },
+    {
+      "data": "2026-12-30",
+      "fase": "Lua nova",
+      "iluminacao": 0
+    }
+  ],
+  "faq": [
+    {
+      "pergunta": "Posso entrar depois que a sessão começou?",
+      "resposta": "Não. A cúpula fica escura e a porta é fechada no horário de início para não atrapalhar a projeção."
+    },
+    {
+      "pergunta": "Quem tem direito a meia-entrada?",
+      "resposta": "Estudantes, professores, pessoas com 60 anos ou mais e pessoas com deficiência, com documento na entrada. Em cada compra, no máximo metade dos lugares pode ser meia-entrada, arredondando para cima (1 lugar: 1 meia; 3 lugares: 2 meias; 4 lugares: 2 meias)."
+    },
+    {
+      "pergunta": "Até quando posso cancelar?",
+      "resposta": "Até 2 horas antes do início da sessão. O valor volta para o mesmo meio de pagamento."
+    },
+    {
+      "pergunta": "Os lugares para cadeirantes podem ser escolhidos por qualquer pessoa?",
+      "resposta": "Não. Eles só podem ser marcados quando a opção \"Preciso de lugar acessível\" estiver ligada."
+    },
+    {
+      "pergunta": "Abre às segundas-feiras?",
+      "resposta": "Não. Às segundas o planetário fica fechado para manutenção dos projetores."
+    }
+  ]
+}

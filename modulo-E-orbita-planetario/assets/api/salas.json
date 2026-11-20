@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nome": "Cúpula Galileu",
+    "capacidade": 136,
+    "layout": [
+      "..AAAA_AAAAAA_AAAA..",
+      ".AAAAA_AAAAAA_AAAAA.",
+      "AAAAAA_AAAAAA_AAAAAA",
+      "AAAAAA_AAAAAA_AAAAAA",
+      "AAAAAA_AAAAAA_AAAAAA",
+      "AAAAAA_AAAAAA_AAAAAA",
+      "AAAAAA_AAAAAA_AAAAAA",
+      "CC.AAA_AAAAAA_AAA.CC"
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Cúpula Hipátia",
+    "capacidade": 56,
+    "layout": [
+      "..AAAAAAAA..",
+      ".AAAAAAAAAA.",
+      "AAAAA__AAAAA",
+      "AAAAA__AAAAA",
+      "AAAAA__AAAAA",
+      "CC.AA__AA.CC"
+    ]
+  }
+]

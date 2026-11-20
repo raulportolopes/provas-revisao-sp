@@ -1,0 +1,129 @@
+{
+  "email": "bia@pulso.com",
+  "senha": "Pulso2026!",
+  "nome": "Bia Costa",
+  "plano_id": 2,
+  "meta_mensal": 12,
+  "historico": [
+    {
+      "data": "2026-10-12",
+      "modalidade_id": 2,
+      "aula_id": 2
+    },
+    {
+      "data": "2026-10-14",
+      "modalidade_id": 1,
+      "aula_id": 20
+    },
+    {
+      "data": "2026-10-21",
+      "modalidade_id": 2,
+      "aula_id": 9
+    },
+    {
+      "data": "2026-10-22",
+      "modalidade_id": 5,
+      "aula_id": 13
+    },
+    {
+      "data": "2026-10-24",
+      "modalidade_id": 4,
+      "aula_id": 18
+    },
+    {
+      "data": "2026-10-29",
+      "modalidade_id": 1,
+      "aula_id": 1
+    },
+    {
+      "data": "2026-11-02",
+      "modalidade_id": 1,
+      "aula_id": 7
+    },
+    {
+      "data": "2026-11-03",
+      "modalidade_id": 1,
+      "aula_id": 6
+    },
+    {
+      "data": "2026-11-05",
+      "modalidade_id": 2,
+      "aula_id": 32
+    },
+    {
+      "data": "2026-11-06",
+      "modalidade_id": 1,
+      "aula_id": 27
+    },
+    {
+      "data": "2026-11-09",
+      "modalidade_id": 6,
+      "aula_id": 23
+    },
+    {
+      "data": "2026-11-12",
+      "modalidade_id": 4,
+      "aula_id": 4
+    },
+    {
+      "data": "2026-11-13",
+      "modalidade_id": 6,
+      "aula_id": 14
+    },
+    {
+      "data": "2026-11-16",
+      "modalidade_id": 6,
+      "aula_id": 14
+    },
+    {
+      "data": "2026-11-18",
+      "modalidade_id": 1,
+      "aula_id": 24
+    },
+    {
+      "data": "2026-11-19",
+      "modalidade_id": 1,
+      "aula_id": 24
+    },
+    {
+      "data": "2026-11-20",
+      "modalidade_id": 5,
+      "aula_id": 19
+    },
+    {
+      "data": "2026-11-21",
+      "modalidade_id": 1,
+      "aula_id": 21
+    },
+    {
+      "data": "2026-11-23",
+      "modalidade_id": 3,
+      "aula_id": 31
+    },
+    {
+      "data": "2026-11-27",
+      "modalidade_id": 1,
+      "aula_id": 12
+    },
+    {
+      "data": "2026-12-02",
+      "modalidade_id": 6,
+      "aula_id": 11
+    },
+    {
+      "data": "2026-12-03",
+      "modalidade_id": 1,
+      "aula_id": 12
+    },
+    {
+      "data": "2026-12-04",
+      "modalidade_id": 1,
+      "aula_id": 12
+    },
+    {
+      "data": "2026-12-05",
+      "modalidade_id": 1,
+      "aula_id": 21
+    }
+  ]
+}

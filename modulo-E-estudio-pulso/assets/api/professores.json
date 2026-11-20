@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nome": "Carla Menezes",
+    "especialidade": "Spinning e Funcional",
+    "foto": "img/prof-1.jpg",
+    "bio": "Educadora física há 12 anos, ex-atleta de ciclismo de estrada."
+  },
+  {
+    "id": 2,
+    "nome": "Rafael Ito",
+    "especialidade": "Yoga",
+    "foto": "img/prof-2.jpg",
+    "bio": "Formado em Hatha e Vinyasa, dá aulas desde 2015."
+  },
+  {
+    "id": 3,
+    "nome": "Juliana Prado",
+    "especialidade": "Pilates",
+    "foto": "img/prof-3.jpg",
+    "bio": "Fisioterapeuta especializada em reabilitação da coluna."
+  },
+  {
+    "id": 4,
+    "nome": "Diego Santos",
+    "especialidade": "Boxe e Funcional",
+    "foto": "img/prof-4.jpg",
+    "bio": "Campeão paulista de boxe amador em 2019."
+  },
+  {
+    "id": 5,
+    "nome": "Marina Lopes",
+    "especialidade": "Dança",
+    "foto": "img/prof-5.jpg",
+    "bio": "Bailarina e coreógrafa, mistura forró, axé e funk nas aulas."
+  },
+  {
+    "id": 6,
+    "nome": "Thiago Ramos",
+    "especialidade": "Spinning",
+    "foto": "img/prof-6.jpg",
+    "bio": "Instrutor certificado e DJ nas horas vagas."
+  }
+]

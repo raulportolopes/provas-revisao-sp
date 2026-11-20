@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nome": "Essencial",
+    "mensal": 119.9,
+    "anual_por_mes": 99.9,
+    "destaque": false,
+    "beneficios": {
+      "musculacao": true,
+      "aulas_por_semana": 2,
+      "avaliacao_fisica": false,
+      "app_treino": true,
+      "convidado": false,
+      "toalha": false
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Pulso+",
+    "mensal": 179.9,
+    "anual_por_mes": 149.9,
+    "destaque": true,
+    "beneficios": {
+      "musculacao": true,
+      "aulas_por_semana": 5,
+      "avaliacao_fisica": true,
+      "app_treino": true,
+      "convidado": false,
+      "toalha": true
+    }
+  },
+  {
+    "id": 3,
+    "nome": "Ilimitado",
+    "mensal": 239.9,
+    "anual_por_mes": 199.9,
+    "destaque": false,
+    "beneficios": {
+      "musculacao": true,
+      "aulas_por_semana": null,
+      "avaliacao_fisica": true,
+      "app_treino": true,
+      "convidado": true,
+      "toalha": true
+    }
+  }
+]

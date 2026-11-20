@@ -1,0 +1,8 @@
+{
+  "agora": "2026-12-05T10:00:00-03:00",
+  "limite_lugares": 6,
+  "tempo_reserva_segundos": 300,
+  "taxa_servico_percentual": 8,
+  "cancelamento_minimo_horas": 2,
+  "meia_maximo_percentual": 50
+}

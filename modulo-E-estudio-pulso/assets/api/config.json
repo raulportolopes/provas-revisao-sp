@@ -1,0 +1,9 @@
+{
+  "agora": "2026-12-08T08:00:00-03:00",
+  "max_aulas_por_dia": 2,
+  "cancelamento_minimo_minutos": 60,
+  "semanas_a_frente": 2,
+  "max_exercicios_treino": 10,
+  "avatar_max_mb": 2,
+  "avatar_min_px": 200
+}

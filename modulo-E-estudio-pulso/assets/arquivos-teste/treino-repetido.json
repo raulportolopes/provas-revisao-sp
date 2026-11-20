@@ -1,0 +1,17 @@
+{
+  "versao": 1,
+  "exercicios": [
+    {
+      "exercicioId": 1,
+      "nome": "Supino reto",
+      "series": 3,
+      "reps": 12
+    },
+    {
+      "exercicioId": 1,
+      "nome": "Supino reto",
+      "series": 3,
+      "reps": 12
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Posso trocar de plano depois?",
+    "resposta": "Sim. A troca vale a partir do mês seguinte, sem multa."
+  },
+  {
+    "pergunta": "Como funciona a lista de espera?",
+    "resposta": "Quando a aula está cheia você entra na fila. Se alguém cancelar, o primeiro da fila recebe a vaga e um aviso."
+  },
+  {
+    "pergunta": "Até quando posso cancelar uma aula?",
+    "resposta": "Até 60 minutos antes do início. Depois disso a vaga fica reservada e conta como presença."
+  },
+  {
+    "pergunta": "Quantas aulas posso fazer por dia?",
+    "resposta": "No máximo duas, em horários que não se sobreponham."
+  },
+  {
+    "pergunta": "O plano anual tem fidelidade?",
+    "resposta": "Sim, de 12 meses. O valor mensal é menor e pode ser pago em até 12 vezes."
+  }
+]

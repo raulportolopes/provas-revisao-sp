@@ -1,0 +1,63 @@
+[
+  {
+    "codigo": "ORB-20261128-K7Q2",
+    "sessao": {
+      "programa": "Auroras",
+      "sala": "Cúpula Hipátia",
+      "data": "2026-11-28",
+      "hora": "18:00"
+    },
+    "sessao_id": null,
+    "lugares": [
+      {
+        "id": "C4",
+        "tipo": "inteira",
+        "valor": 32.0
+      },
+      {
+        "id": "C5",
+        "tipo": "meia",
+        "valor": 16.0
+      }
+    ],
+    "subtotal": 48.0,
+    "taxa": 3.84,
+    "total": 51.84,
+    "status": "ativa",
+    "criada_em": "2026-11-20T19:12:00-03:00",
+    "cancelada_em": null,
+    "cliente": {
+      "nome": "Marina Duarte",
+      "email": "marina@exemplo.com"
+    },
+    "pagamento": "Pix"
+  },
+  {
+    "codigo": "ORB-20261203-M4X9",
+    "sessao": {
+      "programa": "Marte: Próxima Parada",
+      "sala": "Cúpula Galileu",
+      "data": "2026-12-06",
+      "hora": "15:30"
+    },
+    "sessao_id": null,
+    "lugares": [
+      {
+        "id": "E10",
+        "tipo": "inteira",
+        "valor": 40.0
+      }
+    ],
+    "subtotal": 40.0,
+    "taxa": 3.2,
+    "total": 43.2,
+    "status": "cancelada",
+    "criada_em": "2026-12-01T09:40:00-03:00",
+    "cancelada_em": "2026-12-02T08:05:00-03:00",
+    "cliente": {
+      "nome": "Marina Duarte",
+      "email": "marina@exemplo.com"
+    },
+    "pagamento": "Cartão final 4242"
+  }
+]
