@@ -1,0 +1,67 @@
+/*
+ * tokens.css – Pacote P5: fontes, cores e medidas do sistema de design
+ * ---------------------------------------------------------------------
+ * Todo o resto do CSS usa SÓ estas variáveis. Assim o tema escuro é
+ * só trocar os valores aqui (seletor [data-tema="escuro"]).
+ */
+@font-face { font-family: 'Inter'; src: url('../fonts/Inter-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../fonts/Inter-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../fonts/Inter-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
+:root {
+  --fonte: 'Inter', system-ui, sans-serif;
+
+  /* marca */
+  --primaria: #0F766E;
+  --primaria-forte: #0B5952;
+  --primaria-suave: #CCEDE9;
+  --destaque: #F59E0B;
+  --perigo: #B91C1C;
+  --perigo-suave: #FDE2E2;
+
+  /* superfícies e texto (tema claro) */
+  --fundo: #F4F6F3;
+  --superficie: #FFFFFF;
+  --superficie-2: #EEF2EE;
+  --borda: #D6DDD6;
+  --texto: #17211F;
+  --texto-suave: #4F5D5A;
+
+  /* status (contraste AA com texto branco) */
+  --st-aberto: #1D4ED8;
+  --st-triagem: #B45309;
+  --st-execucao: #6D28D9;
+  --st-concluido: #15803D;
+  --st-cancelado: #57606A;
+
+  /* categorias */
+  --cat1: #7C2D12; --cat2: #A16207; --cat3: #166534; --cat4: #4338CA; --cat5: #9D174D; --cat6: #0E7490;
+
+  --raio: 14px;
+  --raio-peq: 8px;
+  --sombra: 0 1px 2px rgba(16, 24, 40, .06), 0 4px 14px rgba(16, 24, 40, .08);
+  --sombra-alta: 0 18px 50px rgba(16, 24, 40, .25);
+  --transicao: 200ms cubic-bezier(.2, .8, .2, 1);
+  --altura-barra-inferior: 64px;
+}
+
+[data-tema="escuro"] {
+  --primaria: #2DD4BF;
+  --primaria-forte: #5EEAD4;
+  --primaria-suave: #134E48;
+  --perigo: #F87171;
+  --perigo-suave: #3B1717;
+  --fundo: #0D1514;
+  --superficie: #15201E;
+  --superficie-2: #1C2A28;
+  --borda: #2B3B38;
+  --texto: #E7EFED;
+  --texto-suave: #A6B6B2;
+  --sombra: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 14px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+
+/* quem pede menos movimento no sistema não vê animações */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; scroll-behavior: auto !important; }
+}

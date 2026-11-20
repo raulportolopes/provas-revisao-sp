@@ -1,0 +1,7 @@
+# Nada enviado pelo usuário é executado como PHP
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+<FilesMatch "\.(php|phtml|phar)$">
+  Require all denied
+</FilesMatch>

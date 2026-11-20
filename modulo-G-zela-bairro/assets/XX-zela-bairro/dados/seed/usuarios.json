@@ -1,0 +1,12 @@
+[
+  {
+    "usuario": "marta",
+    "nome": "Marta Lins",
+    "senha_hash": "$2y$10$Np5Q4/ABKB/iWVFYJUFPce2yFlQPh8OweFxyR41GLbAN6pcpRkDAa"
+  },
+  {
+    "usuario": "paulo",
+    "nome": "Paulo Reis",
+    "senha_hash": "$2y$10$xMefKio3jZ0N36ZPaD141O5.dvA4HGHD1YGAsEHpcZQctWvtZ7sd6"
+  }
+]

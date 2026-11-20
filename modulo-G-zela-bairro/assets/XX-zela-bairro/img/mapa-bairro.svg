@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-labelledby="t d">
+<title id="t">Mapa do Jardim Esperança</title><desc id="d">Mapa ilustrativo do bairro fictício Jardim Esperança com ruas, praça, escola, UBS e parque linear.</desc>
+<rect width="1000" height="640" fill="#E9EEE6"/>
+<rect x="16" y="16" width="108" height="78" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="16" y="126" width="108" height="158" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="16" y="316" width="108" height="138" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="16" y="486" width="108" height="88" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="156" y="16" width="208" height="78" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="156" y="126" width="208" height="158" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="156" y="316" width="208" height="138" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="156" y="486" width="208" height="88" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="396" y="16" width="208" height="78" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="396" y="126" width="208" height="158" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="396" y="316" width="208" height="138" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="396" y="486" width="208" height="88" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="636" y="16" width="208" height="78" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="636" y="126" width="208" height="158" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="636" y="316" width="208" height="138" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="636" y="486" width="208" height="88" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="876" y="16" width="108" height="78" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="876" y="126" width="108" height="158" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="876" y="316" width="108" height="138" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<rect x="876" y="486" width="108" height="88" rx="10" fill="#F7F4EC" stroke="#DCD6C8"/>
+<path d="M0 520 C 200 500, 300 560, 520 540 S 820 500, 1000 530 L1000 555 C 820 525, 640 575, 520 565 S 200 525, 0 545 Z" fill="#B9D7EA"/>
+<rect x="396" y="316" width="208" height="138" rx="12" fill="#CFE5C4" stroke="#A7C99A"/>
+<text x="500" y="392" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#3F6B33">Praça da Matriz</text>
+<rect x="636" y="126" width="208" height="158" rx="12" fill="#F3DFC1" stroke="#D9BD92"/>
+<text x="740" y="210" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#7A5420">E.E. Jardim Esperança</text>
+<rect x="156" y="316" width="208" height="138" rx="12" fill="#F6D3D3" stroke="#D9A3A3"/>
+<text x="260" y="392" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#8A2E2E">UBS Esperança</text>
+<text x="760" y="548" text-anchor="middle" font-family="Arial" font-size="13" font-style="italic" fill="#2C6A8F">Córrego do Lajeado</text>
+<rect x="0" y="99" width="1000" height="22" fill="#FFFFFF"/>
+<rect x="0" y="285" width="1000" height="30" fill="#FFFFFF"/>
+<rect x="0" y="459" width="1000" height="22" fill="#FFFFFF"/>
+<rect x="0" y="579" width="1000" height="22" fill="#FFFFFF"/>
+<rect x="129" y="0" width="22" height="640" fill="#FFFFFF"/>
+<rect x="369" y="0" width="22" height="640" fill="#FFFFFF"/>
+<rect x="609" y="0" width="22" height="640" fill="#FFFFFF"/>
+<rect x="849" y="0" width="22" height="640" fill="#FFFFFF"/>
+<text x="24" y="115" font-family="Arial" font-size="13" fill="#5B6470">Rua Ipê Amarelo</text>
+<text x="24" y="305" font-family="Arial" font-size="13" fill="#5B6470">Av. das Palmeiras</text>
+<text x="24" y="475" font-family="Arial" font-size="13" fill="#5B6470">Rua Jacarandá</text>
+<text x="24" y="595" font-family="Arial" font-size="13" fill="#5B6470">Rua Quaresmeira</text>
+<text x="145" y="40" font-family="Arial" font-size="13" fill="#5B6470" transform="rotate(90 145 40)">Rua Aroeira</text>
+<text x="385" y="40" font-family="Arial" font-size="13" fill="#5B6470" transform="rotate(90 385 40)">Rua Paineira</text>
+<text x="625" y="40" font-family="Arial" font-size="13" fill="#5B6470" transform="rotate(90 625 40)">Rua Sibipiruna</text>
+<text x="865" y="40" font-family="Arial" font-size="13" fill="#5B6470" transform="rotate(90 865 40)">Rua Manacá</text>
+</svg>

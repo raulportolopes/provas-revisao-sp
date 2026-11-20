@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Buraco na via",
+    "prazo_dias": 5,
+    "icone": "buraco"
+  },
+  {
+    "id": 2,
+    "nome": "Iluminação pública",
+    "prazo_dias": 3,
+    "icone": "luz"
+  },
+  {
+    "id": 3,
+    "nome": "Poda de árvore",
+    "prazo_dias": 10,
+    "icone": "arvore"
+  },
+  {
+    "id": 4,
+    "nome": "Lixo e entulho",
+    "prazo_dias": 4,
+    "icone": "lixo"
+  },
+  {
+    "id": 5,
+    "nome": "Calçada danificada",
+    "prazo_dias": 15,
+    "icone": "calcada"
+  },
+  {
+    "id": 6,
+    "nome": "Vazamento de água",
+    "prazo_dias": 2,
+    "icone": "agua"
+  }
+]

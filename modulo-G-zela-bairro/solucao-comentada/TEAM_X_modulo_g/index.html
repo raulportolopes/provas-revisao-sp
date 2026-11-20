@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zela Bairro: abra e acompanhe chamados de zeladoria do Jardim Esperança.">
+  <title>Painel – Zela Bairro</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- P5 (design) é dono do tokens.css; cada pacote tem seu CSS para não haver conflito de merge -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/telas.css">
+  <!-- aplica o tema salvo ANTES de pintar a página, para não piscar o tema errado -->
+  <script>
+    document.documentElement.dataset.tema = localStorage.getItem('zela-tema') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro');
+  </script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <a class="marca" href="#/painel" aria-label="Zela Bairro – início">
+      <img src="img/logo-zela.svg" alt="" width="40" height="40">
+      <span><strong>Zela Bairro</strong><small>Jardim Esperança</small></span>
+    </a>
+
+    <nav class="menu" aria-label="Principal">
+      <a href="#/painel" data-rota="painel">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h5v16H3zM10 4h5v10h-5zM17 4h4v13h-4z"/></svg>
+        <span>Painel</span>
+      </a>
+      <a href="#/mapa" data-rota="mapa">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+        <span>Mapa</span>
+      </a>
+      <a href="#/indicadores" data-rota="indicadores">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10h3v10zM10.5 20V4h3v16zM17 20v-7h3v7z"/></svg>
+        <span>Indicadores</span>
+      </a>
+    </nav>
+
+    <div class="topo__acoes">
+      <button class="btn-icone" id="btn-tema" type="button" aria-label="Ativar tema escuro" aria-pressed="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="ico-lua"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4a8.5 8.5 0 1 0 11.5 11.5z"/></svg>
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="ico-sol"><circle cx="12" cy="12" r="4.5"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn btn--contorno" id="btn-equipe" type="button">Entrar como equipe</button>
+      <button class="btn btn--primario" id="btn-abrir" type="button">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 5h2v14h-2zM5 11h14v2H5z"/></svg>
+        <span>Abrir chamado</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <!-- estados globais de carregamento / erro (P5) -->
+    <div class="carregando" id="carregando" role="status">
+      <span class="carregando__pino" aria-hidden="true"></span> Carregando chamados…
+    </div>
+    <div class="aviso aviso--erro" id="erro-global" role="alert" hidden>
+      <strong>Não foi possível falar com a API.</strong>
+      <span id="erro-global-msg"></span>
+      <button class="btn btn--primario" id="tentar" type="button">Tentar novamente</button>
+    </div>
+
+    <!-- ====== P2: PAINEL ====== -->
+    <section class="tela" id="tela-painel" data-tela="painel" aria-labelledby="titulo-painel" hidden>
+      <div class="tela__topo">
+        <div>
+          <h1 id="titulo-painel">Painel de chamados</h1>
+          <p class="sub" id="resumo-painel"></p>
+        </div>
+        <p class="selo-equipe" id="selo-equipe" hidden></p>
+      </div>
+
+      <form class="filtros" id="filtros" role="search" aria-label="Filtrar chamados">
+        <label class="campo campo--busca">
+          <span class="sr">Buscar</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M10 3a7 7 0 0 1 5.6 11.2l5 5-1.4 1.4-5-5A7 7 0 1 1 10 3zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg>
+          <input type="search" id="f-busca" placeholder="Buscar por título, rua ou protocolo" autocomplete="off">
+        </label>
+        <div class="chips" id="f-categorias" role="group" aria-label="Categoria"></div>
+        <label class="interruptor">
+          <input type="checkbox" id="f-atrasados" role="switch">
+          <span class="interruptor__trilho" aria-hidden="true"></span>
+          Só atrasados
+        </label>
+      </form>
+
+      <div class="kanban" id="kanban"></div>
+      <div class="aviso" id="painel-vazio" hidden>
+        <strong>Nenhum chamado encontrado</strong>
+        <span>Tente outra busca ou limpe os filtros.</span>
+        <button class="btn btn--contorno" type="button" id="limpar-filtros">Limpar filtros</button>
+      </div>
+    </section>
+
+    <!-- ====== P4: MAPA ====== -->
+    <section class="tela" id="tela-mapa" data-tela="mapa" aria-labelledby="titulo-mapa" hidden>
+      <div class="tela__topo">
+        <div>
+          <h1 id="titulo-mapa">Mapa do bairro</h1>
+          <p class="sub">Passe o mouse ou o foco num pino para destacar o chamado na lista.</p>
+        </div>
+        <fieldset class="legenda" id="legenda">
+          <legend class="sr">Mostrar no mapa</legend>
+        </fieldset>
+      </div>
+      <div class="mapa-grade">
+        <div class="mapa" id="mapa">
+          <img src="img/mapa-bairro.svg" alt="Mapa do Jardim Esperança com as ruas do bairro" width="1000" height="640">
+          <div class="mapa__pinos" id="pinos"></div>
+        </div>
+        <ol class="lista-mapa" id="lista-mapa" aria-label="Chamados no mapa"></ol>
+      </div>
+    </section>
+
+    <!-- ====== P4: INDICADORES ====== -->
+    <section class="tela" id="tela-indicadores" data-tela="indicadores" aria-labelledby="titulo-ind" hidden>
+      <div class="tela__topo">
+        <div>
+          <h1 id="titulo-ind">Indicadores</h1>
+          <p class="sub">Atualizado com os dados da API a cada vez que você abre esta tela.</p>
+        </div>
+      </div>
+      <div class="kpis" id="kpis"></div>
+      <div class="graficos">
+        <article class="cartao">
+          <h2>Chamados por categoria</h2>
+          <ul class="barras" id="barras"></ul>
+        </article>
+        <article class="cartao">
+          <h2>Situação dos chamados</h2>
+          <div class="rosca-area">
+            <div class="rosca" id="rosca" role="img"></div>
+            <ul class="rosca-legenda" id="rosca-legenda"></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Zela Bairro – projeto de revisão do Módulo G (Team Challenge), 17 Tecnologias Web. Bairro e chamados fictícios.</p>
+  </footer>
+
+  <!-- ====== P3: MODAL ABRIR CHAMADO ====== -->
+  <dialog class="modal" id="modal-novo" aria-labelledby="novo-titulo">
+    <div class="modal__caixa">
+      <header class="modal__topo">
+        <h2 id="novo-titulo">Abrir chamado</h2>
+        <button class="btn-icone" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4z"/></svg>
+        </button>
+      </header>
+
+      <form id="form-novo" novalidate>
+        <div class="form-grade">
+          <div class="campo">
+            <label for="n-titulo">Título *</label>
+            <input id="n-titulo" name="titulo" maxlength="80" required aria-describedby="e-titulo">
+            <p class="erro" id="e-titulo" aria-live="polite"></p>
+          </div>
+          <div class="campo">
+            <label for="n-categoria">Categoria *</label>
+            <select id="n-categoria" name="categoria_id" required aria-describedby="e-categoria_id">
+              <option value="">Escolha…</option>
+            </select>
+            <p class="erro" id="e-categoria_id" aria-live="polite"></p>
+          </div>
+          <div class="campo campo--largo">
+            <label for="n-descricao">Descrição * <span class="contador" id="n-contador">0/400</span></label>
+            <textarea id="n-descricao" name="descricao" rows="3" maxlength="400" required aria-describedby="e-descricao"></textarea>
+            <p class="erro" id="e-descricao" aria-live="polite"></p>
+          </div>
+          <div class="campo campo--largo">
+            <label for="n-rua">Rua ou ponto de referência *</label>
+            <input id="n-rua" name="rua" required aria-describedby="e-rua">
+            <p class="erro" id="e-rua" aria-live="polite"></p>
+          </div>
+          <div class="campo campo--largo">
+            <span class="rotulo" id="rotulo-local">Local no mapa * <small>(clique no mapa; use as setas para ajustar)</small></span>
+            <div class="mini-mapa" id="mini-mapa" tabindex="0" role="application" aria-labelledby="rotulo-local" aria-describedby="e-local">
+              <img src="img/mapa-bairro.svg" alt="" width="1000" height="640">
+              <span class="pino pino--novo" id="pino-novo" hidden></span>
+            </div>
+            <p class="erro" id="e-local" aria-live="polite"></p>
+          </div>
+          <div class="campo campo--largo">
+            <span class="rotulo">Foto (opcional, JPG, PNG ou WEBP até 2 MB)</span>
+            <div class="foto" id="foto-area">
+              <input type="file" id="n-foto" name="foto" accept="image/jpeg,image/png,image/webp" class="sr" aria-describedby="e-foto">
+              <label for="n-foto" class="foto__soltar" id="foto-soltar">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5h3l2-2h4l2 2h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm7 3.5A4.5 4.5 0 1 0 12 17.5 4.5 4.5 0 0 0 12 8.5z"/></svg>
+                Arraste a foto aqui ou <u>escolha um arquivo</u>
+              </label>
+              <figure class="foto__previa" id="foto-previa" hidden>
+                <img id="foto-img" alt="Prévia da foto escolhida">
+                <figcaption id="foto-nome"></figcaption>
+                <div class="foto__acoes">
+                  <label for="n-foto" class="btn btn--contorno btn--peq">Trocar</label>
+                  <button type="button" class="btn btn--texto btn--peq" id="foto-remover">Remover</button>
+                </div>
+              </figure>
+            </div>
+            <p class="erro" id="e-foto" aria-live="polite"></p>
+          </div>
+        </div>
+        <footer class="modal__rodape">
+          <button type="button" class="btn btn--texto" data-fechar>Cancelar</button>
+          <button type="submit" class="btn btn--primario" id="n-enviar">Enviar chamado</button>
+        </footer>
+      </form>
+
+      <div class="sucesso" id="novo-sucesso" hidden tabindex="-1">
+        <svg class="sucesso__check" aria-hidden="true" viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg>
+        <h3>Chamado aberto!</h3>
+        <p>Guarde o protocolo para acompanhar:</p>
+        <p class="sucesso__protocolo" id="novo-protocolo"></p>
+        <div class="sucesso__acoes">
+          <button type="button" class="btn btn--contorno" id="copiar-protocolo">Copiar protocolo</button>
+          <button type="button" class="btn btn--primario" data-fechar>Fechar</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ====== DETALHE DO CHAMADO (P2) ====== -->
+  <dialog class="modal" id="modal-detalhe" aria-labelledby="det-titulo">
+    <div class="modal__caixa" id="detalhe-conteudo"></div>
+  </dialog>
+
+  <!-- ====== MUDAR STATUS (P2, só equipe) ====== -->
+  <dialog class="modal modal--peq" id="modal-status" aria-labelledby="st-titulo">
+    <form class="modal__caixa" id="form-status" novalidate>
+      <header class="modal__topo">
+        <h2 id="st-titulo">Mudar situação</h2>
+        <button class="btn-icone" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4z"/></svg>
+        </button>
+      </header>
+      <p id="st-texto"></p>
+      <div class="campo">
+        <label for="st-nota">Observação <span id="st-obrig"></span></label>
+        <textarea id="st-nota" rows="3" aria-describedby="e-nota"></textarea>
+        <p class="erro" id="e-nota" aria-live="polite"></p>
+      </div>
+      <footer class="modal__rodape">
+        <button type="button" class="btn btn--texto" data-fechar>Cancelar</button>
+        <button type="submit" class="btn btn--primario">Confirmar</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- ====== LOGIN DA EQUIPE (P1 + P5) ====== -->
+  <dialog class="modal modal--peq" id="modal-login" aria-labelledby="login-titulo">
+    <form class="modal__caixa" id="form-login" novalidate>
+      <header class="modal__topo">
+        <h2 id="login-titulo">Entrar como equipe</h2>
+        <button class="btn-icone" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4z"/></svg>
+        </button>
+      </header>
+      <div class="campo">
+        <label for="l-usuario">Usuário</label>
+        <input id="l-usuario" autocomplete="username" required>
+      </div>
+      <div class="campo">
+        <label for="l-senha">Senha</label>
+        <input id="l-senha" type="password" autocomplete="current-password" required>
+      </div>
+      <p class="erro" id="e-login" aria-live="polite"></p>
+      <footer class="modal__rodape">
+        <button type="submit" class="btn btn--primario">Entrar</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/painel.js"></script>
+  <script src="js/novo-chamado.js"></script>
+  <script src="js/mapa.js"></script>
+  <script src="js/indicadores.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

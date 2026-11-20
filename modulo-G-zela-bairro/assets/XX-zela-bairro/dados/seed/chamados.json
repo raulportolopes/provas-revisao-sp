@@ -1,0 +1,719 @@
+[
+  {
+    "id": 1,
+    "protocolo": "ZB-2026-0001",
+    "titulo": "Cratera em frente à padaria",
+    "descricao": "Buraco grande perto da faixa de pedestres, carros desviam pela contramão.",
+    "categoria_id": 1,
+    "rua": "Av. das Palmeiras, 410",
+    "x": 30.0,
+    "y": 46.9,
+    "foto": null,
+    "status": "execucao",
+    "aberto_em": "2026-11-09 08:12:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed010000",
+      "seed010001",
+      "seed010002",
+      "seed010003",
+      "seed010004",
+      "seed010005",
+      "seed010006",
+      "seed010007",
+      "seed010008",
+      "seed010009",
+      "seed010010",
+      "seed010011",
+      "seed010012",
+      "seed010013"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-09 08:12:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-09 16:12:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      },
+      {
+        "de": "triagem",
+        "para": "execucao",
+        "em": "2026-11-09 22:12:00",
+        "por": "Marta Lins",
+        "nota": "Equipe enviada ao local."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "protocolo": "ZB-2026-0002",
+    "titulo": "Poste apagado há uma semana",
+    "descricao": "O poste da esquina com a Rua Paineira está apagado e a rua fica muito escura.",
+    "categoria_id": 2,
+    "rua": "Rua Ipê Amarelo x Rua Paineira",
+    "x": 38.0,
+    "y": 17.2,
+    "foto": null,
+    "status": "aberto",
+    "aberto_em": "2026-11-16 19:40:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed020000",
+      "seed020001",
+      "seed020002",
+      "seed020003",
+      "seed020004",
+      "seed020005",
+      "seed020006",
+      "seed020007",
+      "seed020008"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-16 19:40:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "protocolo": "ZB-2026-0003",
+    "titulo": "Galho caído sobre a fiação",
+    "descricao": "Depois da chuva um galho grande ficou apoiado nos fios da rede elétrica.",
+    "categoria_id": 3,
+    "rua": "Rua Jacarandá, 77",
+    "x": 21.0,
+    "y": 73.4,
+    "foto": null,
+    "status": "triagem",
+    "aberto_em": "2026-11-12 07:30:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed030000",
+      "seed030001",
+      "seed030002",
+      "seed030003",
+      "seed030004",
+      "seed030005"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-12 07:30:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-12 15:30:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "protocolo": "ZB-2026-0004",
+    "titulo": "Entulho na calçada da escola",
+    "descricao": "Restos de obra bloqueiam a calçada na saída dos alunos, crianças andam pela rua.",
+    "categoria_id": 4,
+    "rua": "Rua Sibipiruna, 25",
+    "x": 62.0,
+    "y": 32.0,
+    "foto": null,
+    "status": "aberto",
+    "aberto_em": "2026-11-17 12:05:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed040000",
+      "seed040001",
+      "seed040002",
+      "seed040003",
+      "seed040004",
+      "seed040005",
+      "seed040006",
+      "seed040007",
+      "seed040008",
+      "seed040009",
+      "seed040010",
+      "seed040011",
+      "seed040012",
+      "seed040013",
+      "seed040014",
+      "seed040015",
+      "seed040016",
+      "seed040017",
+      "seed040018",
+      "seed040019",
+      "seed040020"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-17 12:05:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "protocolo": "ZB-2026-0005",
+    "titulo": "Vazamento na Rua Manacá",
+    "descricao": "Água limpa escorrendo do asfalto há dois dias, já formou lodo na sarjeta.",
+    "categoria_id": 6,
+    "rua": "Rua Manacá, 300",
+    "x": 86.0,
+    "y": 59.4,
+    "foto": null,
+    "status": "execucao",
+    "aberto_em": "2026-11-14 09:00:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed050000",
+      "seed050001",
+      "seed050002",
+      "seed050003",
+      "seed050004",
+      "seed050005",
+      "seed050006",
+      "seed050007",
+      "seed050008",
+      "seed050009",
+      "seed050010"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-14 09:00:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-14 17:00:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      },
+      {
+        "de": "triagem",
+        "para": "execucao",
+        "em": "2026-11-14 23:00:00",
+        "por": "Marta Lins",
+        "nota": "Equipe enviada ao local."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "protocolo": "ZB-2026-0006",
+    "titulo": "Calçada quebrada perto da UBS",
+    "descricao": "Placas de concreto soltas na frente da UBS, idosos tropeçam na entrada.",
+    "categoria_id": 5,
+    "rua": "Av. das Palmeiras, 150",
+    "x": 22.0,
+    "y": 46.9,
+    "foto": null,
+    "status": "triagem",
+    "aberto_em": "2026-11-03 10:20:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed060000",
+      "seed060001",
+      "seed060002",
+      "seed060003",
+      "seed060004",
+      "seed060005",
+      "seed060006",
+      "seed060007",
+      "seed060008",
+      "seed060009",
+      "seed060010",
+      "seed060011",
+      "seed060012",
+      "seed060013",
+      "seed060014",
+      "seed060015",
+      "seed060016"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-03 10:20:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-03 18:20:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "protocolo": "ZB-2026-0007",
+    "titulo": "Buraco na Rua Aroeira",
+    "descricao": "Buraco médio que acumula água quando chove.",
+    "categoria_id": 1,
+    "rua": "Rua Aroeira, 512",
+    "x": 14.0,
+    "y": 84.4,
+    "foto": null,
+    "status": "concluido",
+    "aberto_em": "2026-10-28 14:00:00",
+    "concluido_em": "2026-10-31 16:30:00",
+    "apoiadores": [
+      "seed070000",
+      "seed070001",
+      "seed070002",
+      "seed070003"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-10-28 14:00:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-10-28 22:00:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      },
+      {
+        "de": "triagem",
+        "para": "execucao",
+        "em": "2026-10-29 04:00:00",
+        "por": "Marta Lins",
+        "nota": "Equipe enviada ao local."
+      },
+      {
+        "de": "execucao",
+        "para": "concluido",
+        "em": "2026-10-31 16:30:00",
+        "por": "Paulo Reis",
+        "nota": "Serviço finalizado e conferido."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "protocolo": "ZB-2026-0008",
+    "titulo": "Lâmpada piscando na praça",
+    "descricao": "Uma das luminárias da praça fica piscando a noite toda.",
+    "categoria_id": 2,
+    "rua": "Praça da Matriz",
+    "x": 47.0,
+    "y": 51.6,
+    "foto": null,
+    "status": "concluido",
+    "aberto_em": "2026-11-02 20:10:00",
+    "concluido_em": "2026-11-07 11:00:00",
+    "apoiadores": [
+      "seed080000",
+      "seed080001",
+      "seed080002"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-02 20:10:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-03 04:10:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      },
+      {
+        "de": "triagem",
+        "para": "execucao",
+        "em": "2026-11-03 10:10:00",
+        "por": "Marta Lins",
+        "nota": "Equipe enviada ao local."
+      },
+      {
+        "de": "execucao",
+        "para": "concluido",
+        "em": "2026-11-07 11:00:00",
+        "por": "Paulo Reis",
+        "nota": "Serviço finalizado e conferido."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "protocolo": "ZB-2026-0009",
+    "titulo": "Árvore com cupim inclinada",
+    "descricao": "A árvore está inclinada sobre a casa e tem cupim no tronco.",
+    "categoria_id": 3,
+    "rua": "Rua Quaresmeira, 88",
+    "x": 52.0,
+    "y": 92.2,
+    "foto": null,
+    "status": "aberto",
+    "aberto_em": "2026-11-18 08:45:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed090000",
+      "seed090001",
+      "seed090002",
+      "seed090003",
+      "seed090004"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-18 08:45:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "protocolo": "ZB-2026-0010",
+    "titulo": "Sofá abandonado no córrego",
+    "descricao": "Alguém jogou um sofá na margem do córrego, perto da ponte.",
+    "categoria_id": 4,
+    "rua": "Margem do Córrego do Lajeado",
+    "x": 70.0,
+    "y": 85.2,
+    "foto": null,
+    "status": "cancelado",
+    "aberto_em": "2026-11-05 17:00:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed100000",
+      "seed100001"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-05 17:00:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "cancelado",
+        "em": "2026-11-06 01:00:00",
+        "por": "Marta Lins",
+        "nota": "Responsabilidade da Defesa Civil, encaminhado por ofício."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "protocolo": "ZB-2026-0011",
+    "titulo": "Bueiro sem tampa",
+    "descricao": "Bueiro aberto na esquina, risco para quem passa de bicicleta.",
+    "categoria_id": 1,
+    "rua": "Rua Paineira x Rua Jacarandá",
+    "x": 38.0,
+    "y": 73.4,
+    "foto": null,
+    "status": "aberto",
+    "aberto_em": "2026-11-18 18:20:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed110000",
+      "seed110001",
+      "seed110002",
+      "seed110003",
+      "seed110004",
+      "seed110005",
+      "seed110006",
+      "seed110007",
+      "seed110008",
+      "seed110009",
+      "seed110010",
+      "seed110011"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-18 18:20:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "protocolo": "ZB-2026-0012",
+    "titulo": "Rampa de acessibilidade quebrada",
+    "descricao": "A rampa da esquina está quebrada e cadeirantes não conseguem subir.",
+    "categoria_id": 5,
+    "rua": "Rua Sibipiruna x Av. das Palmeiras",
+    "x": 62.0,
+    "y": 46.9,
+    "foto": null,
+    "status": "aberto",
+    "aberto_em": "2026-11-11 11:10:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed120000",
+      "seed120001",
+      "seed120002",
+      "seed120003",
+      "seed120004",
+      "seed120005",
+      "seed120006",
+      "seed120007"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-11 11:10:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "protocolo": "ZB-2026-0013",
+    "titulo": "Cano estourado na calçada",
+    "descricao": "Cano da rede de água estourado, desperdício grande.",
+    "categoria_id": 6,
+    "rua": "Rua Ipê Amarelo, 930",
+    "x": 93.0,
+    "y": 17.2,
+    "foto": null,
+    "status": "concluido",
+    "aberto_em": "2026-11-10 06:50:00",
+    "concluido_em": "2026-11-13 09:15:00",
+    "apoiadores": [
+      "seed130000",
+      "seed130001",
+      "seed130002",
+      "seed130003",
+      "seed130004",
+      "seed130005",
+      "seed130006",
+      "seed130007",
+      "seed130008",
+      "seed130009"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-10 06:50:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-10 14:50:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      },
+      {
+        "de": "triagem",
+        "para": "execucao",
+        "em": "2026-11-10 20:50:00",
+        "por": "Marta Lins",
+        "nota": "Equipe enviada ao local."
+      },
+      {
+        "de": "execucao",
+        "para": "concluido",
+        "em": "2026-11-13 09:15:00",
+        "por": "Paulo Reis",
+        "nota": "Serviço finalizado e conferido."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "protocolo": "ZB-2026-0014",
+    "titulo": "Rua inteira sem iluminação",
+    "descricao": "Toda a Rua Manacá ficou sem luz depois da tempestade.",
+    "categoria_id": 2,
+    "rua": "Rua Manacá, 120",
+    "x": 86.0,
+    "y": 25.0,
+    "foto": null,
+    "status": "triagem",
+    "aberto_em": "2026-11-17 21:00:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed140000",
+      "seed140001",
+      "seed140002",
+      "seed140003",
+      "seed140004",
+      "seed140005",
+      "seed140006",
+      "seed140007",
+      "seed140008",
+      "seed140009",
+      "seed140010",
+      "seed140011",
+      "seed140012",
+      "seed140013",
+      "seed140014",
+      "seed140015",
+      "seed140016",
+      "seed140017",
+      "seed140018"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-17 21:00:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-18 05:00:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "protocolo": "ZB-2026-0015",
+    "titulo": "Mato alto no canteiro central",
+    "descricao": "O canteiro da avenida está com mato alto escondendo a placa de pare.",
+    "categoria_id": 3,
+    "rua": "Av. das Palmeiras, 780",
+    "x": 78.0,
+    "y": 46.9,
+    "foto": null,
+    "status": "execucao",
+    "aberto_em": "2026-11-06 13:30:00",
+    "concluido_em": null,
+    "apoiadores": [
+      "seed150000",
+      "seed150001",
+      "seed150002",
+      "seed150003",
+      "seed150004",
+      "seed150005",
+      "seed150006"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-06 13:30:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-06 21:30:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      },
+      {
+        "de": "triagem",
+        "para": "execucao",
+        "em": "2026-11-07 03:30:00",
+        "por": "Marta Lins",
+        "nota": "Equipe enviada ao local."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "protocolo": "ZB-2026-0016",
+    "titulo": "Pneus acumulando água",
+    "descricao": "Pilha de pneus velhos acumulando água parada, risco de dengue.",
+    "categoria_id": 4,
+    "rua": "Rua Quaresmeira, 410",
+    "x": 30.0,
+    "y": 92.2,
+    "foto": null,
+    "status": "concluido",
+    "aberto_em": "2026-11-08 09:40:00",
+    "concluido_em": "2026-11-10 15:00:00",
+    "apoiadores": [
+      "seed160000",
+      "seed160001",
+      "seed160002",
+      "seed160003",
+      "seed160004",
+      "seed160005",
+      "seed160006",
+      "seed160007",
+      "seed160008",
+      "seed160009",
+      "seed160010",
+      "seed160011",
+      "seed160012",
+      "seed160013",
+      "seed160014"
+    ],
+    "historico": [
+      {
+        "de": null,
+        "para": "aberto",
+        "em": "2026-11-08 09:40:00",
+        "por": "Morador",
+        "nota": "Chamado aberto pelo site."
+      },
+      {
+        "de": "aberto",
+        "para": "triagem",
+        "em": "2026-11-08 17:40:00",
+        "por": "Marta Lins",
+        "nota": "Vistoria agendada."
+      },
+      {
+        "de": "triagem",
+        "para": "execucao",
+        "em": "2026-11-08 23:40:00",
+        "por": "Marta Lins",
+        "nota": "Equipe enviada ao local."
+      },
+      {
+        "de": "execucao",
+        "para": "concluido",
+        "em": "2026-11-10 15:00:00",
+        "por": "Paulo Reis",
+        "nota": "Serviço finalizado e conferido."
+      }
+    ]
+  }
+]
