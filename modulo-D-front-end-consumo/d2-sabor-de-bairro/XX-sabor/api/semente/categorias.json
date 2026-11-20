@@ -1,0 +1,50 @@
+[
+ {
+  "id": 1,
+  "nome": "Pizza",
+  "slug": "pizza",
+  "cor": "#E4572E"
+ },
+ {
+  "id": 2,
+  "nome": "Japonesa",
+  "slug": "japonesa",
+  "cor": "#D7263D"
+ },
+ {
+  "id": 3,
+  "nome": "Hambúrguer",
+  "slug": "hamburguer",
+  "cor": "#F29E4C"
+ },
+ {
+  "id": 4,
+  "nome": "Brasileira",
+  "slug": "brasileira",
+  "cor": "#3E8E41"
+ },
+ {
+  "id": 5,
+  "nome": "Saudável",
+  "slug": "saudavel",
+  "cor": "#2BA84A"
+ },
+ {
+  "id": 6,
+  "nome": "Doces",
+  "slug": "doces",
+  "cor": "#C2549D"
+ },
+ {
+  "id": 7,
+  "nome": "Árabe",
+  "slug": "arabe",
+  "cor": "#B5651D"
+ },
+ {
+  "id": 8,
+  "nome": "Lanches 24h",
+  "slug": "lanches",
+  "cor": "#3A6EA5"
+ }
+]

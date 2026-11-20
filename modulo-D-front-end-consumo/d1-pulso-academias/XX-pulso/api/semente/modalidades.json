@@ -1,0 +1,82 @@
+[
+ {
+  "id": 1,
+  "nome": "Bike Indoor",
+  "slug": "bike",
+  "cor": "#E63946",
+  "intensidade": 3,
+  "calorias_media": 520,
+  "descricao": "Pedalada em grupo com música alta e variação de carga. Leve garrafa de água.",
+  "imagem": "img/modalidades/bike.jpg"
+ },
+ {
+  "id": 2,
+  "nome": "Funcional",
+  "slug": "funcional",
+  "cor": "#F4A261",
+  "intensidade": 2,
+  "calorias_media": 430,
+  "descricao": "Circuito com peso do corpo, elásticos e kettlebell para força e resistência.",
+  "imagem": "img/modalidades/funcional.jpg"
+ },
+ {
+  "id": 3,
+  "nome": "Yoga",
+  "slug": "yoga",
+  "cor": "#2A9D8F",
+  "intensidade": 1,
+  "calorias_media": 180,
+  "descricao": "Posturas, respiração e relaxamento. Tapete fornecido pela unidade.",
+  "imagem": "img/modalidades/yoga.jpg"
+ },
+ {
+  "id": 4,
+  "nome": "Pilates Solo",
+  "slug": "pilates",
+  "cor": "#8E7DBE",
+  "intensidade": 1,
+  "calorias_media": 220,
+  "descricao": "Fortalecimento do centro do corpo com bola e anel, sem aparelhos.",
+  "imagem": "img/modalidades/pilates.jpg"
+ },
+ {
+  "id": 5,
+  "nome": "Boxe",
+  "slug": "boxe",
+  "cor": "#264653",
+  "intensidade": 3,
+  "calorias_media": 600,
+  "descricao": "Técnica de socos, esquivas e saco de pancada. Luvas emprestadas na recepção.",
+  "imagem": "img/modalidades/boxe.jpg"
+ },
+ {
+  "id": 6,
+  "nome": "Ritmos",
+  "slug": "ritmos",
+  "cor": "#E76F51",
+  "intensidade": 2,
+  "calorias_media": 450,
+  "descricao": "Coreografias fáceis de axé, funk e pop. Ninguém precisa saber dançar.",
+  "imagem": "img/modalidades/ritmos.jpg"
+ },
+ {
+  "id": 7,
+  "nome": "HIIT",
+  "slug": "hiit",
+  "cor": "#D62828",
+  "intensidade": 3,
+  "calorias_media": 560,
+  "descricao": "Treino intervalado de alta intensidade: 40 s de esforço, 20 s de pausa.",
+  "imagem": "img/modalidades/hiit.jpg"
+ },
+ {
+  "id": 8,
+  "nome": "Alongamento",
+  "slug": "alongamento",
+  "cor": "#3A86FF",
+  "intensidade": 1,
+  "calorias_media": 120,
+  "descricao": "Mobilidade e alongamento para o dia seguinte não doer.",
+  "imagem": "img/modalidades/alongamento.jpg"
+ }
+]

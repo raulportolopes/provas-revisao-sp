@@ -1,0 +1,17 @@
+{
+ "01-vitrine-brilho-e-busca": "01 · Vitrine: brilho que segue o cursor e busca com debounce (URL ?busca=)",
+ "02-chips-filtros-e-carregar-mais": "02 · Chips, interruptores, ordem e Carregar mais (filtros na URL)",
+ "03-cartao-hover-e-esqueleto": "03 · Esqueleto com brilho enquanto carrega e hover dos cartões",
+ "04-abas-do-cardapio-e-scrollspy": "04 · Abas do cardápio: rolagem suave, scrollspy e busca no cardápio",
+ "05-modal-do-prato-opcoes-e-preco": "05 · Modal do prato: obrigatório (tremida), máximo, preço ao vivo e quantidade",
+ "06-adicionar-pulo-do-contador-e-aviso": "06 · Adicionar: contador do carrinho dá um pulo e o aviso aparece",
+ "07-gaveta-minimo-e-esvaziar": "07 · Gaveta do carrinho: barra do pedido mínimo e esvaziar com confirmação",
+ "08-confirmar-outro-restaurante": "08 · Item de outro restaurante: confirmação antes de trocar o carrinho",
+ "09-login-pelo-checkout": "09 · Checkout sem login: 422, 401, mostrar senha e volta ao checkout",
+ "10-checkout-cep-pagamento-e-troco": "10 · Checkout: passos, máscara e busca do CEP, pagamento e troco",
+ "11-cupom-e-confirmar-pedido": "11 · Cupom (vencido, 10 por cento, frete grátis) e confirmação do pedido",
+ "12-linha-do-tempo-do-pedido": "12 · Acompanhamento: polling, linha que cresce e bolinha que pulsa",
+ "13-cancelar-e-avaliar-com-estrelas": "13 · Cancelar com confirmação e avaliar com estrelas (mouse e setas)",
+ "14-tema-escuro": "14 · Tema escuro: troca e salva",
+ "15-celular-barra-modal-e-gaveta": "15 · Celular (375 px): modal como folha, barra do carrinho e gaveta"
+}

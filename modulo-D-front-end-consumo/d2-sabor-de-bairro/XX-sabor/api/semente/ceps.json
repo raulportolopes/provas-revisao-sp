@@ -1,0 +1,58 @@
+[
+ {
+  "cep": "03101-001",
+  "logradouro": "Rua Javari",
+  "bairro": "Mooca",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "acrescimo_taxa": 0
+ },
+ {
+  "cep": "03102-002",
+  "logradouro": "Rua Taquari",
+  "bairro": "Mooca",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "acrescimo_taxa": 0
+ },
+ {
+  "cep": "03164-000",
+  "logradouro": "Rua Itapiti",
+  "bairro": "Água Rasa",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "acrescimo_taxa": 300
+ },
+ {
+  "cep": "03301-000",
+  "logradouro": "Rua Tuiuti",
+  "bairro": "Tatuapé",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "acrescimo_taxa": 500
+ },
+ {
+  "cep": "03047-000",
+  "logradouro": "Rua Bresser",
+  "bairro": "Brás",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "acrescimo_taxa": 400
+ },
+ {
+  "cep": "04101-000",
+  "logradouro": "Rua Domingos de Morais",
+  "bairro": "Vila Mariana",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "acrescimo_taxa": 900
+ },
+ {
+  "cep": "03181-100",
+  "logradouro": "Rua Herval",
+  "bairro": "Belenzinho",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "acrescimo_taxa": 300
+ }
+]

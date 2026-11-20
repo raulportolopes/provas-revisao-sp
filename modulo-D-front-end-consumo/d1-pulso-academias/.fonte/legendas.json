@@ -1,0 +1,17 @@
+{
+ "01-login-carregando-e-erros": "01 · Login: erros 422 por campo, mostrar senha, Entrando… e erro 401",
+ "02-menu-e-link-ativo": "02 · Menu: hover e link ativo (classe ativo + aria-current)",
+ "03-abas-de-dias-com-teclado": "03 · Abas de dias: clique, setas, Home e End",
+ "04-filtros-busca-e-paginacao": "04 · Busca com debounce, chips, período, só com vaga, ordem e paginação",
+ "05-card-3d-e-brilho-no-cursor": "05 · Card: inclinação 3D e brilho que seguem o cursor",
+ "06-modal-reservar-e-lista-de-espera": "06 · Modal: foco preso, reservar, lista de espera, fechar no fundo",
+ "07-cancelar-com-confirmacao-e-toast": "07 · Cancelar: confirmação, toast e contagem atualizada",
+ "08-reservas-abas-e-paginacao": "08 · Minhas reservas: abas com contagem, paginação e teclado",
+ "09-graficos-de-progresso": "09 · Progresso: barras animadas, linha da meta e balão no hover/foco",
+ "10-perfil-foto-mascara-e-erros": "10 · Perfil: arrastar foto, prévia, máscara e erros 422",
+ "11-tema-claro-escuro": "11 · Tema claro, escuro e automático",
+ "12-acordeao-regras": "12 · Acordeão: um item aberto por vez",
+ "13-sessao-expirada": "13 · Token vencido (401): login e volta para a mesma tela",
+ "14-carregando-e-erro": "14 · Erro da API e Tentar novamente com carregando",
+ "15-celular-375": "15 · 375 px: barra inferior e modal como folha"
+}

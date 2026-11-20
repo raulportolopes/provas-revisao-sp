@@ -1,0 +1,74 @@
+[
+ {
+  "id": 1,
+  "nome": "Marina Duarte",
+  "foto": "img/instrutores/1.jpg",
+  "modalidade_ids": [
+   1,
+   7
+  ]
+ },
+ {
+  "id": 2,
+  "nome": "Caio Ferraz",
+  "foto": "img/instrutores/2.jpg",
+  "modalidade_ids": [
+   2,
+   7
+  ]
+ },
+ {
+  "id": 3,
+  "nome": "Lívia Okamoto",
+  "foto": "img/instrutores/3.jpg",
+  "modalidade_ids": [
+   3,
+   8
+  ]
+ },
+ {
+  "id": 4,
+  "nome": "Renato Vasques",
+  "foto": "img/instrutores/4.jpg",
+  "modalidade_ids": [
+   5,
+   2
+  ]
+ },
+ {
+  "id": 5,
+  "nome": "Bianca Lopes",
+  "foto": "img/instrutores/5.jpg",
+  "modalidade_ids": [
+   6,
+   1
+  ]
+ },
+ {
+  "id": 6,
+  "nome": "Tiago Nunes",
+  "foto": "img/instrutores/6.jpg",
+  "modalidade_ids": [
+   4,
+   8
+  ]
+ },
+ {
+  "id": 7,
+  "nome": "Júlia Arantes",
+  "foto": "img/instrutores/7.jpg",
+  "modalidade_ids": [
+   3,
+   4
+  ]
+ },
+ {
+  "id": 8,
+  "nome": "Otávio Sena",
+  "foto": "img/instrutores/8.jpg",
+  "modalidade_ids": [
+   5,
+   7
+  ]
+ }
+]

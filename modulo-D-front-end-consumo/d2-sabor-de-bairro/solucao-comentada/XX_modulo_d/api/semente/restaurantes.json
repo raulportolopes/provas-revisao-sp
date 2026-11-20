@@ -1,0 +1,701 @@
+[
+ {
+  "id": 1,
+  "slug": "forno-da-vila",
+  "nome": "Forno da Vila",
+  "categoria_id": 1,
+  "avaliacao": 4.8,
+  "avaliacoes_total": 1520,
+  "tempo_min": 35,
+  "tempo_max": 50,
+  "taxa_entrega": 690,
+  "pedido_minimo": 3000,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "18:00",
+    "fecha": "23:59"
+   }
+  ],
+  "imagem": "img/restaurantes/forno-da-vila.jpg",
+  "endereco": "Rua dos Trilhos, 268 – Mooca"
+ },
+ {
+  "id": 2,
+  "slug": "pizzaria-bella-mooca",
+  "nome": "Pizzaria Bella Mooca",
+  "categoria_id": 1,
+  "avaliacao": 4.5,
+  "avaliacoes_total": 860,
+  "tempo_min": 40,
+  "tempo_max": 60,
+  "taxa_entrega": 0,
+  "pedido_minimo": 4000,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "11:00",
+    "fecha": "23:30"
+   }
+  ],
+  "imagem": "img/restaurantes/pizzaria-bella-mooca.jpg",
+  "endereco": "Rua Javari, 1558 – Mooca"
+ },
+ {
+  "id": 3,
+  "slug": "sushi-kaigan",
+  "nome": "Sushi Kaigan",
+  "categoria_id": 2,
+  "avaliacao": 4.9,
+  "avaliacoes_total": 2310,
+  "tempo_min": 45,
+  "tempo_max": 60,
+  "taxa_entrega": 990,
+  "pedido_minimo": 6000,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "18:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "18:00",
+    "fecha": "23:59"
+   }
+  ],
+  "imagem": "img/restaurantes/sushi-kaigan.jpg",
+  "endereco": "Rua Bresser, 541 – Mooca"
+ },
+ {
+  "id": 4,
+  "slug": "temaki-express",
+  "nome": "Temaki Express",
+  "categoria_id": 2,
+  "avaliacao": 4.2,
+  "avaliacoes_total": 410,
+  "tempo_min": 25,
+  "tempo_max": 40,
+  "taxa_entrega": 490,
+  "pedido_minimo": 2500,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "11:00",
+    "fecha": "23:30"
+   }
+  ],
+  "imagem": "img/restaurantes/temaki-express.jpg",
+  "endereco": "Rua Taquari, 325 – Mooca"
+ },
+ {
+  "id": 5,
+  "slug": "brasa-burger",
+  "nome": "Brasa Burger",
+  "categoria_id": 3,
+  "avaliacao": 4.7,
+  "avaliacoes_total": 3120,
+  "tempo_min": 30,
+  "tempo_max": 45,
+  "taxa_entrega": 599,
+  "pedido_minimo": 2500,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "11:00",
+    "fecha": "23:30"
+   }
+  ],
+  "imagem": "img/restaurantes/brasa-burger.jpg",
+  "endereco": "Rua dos Trilhos, 249 – Mooca"
+ },
+ {
+  "id": 6,
+  "slug": "smash-do-bairro",
+  "nome": "Smash do Bairro",
+  "categoria_id": 3,
+  "avaliacao": 4.4,
+  "avaliacoes_total": 980,
+  "tempo_min": 20,
+  "tempo_max": 35,
+  "taxa_entrega": 390,
+  "pedido_minimo": 2000,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "00:00",
+    "fecha": "23:59"
+   }
+  ],
+  "imagem": "img/restaurantes/smash-do-bairro.jpg",
+  "endereco": "Rua dos Trilhos, 1556 – Mooca"
+ },
+ {
+  "id": 7,
+  "slug": "cozinha-da-dona-cida",
+  "nome": "Cozinha da Dona Cida",
+  "categoria_id": 4,
+  "avaliacao": 4.9,
+  "avaliacoes_total": 1870,
+  "tempo_min": 30,
+  "tempo_max": 40,
+  "taxa_entrega": 0,
+  "pedido_minimo": 2000,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "10:30",
+    "fecha": "15:30"
+   }
+  ],
+  "imagem": "img/restaurantes/cozinha-da-dona-cida.jpg",
+  "endereco": "Rua Orville Derby, 218 – Mooca"
+ },
+ {
+  "id": 8,
+  "slug": "feijoada-do-largo",
+  "nome": "Feijoada do Largo",
+  "categoria_id": 4,
+  "avaliacao": 4.6,
+  "avaliacoes_total": 640,
+  "tempo_min": 40,
+  "tempo_max": 55,
+  "taxa_entrega": 790,
+  "pedido_minimo": 3500,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "10:30",
+    "fecha": "15:30"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "10:30",
+    "fecha": "15:30"
+   }
+  ],
+  "imagem": "img/restaurantes/feijoada-do-largo.jpg",
+  "endereco": "Rua Orville Derby, 904 – Mooca"
+ },
+ {
+  "id": 9,
+  "slug": "verde-vivo",
+  "nome": "Verde Vivo",
+  "categoria_id": 5,
+  "avaliacao": 4.6,
+  "avaliacoes_total": 720,
+  "tempo_min": 25,
+  "tempo_max": 35,
+  "taxa_entrega": 490,
+  "pedido_minimo": 2500,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "11:00",
+    "fecha": "23:30"
+   }
+  ],
+  "imagem": "img/restaurantes/verde-vivo.jpg",
+  "endereco": "Rua Javari, 101 – Mooca"
+ },
+ {
+  "id": 10,
+  "slug": "bowl-e-cia",
+  "nome": "Bowl & Cia",
+  "categoria_id": 5,
+  "avaliacao": 4.3,
+  "avaliacoes_total": 300,
+  "tempo_min": 20,
+  "tempo_max": 30,
+  "taxa_entrega": 0,
+  "pedido_minimo": 2000,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "00:00",
+    "fecha": "23:59"
+   }
+  ],
+  "imagem": "img/restaurantes/bowl-e-cia.jpg",
+  "endereco": "Rua Javari, 487 – Mooca"
+ },
+ {
+  "id": 11,
+  "slug": "doce-atelie",
+  "nome": "Doce Ateliê",
+  "categoria_id": 6,
+  "avaliacao": 4.8,
+  "avaliacoes_total": 1110,
+  "tempo_min": 30,
+  "tempo_max": 45,
+  "taxa_entrega": 590,
+  "pedido_minimo": 1500,
+  "horarios": [
+   {
+    "dia_semana": 2,
+    "abre": "13:00",
+    "fecha": "22:00"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "13:00",
+    "fecha": "22:00"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "13:00",
+    "fecha": "22:00"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "13:00",
+    "fecha": "22:00"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "13:00",
+    "fecha": "22:00"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "13:00",
+    "fecha": "22:00"
+   }
+  ],
+  "imagem": "img/restaurantes/doce-atelie.jpg",
+  "endereco": "Rua Taquari, 1074 – Mooca"
+ },
+ {
+  "id": 12,
+  "slug": "acai-da-esquina",
+  "nome": "Açaí da Esquina",
+  "categoria_id": 6,
+  "avaliacao": 4.1,
+  "avaliacoes_total": 520,
+  "tempo_min": 15,
+  "tempo_max": 25,
+  "taxa_entrega": 299,
+  "pedido_minimo": 1500,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "00:00",
+    "fecha": "23:59"
+   }
+  ],
+  "imagem": "img/restaurantes/acai-da-esquina.jpg",
+  "endereco": "Rua Orville Derby, 94 – Mooca"
+ },
+ {
+  "id": 13,
+  "slug": "esfiha-cedro",
+  "nome": "Esfiha Cedro",
+  "categoria_id": 7,
+  "avaliacao": 4.7,
+  "avaliacoes_total": 1340,
+  "tempo_min": 30,
+  "tempo_max": 45,
+  "taxa_entrega": 490,
+  "pedido_minimo": 2500,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "11:00",
+    "fecha": "23:30"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "11:00",
+    "fecha": "23:30"
+   }
+  ],
+  "imagem": "img/restaurantes/esfiha-cedro.jpg",
+  "endereco": "Rua Orville Derby, 447 – Mooca"
+ },
+ {
+  "id": 14,
+  "slug": "pastelaria-madrugada",
+  "nome": "Pastelaria Madrugada",
+  "categoria_id": 8,
+  "avaliacao": 4.5,
+  "avaliacoes_total": 2200,
+  "tempo_min": 15,
+  "tempo_max": 30,
+  "taxa_entrega": 390,
+  "pedido_minimo": 1500,
+  "horarios": [
+   {
+    "dia_semana": 1,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 2,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 3,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 4,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 5,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 6,
+    "abre": "00:00",
+    "fecha": "23:59"
+   },
+   {
+    "dia_semana": 7,
+    "abre": "00:00",
+    "fecha": "23:59"
+   }
+  ],
+  "imagem": "img/restaurantes/pastelaria-madrugada.jpg",
+  "endereco": "Rua dos Trilhos, 1370 – Mooca"
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "id": 1,
+  "nome": "Pulso Centro",
+  "bairro": "República",
+  "endereco": "Rua Barão de Itapetininga, 210",
+  "horario": "Seg a sex 6h–23h · Sáb 8h–18h · Dom 8h–13h",
+  "imagem": "img/unidades/centro.jpg"
+ },
+ {
+  "id": 2,
+  "nome": "Pulso Jardins",
+  "bairro": "Jardim Paulista",
+  "endereco": "Alameda Santos, 1480",
+  "horario": "Seg a sex 6h–23h · Sáb 8h–18h · Dom 8h–13h",
+  "imagem": "img/unidades/jardins.jpg"
+ },
+ {
+  "id": 3,
+  "nome": "Pulso Lapa",
+  "bairro": "Lapa",
+  "endereco": "Rua Doze de Outubro, 385",
+  "horario": "Seg a sex 6h–22h · Sáb 8h–16h · Dom fechado",
+  "imagem": "img/unidades/lapa.jpg"
+ },
+ {
+  "id": 4,
+  "nome": "Pulso Mooca",
+  "bairro": "Mooca",
+  "endereco": "Rua da Mooca, 2750",
+  "horario": "Seg a sex 6h–22h · Sáb 8h–16h · Dom 8h–12h",
+  "imagem": "img/unidades/mooca.jpg"
+ }
+]

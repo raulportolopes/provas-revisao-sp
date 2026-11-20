@@ -1,0 +1,27 @@
+[
+ {
+  "id": 1,
+  "titulo": "Até quando posso cancelar uma reserva?",
+  "texto": "Até 2 horas antes do início da aula. Depois disso a vaga fica presa e conta como falta."
+ },
+ {
+  "id": 2,
+  "titulo": "Quantas aulas posso reservar por dia?",
+  "texto": "No máximo 2 aulas por dia, e nunca duas no mesmo horário."
+ },
+ {
+  "id": 3,
+  "titulo": "Como funciona a lista de espera?",
+  "texto": "Quando a aula está lotada você pode entrar na lista. Se alguém cancelar, a vaga vai para o primeiro da fila automaticamente."
+ },
+ {
+  "id": 4,
+  "titulo": "Preciso chegar com antecedência?",
+  "texto": "Chegue 10 minutos antes. Com 10 minutos de atraso a entrada na sala não é mais permitida."
+ },
+ {
+  "id": 5,
+  "titulo": "O que levar para a aula?",
+  "texto": "Toalha, garrafa de água e roupa confortável. Luvas de boxe e tapetes de yoga são emprestados na recepção."
+ }
+]

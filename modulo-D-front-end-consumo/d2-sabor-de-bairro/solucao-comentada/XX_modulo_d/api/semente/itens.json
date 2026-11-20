@@ -1,0 +1,2366 @@
+[
+ {
+  "id": 1,
+  "secao_id": 1,
+  "nome": "Margherita",
+  "descricao": "Molho de tomate, muçarela de búfala e manjericão.",
+  "preco": 5750,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 1,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 1,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 2,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 3,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 4,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 5,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 6,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "secao_id": 1,
+  "nome": "Calabresa",
+  "descricao": "Calabresa fatiada, cebola roxa e azeitonas.",
+  "preco": 5230,
+  "imagem": "img/pratos/1-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 3,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 7,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 8,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 9,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 10,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 11,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 12,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "secao_id": 1,
+  "nome": "Portuguesa",
+  "descricao": "Presunto, ovos, cebola, ervilha e muçarela.",
+  "preco": 6070,
+  "imagem": "img/pratos/1-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 5,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 13,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 14,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 15,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 16,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 17,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 18,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 4,
+  "secao_id": 1,
+  "nome": "Quatro queijos",
+  "descricao": "Muçarela, provolone, gorgonzola e parmesão.",
+  "preco": 6280,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 7,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 19,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 20,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 21,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 22,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 23,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 24,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 5,
+  "secao_id": 2,
+  "nome": "Chocolate com morango",
+  "descricao": "Chocolate ao leite e morangos frescos.",
+  "preco": 5120,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 9,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 25,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 26,
+      "nome": "Grande",
+      "preco": 1200
+     },
+     {
+      "id": 27,
+      "nome": "Gigante",
+      "preco": 2400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "secao_id": 2,
+  "nome": "Banana com canela",
+  "descricao": "Banana, açúcar e canela.",
+  "preco": 4490,
+  "imagem": "img/pratos/1-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 10,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 28,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 29,
+      "nome": "Grande",
+      "preco": 1200
+     },
+     {
+      "id": 30,
+      "nome": "Gigante",
+      "preco": 2400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 7,
+  "secao_id": 3,
+  "nome": "Refrigerante 2 L",
+  "descricao": "Escolha o sabor na observação.",
+  "preco": 1550,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 8,
+  "secao_id": 3,
+  "nome": "Suco de uva 1 L",
+  "descricao": "Integral, sem açúcar.",
+  "preco": 1760,
+  "imagem": "img/pratos/1-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 9,
+  "secao_id": 4,
+  "nome": "Margherita",
+  "descricao": "Molho de tomate, muçarela de búfala e manjericão.",
+  "preco": 6040,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 11,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 31,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 32,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 33,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 34,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 35,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 36,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "secao_id": 4,
+  "nome": "Calabresa",
+  "descricao": "Calabresa fatiada, cebola roxa e azeitonas.",
+  "preco": 5490,
+  "imagem": "img/pratos/1-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 13,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 37,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 38,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 39,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 14,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 40,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 41,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 42,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "secao_id": 4,
+  "nome": "Portuguesa",
+  "descricao": "Presunto, ovos, cebola, ervilha e muçarela.",
+  "preco": 6370,
+  "imagem": "img/pratos/1-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 15,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 43,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 44,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 45,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 16,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 46,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 47,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 48,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "secao_id": 4,
+  "nome": "Quatro queijos",
+  "descricao": "Muçarela, provolone, gorgonzola e parmesão.",
+  "preco": 6590,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 17,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 49,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 50,
+      "nome": "Grande",
+      "preco": 1500
+     },
+     {
+      "id": 51,
+      "nome": "Gigante",
+      "preco": 3000
+     }
+    ]
+   },
+   {
+    "id": 18,
+    "nome": "Borda recheada",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 52,
+      "nome": "Catupiry",
+      "preco": 900
+     },
+     {
+      "id": 53,
+      "nome": "Cheddar",
+      "preco": 900
+     },
+     {
+      "id": 54,
+      "nome": "Chocolate",
+      "preco": 1100
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "secao_id": 5,
+  "nome": "Chocolate com morango",
+  "descricao": "Chocolate ao leite e morangos frescos.",
+  "preco": 5380,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 19,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 55,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 56,
+      "nome": "Grande",
+      "preco": 1200
+     },
+     {
+      "id": 57,
+      "nome": "Gigante",
+      "preco": 2400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "secao_id": 5,
+  "nome": "Banana com canela",
+  "descricao": "Banana, açúcar e canela.",
+  "preco": 4720,
+  "imagem": "img/pratos/1-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 20,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 58,
+      "nome": "Média",
+      "preco": 0
+     },
+     {
+      "id": 59,
+      "nome": "Grande",
+      "preco": 1200
+     },
+     {
+      "id": 60,
+      "nome": "Gigante",
+      "preco": 2400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "secao_id": 6,
+  "nome": "Refrigerante 2 L",
+  "descricao": "Escolha o sabor na observação.",
+  "preco": 1640,
+  "imagem": "img/pratos/1-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 16,
+  "secao_id": 6,
+  "nome": "Suco de uva 1 L",
+  "descricao": "Integral, sem açúcar.",
+  "preco": 1860,
+  "imagem": "img/pratos/1-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 17,
+  "secao_id": 7,
+  "nome": "Combinado 20 peças",
+  "descricao": "8 sashimis, 6 uramakis e 6 niguiris do dia.",
+  "preco": 7980,
+  "imagem": "img/pratos/2-1.jpg",
+  "destaque": true,
+  "disponivel": false,
+  "grupos": [
+   {
+    "id": 21,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 61,
+      "nome": "Shoyu extra",
+      "preco": 200
+     },
+     {
+      "id": 62,
+      "nome": "Gengibre extra",
+      "preco": 300
+     },
+     {
+      "id": 63,
+      "nome": "Cream cheese",
+      "preco": 500
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "secao_id": 7,
+  "nome": "Combinado 40 peças",
+  "descricao": "Para dividir: sashimi, hot roll, uramaki e niguiri.",
+  "preco": 13980,
+  "imagem": "img/pratos/2-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 22,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 64,
+      "nome": "Shoyu extra",
+      "preco": 200
+     },
+     {
+      "id": 65,
+      "nome": "Gengibre extra",
+      "preco": 300
+     },
+     {
+      "id": 66,
+      "nome": "Cream cheese",
+      "preco": 500
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "secao_id": 8,
+  "nome": "Temaki salmão",
+  "descricao": "Salmão picado, cebolinha e gergelim.",
+  "preco": 3280,
+  "imagem": "img/pratos/2-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 23,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 67,
+      "nome": "Cream cheese",
+      "preco": 500
+     },
+     {
+      "id": 68,
+      "nome": "Cebolinha",
+      "preco": 0
+     },
+     {
+      "id": 69,
+      "nome": "Tarê",
+      "preco": 200
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 20,
+  "secao_id": 8,
+  "nome": "Temaki skin",
+  "descricao": "Pele de salmão crocante.",
+  "preco": 2680,
+  "imagem": "img/pratos/2-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 21,
+  "secao_id": 9,
+  "nome": "Hot roll 10 peças",
+  "descricao": "Empanado e frito, com tarê.",
+  "preco": 3480,
+  "imagem": "img/pratos/2-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 22,
+  "secao_id": 9,
+  "nome": "Guioza 6 unidades",
+  "descricao": "Recheio de carne suína e legumes.",
+  "preco": 2880,
+  "imagem": "img/pratos/2-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 23,
+  "secao_id": 10,
+  "nome": "Combinado 20 peças",
+  "descricao": "8 sashimis, 6 uramakis e 6 niguiris do dia.",
+  "preco": 8390,
+  "imagem": "img/pratos/2-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 24,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 70,
+      "nome": "Shoyu extra",
+      "preco": 200
+     },
+     {
+      "id": 71,
+      "nome": "Gengibre extra",
+      "preco": 300
+     },
+     {
+      "id": 72,
+      "nome": "Cream cheese",
+      "preco": 500
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "secao_id": 10,
+  "nome": "Combinado 40 peças",
+  "descricao": "Para dividir: sashimi, hot roll, uramaki e niguiri.",
+  "preco": 14690,
+  "imagem": "img/pratos/2-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 25,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 73,
+      "nome": "Shoyu extra",
+      "preco": 200
+     },
+     {
+      "id": 74,
+      "nome": "Gengibre extra",
+      "preco": 300
+     },
+     {
+      "id": 75,
+      "nome": "Cream cheese",
+      "preco": 500
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "secao_id": 11,
+  "nome": "Temaki salmão",
+  "descricao": "Salmão picado, cebolinha e gergelim.",
+  "preco": 3450,
+  "imagem": "img/pratos/2-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 26,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 76,
+      "nome": "Cream cheese",
+      "preco": 500
+     },
+     {
+      "id": 77,
+      "nome": "Cebolinha",
+      "preco": 0
+     },
+     {
+      "id": 78,
+      "nome": "Tarê",
+      "preco": 200
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 26,
+  "secao_id": 11,
+  "nome": "Temaki skin",
+  "descricao": "Pele de salmão crocante.",
+  "preco": 2820,
+  "imagem": "img/pratos/2-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 27,
+  "secao_id": 12,
+  "nome": "Hot roll 10 peças",
+  "descricao": "Empanado e frito, com tarê.",
+  "preco": 3660,
+  "imagem": "img/pratos/2-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 28,
+  "secao_id": 12,
+  "nome": "Guioza 6 unidades",
+  "descricao": "Recheio de carne suína e legumes.",
+  "preco": 3030,
+  "imagem": "img/pratos/2-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 29,
+  "secao_id": 13,
+  "nome": "Clássico",
+  "descricao": "Pão brioche, blend 160 g, queijo prato, alface e tomate.",
+  "preco": 3830,
+  "imagem": "img/pratos/3-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 27,
+    "nome": "Ponto da carne",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 79,
+      "nome": "Ao ponto",
+      "preco": 0
+     },
+     {
+      "id": 80,
+      "nome": "Mal passado",
+      "preco": 0
+     },
+     {
+      "id": 81,
+      "nome": "Bem passado",
+      "preco": 0
+     }
+    ]
+   },
+   {
+    "id": 28,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 82,
+      "nome": "Bacon",
+      "preco": 600
+     },
+     {
+      "id": 83,
+      "nome": "Queijo extra",
+      "preco": 500
+     },
+     {
+      "id": 84,
+      "nome": "Ovo",
+      "preco": 400
+     },
+     {
+      "id": 85,
+      "nome": "Cebola caramelizada",
+      "preco": 500
+     }
+    ]
+   },
+   {
+    "id": 29,
+    "nome": "Bebida",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 86,
+      "nome": "Refrigerante lata",
+      "preco": 600
+     },
+     {
+      "id": 87,
+      "nome": "Suco natural 300 ml",
+      "preco": 900
+     },
+     {
+      "id": 88,
+      "nome": "Água sem gás",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 30,
+  "secao_id": 13,
+  "nome": "Duplo cheddar",
+  "descricao": "Dois blends de 120 g, muito cheddar e cebola crispy.",
+  "preco": 4710,
+  "imagem": "img/pratos/3-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 30,
+    "nome": "Ponto da carne",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 89,
+      "nome": "Ao ponto",
+      "preco": 0
+     },
+     {
+      "id": 90,
+      "nome": "Mal passado",
+      "preco": 0
+     },
+     {
+      "id": 91,
+      "nome": "Bem passado",
+      "preco": 0
+     }
+    ]
+   },
+   {
+    "id": 31,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 92,
+      "nome": "Bacon",
+      "preco": 600
+     },
+     {
+      "id": 93,
+      "nome": "Queijo extra",
+      "preco": 500
+     },
+     {
+      "id": 94,
+      "nome": "Ovo",
+      "preco": 400
+     }
+    ]
+   },
+   {
+    "id": 32,
+    "nome": "Bebida",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 95,
+      "nome": "Refrigerante lata",
+      "preco": 600
+     },
+     {
+      "id": 96,
+      "nome": "Suco natural 300 ml",
+      "preco": 900
+     },
+     {
+      "id": 97,
+      "nome": "Água sem gás",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 31,
+  "secao_id": 13,
+  "nome": "Veggie",
+  "descricao": "Hambúrguer de grão-de-bico, rúcula e maionese verde.",
+  "preco": 4050,
+  "imagem": "img/pratos/3-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 33,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 98,
+      "nome": "Queijo extra",
+      "preco": 500
+     },
+     {
+      "id": 99,
+      "nome": "Cebola caramelizada",
+      "preco": 500
+     }
+    ]
+   },
+   {
+    "id": 34,
+    "nome": "Bebida",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 100,
+      "nome": "Refrigerante lata",
+      "preco": 600
+     },
+     {
+      "id": 101,
+      "nome": "Suco natural 300 ml",
+      "preco": 900
+     },
+     {
+      "id": 102,
+      "nome": "Água sem gás",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 32,
+  "secao_id": 14,
+  "nome": "Batata rústica",
+  "descricao": "Com alecrim e páprica.",
+  "preco": 2070,
+  "imagem": "img/pratos/3-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 35,
+    "nome": "Molho",
+    "min": 1,
+    "max": 2,
+    "opcoes": [
+     {
+      "id": 103,
+      "nome": "Maionese da casa",
+      "preco": 0
+     },
+     {
+      "id": 104,
+      "nome": "Barbecue",
+      "preco": 0
+     },
+     {
+      "id": 105,
+      "nome": "Cheddar",
+      "preco": 300
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 33,
+  "secao_id": 14,
+  "nome": "Onion rings",
+  "descricao": "10 anéis empanados.",
+  "preco": 2400,
+  "imagem": "img/pratos/3-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 34,
+  "secao_id": 15,
+  "nome": "Milk-shake 400 ml",
+  "descricao": "Baunilha, chocolate ou morango (diga na observação).",
+  "preco": 2180,
+  "imagem": "img/pratos/3-1.jpg",
+  "destaque": false,
+  "disponivel": false,
+  "grupos": []
+ },
+ {
+  "id": 35,
+  "secao_id": 15,
+  "nome": "Refrigerante lata",
+  "descricao": "Gelado.",
+  "preco": 650,
+  "imagem": "img/pratos/3-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 36,
+  "secao_id": 16,
+  "nome": "Clássico",
+  "descricao": "Pão brioche, blend 160 g, queijo prato, alface e tomate.",
+  "preco": 3490,
+  "imagem": "img/pratos/3-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 36,
+    "nome": "Ponto da carne",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 106,
+      "nome": "Ao ponto",
+      "preco": 0
+     },
+     {
+      "id": 107,
+      "nome": "Mal passado",
+      "preco": 0
+     },
+     {
+      "id": 108,
+      "nome": "Bem passado",
+      "preco": 0
+     }
+    ]
+   },
+   {
+    "id": 37,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 109,
+      "nome": "Bacon",
+      "preco": 600
+     },
+     {
+      "id": 110,
+      "nome": "Queijo extra",
+      "preco": 500
+     },
+     {
+      "id": 111,
+      "nome": "Ovo",
+      "preco": 400
+     },
+     {
+      "id": 112,
+      "nome": "Cebola caramelizada",
+      "preco": 500
+     }
+    ]
+   },
+   {
+    "id": 38,
+    "nome": "Bebida",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 113,
+      "nome": "Refrigerante lata",
+      "preco": 600
+     },
+     {
+      "id": 114,
+      "nome": "Suco natural 300 ml",
+      "preco": 900
+     },
+     {
+      "id": 115,
+      "nome": "Água sem gás",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 37,
+  "secao_id": 16,
+  "nome": "Duplo cheddar",
+  "descricao": "Dois blends de 120 g, muito cheddar e cebola crispy.",
+  "preco": 4290,
+  "imagem": "img/pratos/3-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 39,
+    "nome": "Ponto da carne",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 116,
+      "nome": "Ao ponto",
+      "preco": 0
+     },
+     {
+      "id": 117,
+      "nome": "Mal passado",
+      "preco": 0
+     },
+     {
+      "id": 118,
+      "nome": "Bem passado",
+      "preco": 0
+     }
+    ]
+   },
+   {
+    "id": 40,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 119,
+      "nome": "Bacon",
+      "preco": 600
+     },
+     {
+      "id": 120,
+      "nome": "Queijo extra",
+      "preco": 500
+     },
+     {
+      "id": 121,
+      "nome": "Ovo",
+      "preco": 400
+     }
+    ]
+   },
+   {
+    "id": 41,
+    "nome": "Bebida",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 122,
+      "nome": "Refrigerante lata",
+      "preco": 600
+     },
+     {
+      "id": 123,
+      "nome": "Suco natural 300 ml",
+      "preco": 900
+     },
+     {
+      "id": 124,
+      "nome": "Água sem gás",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 38,
+  "secao_id": 16,
+  "nome": "Veggie",
+  "descricao": "Hambúrguer de grão-de-bico, rúcula e maionese verde.",
+  "preco": 3690,
+  "imagem": "img/pratos/3-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 42,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 125,
+      "nome": "Queijo extra",
+      "preco": 500
+     },
+     {
+      "id": 126,
+      "nome": "Cebola caramelizada",
+      "preco": 500
+     }
+    ]
+   },
+   {
+    "id": 43,
+    "nome": "Bebida",
+    "min": 0,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 127,
+      "nome": "Refrigerante lata",
+      "preco": 600
+     },
+     {
+      "id": 128,
+      "nome": "Suco natural 300 ml",
+      "preco": 900
+     },
+     {
+      "id": 129,
+      "nome": "Água sem gás",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 39,
+  "secao_id": 17,
+  "nome": "Batata rústica",
+  "descricao": "Com alecrim e páprica.",
+  "preco": 1890,
+  "imagem": "img/pratos/3-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 44,
+    "nome": "Molho",
+    "min": 1,
+    "max": 2,
+    "opcoes": [
+     {
+      "id": 130,
+      "nome": "Maionese da casa",
+      "preco": 0
+     },
+     {
+      "id": 131,
+      "nome": "Barbecue",
+      "preco": 0
+     },
+     {
+      "id": 132,
+      "nome": "Cheddar",
+      "preco": 300
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "secao_id": 17,
+  "nome": "Onion rings",
+  "descricao": "10 anéis empanados.",
+  "preco": 2190,
+  "imagem": "img/pratos/3-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 41,
+  "secao_id": 18,
+  "nome": "Milk-shake 400 ml",
+  "descricao": "Baunilha, chocolate ou morango (diga na observação).",
+  "preco": 1990,
+  "imagem": "img/pratos/3-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 42,
+  "secao_id": 18,
+  "nome": "Refrigerante lata",
+  "descricao": "Gelado.",
+  "preco": 600,
+  "imagem": "img/pratos/3-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 43,
+  "secao_id": 19,
+  "nome": "Feijoada completa",
+  "descricao": "Feijão preto, carnes, arroz, couve, farofa e laranja.",
+  "preco": 4490,
+  "imagem": "img/pratos/4-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 45,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 133,
+      "nome": "Individual",
+      "preco": 0
+     },
+     {
+      "id": 134,
+      "nome": "Para dois",
+      "preco": 3200
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 44,
+  "secao_id": 19,
+  "nome": "Frango com quiabo",
+  "descricao": "Com arroz branco e angu.",
+  "preco": 3440,
+  "imagem": "img/pratos/4-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 45,
+  "secao_id": 19,
+  "nome": "Picadinho",
+  "descricao": "Carne em cubos, arroz, farofa, ovo e banana.",
+  "preco": 3760,
+  "imagem": "img/pratos/4-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 46,
+  "secao_id": 20,
+  "nome": "Marmita executiva",
+  "descricao": "Arroz, feijão, salada e uma carne do dia.",
+  "preco": 2710,
+  "imagem": "img/pratos/4-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 46,
+    "nome": "Carne",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 135,
+      "nome": "Bife acebolado",
+      "preco": 0
+     },
+     {
+      "id": 136,
+      "nome": "Frango grelhado",
+      "preco": 0
+     },
+     {
+      "id": 137,
+      "nome": "Linguiça",
+      "preco": 0
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 47,
+  "secao_id": 21,
+  "nome": "Pudim de leite",
+  "descricao": "Fatia generosa.",
+  "preco": 1340,
+  "imagem": "img/pratos/4-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 48,
+  "secao_id": 21,
+  "nome": "Doce de abóbora",
+  "descricao": "Com coco.",
+  "preco": 1030,
+  "imagem": "img/pratos/4-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 49,
+  "secao_id": 22,
+  "nome": "Feijoada completa",
+  "descricao": "Feijão preto, carnes, arroz, couve, farofa e laranja.",
+  "preco": 4720,
+  "imagem": "img/pratos/4-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 47,
+    "nome": "Tamanho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 138,
+      "nome": "Individual",
+      "preco": 0
+     },
+     {
+      "id": 139,
+      "nome": "Para dois",
+      "preco": 3200
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 50,
+  "secao_id": 22,
+  "nome": "Frango com quiabo",
+  "descricao": "Com arroz branco e angu.",
+  "preco": 3620,
+  "imagem": "img/pratos/4-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 51,
+  "secao_id": 22,
+  "nome": "Picadinho",
+  "descricao": "Carne em cubos, arroz, farofa, ovo e banana.",
+  "preco": 3950,
+  "imagem": "img/pratos/4-3.jpg",
+  "destaque": false,
+  "disponivel": false,
+  "grupos": []
+ },
+ {
+  "id": 52,
+  "secao_id": 23,
+  "nome": "Marmita executiva",
+  "descricao": "Arroz, feijão, salada e uma carne do dia.",
+  "preco": 2850,
+  "imagem": "img/pratos/4-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 48,
+    "nome": "Carne",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 140,
+      "nome": "Bife acebolado",
+      "preco": 0
+     },
+     {
+      "id": 141,
+      "nome": "Frango grelhado",
+      "preco": 0
+     },
+     {
+      "id": 142,
+      "nome": "Linguiça",
+      "preco": 0
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 53,
+  "secao_id": 24,
+  "nome": "Pudim de leite",
+  "descricao": "Fatia generosa.",
+  "preco": 1420,
+  "imagem": "img/pratos/4-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 54,
+  "secao_id": 24,
+  "nome": "Doce de abóbora",
+  "descricao": "Com coco.",
+  "preco": 1090,
+  "imagem": "img/pratos/4-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 55,
+  "secao_id": 25,
+  "nome": "Bowl de salmão",
+  "descricao": "Arroz integral, salmão grelhado, abacate e legumes.",
+  "preco": 4680,
+  "imagem": "img/pratos/5-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 49,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 143,
+      "nome": "Ovo cozido",
+      "preco": 300
+     },
+     {
+      "id": 144,
+      "nome": "Castanhas",
+      "preco": 500
+     },
+     {
+      "id": 145,
+      "nome": "Quinoa",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 56,
+  "secao_id": 25,
+  "nome": "Bowl vegano",
+  "descricao": "Grão-de-bico, quinoa, legumes assados e tahine.",
+  "preco": 3580,
+  "imagem": "img/pratos/5-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 50,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 146,
+      "nome": "Castanhas",
+      "preco": 500
+     },
+     {
+      "id": 147,
+      "nome": "Tofu",
+      "preco": 600
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "secao_id": 26,
+  "nome": "Caesar com frango",
+  "descricao": "Alface romana, frango, croutons e parmesão.",
+  "preco": 3280,
+  "imagem": "img/pratos/5-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 51,
+    "nome": "Molho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 148,
+      "nome": "Caesar",
+      "preco": 0
+     },
+     {
+      "id": 149,
+      "nome": "Mostarda e mel",
+      "preco": 0
+     },
+     {
+      "id": 150,
+      "nome": "Sem molho",
+      "preco": 0
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 58,
+  "secao_id": 27,
+  "nome": "Verde detox",
+  "descricao": "Couve, limão, gengibre e maçã.",
+  "preco": 1480,
+  "imagem": "img/pratos/5-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 59,
+  "secao_id": 27,
+  "nome": "Laranja com acerola",
+  "descricao": "500 ml.",
+  "preco": 1280,
+  "imagem": "img/pratos/5-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 60,
+  "secao_id": 28,
+  "nome": "Bowl de salmão",
+  "descricao": "Arroz integral, salmão grelhado, abacate e legumes.",
+  "preco": 4920,
+  "imagem": "img/pratos/5-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 52,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 151,
+      "nome": "Ovo cozido",
+      "preco": 300
+     },
+     {
+      "id": 152,
+      "nome": "Castanhas",
+      "preco": 500
+     },
+     {
+      "id": 153,
+      "nome": "Quinoa",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 61,
+  "secao_id": 28,
+  "nome": "Bowl vegano",
+  "descricao": "Grão-de-bico, quinoa, legumes assados e tahine.",
+  "preco": 3770,
+  "imagem": "img/pratos/5-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 53,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 154,
+      "nome": "Castanhas",
+      "preco": 500
+     },
+     {
+      "id": 155,
+      "nome": "Tofu",
+      "preco": 600
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "secao_id": 29,
+  "nome": "Caesar com frango",
+  "descricao": "Alface romana, frango, croutons e parmesão.",
+  "preco": 3450,
+  "imagem": "img/pratos/5-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 54,
+    "nome": "Molho",
+    "min": 1,
+    "max": 1,
+    "opcoes": [
+     {
+      "id": 156,
+      "nome": "Caesar",
+      "preco": 0
+     },
+     {
+      "id": 157,
+      "nome": "Mostarda e mel",
+      "preco": 0
+     },
+     {
+      "id": 158,
+      "nome": "Sem molho",
+      "preco": 0
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 63,
+  "secao_id": 30,
+  "nome": "Verde detox",
+  "descricao": "Couve, limão, gengibre e maçã.",
+  "preco": 1560,
+  "imagem": "img/pratos/5-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 64,
+  "secao_id": 30,
+  "nome": "Laranja com acerola",
+  "descricao": "500 ml.",
+  "preco": 1350,
+  "imagem": "img/pratos/5-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 65,
+  "secao_id": 31,
+  "nome": "Bolo de cenoura",
+  "descricao": "Fatia com cobertura de brigadeiro.",
+  "preco": 1630,
+  "imagem": "img/pratos/6-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 66,
+  "secao_id": 31,
+  "nome": "Brownie",
+  "descricao": "Com nozes.",
+  "preco": 1410,
+  "imagem": "img/pratos/6-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 55,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 159,
+      "nome": "Sorvete de creme",
+      "preco": 700
+     },
+     {
+      "id": 160,
+      "nome": "Calda de chocolate",
+      "preco": 300
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 67,
+  "secao_id": 31,
+  "nome": "Caixa com 6 brigadeiros",
+  "descricao": "Sabores tradicionais.",
+  "preco": 2730,
+  "imagem": "img/pratos/6-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 68,
+  "secao_id": 32,
+  "nome": "Açaí 500 ml",
+  "descricao": "Batido na hora.",
+  "preco": 2510,
+  "imagem": "img/pratos/6-1.jpg",
+  "destaque": false,
+  "disponivel": false,
+  "grupos": [
+   {
+    "id": 56,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 161,
+      "nome": "Granola",
+      "preco": 300
+     },
+     {
+      "id": 162,
+      "nome": "Leite em pó",
+      "preco": 300
+     },
+     {
+      "id": 163,
+      "nome": "Banana",
+      "preco": 200
+     },
+     {
+      "id": 164,
+      "nome": "Morango",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 69,
+  "secao_id": 32,
+  "nome": "Sorvete 2 bolas",
+  "descricao": "Escolha os sabores na observação.",
+  "preco": 1850,
+  "imagem": "img/pratos/6-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 70,
+  "secao_id": 33,
+  "nome": "Bolo de cenoura",
+  "descricao": "Fatia com cobertura de brigadeiro.",
+  "preco": 1490,
+  "imagem": "img/pratos/6-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 71,
+  "secao_id": 33,
+  "nome": "Brownie",
+  "descricao": "Com nozes.",
+  "preco": 1290,
+  "imagem": "img/pratos/6-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 57,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 165,
+      "nome": "Sorvete de creme",
+      "preco": 700
+     },
+     {
+      "id": 166,
+      "nome": "Calda de chocolate",
+      "preco": 300
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 72,
+  "secao_id": 33,
+  "nome": "Caixa com 6 brigadeiros",
+  "descricao": "Sabores tradicionais.",
+  "preco": 2490,
+  "imagem": "img/pratos/6-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 73,
+  "secao_id": 34,
+  "nome": "Açaí 500 ml",
+  "descricao": "Batido na hora.",
+  "preco": 2290,
+  "imagem": "img/pratos/6-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 58,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 167,
+      "nome": "Granola",
+      "preco": 300
+     },
+     {
+      "id": 168,
+      "nome": "Leite em pó",
+      "preco": 300
+     },
+     {
+      "id": 169,
+      "nome": "Banana",
+      "preco": 200
+     },
+     {
+      "id": 170,
+      "nome": "Morango",
+      "preco": 400
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 74,
+  "secao_id": 34,
+  "nome": "Sorvete 2 bolas",
+  "descricao": "Escolha os sabores na observação.",
+  "preco": 1690,
+  "imagem": "img/pratos/6-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 75,
+  "secao_id": 35,
+  "nome": "Esfiha de carne",
+  "descricao": "Aberta, com limão.",
+  "preco": 710,
+  "imagem": "img/pratos/7-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 76,
+  "secao_id": 35,
+  "nome": "Esfiha de queijo",
+  "descricao": "Aberta.",
+  "preco": 710,
+  "imagem": "img/pratos/7-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 77,
+  "secao_id": 35,
+  "nome": "Esfiha de zaatar",
+  "descricao": "Com azeite.",
+  "preco": 610,
+  "imagem": "img/pratos/7-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 78,
+  "secao_id": 36,
+  "nome": "Kibe assado",
+  "descricao": "Recheado com coalhada.",
+  "preco": 3020,
+  "imagem": "img/pratos/7-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 79,
+  "secao_id": 36,
+  "nome": "Kafta no prato",
+  "descricao": "Com arroz sírio e homus.",
+  "preco": 4180,
+  "imagem": "img/pratos/7-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 80,
+  "secao_id": 37,
+  "nome": "Combo 10 esfihas",
+  "descricao": "Escolha até 3 sabores.",
+  "preco": 6590,
+  "imagem": "img/pratos/7-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 59,
+    "nome": "Sabores",
+    "min": 1,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 171,
+      "nome": "Carne",
+      "preco": 0
+     },
+     {
+      "id": 172,
+      "nome": "Queijo",
+      "preco": 0
+     },
+     {
+      "id": 173,
+      "nome": "Zaatar",
+      "preco": 0
+     },
+     {
+      "id": 174,
+      "nome": "Frango com catupiry",
+      "preco": 500
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 81,
+  "secao_id": 38,
+  "nome": "Pastel de carne",
+  "descricao": "Massa crocante.",
+  "preco": 1420,
+  "imagem": "img/pratos/8-1.jpg",
+  "destaque": true,
+  "disponivel": true,
+  "grupos": [
+   {
+    "id": 60,
+    "nome": "Adicionais",
+    "min": 0,
+    "max": 3,
+    "opcoes": [
+     {
+      "id": 175,
+      "nome": "Queijo",
+      "preco": 300
+     },
+     {
+      "id": 176,
+      "nome": "Ovo",
+      "preco": 300
+     },
+     {
+      "id": 177,
+      "nome": "Azeitona",
+      "preco": 200
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 82,
+  "secao_id": 38,
+  "nome": "Pastel de queijo",
+  "descricao": "Muçarela.",
+  "preco": 1310,
+  "imagem": "img/pratos/8-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 83,
+  "secao_id": 38,
+  "nome": "Pastel de pizza",
+  "descricao": "Muçarela, tomate e orégano.",
+  "preco": 1420,
+  "imagem": "img/pratos/8-3.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 84,
+  "secao_id": 39,
+  "nome": "Misto quente",
+  "descricao": "Pão de forma na chapa.",
+  "preco": 1310,
+  "imagem": "img/pratos/8-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 85,
+  "secao_id": 39,
+  "nome": "Bauru",
+  "descricao": "Rosbife, tomate e queijo.",
+  "preco": 2190,
+  "imagem": "img/pratos/8-2.jpg",
+  "destaque": false,
+  "disponivel": false,
+  "grupos": []
+ },
+ {
+  "id": 86,
+  "secao_id": 40,
+  "nome": "Caldo de cana 500 ml",
+  "descricao": "Com limão.",
+  "preco": 1090,
+  "imagem": "img/pratos/8-1.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ },
+ {
+  "id": 87,
+  "secao_id": 40,
+  "nome": "Café coado",
+  "descricao": "200 ml.",
+  "preco": 550,
+  "imagem": "img/pratos/8-2.jpg",
+  "destaque": false,
+  "disponivel": true,
+  "grupos": []
+ }
+]

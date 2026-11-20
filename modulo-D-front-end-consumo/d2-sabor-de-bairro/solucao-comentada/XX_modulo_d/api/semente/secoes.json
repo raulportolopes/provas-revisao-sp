@@ -1,0 +1,242 @@
+[
+ {
+  "id": 1,
+  "restaurante_id": 1,
+  "nome": "Pizzas salgadas",
+  "ordem": 1
+ },
+ {
+  "id": 2,
+  "restaurante_id": 1,
+  "nome": "Pizzas doces",
+  "ordem": 2
+ },
+ {
+  "id": 3,
+  "restaurante_id": 1,
+  "nome": "Bebidas",
+  "ordem": 3
+ },
+ {
+  "id": 4,
+  "restaurante_id": 2,
+  "nome": "Pizzas salgadas",
+  "ordem": 1
+ },
+ {
+  "id": 5,
+  "restaurante_id": 2,
+  "nome": "Pizzas doces",
+  "ordem": 2
+ },
+ {
+  "id": 6,
+  "restaurante_id": 2,
+  "nome": "Bebidas",
+  "ordem": 3
+ },
+ {
+  "id": 7,
+  "restaurante_id": 3,
+  "nome": "Combinados",
+  "ordem": 1
+ },
+ {
+  "id": 8,
+  "restaurante_id": 3,
+  "nome": "Temakis",
+  "ordem": 2
+ },
+ {
+  "id": 9,
+  "restaurante_id": 3,
+  "nome": "Quentes",
+  "ordem": 3
+ },
+ {
+  "id": 10,
+  "restaurante_id": 4,
+  "nome": "Combinados",
+  "ordem": 1
+ },
+ {
+  "id": 11,
+  "restaurante_id": 4,
+  "nome": "Temakis",
+  "ordem": 2
+ },
+ {
+  "id": 12,
+  "restaurante_id": 4,
+  "nome": "Quentes",
+  "ordem": 3
+ },
+ {
+  "id": 13,
+  "restaurante_id": 5,
+  "nome": "Burgers",
+  "ordem": 1
+ },
+ {
+  "id": 14,
+  "restaurante_id": 5,
+  "nome": "Acompanhamentos",
+  "ordem": 2
+ },
+ {
+  "id": 15,
+  "restaurante_id": 5,
+  "nome": "Bebidas",
+  "ordem": 3
+ },
+ {
+  "id": 16,
+  "restaurante_id": 6,
+  "nome": "Burgers",
+  "ordem": 1
+ },
+ {
+  "id": 17,
+  "restaurante_id": 6,
+  "nome": "Acompanhamentos",
+  "ordem": 2
+ },
+ {
+  "id": 18,
+  "restaurante_id": 6,
+  "nome": "Bebidas",
+  "ordem": 3
+ },
+ {
+  "id": 19,
+  "restaurante_id": 7,
+  "nome": "Pratos do dia",
+  "ordem": 1
+ },
+ {
+  "id": 20,
+  "restaurante_id": 7,
+  "nome": "Marmitas",
+  "ordem": 2
+ },
+ {
+  "id": 21,
+  "restaurante_id": 7,
+  "nome": "Sobremesas",
+  "ordem": 3
+ },
+ {
+  "id": 22,
+  "restaurante_id": 8,
+  "nome": "Pratos do dia",
+  "ordem": 1
+ },
+ {
+  "id": 23,
+  "restaurante_id": 8,
+  "nome": "Marmitas",
+  "ordem": 2
+ },
+ {
+  "id": 24,
+  "restaurante_id": 8,
+  "nome": "Sobremesas",
+  "ordem": 3
+ },
+ {
+  "id": 25,
+  "restaurante_id": 9,
+  "nome": "Bowls",
+  "ordem": 1
+ },
+ {
+  "id": 26,
+  "restaurante_id": 9,
+  "nome": "Saladas",
+  "ordem": 2
+ },
+ {
+  "id": 27,
+  "restaurante_id": 9,
+  "nome": "Sucos",
+  "ordem": 3
+ },
+ {
+  "id": 28,
+  "restaurante_id": 10,
+  "nome": "Bowls",
+  "ordem": 1
+ },
+ {
+  "id": 29,
+  "restaurante_id": 10,
+  "nome": "Saladas",
+  "ordem": 2
+ },
+ {
+  "id": 30,
+  "restaurante_id": 10,
+  "nome": "Sucos",
+  "ordem": 3
+ },
+ {
+  "id": 31,
+  "restaurante_id": 11,
+  "nome": "Doces",
+  "ordem": 1
+ },
+ {
+  "id": 32,
+  "restaurante_id": 11,
+  "nome": "Açaí e sorvetes",
+  "ordem": 2
+ },
+ {
+  "id": 33,
+  "restaurante_id": 12,
+  "nome": "Doces",
+  "ordem": 1
+ },
+ {
+  "id": 34,
+  "restaurante_id": 12,
+  "nome": "Açaí e sorvetes",
+  "ordem": 2
+ },
+ {
+  "id": 35,
+  "restaurante_id": 13,
+  "nome": "Esfihas",
+  "ordem": 1
+ },
+ {
+  "id": 36,
+  "restaurante_id": 13,
+  "nome": "Pratos",
+  "ordem": 2
+ },
+ {
+  "id": 37,
+  "restaurante_id": 13,
+  "nome": "Combos",
+  "ordem": 3
+ },
+ {
+  "id": 38,
+  "restaurante_id": 14,
+  "nome": "Pastéis",
+  "ordem": 1
+ },
+ {
+  "id": 39,
+  "restaurante_id": 14,
+  "nome": "Lanches",
+  "ordem": 2
+ },
+ {
+  "id": 40,
+  "restaurante_id": 14,
+  "nome": "Bebidas",
+  "ordem": 3
+ }
+]

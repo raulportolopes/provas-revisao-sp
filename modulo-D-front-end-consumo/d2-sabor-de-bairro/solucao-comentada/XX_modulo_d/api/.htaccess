@@ -1,0 +1,11 @@
+# Repassa o cabeçalho Authorization para o PHP (necessário em alguns Apache com PHP-FPM/CGI).
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+# Os arquivos de dados e semente não podem ser baixados direto.
+<FilesMatch "^(nucleo\.php)$">
+Require all denied
+</FilesMatch>
