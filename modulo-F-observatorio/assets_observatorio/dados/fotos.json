@@ -1,0 +1,83 @@
+[
+  {
+    "arquivo": "foto-nebulosa-carina",
+    "titulo": "Nebulosa de Carina",
+    "categoria": "nebulosas",
+    "autor": "Ana Ribeiro",
+    "equipamento": "Refrator 120 mm · 3 h de exposição",
+    "data": "2026-03-14",
+    "textoAlternativo": "Nuvens de gás iluminadas por estrelas jovens na constelação de Carina."
+  },
+  {
+    "arquivo": "foto-galaxia-espiral",
+    "titulo": "Galáxia espiral NGC 1300",
+    "categoria": "galaxias",
+    "autor": "Pedro Kato",
+    "equipamento": "Refletor 400 mm · 5 h de exposição",
+    "data": "2026-08-02",
+    "textoAlternativo": "Galáxia espiral barrada vista de frente, com braços cheios de estrelas jovens."
+  },
+  {
+    "arquivo": "foto-lua-gibosa",
+    "titulo": "Lua gibosa",
+    "categoria": "sistema-solar",
+    "autor": "Carla Menezes",
+    "equipamento": "Refletor 400 mm · 1/250 s",
+    "data": "2026-05-27",
+    "textoAlternativo": "Lua quase cheia com as crateras marcadas pela sombra na borda iluminada."
+  },
+  {
+    "arquivo": "foto-rastros-estelares",
+    "titulo": "Rastros sobre a cúpula",
+    "categoria": "paisagens",
+    "autor": "Lucas Andrade",
+    "equipamento": "Câmera fixa · 2 h de exposição",
+    "data": "2026-07-11",
+    "textoAlternativo": "Rastros circulares das estrelas girando em torno do polo sul celeste sobre o observatório."
+  },
+  {
+    "arquivo": "foto-cometa",
+    "titulo": "Cometa sobre a serra",
+    "categoria": "sistema-solar",
+    "autor": "Ana Ribeiro",
+    "equipamento": "Lente 85 mm · 30 s",
+    "data": "2026-04-20",
+    "textoAlternativo": "Cometa com a cauda azulada apontando para longe do Sol, acima do contorno da serra."
+  },
+  {
+    "arquivo": "foto-nebulosa-laguna",
+    "titulo": "Nebulosa da Lagoa",
+    "categoria": "nebulosas",
+    "autor": "Pedro Kato",
+    "equipamento": "Refrator 120 mm · 4 h de exposição",
+    "data": "2026-06-18",
+    "textoAlternativo": "Nuvem rosada de gás e poeira na constelação de Sagitário."
+  },
+  {
+    "arquivo": "foto-eclipse-total",
+    "titulo": "Coroa no eclipse total",
+    "categoria": "sistema-solar",
+    "autor": "Carla Menezes",
+    "equipamento": "Teleobjetiva 600 mm · 1/60 s",
+    "data": "2026-08-12",
+    "textoAlternativo": "Coroa solar visível ao redor da Lua durante a totalidade do eclipse."
+  },
+  {
+    "arquivo": "foto-aglomerado-globular",
+    "titulo": "Aglomerado Ômega Centauri",
+    "categoria": "galaxias",
+    "autor": "Lucas Andrade",
+    "equipamento": "Refletor 400 mm · 2 h de exposição",
+    "data": "2026-04-03",
+    "textoAlternativo": "Milhões de estrelas antigas concentradas em uma esfera brilhante."
+  },
+  {
+    "arquivo": "foto-via-lactea",
+    "titulo": "Via Láctea no inverno",
+    "categoria": "paisagens",
+    "autor": "Ana Ribeiro",
+    "equipamento": "Grande-angular 14 mm · 20 s",
+    "data": "2026-07-25",
+    "textoAlternativo": "O centro da Via Láctea cruzando o céu sobre a serra em uma noite sem Lua."
+  }
+]

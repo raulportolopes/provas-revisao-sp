@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafés – Torra Serrana</title>
+  <meta name="description" content="Catálogo de cafés especiais da Torra Serrana com perfil sensorial, nota SCA, filtros por torra e sacola de compras.">
+  <link rel="icon" href="img/logo-torra-serrana.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/comum.js" defer></script>
+  <script src="js/cafes.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ CABEÇALHO (igual nas três páginas) ============ -->
+  <header class="cabecalho">
+    <div class="cabecalho__dentro container">
+      <a class="marca" href="index.html">
+        <img src="img/logo-torra-serrana.svg" alt="" width="48" height="48">
+        <span class="marca__nome">Torra <em>Serrana</em></span>
+      </a>
+      <!-- em 375 px este mesmo nav vira a barra fixa de baixo -->
+      <nav class="menu" aria-label="Principal">
+        <ul>
+          <li><a href="index.html"><span class="icone icone--casa" aria-hidden="true"></span>Início</a></li>
+          <li><a href="cafes.html" aria-current="page" class="ativo"><span class="icone icone--grao" aria-hidden="true"></span>Cafés</a></li>
+          <li><a href="preparo.html"><span class="icone icone--xicara" aria-hidden="true"></span>Preparo</a></li>
+          <li class="menu__sacola-item"><button class="botao-sacola" type="button" aria-controls="sacola" aria-expanded="false">
+            <span class="icone icone--sacola" aria-hidden="true"></span><span class="botao-sacola__texto">Sacola</span>
+            <span class="selo" aria-live="polite"><span class="visualmente-oculto">itens na sacola: </span><span class="selo__numero">0</span></span>
+          </button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina">
+      <div class="container">
+        <nav class="trilha" aria-label="Você está em"><ol><li><a href="index.html">Início</a></li><li aria-current="page">Cafés</li></ol></nav>
+        <p class="sobretitulo">8 cafés · lotes da semana</p>
+        <h1>Nossos <em>cafés</em></h1>
+        <p>Passe o mouse em um café para ver o perfil sensorial e a nota SCA. Use os filtros para achar o café do seu jeito.</p>
+      </div>
+    </section>
+    <section class="secao container loja" aria-label="Catálogo">
+      <!-- FILTROS: busca + torra + ordenação, todos juntos -->
+      <form class="filtros" id="filtros" role="search" aria-label="Filtrar cafés">
+        <h2>Filtrar</h2>
+        <div class="campo busca-campo">
+          <label for="f-busca">Buscar</label>
+          <div class="busca"><span class="icone icone--busca" aria-hidden="true"></span><input id="f-busca" type="search" placeholder="Nome, origem ou notas" autocomplete="off"></div>
+        </div>
+        <fieldset class="grupo">
+          <legend>Torra</legend>
+          <div class="chips">
+            <button class="chip" type="button" data-torra="" aria-pressed="true">Todas</button>
+            <button class="chip" type="button" data-torra="clara" aria-pressed="false">Clara</button>
+            <button class="chip" type="button" data-torra="media" aria-pressed="false">Média</button>
+            <button class="chip" type="button" data-torra="escura" aria-pressed="false">Escura</button>
+          </div>
+        </fieldset>
+        <div class="campo">
+          <label for="f-ordem">Ordenar por</label>
+          <select id="f-ordem">
+            <option value="nota">Maior nota SCA</option>
+            <option value="preco-asc">Menor preço</option>
+            <option value="preco-desc">Maior preço</option>
+            <option value="nome">Nome (A–Z)</option>
+          </select>
+        </div>
+        <button class="botao-limpar" type="reset">Limpar filtros</button>
+      </form>
+      <div>
+        <div class="loja__topo"><p class="loja__contador" aria-live="polite">Carregando…</p></div>
+        <ul class="cartoes" id="lista-cafes"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ (igual nas três páginas) ============ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a class="marca marca--clara" href="index.html"><img src="img/logo-torra-serrana.svg" alt="" width="48" height="48"><span class="marca__nome">Torra <em>Serrana</em></span></a>
+        <p>Torrefação de cafés especiais fundada em 2019 por uma família de produtores da Serra da Mantiqueira.</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Loja e torrefação</h2>
+        <p>Rua das Araucárias, 210 · Campos da Serra – SP<br>Seg. a sáb., das 8h às 18h</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Navegue</h2>
+        <ul class="rodape__links"><li><a href="index.html">Início</a></li><li><a href="cafes.html">Cafés</a></li><li><a href="preparo.html">Preparo</a></li></ul>
+      </div>
+    </div>
+    <p class="rodape__direitos container">© 2026 Torra Serrana · Projeto de treino SP Skills · Ilustrações originais</p>
+  </footer>
+
+  <!-- ============ SACOLA (gaveta lateral, igual nas três páginas) ============ -->
+  <div class="gaveta-fundo" hidden></div>
+  <div class="gaveta" id="sacola" aria-labelledby="sacola-titulo" role="dialog" aria-modal="true" hidden>
+    <div class="gaveta__topo">
+      <h2 id="sacola-titulo">Sua sacola</h2>
+      <button class="gaveta__fechar" type="button" aria-label="Fechar sacola"><span class="icone icone--fechar" aria-hidden="true"></span></button>
+    </div>
+    <div class="frete" aria-live="polite">
+      <p class="frete__texto"></p>
+      <div class="frete__barra"><span></span></div>
+    </div>
+    <ul class="gaveta__itens"></ul>
+    <div class="gaveta__vazia" hidden>
+      <span class="icone icone--sacola" aria-hidden="true"></span>
+      <p><strong>Sua sacola está vazia.</strong><br>Que tal começar pelos cafés da semana?</p>
+      <a class="botao botao--contorno" href="cafes.html">Ver cafés</a>
+    </div>
+    <div class="gaveta__rodape">
+      <p class="gaveta__linha"><span>Subtotal</span><span class="js-subtotal">R$ 0,00</span></p>
+      <p class="gaveta__linha"><span>Frete</span><span class="js-frete">R$ 0,00</span></p>
+      <p class="gaveta__linha gaveta__linha--total"><span>Total</span><strong class="js-total">R$ 0,00</strong></p>
+      <button class="botao botao--primario botao--largo" type="button">Finalizar pedido</button>
+    </div>
+  </div>
+  <p class="aviso" role="status" aria-live="polite"></p>
+</body>
+</html>

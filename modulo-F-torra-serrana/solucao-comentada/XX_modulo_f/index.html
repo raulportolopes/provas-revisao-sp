@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torra Serrana – Cafés especiais da montanha</title>
+  <meta name="description" content="Cafés especiais de pequenos produtores da Mantiqueira e do interior paulista, torrados toda semana e entregues em casa.">
+  <link rel="icon" href="img/logo-torra-serrana.svg" type="image/svg+xml">
+  <!-- preload: o navegador já baixa a foto do hero e as fontes do título antes de ler o CSS -->
+  <link rel="preload" as="image" href="img/hero-fundo-mini.webp" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="img/hero-fundo.webp" media="(min-width: 768px)">
+  <link rel="preload" as="font" href="fonts/Caladea-Bold.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/Inter-Regular.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/comum.js" defer></script>
+  <script src="js/inicio.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ CABEÇALHO (igual nas três páginas) ============ -->
+  <header class="cabecalho">
+    <div class="cabecalho__dentro container">
+      <a class="marca" href="index.html">
+        <img src="img/logo-torra-serrana.svg" alt="" width="48" height="48">
+        <span class="marca__nome">Torra <em>Serrana</em></span>
+      </a>
+      <!-- em 375 px este mesmo nav vira a barra fixa de baixo -->
+      <nav class="menu" aria-label="Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page" class="ativo"><span class="icone icone--casa" aria-hidden="true"></span>Início</a></li>
+          <li><a href="cafes.html"><span class="icone icone--grao" aria-hidden="true"></span>Cafés</a></li>
+          <li><a href="preparo.html"><span class="icone icone--xicara" aria-hidden="true"></span>Preparo</a></li>
+          <li class="menu__sacola-item"><button class="botao-sacola" type="button" aria-controls="sacola" aria-expanded="false">
+            <span class="icone icone--sacola" aria-hidden="true"></span><span class="botao-sacola__texto">Sacola</span>
+            <span class="selo" aria-live="polite"><span class="visualmente-oculto">itens na sacola: </span><span class="selo__numero">0</span></span>
+          </button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__dentro container">
+        <div class="hero__texto">
+          <p class="sobretitulo">Torrefação artesanal · Serra da Mantiqueira</p>
+          <!-- cada palavra num span com --i: elas sobem uma depois da outra -->
+          <h1 id="hero-titulo" class="hero__titulo">
+            <span class="palavra" style="--i:0"><span>Café</span></span>
+            <span class="palavra" style="--i:1"><span>de</span></span>
+            <span class="palavra" style="--i:2"><span><em>montanha,</em></span></span>
+            <span class="palavra" style="--i:3"><span>torrado</span></span>
+            <span class="palavra" style="--i:4"><span>toda</span></span>
+            <span class="palavra" style="--i:5"><span>semana</span></span>
+          </h1>
+          <p class="hero__paragrafo">Compramos direto de pequenos produtores acima de 1.000 metros e torramos em lotes de 15 kg. Seu café chega com no máximo 7 dias de torra.</p>
+          <div class="hero__acoes">
+            <!-- botão magnético: o JS desloca --mx/--my na direção do cursor -->
+            <a class="botao botao--primario magnetico" href="cafes.html"><span class="magnetico__texto">Conheça os cafés</span></a>
+            <a class="link-seta" href="preparo.html">Como preparar <span class="icone icone--seta-direita" aria-hidden="true"></span></a>
+          </div>
+          <ul class="hero__selos">
+            <li><span class="icone icone--montanha" aria-hidden="true"></span>8 fazendas parceiras</li>
+            <li><span class="icone icone--estrela" aria-hidden="true"></span>Notas SCA de 82 a 90</li>
+            <li><span class="icone icone--caminhao" aria-hidden="true"></span>Frete grátis acima de R$ 150</li>
+          </ul>
+        </div>
+        <div class="hero__xicara">
+          <!-- vapor: 3 caminhos SVG que sobem e somem em loop -->
+          <svg class="vapor" viewBox="0 0 120 160" aria-hidden="true" focusable="false">
+            <path d="M30 150 C 10 120, 50 100, 30 70 S 40 20, 30 5"/>
+            <path d="M60 150 C 40 115, 80 95, 60 65 S 70 25, 60 0"/>
+            <path d="M90 150 C 70 120, 110 100, 90 70 S 100 20, 90 5"/>
+          </svg>
+          <img src="img/xicara.webp" alt="Xícara de café coado com crema dourada sobre o pires" width="760" height="520">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAIXA INFINITA ============ -->
+    <div class="faixa" role="region" aria-label="Regiões de origem">
+      <!-- o conteúdo está duplicado: quando a primeira metade sai, a segunda está no lugar (translateX -50%) -->
+      <div class="faixa__trilho">
+        <ul class="faixa__lista">
+          <li>Serra da Mantiqueira</li><li>Alta Mogiana</li><li>Sul de Minas</li><li>Cerrado Mineiro</li><li>Alta Paulista</li><li>Pedra Bela</li>
+        </ul>
+        <ul class="faixa__lista" aria-hidden="true">
+          <li>Serra da Mantiqueira</li><li>Alta Mogiana</li><li>Sul de Minas</li><li>Cerrado Mineiro</li><li>Alta Paulista</li><li>Pedra Bela</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ CAFÉS DA SEMANA (gráfico no hover) ============ -->
+    <section class="secao container" aria-labelledby="semana-titulo">
+      <div class="secao__topo">
+        <div>
+          <p class="sobretitulo">Torrados nesta semana</p>
+          <h2 id="semana-titulo">Cafés da semana</h2>
+        </div>
+        <a class="link-seta" href="cafes.html">Ver todos os cafés <span class="icone icone--seta-direita" aria-hidden="true"></span></a>
+      </div>
+      <!-- os cartões são montados pelo inicio.js a partir de dados/cafes.json (mesmo componente da página Cafés) -->
+      <ul class="cartoes" id="cafes-semana" data-ids="mantiqueira-amarelo,vale-do-garcia,sitio-aurora"></ul>
+    </section>
+
+    <!-- ============ DO PÉ À XÍCARA (linha que enche com a rolagem) ============ -->
+    <section class="secao secao--creme" aria-labelledby="etapas-titulo">
+      <div class="container">
+        <div class="secao__topo secao__topo--centro">
+          <div>
+            <p class="sobretitulo">Do pé à xícara</p>
+            <h2 id="etapas-titulo">Quatro etapas, nenhum atalho</h2>
+          </div>
+        </div>
+        <ol class="etapas">
+          <li class="etapa">
+            <img src="img/etapa-colheita.webp" alt="Pé de café carregado de frutos vermelhos e amarelos na encosta" width="600" height="400" loading="lazy">
+            <span class="etapa__numero">01</span>
+            <h3>Colheita seletiva</h3>
+            <p>Só os frutos maduros, colhidos à mão em três passadas pelo mesmo pé.</p>
+          </li>
+          <li class="etapa">
+            <img src="img/etapa-secagem.webp" alt="Grãos espalhados no terreiro secando ao sol, com um rodo de madeira" width="600" height="400" loading="lazy">
+            <span class="etapa__numero">02</span>
+            <h3>Secagem lenta</h3>
+            <p>De 15 a 25 dias no terreiro suspenso, revirando o café a cada hora.</p>
+          </li>
+          <li class="etapa">
+            <img src="img/etapa-torra.webp" alt="Torrador de cilindro com os grãos esfriando na bandeja" width="600" height="400" loading="lazy">
+            <span class="etapa__numero">03</span>
+            <h3>Torra em lotes</h3>
+            <p>Perfil de torra próprio para cada café, registrado lote a lote.</p>
+          </li>
+          <li class="etapa">
+            <img src="img/etapa-xicara.webp" alt="Xícara de café pronta sobre a mesa com grãos ao redor" width="600" height="400" loading="lazy">
+            <span class="etapa__numero">04</span>
+            <h3>Na sua xícara</h3>
+            <p>Entrega em até 3 dias úteis na capital e 5 no interior.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS (carrossel) ============ -->
+    <section class="secao container" aria-labelledby="depo-titulo">
+      <div class="secao__topo secao__topo--centro">
+        <div>
+          <p class="sobretitulo">Quem toma, conta</p>
+          <h2 id="depo-titulo">O que dizem os assinantes</h2>
+        </div>
+      </div>
+      <div class="carrossel" role="region" aria-roledescription="carrossel" aria-label="Depoimentos">
+        <div class="carrossel__janela">
+          <div class="carrossel__trilho" aria-live="off">
+            <div class="depo" role="group" aria-roledescription="slide" aria-label="1 de 4">
+              <blockquote><p>“O Vale do Garcia mudou o que eu achava de café. Parece um chá de frutas vermelhas, e minha família inteira virou fã.”</p></blockquote>
+              <p class="depo__autor"><span class="avatar" aria-hidden="true">LM</span><span><strong>Luciana Moraes</strong>Campinas – SP · assinante desde 2024</span></p>
+            </div>
+            <div class="depo" role="group" aria-roledescription="slide" aria-label="2 de 4">
+              <blockquote><p>“Chega sempre fresquinho, com a data da torra no pacote. O Pedra Bela na moka virou meu ritual de domingo.”</p></blockquote>
+              <p class="depo__autor"><span class="avatar" aria-hidden="true">RT</span><span><strong>Rafael Tanaka</strong>Sorocaba – SP · assinante desde 2025</span></p>
+            </div>
+            <div class="depo" role="group" aria-roledescription="slide" aria-label="3 de 4">
+              <blockquote><p>“A página de preparo com o cronômetro me ensinou a usar a V60 do jeito certo. Nunca mais café amargo.”</p></blockquote>
+              <p class="depo__autor"><span class="avatar" aria-hidden="true">BA</span><span><strong>Beatriz Alves</strong>São Paulo – SP · assinante desde 2023</span></p>
+            </div>
+            <div class="depo" role="group" aria-roledescription="slide" aria-label="4 de 4">
+              <blockquote><p>“Uso o Cerrado Noturno na cafeteria do meu restaurante. Os clientes perguntam o nome do café toda semana.”</p></blockquote>
+              <p class="depo__autor"><span class="avatar" aria-hidden="true">JC</span><span><strong>João Carvalho</strong>Ribeirão Preto – SP · cliente desde 2022</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="carrossel__controles">
+          <button class="carrossel__seta" type="button" data-dir="-1" aria-label="Depoimento anterior"><span class="icone icone--seta-esquerda" aria-hidden="true"></span></button>
+          <div class="carrossel__pontos" role="group" aria-label="Escolher depoimento">
+            <button type="button" class="ponto" aria-label="Depoimento 1" aria-current="true"></button>
+            <button type="button" class="ponto" aria-label="Depoimento 2"></button>
+            <button type="button" class="ponto" aria-label="Depoimento 3"></button>
+            <button type="button" class="ponto" aria-label="Depoimento 4"></button>
+          </div>
+          <button class="carrossel__seta" type="button" data-dir="1" aria-label="Próximo depoimento"><span class="icone icone--seta-direita" aria-hidden="true"></span></button>
+          <button class="carrossel__pausa" type="button" aria-pressed="false"><span class="icone icone--pausa" aria-hidden="true"></span><span class="carrossel__pausa-texto">Pausar</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLUBE DE ASSINATURA ============ -->
+    <section class="clube" aria-labelledby="clube-titulo">
+      <div class="container clube__dentro">
+        <div>
+          <p class="sobretitulo">Clube Torra Serrana</p>
+          <h2 id="clube-titulo">Dois cafés por mês, <em>sem pensar nisso</em></h2>
+          <p>Todo mês você recebe dois pacotes de 250 g escolhidos pelo nosso mestre de torra, com cartão de degustação.</p>
+          <!-- interruptor mensal/anual: o JS troca data-plano e o preço "rola" -->
+          <div class="plano" data-plano="mensal">
+            <div class="interruptor" role="radiogroup" aria-label="Forma de pagamento">
+              <button type="button" role="radio" aria-checked="true" data-valor="mensal">Mensal</button>
+              <button type="button" role="radio" aria-checked="false" data-valor="anual" tabindex="-1">Anual <span class="economia">−14%</span></button>
+            </div>
+            <p class="plano__preco"><span class="plano__valor" data-mensal="109,90" data-anual="94,90">R$ <strong>109,90</strong></span> / mês</p>
+            <p class="plano__nota">No anual: 12 × R$ 94,90, cobrados uma vez por ano.</p>
+          </div>
+        </div>
+        <form class="clube__form" id="form-clube" novalidate>
+          <h3>Quero entrar na lista do próximo lote</h3>
+          <div class="campo">
+            <label for="clube-nome">Nome</label>
+            <input id="clube-nome" name="nome" type="text" autocomplete="name" required minlength="2" aria-describedby="erro-clube-nome">
+            <p class="campo__erro" id="erro-clube-nome"></p>
+          </div>
+          <div class="campo">
+            <label for="clube-email">E-mail</label>
+            <input id="clube-email" name="email" type="email" autocomplete="email" required aria-describedby="erro-clube-email">
+            <p class="campo__erro" id="erro-clube-email"></p>
+          </div>
+          <div class="campo">
+            <label for="clube-cep">CEP</label>
+            <input id="clube-cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" required pattern="\d{5}-\d{3}" maxlength="9" placeholder="00000-000" aria-describedby="erro-clube-cep">
+            <p class="campo__erro" id="erro-clube-cep"></p>
+          </div>
+          <button class="botao botao--primario botao--largo" type="submit">Entrar na lista</button>
+          <p class="clube__ok" role="status" hidden><span class="icone icone--check" aria-hidden="true"></span><span class="clube__ok-texto"></span></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ (igual nas três páginas) ============ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a class="marca marca--clara" href="index.html"><img src="img/logo-torra-serrana.svg" alt="" width="48" height="48"><span class="marca__nome">Torra <em>Serrana</em></span></a>
+        <p>Torrefação de cafés especiais fundada em 2019 por uma família de produtores da Serra da Mantiqueira.</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Loja e torrefação</h2>
+        <p>Rua das Araucárias, 210 · Campos da Serra – SP<br>Seg. a sáb., das 8h às 18h</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Navegue</h2>
+        <ul class="rodape__links"><li><a href="index.html">Início</a></li><li><a href="cafes.html">Cafés</a></li><li><a href="preparo.html">Preparo</a></li></ul>
+      </div>
+    </div>
+    <p class="rodape__direitos container">© 2026 Torra Serrana · Projeto de treino SP Skills · Ilustrações originais</p>
+  </footer>
+
+  <!-- ============ SACOLA (gaveta lateral, igual nas três páginas) ============ -->
+  <div class="gaveta-fundo" hidden></div>
+  <div class="gaveta" id="sacola" aria-labelledby="sacola-titulo" role="dialog" aria-modal="true" hidden>
+    <div class="gaveta__topo">
+      <h2 id="sacola-titulo">Sua sacola</h2>
+      <button class="gaveta__fechar" type="button" aria-label="Fechar sacola"><span class="icone icone--fechar" aria-hidden="true"></span></button>
+    </div>
+    <div class="frete" aria-live="polite">
+      <p class="frete__texto"></p>
+      <div class="frete__barra"><span></span></div>
+    </div>
+    <ul class="gaveta__itens"></ul>
+    <div class="gaveta__vazia" hidden>
+      <span class="icone icone--sacola" aria-hidden="true"></span>
+      <p><strong>Sua sacola está vazia.</strong><br>Que tal começar pelos cafés da semana?</p>
+      <a class="botao botao--contorno" href="cafes.html">Ver cafés</a>
+    </div>
+    <div class="gaveta__rodape">
+      <p class="gaveta__linha"><span>Subtotal</span><span class="js-subtotal">R$ 0,00</span></p>
+      <p class="gaveta__linha"><span>Frete</span><span class="js-frete">R$ 0,00</span></p>
+      <p class="gaveta__linha gaveta__linha--total"><span>Total</span><strong class="js-total">R$ 0,00</strong></p>
+      <button class="botao botao--primario botao--largo" type="button">Finalizar pedido</button>
+    </div>
+  </div>
+  <p class="aviso" role="status" aria-live="polite"></p>
+</body>
+</html>

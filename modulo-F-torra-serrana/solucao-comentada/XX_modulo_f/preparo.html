@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preparo – Torra Serrana</title>
+  <meta name="description" content="Guia de preparo de café da Torra Serrana: receitas de V60, prensa francesa, moka e AeroPress com cronômetro e calculadora de proporção.">
+  <link rel="icon" href="img/logo-torra-serrana.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/comum.js" defer></script>
+  <script src="js/preparo.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ CABEÇALHO (igual nas três páginas) ============ -->
+  <header class="cabecalho">
+    <div class="cabecalho__dentro container">
+      <a class="marca" href="index.html">
+        <img src="img/logo-torra-serrana.svg" alt="" width="48" height="48">
+        <span class="marca__nome">Torra <em>Serrana</em></span>
+      </a>
+      <!-- em 375 px este mesmo nav vira a barra fixa de baixo -->
+      <nav class="menu" aria-label="Principal">
+        <ul>
+          <li><a href="index.html"><span class="icone icone--casa" aria-hidden="true"></span>Início</a></li>
+          <li><a href="cafes.html"><span class="icone icone--grao" aria-hidden="true"></span>Cafés</a></li>
+          <li><a href="preparo.html" aria-current="page" class="ativo"><span class="icone icone--xicara" aria-hidden="true"></span>Preparo</a></li>
+          <li class="menu__sacola-item"><button class="botao-sacola" type="button" aria-controls="sacola" aria-expanded="false">
+            <span class="icone icone--sacola" aria-hidden="true"></span><span class="botao-sacola__texto">Sacola</span>
+            <span class="selo" aria-live="polite"><span class="visualmente-oculto">itens na sacola: </span><span class="selo__numero">0</span></span>
+          </button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina">
+      <div class="container">
+        <nav class="trilha" aria-label="Você está em"><ol><li><a href="index.html">Início</a></li><li aria-current="page">Preparo</li></ol></nav>
+        <p class="sobretitulo">Guia de preparo</p>
+        <h1>Cada método, <em>uma receita</em></h1>
+        <p>Escolha o método, ajuste a quantidade de água e use o cronômetro: cada passo acende na hora certa.</p>
+      </div>
+    </section>
+    <section class="secao container preparo" aria-label="Métodos de preparo">
+      <div class="metodos" role="tablist" aria-label="Método" aria-orientation="vertical">
+          <button class="metodo-aba" role="tab" id="aba-v60" aria-controls="painel-metodo" aria-selected="true" data-metodo="v60">
+            <img src="img/metodo-v60.webp" alt="" width="300" height="300"><span>V60<small>Coado</small></span>
+          </button>
+          <button class="metodo-aba" role="tab" id="aba-prensa" aria-controls="painel-metodo" aria-selected="false" tabindex="-1" data-metodo="prensa">
+            <img src="img/metodo-prensa.webp" alt="" width="300" height="300"><span>Prensa francesa<small>Imersão</small></span>
+          </button>
+          <button class="metodo-aba" role="tab" id="aba-moka" aria-controls="painel-metodo" aria-selected="false" tabindex="-1" data-metodo="moka">
+            <img src="img/metodo-moka.webp" alt="" width="300" height="300"><span>Moka<small>Pressão</small></span>
+          </button>
+          <button class="metodo-aba" role="tab" id="aba-aeropress" aria-controls="painel-metodo" aria-selected="false" tabindex="-1" data-metodo="aeropress">
+            <img src="img/metodo-aeropress.webp" alt="" width="300" height="300"><span>AeroPress<small>Pressão manual</small></span>
+          </button>
+      </div>
+      <div id="painel-metodo" role="tabpanel" aria-labelledby="aba-v60">
+        <article class="receita" id="receita">
+          <div class="receita__topo">
+            <div><p class="sobretitulo" id="r-tipo">Coado</p><h2 id="r-nome">V60</h2><p id="r-resumo">Coado limpo e aromático</p></div>
+            <img id="r-img" src="img/metodo-v60.webp" alt="" width="300" height="300">
+          </div>
+          <ul class="ficha">
+            <li><span class="icone icone--balanca" aria-hidden="true"></span>Café<strong id="r-cafe">15 g</strong></li>
+            <li><span class="icone icone--gota" aria-hidden="true"></span>Água<strong id="r-agua">250 ml</strong></li>
+            <li><span class="icone icone--grao" aria-hidden="true"></span>Moagem<strong id="r-moagem">Média-fina</strong></li>
+            <li><span class="icone icone--termometro" aria-hidden="true"></span>Temperatura<strong id="r-temp">93 °C</strong></li>
+          </ul>
+          <div class="extracao">
+            <div class="cronometro">
+              <div class="anel" role="timer" aria-live="off"><p class="anel__tempo"><span id="c-tempo">0:00</span><small>de <span id="c-total">2:30</span></small></p></div>
+              <div class="cronometro__botoes">
+                <button class="botao botao--primario" type="button" id="c-iniciar"><span class="icone icone--play" aria-hidden="true"></span><span>Iniciar</span></button>
+                <button class="botao botao--contorno" type="button" id="c-zerar"><span class="icone icone--reiniciar" aria-hidden="true"></span>Zerar</button>
+              </div>
+            </div>
+            <ol class="passos" id="passos" aria-live="polite"></ol>
+          </div>
+          <div class="calculadora">
+            <label for="calc-agua">Quanto de café você quer fazer?</label>
+            <input id="calc-agua" type="range" min="100" max="1000" step="10" value="250" aria-describedby="calc-resultado">
+            <p class="calculadora__resultado" id="calc-resultado"><span>Água: <strong id="calc-ml">250 ml</strong></span><span>Café: <strong id="calc-g">15 g</strong></span><span>Proporção <b id="calc-prop">1:16,7</b></span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="secao secao--creme" aria-labelledby="faq-titulo">
+      <div class="container">
+        <div class="secao__topo secao__topo--centro"><div><p class="sobretitulo">Dúvidas</p><h2 id="faq-titulo">Perguntas frequentes</h2></div></div>
+        <!-- name="faq" nos <details> = acordeão exclusivo nativo: abrir um fecha o outro -->
+        <div class="faq">
+          <details name="faq" open><summary>Posso usar o café moído do mercado nesses métodos?<span class="icone icone--seta-baixo" aria-hidden="true"></span></summary><p>Pode, mas o moído de mercado é fino demais para a prensa francesa e grosso demais para a moka. Para o melhor resultado, moa na hora e na moagem indicada em cada receita.</p></details>
+          <details name="faq"><summary>Quanto tempo o café dura depois de aberto?<span class="icone icone--seta-baixo" aria-hidden="true"></span></summary><p>Em grão, até 30 dias em pote fechado, longe da luz. Moído, o aroma cai bastante depois de uma semana.</p></details>
+          <details name="faq"><summary>Por que a temperatura da água importa?<span class="icone icone--seta-baixo" aria-hidden="true"></span></summary><p>Água fervendo extrai amargor demais; água fria deixa o café aguado e ácido. Entre 85 °C e 94 °C você extrai doçura sem queimar.</p></details>
+          <details name="faq"><summary>Vocês entregam em todo o estado de São Paulo?<span class="icone icone--seta-baixo" aria-hidden="true"></span></summary><p>Sim. Capital em até 3 dias úteis e interior em até 5. Acima de R$ 150,00 o frete é grátis.</p></details>
+          <details name="faq"><summary>Como funciona o clube de assinatura?<span class="icone icone--seta-baixo" aria-hidden="true"></span></summary><p>Você recebe dois pacotes de 250 g por mês. Pode pausar ou cancelar quando quiser, sem multa.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ (igual nas três páginas) ============ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a class="marca marca--clara" href="index.html"><img src="img/logo-torra-serrana.svg" alt="" width="48" height="48"><span class="marca__nome">Torra <em>Serrana</em></span></a>
+        <p>Torrefação de cafés especiais fundada em 2019 por uma família de produtores da Serra da Mantiqueira.</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Loja e torrefação</h2>
+        <p>Rua das Araucárias, 210 · Campos da Serra – SP<br>Seg. a sáb., das 8h às 18h</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Navegue</h2>
+        <ul class="rodape__links"><li><a href="index.html">Início</a></li><li><a href="cafes.html">Cafés</a></li><li><a href="preparo.html">Preparo</a></li></ul>
+      </div>
+    </div>
+    <p class="rodape__direitos container">© 2026 Torra Serrana · Projeto de treino SP Skills · Ilustrações originais</p>
+  </footer>
+
+  <!-- ============ SACOLA (gaveta lateral, igual nas três páginas) ============ -->
+  <div class="gaveta-fundo" hidden></div>
+  <div class="gaveta" id="sacola" aria-labelledby="sacola-titulo" role="dialog" aria-modal="true" hidden>
+    <div class="gaveta__topo">
+      <h2 id="sacola-titulo">Sua sacola</h2>
+      <button class="gaveta__fechar" type="button" aria-label="Fechar sacola"><span class="icone icone--fechar" aria-hidden="true"></span></button>
+    </div>
+    <div class="frete" aria-live="polite">
+      <p class="frete__texto"></p>
+      <div class="frete__barra"><span></span></div>
+    </div>
+    <ul class="gaveta__itens"></ul>
+    <div class="gaveta__vazia" hidden>
+      <span class="icone icone--sacola" aria-hidden="true"></span>
+      <p><strong>Sua sacola está vazia.</strong><br>Que tal começar pelos cafés da semana?</p>
+      <a class="botao botao--contorno" href="cafes.html">Ver cafés</a>
+    </div>
+    <div class="gaveta__rodape">
+      <p class="gaveta__linha"><span>Subtotal</span><span class="js-subtotal">R$ 0,00</span></p>
+      <p class="gaveta__linha"><span>Frete</span><span class="js-frete">R$ 0,00</span></p>
+      <p class="gaveta__linha gaveta__linha--total"><span>Total</span><strong class="js-total">R$ 0,00</strong></p>
+      <button class="botao botao--primario botao--largo" type="button">Finalizar pedido</button>
+    </div>
+  </div>
+  <p class="aviso" role="status" aria-live="polite"></p>
+</body>
+</html>

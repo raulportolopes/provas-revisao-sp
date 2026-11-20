@@ -1,0 +1,65 @@
+Textos da página preparo.html, na ordem em que aparecem (dados do JSON incluídos).
+
+Pular para o conteúdo
+Torra Serrana
+Início
+Cafés
+Preparo
+Sacola
+itens na sacola:
+0
+Início
+Preparo
+Guia de preparo
+Cada método, uma receita
+Escolha o método, ajuste a quantidade de água e use o cronômetro: cada passo acende na hora certa.
+V60 Coado
+Prensa francesa Imersão
+Moka Pressão
+AeroPress Pressão manual
+Coado
+V60
+Coado limpo e aromático
+Café 15 g
+Água 250 ml
+Moagem Média-fina
+Temperatura 93 °C
+0:00
+de 2:30
+Iniciar
+Zerar
+Molhe o filtro e descarte a água
+0:00–0:15
+Pré-infusão: 40 ml e espere
+0:15–0:45
+Despeje em círculos até 150 ml
+0:45–1:30
+Complete até 250 ml
+1:30–2:10
+Deixe drenar
+2:10–2:30
+Quanto de café você quer fazer?
+Água: 250 ml
+Café: 15 g
+Proporção 1:16,7
+Dúvidas
+Perguntas frequentes
+Posso usar o café moído do mercado nesses métodos?
+Pode, mas o moído de mercado é fino demais para a prensa francesa e grosso demais para a moka. Para o melhor resultado, moa na hora e na moagem indicada em cada receita.
+Quanto tempo o café dura depois de aberto?
+Em grão, até 30 dias em pote fechado, longe da luz. Moído, o aroma cai bastante depois de uma semana.
+Por que a temperatura da água importa?
+Água fervendo extrai amargor demais; água fria deixa o café aguado e ácido. Entre 85 °C e 94 °C você extrai doçura sem queimar.
+Vocês entregam em todo o estado de São Paulo?
+Sim. Capital em até 3 dias úteis e interior em até 5. Acima de R$ 150,00 o frete é grátis.
+Como funciona o clube de assinatura?
+Você recebe dois pacotes de 250 g por mês. Pode pausar ou cancelar quando quiser, sem multa.
+Torra Serrana
+Torrefação de cafés especiais fundada em 2019 por uma família de produtores da Serra da Mantiqueira.
+Loja e torrefação
+Rua das Araucárias, 210 · Campos da Serra – SP Seg. a sáb., das 8h às 18h
+Navegue
+Início
+Cafés
+Preparo
+© 2026 Torra Serrana · Projeto de treino SP Skills · Ilustrações originais

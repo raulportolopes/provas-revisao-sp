@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Observatório Estrela da Serra – Agenda</title>
+  <meta name="description" content="Agenda de noites de observação, palestras e oficinas do Observatório Estrela da Serra, com reserva de vagas.">
+  <link rel="icon" href="img/logo-estrela-da-serra.svg" type="image/svg+xml">
+  <!-- tema.js roda ANTES do CSS pintar a tela: assim o tema salvo não "pisca" -->
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/comum.js" defer></script>
+  <script src="js/agenda.js" defer></script>
+</head>
+<body class="pagina-agenda">
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ CABEÇALHO (igual nas três páginas) ============ -->
+  <header class="cabecalho">
+    <div class="cabecalho__progresso" aria-hidden="true"></div>
+    <div class="cabecalho__dentro">
+      <a class="marca" href="index.html">
+        <img src="img/logo-estrela-da-serra.svg" alt="" width="44" height="44">
+        <span class="marca__texto"><strong>Estrela da Serra</strong><small>Observatório · SP</small></span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span class="icone icone--menu" aria-hidden="true"></span>
+      </button>
+
+      <nav class="menu" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="agenda.html" class="ativo" aria-current="page">Agenda</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <a class="botao botao--primario botao--pequeno" href="agenda.html">Reservar visita</a>
+      </nav>
+
+      <button class="tema-botao" type="button" aria-pressed="false" aria-label="Usar tema claro">
+        <span class="icone icone--sol" aria-hidden="true"></span>
+        <span class="icone icone--lua" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina" aria-labelledby="titulo-pagina">
+      <div class="container">
+        <nav class="trilha" aria-label="Você está em"><ol><li><a href="index.html">Início</a></li><li aria-current="page">Agenda</li></ol></nav>
+        <p class="sobretitulo">Dezembro de 2026 a fevereiro de 2027</p>
+        <h1 id="titulo-pagina">Agenda de observações</h1>
+        <p>Escolha o mês, filtre pelo tipo de atividade e abra cada sessão para ver os detalhes e reservar sua vaga.</p>
+      </div>
+    </section>
+
+    <section class="secao container agenda" aria-label="Atividades">
+      <!-- ABAS: role=tablist/tab/tabpanel; setas do teclado trocam a aba (agenda.js) -->
+      <div class="abas" role="tablist" aria-label="Mês">
+        <button class="aba" role="tab" id="aba-2026-12" aria-controls="painel-eventos" aria-selected="true" data-mes="2026-12">Dezembro <span class="aba__qtd">0</span></button>
+        <button class="aba" role="tab" id="aba-2027-01" aria-controls="painel-eventos" aria-selected="false" tabindex="-1" data-mes="2027-01">Janeiro <span class="aba__qtd">0</span></button>
+        <button class="aba" role="tab" id="aba-2027-02" aria-controls="painel-eventos" aria-selected="false" tabindex="-1" data-mes="2027-02">Fevereiro <span class="aba__qtd">0</span></button>
+      </div>
+
+      <div id="painel-eventos" role="tabpanel" aria-labelledby="aba-2026-12">
+        <div class="agenda__barra">
+          <div class="filtros" role="group" aria-label="Tipo de atividade">
+            <button class="chip" type="button" data-tipo="" aria-pressed="true">Todas</button>
+            <button class="chip" type="button" data-tipo="observacao" aria-pressed="false">Observação</button>
+            <button class="chip" type="button" data-tipo="palestra" aria-pressed="false">Palestra</button>
+            <button class="chip" type="button" data-tipo="oficina" aria-pressed="false">Oficina</button>
+          </div>
+          <p class="agenda__contador" aria-live="polite">Carregando…</p>
+        </div>
+        <ul class="eventos" id="lista-eventos"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL DE RESERVA (<dialog>) -->
+  <dialog class="modal" id="modal-reserva" aria-labelledby="modal-titulo">
+    <div class="modal__topo">
+      <h2 id="modal-titulo">Reservar vaga</h2>
+      <button class="modal__fechar" type="button" aria-label="Fechar"><span class="icone icone--fechar" aria-hidden="true"></span></button>
+    </div>
+    <div class="modal__corpo">
+      <form id="form-reserva" novalidate>
+        <p class="modal__evento" id="modal-evento"></p>
+        <div class="campo">
+          <label for="r-nome">Nome completo</label>
+          <input id="r-nome" name="nome" type="text" autocomplete="name" required minlength="3" aria-describedby="e-nome">
+          <p class="campo__erro" id="e-nome"></p>
+        </div>
+        <div class="campo">
+          <label for="r-email">E-mail</label>
+          <input id="r-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+          <p class="campo__erro" id="e-email"></p>
+        </div>
+        <div class="campo">
+          <label for="r-qtd">Quantidade de pessoas</label>
+          <input id="r-qtd" name="quantidade" type="number" inputmode="numeric" required min="1" max="6" value="1" aria-describedby="e-qtd">
+          <p class="campo__erro" id="e-qtd"></p>
+        </div>
+        <div class="campo campo--linha">
+          <input id="r-termos" name="termos" type="checkbox" required aria-describedby="e-termos">
+          <label for="r-termos">Li as regras de visita (chegar 15 minutos antes, sem luz branca na cúpula).</label>
+          <p class="campo__erro" id="e-termos" data-linha-inteira></p>
+        </div>
+        <div class="modal__total"><span>Total</span><strong id="r-total">R$ 0,00</strong></div>
+        <button class="botao botao--primario botao--largo" type="submit">Confirmar reserva</button>
+      </form>
+      <div class="modal__sucesso" id="reserva-ok" hidden>
+        <span class="icone icone--check" aria-hidden="true"></span>
+        <h3>Reserva confirmada!</h3>
+        <p id="reserva-texto"></p>
+        <p class="protocolo" id="reserva-protocolo"></p>
+        <p><button class="botao botao--contorno" type="button" data-fechar>Voltar para a agenda</button></p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============ RODAPÉ (igual nas três páginas) ============ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a class="marca" href="index.html">
+          <img src="img/logo-estrela-da-serra.svg" alt="" width="44" height="44">
+          <span class="marca__texto"><strong>Estrela da Serra</strong><small>Observatório · SP</small></span>
+        </a>
+        <p class="rodape__texto">Observatório público mantido por uma associação de astrônomos amadores desde 1998.</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Visite</h2>
+        <p class="rodape__item"><span class="icone icone--local" aria-hidden="true"></span>Estrada do Mirante, km 7 · Serra Alta – SP</p>
+        <p class="rodape__item"><span class="icone icone--relogio" aria-hidden="true"></span>Sextas e sábados, das 19h às 0h</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Navegue</h2>
+        <ul class="rodape__links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape__direitos container">© 2026 Observatório Estrela da Serra · Projeto de treino SP Skills · Ilustrações originais</p>
+  </footer>
+</body>
+</html>

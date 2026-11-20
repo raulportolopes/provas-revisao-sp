@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Observatório Estrela da Serra – Galeria</title>
+  <meta name="description" content="Galeria de astrofotografias feitas no Observatório Estrela da Serra: nebulosas, galáxias, Lua, eclipses e paisagens.">
+  <link rel="icon" href="img/logo-estrela-da-serra.svg" type="image/svg+xml">
+  <!-- tema.js roda ANTES do CSS pintar a tela: assim o tema salvo não "pisca" -->
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/comum.js" defer></script>
+  <script src="js/galeria.js" defer></script>
+</head>
+<body class="pagina-galeria">
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ CABEÇALHO (igual nas três páginas) ============ -->
+  <header class="cabecalho">
+    <div class="cabecalho__progresso" aria-hidden="true"></div>
+    <div class="cabecalho__dentro">
+      <a class="marca" href="index.html">
+        <img src="img/logo-estrela-da-serra.svg" alt="" width="44" height="44">
+        <span class="marca__texto"><strong>Estrela da Serra</strong><small>Observatório · SP</small></span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span class="icone icone--menu" aria-hidden="true"></span>
+      </button>
+
+      <nav class="menu" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galeria.html" class="ativo" aria-current="page">Galeria</a></li>
+        </ul>
+        <a class="botao botao--primario botao--pequeno" href="agenda.html">Reservar visita</a>
+      </nav>
+
+      <button class="tema-botao" type="button" aria-pressed="false" aria-label="Usar tema claro">
+        <span class="icone icone--sol" aria-hidden="true"></span>
+        <span class="icone icone--lua" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina" aria-labelledby="titulo-pagina">
+      <div class="container">
+        <nav class="trilha" aria-label="Você está em"><ol><li><a href="index.html">Início</a></li><li aria-current="page">Galeria</li></ol></nav>
+        <p class="sobretitulo">Feitas na cúpula do observatório</p>
+        <h1 id="titulo-pagina">Galeria de astrofotografia</h1>
+        <p>Imagens captadas pela equipe e pelos visitantes das oficinas. Passe o mouse para inclinar e clique para ampliar.</p>
+      </div>
+    </section>
+
+    <section class="secao container" aria-label="Fotos">
+      <div class="agenda__barra">
+        <div class="filtros" role="group" aria-label="Categoria">
+          <button class="chip" type="button" data-categoria="" aria-pressed="true">Todas</button>
+          <button class="chip" type="button" data-categoria="nebulosas" aria-pressed="false">Nebulosas</button>
+          <button class="chip" type="button" data-categoria="galaxias" aria-pressed="false">Galáxias e aglomerados</button>
+          <button class="chip" type="button" data-categoria="sistema-solar" aria-pressed="false">Sistema Solar</button>
+          <button class="chip" type="button" data-categoria="paisagens" aria-pressed="false">Paisagens</button>
+        </div>
+        <p class="agenda__contador" aria-live="polite">Carregando…</p>
+      </div>
+      <ul class="galeria" id="galeria"></ul>
+    </section>
+  </main>
+
+  <dialog class="modal lightbox" id="lightbox" aria-labelledby="lb-titulo">
+    <div class="modal__topo">
+      <h2 id="lb-titulo">Foto</h2>
+      <button class="modal__fechar" type="button" aria-label="Fechar"><span class="icone icone--fechar" aria-hidden="true"></span></button>
+    </div>
+    <div class="modal__corpo">
+      <figure class="lightbox__figura">
+        <img class="lightbox__img" id="lb-img" src="img/foto-via-lactea.jpg" alt="" width="1600" height="1067">
+        <figcaption class="lightbox__info">
+          <p id="lb-texto"></p>
+          <span class="lightbox__nav">
+            <button type="button" id="lb-ant" aria-label="Foto anterior"><span class="icone icone--seta-esquerda" aria-hidden="true"></span></button>
+            <span class="lightbox__contador" id="lb-contador" aria-live="polite">1 de 9</span>
+            <button type="button" id="lb-prox" aria-label="Próxima foto"><span class="icone icone--seta-direita" aria-hidden="true"></span></button>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </dialog>
+
+  <!-- ============ RODAPÉ (igual nas três páginas) ============ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a class="marca" href="index.html">
+          <img src="img/logo-estrela-da-serra.svg" alt="" width="44" height="44">
+          <span class="marca__texto"><strong>Estrela da Serra</strong><small>Observatório · SP</small></span>
+        </a>
+        <p class="rodape__texto">Observatório público mantido por uma associação de astrônomos amadores desde 1998.</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Visite</h2>
+        <p class="rodape__item"><span class="icone icone--local" aria-hidden="true"></span>Estrada do Mirante, km 7 · Serra Alta – SP</p>
+        <p class="rodape__item"><span class="icone icone--relogio" aria-hidden="true"></span>Sextas e sábados, das 19h às 0h</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Navegue</h2>
+        <ul class="rodape__links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape__direitos container">© 2026 Observatório Estrela da Serra · Projeto de treino SP Skills · Ilustrações originais</p>
+  </footer>
+</body>
+</html>
