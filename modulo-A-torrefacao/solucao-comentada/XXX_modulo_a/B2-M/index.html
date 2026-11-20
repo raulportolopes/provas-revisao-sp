@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2-M · Monte seu pedido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Torra Paulista · Monte seu pedido</h1>
+    <a href="#carrinho" class="topo__carrinho">Carrinho <span id="badge" class="badge">0</span></a>
+  </header>
+
+  <div class="layout">
+    <main>
+      <p id="estado" role="status">Carregando cardápio…</p>
+      <!-- abas e painéis são criados pelo JS a partir do cardapio.json -->
+      <div role="tablist" aria-label="Categorias" id="abas" class="abas"></div>
+      <div id="paineis"></div>
+    </main>
+
+    <aside id="carrinho" class="carrinho" aria-labelledby="t-carrinho">
+      <h2 id="t-carrinho">Seu carrinho</h2>
+      <p id="vazio" class="vazio">Seu carrinho está vazio.</p>
+      <ul id="linhas" class="linhas"></ul>
+
+      <form id="form-cupom" class="cupom">
+        <label for="cupom">Cupom</label>
+        <div class="cupom__linha">
+          <input id="cupom" autocomplete="off" placeholder="Ex.: TORRA10">
+          <button type="submit">Aplicar</button>
+        </div>
+        <p id="msg-cupom" class="msg" aria-live="polite"></p>
+      </form>
+
+      <dl class="totais">
+        <dt>Subtotal</dt><dd id="subtotal">R$ 0,00</dd>
+        <dt>Desconto</dt><dd id="desconto">R$ 0,00</dd>
+        <dt>Frete</dt><dd id="frete">R$ 0,00</dd>
+        <dt class="total">Total</dt><dd id="total" class="total">R$ 0,00</dd>
+      </dl>
+      <p class="dica-frete" id="dica-frete"></p>
+      <button type="button" id="finalizar" class="finalizar" disabled>Finalizar pedido</button>
+    </aside>
+  </div>
+
+  <!-- barra fixa só no celular -->
+  <a href="#carrinho" class="barra-celular" id="barra-celular">Ver carrinho (<span id="barra-qtd">0</span>) · <span id="barra-total">R$ 0,00</span></a>
+
+  <dialog id="modal" class="modal" aria-labelledby="m-titulo">
+    <button type="button" class="modal__fechar" id="m-fechar" aria-label="Fechar">×</button>
+    <h2 id="m-titulo">Confirmar pedido</h2>
+    <div id="m-conteudo"></div>
+    <div class="modal__acoes" id="m-acoes">
+      <button type="button" id="m-cancelar" class="secundario">Cancelar</button>
+      <button type="button" id="m-confirmar">Confirmar</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

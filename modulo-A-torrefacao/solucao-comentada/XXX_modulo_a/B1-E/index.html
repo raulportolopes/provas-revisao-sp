@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B1-E · Preferências de tema</title>
+  <!-- Sem "piscar": aplica o tema salvo ANTES de a página ser pintada.
+       Por isso este pedaço fica no <head>, antes do CSS, e é pequeno. -->
+  <script>
+    (function () {
+      try {
+        var p = JSON.parse(localStorage.getItem('torra-preferencias')) || {};
+        var tema = p.tema || 'sistema';
+        if (tema === 'sistema') tema = matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+        document.documentElement.dataset.tema = tema;
+        document.documentElement.dataset.fonte = p.fonte || 'normal';
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pagina">
+    <h1>Preferências</h1>
+
+    <section class="bloco" aria-labelledby="t-tema">
+      <h2 id="t-tema">Tema</h2>
+      <!-- radiogroup: um item marcado; as setas trocam (padrão ARIA) -->
+      <div class="segmentado" role="radiogroup" aria-labelledby="t-tema" id="grupo-tema">
+        <button type="button" role="radio" data-tema="claro">Claro</button>
+        <button type="button" role="radio" data-tema="escuro">Escuro</button>
+        <button type="button" role="radio" data-tema="sistema">Sistema</button>
+      </div>
+      <p id="status-tema" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-fonte">
+      <h2 id="t-fonte">Tamanho do texto</h2>
+      <div class="segmentado" id="grupo-fonte" role="group" aria-labelledby="t-fonte">
+        <button type="button" data-fonte="pequena" aria-label="Texto pequeno">A−</button>
+        <button type="button" data-fonte="normal" aria-label="Texto normal">A</button>
+        <button type="button" data-fonte="grande" aria-label="Texto grande">A+</button>
+      </div>
+    </section>
+
+    <article class="cartao">
+      <h2>Café Mantiqueira 250 g</h2>
+      <p>Notas de caramelo e laranja. Torra média, ideal para coado e prensa francesa.</p>
+      <p class="preco">R$ 42,90</p>
+      <a href="#" class="botao">Comprar</a>
+    </article>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #070A1A;
+  color: #E8ECFF;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+.app { max-width: 840px; margin: 0 auto; padding: 24px 16px; }
+h1 { margin: 0 0 6px; font-size: clamp(22px, 4vw, 32px); }
+.ajuda { margin: 0 0 16px; color: #8E97C8; font-size: 14px; }
+
+.barra { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
+
+button, .botao-arquivo {
+  padding: 8px 14px;
+  border: 1px solid #2A3470;
+  border-radius: 8px;
+  background: #151B3D;
+  color: #E8ECFF;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+button:disabled { opacity: .45; cursor: not-allowed; }
+button:hover:not(:disabled), .botao-arquivo:hover { border-color: #7C5CFF; }
+
+/* input de arquivo escondido, mas o label continua clicável e focável pelo input */
+.botao-arquivo { position: relative; }
+.botao-arquivo input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.botao-arquivo:focus-within { outline: 3px solid #FFD166; outline-offset: 2px; }
+
+:focus-visible { outline: 3px solid #FFD166; outline-offset: 2px; }
+
+.contador { margin-left: auto; color: #FFD166; font-weight: 700; }
+
+.area { position: relative; }
+
+canvas {
+  display: block;
+  width: 100%;          /* responsivo: o desenho continua 800x500 lógicos */
+  height: auto;
+  border: 2px solid #2A3470;
+  border-radius: 12px;
+  background: #0B1026;
+}
+
+/* destaque enquanto um arquivo é arrastado por cima */
+.area.arrastando canvas { border-color: #22D3EE; border-style: dashed; }
+
+.dica {
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #FFD166;
+  color: #0B1026;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 12px));
+}
+
+.mensagem { min-height: 1.4em; color: #22D3EE; }
+.mensagem.erro { color: #FF8FA3; }

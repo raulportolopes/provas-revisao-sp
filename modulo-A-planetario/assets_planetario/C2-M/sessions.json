@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "title": "Céu de Verão",
+        "date": "2026-12-12",
+        "start": "19:00",
+        "capacity": 60,
+        "reserved": 60
+    },
+    {
+        "id": 2,
+        "title": "Planetas Gigantes",
+        "date": "2026-12-12",
+        "start": "20:30",
+        "capacity": 60,
+        "reserved": 42
+    },
+    {
+        "id": 3,
+        "title": "Via Láctea",
+        "date": "2026-12-05",
+        "start": "19:00",
+        "capacity": 80,
+        "reserved": 15
+    },
+    {
+        "id": 4,
+        "title": "Lua Cheia",
+        "date": "2026-12-24",
+        "start": "21:00",
+        "capacity": 60,
+        "reserved": 8
+    },
+    {
+        "id": 5,
+        "title": "Buracos Negros",
+        "date": "2026-11-28",
+        "start": "18:30",
+        "capacity": 40,
+        "reserved": 40
+    },
+    {
+        "id": 6,
+        "title": "Constelações do Sul",
+        "date": "2026-12-12",
+        "start": "17:30",
+        "capacity": 60,
+        "reserved": 31
+    },
+    {
+        "id": 7,
+        "title": "Céu de Verão",
+        "date": "2026-12-19",
+        "start": "19:00",
+        "capacity": 60,
+        "reserved": 12
+    },
+    {
+        "id": 8,
+        "title": "Eclipses",
+        "date": "2026-11-28",
+        "start": "20:00",
+        "capacity": 40,
+        "reserved": 3
+    },
+    {
+        "id": 9,
+        "title": "Planetas Gigantes",
+        "date": "2027-01-09",
+        "start": "19:00",
+        "capacity": 60,
+        "reserved": 0
+    },
+    {
+        "id": 10,
+        "title": "Via Láctea",
+        "date": "2026-12-05",
+        "start": "21:00",
+        "capacity": 80,
+        "reserved": 80
+    },
+    {
+        "id": 11,
+        "title": "Cometas",
+        "date": "2027-01-16",
+        "start": "18:00",
+        "capacity": 50,
+        "reserved": 22
+    },
+    {
+        "id": 12,
+        "title": "Constelações do Sul",
+        "date": "2026-12-19",
+        "start": "20:30",
+        "capacity": 60,
+        "reserved": 59
+    },
+    {
+        "id": 13,
+        "title": "Lua Cheia",
+        "date": "2027-01-02",
+        "start": "21:00",
+        "capacity": 60,
+        "reserved": 0
+    }
+]

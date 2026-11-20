@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A3-H · Cafeteria Torra Paulista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HTML FORNECIDO AO COMPETIDOR · NÃO MODIFICAR ===== -->
+  <div class="progresso" aria-hidden="true"></div>
+
+  <header class="topo">
+    <a class="marca" href="#inicio">Torra Paulista</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-botao" aria-label="Abrir menu"><span></span></label>
+    <nav class="menu" aria-label="Principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#precos">Preços</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#visite">Visite</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__texto">
+        <h1>Café torrado toda manhã, no centro de São Paulo</h1>
+        <p>Grãos de pequenos produtores, torra artesanal e métodos para todos os gostos.</p>
+        <a class="botao" href="#cardapio">Ver cardápio</a>
+      </div>
+    </section>
+
+    <section class="secao" id="cardapio">
+      <h2>Cardápio</h2>
+      <ul class="cardapio">
+        <li class="item">
+          <img src="images/espresso.jpg" alt="Espresso" width="600" height="400">
+          <h3>Espresso</h3>
+          <p>Extração de 30 ml, crema espessa.</p>
+          <span class="item__preco">R$ 7,50</span>
+        </li>
+        <li class="item">
+          <img src="images/cappuccino.jpg" alt="Cappuccino" width="600" height="400">
+          <h3>Cappuccino</h3>
+          <p>Espresso, leite vaporizado e canela.</p>
+          <span class="item__preco">R$ 13,90</span>
+        </li>
+        <li class="item">
+          <img src="images/coado.jpg" alt="Coado V60" width="600" height="400">
+          <h3>Coado V60</h3>
+          <p>Método filtrado, notas de frutas.</p>
+          <span class="item__preco">R$ 11,00</span>
+        </li>
+        <li class="item">
+          <img src="images/pao-de-queijo.jpg" alt="Pão de queijo" width="600" height="400">
+          <h3>Pão de queijo</h3>
+          <p>Receita mineira, assado na hora.</p>
+          <span class="item__preco">R$ 6,50</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="secao" id="precos">
+      <h2>Preços dos grãos</h2>
+      <table class="tabela">
+        <caption>Preços por pacote de grãos torrados</caption>
+        <thead>
+          <tr><th scope="col">Café</th><th scope="col">Torra</th><th scope="col">250 g</th><th scope="col">500 g</th><th scope="col">1 kg</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Café">Mantiqueira</td><td data-label="Torra">Média</td><td data-label="250 g">R$ 42,90</td><td data-label="500 g">R$ 79,90</td><td data-label="1 kg">R$ 149,00</td></tr>
+          <tr><td data-label="Café">Cerrado Mineiro</td><td data-label="Torra">Média-escura</td><td data-label="250 g">R$ 38,50</td><td data-label="500 g">R$ 72,00</td><td data-label="1 kg">R$ 135,00</td></tr>
+          <tr><td data-label="Café">Alta Mogiana</td><td data-label="Torra">Clara</td><td data-label="250 g">R$ 46,00</td><td data-label="500 g">R$ 86,00</td><td data-label="1 kg">R$ 162,00</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="secao" id="duvidas">
+      <h2>Dúvidas frequentes</h2>
+      <div class="faq">
+        <details name="faq" open>
+          <summary>Vocês moem o café na hora?</summary>
+          <p>Sim. Escolha a moagem no balcão: grossa para prensa francesa, média para coado e fina para espresso.</p>
+        </details>
+        <details name="faq">
+          <summary>Qual é a validade dos grãos?</summary>
+          <p>Os grãos ficam melhores entre 7 e 30 dias depois da torra. A data da torra vem impressa no pacote.</p>
+        </details>
+        <details name="faq">
+          <summary>Fazem entregas?</summary>
+          <p>Entregamos na cidade de São Paulo em até 2 dias úteis. O frete é grátis em compras acima de R$ 150,00.</p>
+        </details>
+        <details name="faq">
+          <summary>Tem opção sem lactose?</summary>
+          <p>Sim. Todas as bebidas com leite podem ser feitas com leite sem lactose ou bebida de aveia.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="secao visite" id="visite">
+      <h2>Visite</h2>
+      <address>Rua Augusta, 1200 · Consolação · São Paulo (SP)</address>
+      <p>Segunda a sábado, das 7h às 20h.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Torra Paulista Cafés Especiais · 2026</p>
+  </footer>
+</body>
+</html>

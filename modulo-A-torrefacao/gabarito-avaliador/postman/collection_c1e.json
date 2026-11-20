@@ -1,0 +1,282 @@
+{
+  "info": {
+    "_postman_id": "9953cc89-f970-5a63-9803-e36e0da38d73",
+    "name": "C1-E · Relatório de vendas por dia (Torra Paulista Cafés Especiais)",
+    "description": "Rode na ordem (Runner ou uma a uma). Antes de começar, restaure os arquivos JSON originais da pasta assets. Ajuste baseUrl na aba Variables e salve.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 · Período de 04 a 06/11 (espera 200)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/report?from=04/11/2026&to=06/11/2026",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "report"
+          ],
+          "query": [
+            {
+              "key": "from",
+              "value": "04/11/2026"
+            },
+            {
+              "key": "to",
+              "value": "06/11/2026"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: 3 dias; 04/11 quarta-feira: 6 pedidos, 20 itens, R$ 202,30 (20230); 05/11 zerado"
+    },
+    {
+      "name": "02 · Sem parâmetros (espera 200)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/report",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "report"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: from 02/11/2026, to 10/11/2026; summary: 34 pedidos, 116 itens, R$ 1.489,40, best_day 02/11/2026"
+    },
+    {
+      "name": "03 · Data inexistente (espera 422)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/report?from=31/11/2026",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "report"
+          ],
+          "query": [
+            {
+              "key": "from",
+              "value": "31/11/2026"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Invalid date\"}"
+    },
+    {
+      "name": "04 · Data no formato errado (espera 422)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/report?from=2026-11-02",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "report"
+          ],
+          "query": [
+            {
+              "key": "from",
+              "value": "2026-11-02"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Invalid date"
+    },
+    {
+      "name": "05 · from depois de to (espera 422)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/report?from=10/11/2026&to=02/11/2026",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "report"
+          ],
+          "query": [
+            {
+              "key": "from",
+              "value": "10/11/2026"
+            },
+            {
+              "key": "to",
+              "value": "02/11/2026"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Invalid range\"}"
+    },
+    {
+      "name": "06 · Mais de 31 dias (espera 422)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/report?from=01/10/2026&to=10/11/2026",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "report"
+          ],
+          "query": [
+            {
+              "key": "from",
+              "value": "01/10/2026"
+            },
+            {
+              "key": "to",
+              "value": "10/11/2026"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Range too long\"}"
+    },
+    {
+      "name": "07 · Método errado (espera 405)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/report",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "report"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 405', () => pm.response.to.have.status(405));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Method not allowed"
+    },
+    {
+      "name": "08 · Rota inexistente (espera 404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/sales",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "sales"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 404', () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Not found"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://000.000.00.00/XXX_modulo_a/C1-E"
+    }
+  ]
+}

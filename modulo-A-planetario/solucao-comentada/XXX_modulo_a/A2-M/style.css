@@ -1,0 +1,210 @@
+/* =====================================================================
+   A2-M · Carrossel 3D do Sistema Solar (só CSS, HTML travado)
+   Peças-chave:
+   - --n (quantidade) e --i (posição) já vêm no HTML;
+   - cada cartão gira (360° / n) × i em torno do eixo Y e é empurrado
+     para fora com translateZ(raio): isso forma o anel;
+   - o rádio marcado diz qual planeta vem para a frente: com :has()
+     o .carrossel "sabe" qual rádio está marcado e define --sel;
+   - o anel inteiro gira -(360° / n) × sel.
+   ===================================================================== */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;               /* nada de rolagem lateral */
+  background: radial-gradient(ellipse at 50% 30%, #1B2350, #070A1A 70%);
+  color: #E8ECFF;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+.carrossel {
+  --raio: 380px;                    /* distância do centro até o cartão */
+  --largura: 180px;
+  --altura: 250px;
+  --sel: 0;                         /* índice do planeta escolhido (0 a 7) */
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.carrossel__titulo {
+  margin: 8px 0 0;
+  font-size: clamp(24px, 4vw, 40px);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ---------- 1. Rádios: escondidos só visualmente ----------
+   NÃO usar display:none: o rádio precisa continuar focável
+   para as setas do teclado trocarem de planeta. */
+.seletor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- 2. Palco com perspectiva ---------- */
+.palco {
+  width: 100%;
+  height: calc(var(--altura) + 140px);
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+/* ---------- 3. O anel ---------- */
+.anel {
+  position: relative;
+  width: var(--largura);
+  height: var(--altura);
+  transform-style: preserve-3d;     /* os filhos ficam no espaço 3D */
+  /* primeiro afasta o anel para trás (o cartão da frente fica no plano
+     da tela) e depois gira para trazer o planeta escolhido */
+  transform: translateZ(calc(var(--raio) * -1)) rotateY(calc(var(--sel) * -360deg / var(--n)));
+  transition: transform .8s cubic-bezier(.65, 0, .35, 1);
+}
+
+/* ---------- 4. Cada cartão ---------- */
+.planeta {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 12px;
+  border: 1px solid rgba(124, 92, 255, .5);
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(27, 35, 80, .95), rgba(11, 16, 38, .95));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  text-align: center;
+  transform: rotateY(calc(var(--i) * 360deg / var(--n))) translateZ(var(--raio));
+  backface-visibility: hidden;      /* cartão de costas não aparece espelhado */
+  opacity: .45;
+  transition: opacity .8s, transform .8s cubic-bezier(.65, 0, .35, 1), box-shadow .8s;
+}
+
+.planeta img {
+  width: 70%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.planeta h2 { margin: 6px 0 2px; font-size: 20px; }
+.planeta p  { margin: 0; font-size: 13px; color: #B8C0E8; }
+
+/* ---------- 5. Qual rádio está marcado? (uma regra por planeta) ---------- */
+.carrossel:has(#p1:checked) { --sel: 0; }
+.carrossel:has(#p2:checked) { --sel: 1; }
+.carrossel:has(#p3:checked) { --sel: 2; }
+.carrossel:has(#p4:checked) { --sel: 3; }
+.carrossel:has(#p5:checked) { --sel: 4; }
+.carrossel:has(#p6:checked) { --sel: 5; }
+.carrossel:has(#p7:checked) { --sel: 6; }
+.carrossel:has(#p8:checked) { --sel: 7; }
+
+/* ---------- 6. Cartão da frente: opaco, maior e com brilho ---------- */
+.carrossel:has(#p1:checked) .planeta:nth-child(1),
+.carrossel:has(#p2:checked) .planeta:nth-child(2),
+.carrossel:has(#p3:checked) .planeta:nth-child(3),
+.carrossel:has(#p4:checked) .planeta:nth-child(4),
+.carrossel:has(#p5:checked) .planeta:nth-child(5),
+.carrossel:has(#p6:checked) .planeta:nth-child(6),
+.carrossel:has(#p7:checked) .planeta:nth-child(7),
+.carrossel:has(#p8:checked) .planeta:nth-child(8) {
+  opacity: 1;
+  /* mesmo giro do anel + um pouco maior (scale entra no fim) */
+  transform: rotateY(calc(var(--i) * 360deg / var(--n))) translateZ(var(--raio)) scale(1.12);
+  box-shadow: 0 0 30px rgba(124, 92, 255, .6), 0 10px 30px rgba(0, 0, 0, .5);
+}
+
+/* a imagem do planeta da frente flutua devagar */
+.carrossel:has(#p1:checked) .planeta:nth-child(1) img,
+.carrossel:has(#p2:checked) .planeta:nth-child(2) img,
+.carrossel:has(#p3:checked) .planeta:nth-child(3) img,
+.carrossel:has(#p4:checked) .planeta:nth-child(4) img,
+.carrossel:has(#p5:checked) .planeta:nth-child(5) img,
+.carrossel:has(#p6:checked) .planeta:nth-child(6) img,
+.carrossel:has(#p7:checked) .planeta:nth-child(7) img,
+.carrossel:has(#p8:checked) .planeta:nth-child(8) img {
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  50% { transform: translateY(-8px); }
+}
+
+/* ---------- 7. Nomes (labels) ---------- */
+.nomes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  max-width: 900px;
+}
+
+.nomes label {
+  padding: 6px 4px;
+  color: #8E97C8;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color .3s, border-color .3s;
+}
+
+.nomes label:hover { color: #E8ECFF; }
+
+/* nome do planeta escolhido: amarelo e sublinhado */
+.carrossel:has(#p1:checked) label[for="p1"],
+.carrossel:has(#p2:checked) label[for="p2"],
+.carrossel:has(#p3:checked) label[for="p3"],
+.carrossel:has(#p4:checked) label[for="p4"],
+.carrossel:has(#p5:checked) label[for="p5"],
+.carrossel:has(#p6:checked) label[for="p6"],
+.carrossel:has(#p7:checked) label[for="p7"],
+.carrossel:has(#p8:checked) label[for="p8"] {
+  color: #FFD166;
+  border-color: #FFD166;
+}
+
+/* foco do teclado: como o rádio é invisível, o contorno vai no label dele */
+.carrossel:has(#p1:focus-visible) label[for="p1"],
+.carrossel:has(#p2:focus-visible) label[for="p2"],
+.carrossel:has(#p3:focus-visible) label[for="p3"],
+.carrossel:has(#p4:focus-visible) label[for="p4"],
+.carrossel:has(#p5:focus-visible) label[for="p5"],
+.carrossel:has(#p6:focus-visible) label[for="p6"],
+.carrossel:has(#p7:focus-visible) label[for="p7"],
+.carrossel:has(#p8:focus-visible) label[for="p8"] {
+  outline: 2px dashed #22D3EE;
+  outline-offset: 4px;
+}
+
+/* ---------- 8. Celular (até 600 px): anel menor ---------- */
+@media (max-width: 600px) {
+  .carrossel {
+    --raio: 190px;
+    --largura: 120px;
+    --altura: 170px;
+  }
+  .planeta h2 { font-size: 15px; }
+  .planeta p  { font-size: 11px; }
+}
+
+/* ---------- 9. Menos movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .anel, .planeta { transition: none; }
+  .planeta img { animation: none !important; }
+}

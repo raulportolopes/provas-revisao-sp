@@ -1,0 +1,214 @@
+{
+  "info": {
+    "_postman_id": "79846969-62a9-5dc5-ad4a-59fe34b06b87",
+    "name": "C1-E · Conversor de registros de observação (Planetário Estrela Guia)",
+    "description": "Rode na ordem (Runner ou uma a uma). Antes de começar, restaure os arquivos JSON originais da pasta assets. Ajuste baseUrl na aba Variables e salve.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 · Converter observacoes.csv (espera 200)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/convert",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "convert"
+          ]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "observacoes.csv"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: total 5; chaves sem BOM; Júpiter com magnitude -2.7 (número) e data 2026-11-12; errors nas linhas 6 (Invalid date), 7 (Invalid date) e 9 (Wrong number of columns)"
+    },
+    {
+      "name": "02 · Sem arquivo (espera 400)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/convert",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "convert"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 400', () => pm.response.to.have.status(400));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"No file uploaded\"}"
+    },
+    {
+      "name": "03 · Arquivo .txt (espera 415)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/convert",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "convert"
+          ]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "notas.txt"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 415', () => pm.response.to.have.status(415));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Invalid file type\"}"
+    },
+    {
+      "name": "04 · Só cabeçalho (espera 422)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/convert",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "convert"
+          ]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "so-cabecalho.csv"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Empty file\"}"
+    },
+    {
+      "name": "05 · Método errado (espera 405)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/convert",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "convert"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 405', () => pm.response.to.have.status(405));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Method not allowed\"}"
+    },
+    {
+      "name": "06 · Rota inexistente (espera 404)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/x",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "x"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 404', () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Not found\"}"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://000.000.00.00/XXX_modulo_a/C1-E"
+    }
+  ]
+}

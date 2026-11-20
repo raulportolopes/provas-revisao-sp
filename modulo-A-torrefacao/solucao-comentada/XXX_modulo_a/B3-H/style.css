@@ -1,0 +1,77 @@
+*, *::before, *::after { box-sizing: border-box; }
+:root { --cafe: #3B2416; --creme: #F5EBDD; --caramelo: #C8873A; --verde: #2F5D50; --borda: #E2D3BE; --erro: #A3322A; }
+
+body { margin: 0; background: var(--creme); color: var(--cafe); font-family: system-ui, "Segoe UI", Arial, sans-serif; }
+body.travado { overflow: hidden; }
+:focus-visible { outline: 3px solid var(--caramelo); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.app { max-width: 900px; margin: 0 auto; padding: 28px 16px 48px; }
+h1 { margin: 0 0 16px; font-family: Georgia, serif; font-size: clamp(26px, 4vw, 36px); }
+
+/* ---------- Estrelas só com CSS ---------- */
+.estrelas { display: inline-flex; flex-direction: row-reverse; justify-content: flex-end; gap: 2px; margin: 0 0 20px; padding: 0; border: 0; }
+.estrelas legend { width: 100%; margin-bottom: 4px; font-weight: 700; }
+.estrelas input { position: absolute; opacity: 0; }
+.estrelas label { font-size: 36px; line-height: 1; color: #D8C9B4; cursor: pointer; transition: color .15s, transform .15s; }
+/* marcada e as "anteriores" (que no HTML vêm depois) ficam douradas */
+.estrelas input:checked ~ label,
+.estrelas label:hover, .estrelas label:hover ~ label { color: var(--caramelo); }
+.estrelas label:hover { transform: scale(1.15); }
+.estrelas input:focus-visible + label { outline: 3px solid var(--caramelo); outline-offset: 2px; border-radius: 4px; }
+
+/* ---------- Zona de soltar ---------- */
+.zona {
+  padding: 32px 16px; text-align: center; cursor: pointer;
+  border: 3px dashed #C9B49A; border-radius: 16px; background: #fff;
+  transition: border-color .2s, background-color .2s, transform .2s;
+}
+.zona p { margin: 4px 0; }
+.zona__dica { color: #6B4F3A; font-size: 14px; }
+.zona:hover { border-color: var(--caramelo); }
+.zona.arrastando { border-color: var(--verde); background: #EAF3EF; transform: scale(1.01); }
+
+.contador { font-weight: 700; }
+.erros { margin: 0 0 12px; padding: 0; list-style: none; }
+.erros li { margin-bottom: 6px; padding: 8px 12px; border-radius: 8px; background: #F8E3DF; color: var(--erro); font-size: 14px; }
+
+/* ---------- Miniaturas ---------- */
+.fotos { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 600px) { .fotos { grid-template-columns: repeat(2, 1fr); } }
+
+.foto {
+  position: relative; display: flex; flex-direction: column; gap: 6px; padding: 8px;
+  border: 2px solid var(--borda); border-radius: 12px; background: #fff;
+  transition: opacity .2s, border-color .2s;
+}
+.foto.arrastada { opacity: .4; }
+.foto.alvo { border-color: var(--verde); border-style: dashed; }
+.foto__abrir { padding: 0; border: 0; background: none; cursor: zoom-in; }
+.foto img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+.foto__nome { margin: 0; font-size: 13px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.foto__tam { margin: 0; font-size: 12px; color: #6B4F3A; }
+.foto__acoes { display: flex; gap: 4px; }
+.foto__acoes button { flex: 1; padding: 6px 4px; border: 1px solid var(--borda); border-radius: 8px; background: var(--creme); font: inherit; font-size: 13px; cursor: pointer; }
+.foto__acoes button:disabled { opacity: .4; cursor: not-allowed; }
+.foto__acoes .remover { color: var(--erro); }
+.capa { position: absolute; top: 14px; left: 14px; padding: 2px 8px; border-radius: 6px; background: var(--verde); color: #fff; font-size: 12px; font-weight: 800; }
+
+.publicar { margin-top: 20px; padding: 14px 24px; border: 0; border-radius: 12px; background: var(--verde); color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.publicar:disabled { background: #B9AFA4; cursor: not-allowed; }
+.resultado { color: var(--verde); font-weight: 700; }
+
+/* ---------- Lightbox ---------- */
+.lightbox { max-width: min(960px, calc(100% - 24px)); padding: 0; border: 0; border-radius: 14px; background: #1C1410; color: var(--creme); }
+.lightbox::backdrop { background: rgba(0, 0, 0, .85); }
+.lightbox[open] { animation: surgir .25s ease-out; }
+@keyframes surgir { from { opacity: 0; transform: scale(.94); } }
+.lightbox img { display: block; max-width: 100%; max-height: 75vh; margin: 0 auto; }
+.lightbox__fechar { position: absolute; top: 8px; right: 8px; width: 42px; height: 42px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, .55); color: #fff; font-size: 26px; cursor: pointer; }
+.lightbox__rodape { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; }
+.lightbox__rodape p { margin: 0; text-align: center; font-size: 14px; }
+.lightbox__rodape button { width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--caramelo); color: var(--cafe); font-size: 24px; cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox[open] { animation: none; }
+  .zona, .foto, .estrelas label { transition: none; }
+}

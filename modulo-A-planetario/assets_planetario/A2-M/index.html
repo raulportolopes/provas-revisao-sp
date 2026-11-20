@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2-M · Carrossel 3D do Sistema Solar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HTML FORNECIDO AO COMPETIDOR · NÃO MODIFICAR ===== -->
+  <main class="carrossel">
+    <h1 class="carrossel__titulo">Sistema Solar</h1>
+      <input type="radio" name="planeta" id="p1" class="seletor" checked>
+      <input type="radio" name="planeta" id="p2" class="seletor">
+      <input type="radio" name="planeta" id="p3" class="seletor">
+      <input type="radio" name="planeta" id="p4" class="seletor">
+      <input type="radio" name="planeta" id="p5" class="seletor">
+      <input type="radio" name="planeta" id="p6" class="seletor">
+      <input type="radio" name="planeta" id="p7" class="seletor">
+      <input type="radio" name="planeta" id="p8" class="seletor">
+
+    <div class="palco">
+      <div class="anel" style="--n: 8">
+        <article class="planeta" style="--i: 0">
+          <img src="images/mercurio.png" alt="Planeta Mercúrio">
+          <h2>Mercúrio</h2>
+          <p>Distância do Sol: 0,39 UA</p>
+          <p>Ano: 88 dias</p>
+        </article>
+        <article class="planeta" style="--i: 1">
+          <img src="images/venus.png" alt="Planeta Vênus">
+          <h2>Vênus</h2>
+          <p>Distância do Sol: 0,72 UA</p>
+          <p>Ano: 225 dias</p>
+        </article>
+        <article class="planeta" style="--i: 2">
+          <img src="images/terra.png" alt="Planeta Terra">
+          <h2>Terra</h2>
+          <p>Distância do Sol: 1,00 UA</p>
+          <p>Ano: 365 dias</p>
+        </article>
+        <article class="planeta" style="--i: 3">
+          <img src="images/marte.png" alt="Planeta Marte">
+          <h2>Marte</h2>
+          <p>Distância do Sol: 1,52 UA</p>
+          <p>Ano: 687 dias</p>
+        </article>
+        <article class="planeta" style="--i: 4">
+          <img src="images/jupiter.png" alt="Planeta Júpiter">
+          <h2>Júpiter</h2>
+          <p>Distância do Sol: 5,20 UA</p>
+          <p>Ano: 11,9 anos</p>
+        </article>
+        <article class="planeta" style="--i: 5">
+          <img src="images/saturno.png" alt="Planeta Saturno">
+          <h2>Saturno</h2>
+          <p>Distância do Sol: 9,58 UA</p>
+          <p>Ano: 29,4 anos</p>
+        </article>
+        <article class="planeta" style="--i: 6">
+          <img src="images/urano.png" alt="Planeta Urano">
+          <h2>Urano</h2>
+          <p>Distância do Sol: 19,2 UA</p>
+          <p>Ano: 84 anos</p>
+        </article>
+        <article class="planeta" style="--i: 7">
+          <img src="images/netuno.png" alt="Planeta Netuno">
+          <h2>Netuno</h2>
+          <p>Distância do Sol: 30,1 UA</p>
+          <p>Ano: 165 anos</p>
+        </article>
+      </div>
+    </div>
+
+    <nav class="nomes" aria-label="Escolha o planeta">
+        <label for="p1">Mercúrio</label>
+        <label for="p2">Vênus</label>
+        <label for="p3">Terra</label>
+        <label for="p4">Marte</label>
+        <label for="p5">Júpiter</label>
+        <label for="p6">Saturno</label>
+        <label for="p7">Urano</label>
+        <label for="p8">Netuno</label>
+    </nav>
+  </main>
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* =====================================================================
+   A3-H · Painel do Observatório (só CSS, HTML travado)
+   Três gráficos que só "acontecem" no hover do cartão:
+   1. barras horizontais em sequência (--v e --i vêm do HTML);
+   2. rosca que se desenha no sentido horário (conic-gradient + @property);
+   3. medidor semicircular com ponteiro e número que conta de 0 até --v.
+   O segredo dos itens 2 e 3: variáveis registradas com @property podem
+   ser animadas com transition, porque o navegador sabe o tipo delas.
+   ===================================================================== */
+
+@property --giro {            /* quanto da rosca está aparecendo */
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --p {               /* valor atual do medidor (0 a --v) */
+  syntax: '<integer>';        /* inteiro: o contador anda de 1 em 1 */
+  inherits: true;             /* o ponteiro (filho) precisa herdar */
+  initial-value: 0;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0B1026;
+  color: #E8ECFF;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Layout: 3 colunas → 2 → 1 ---------- */
+.painel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.painel h1 {
+  grid-column: 1 / -1;          /* o título ocupa a linha toda */
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+@media (max-width: 1099px) {
+  .painel { grid-template-columns: repeat(2, 1fr); }
+  .cartao--barras { grid-column: 1 / -1; }
+}
+
+@media (max-width: 699px) {
+  .painel { grid-template-columns: 1fr; padding: 20px 16px; }
+}
+
+.cartao {
+  min-width: 0;                 /* deixa o cartão encolher no grid (evita rolagem lateral) */
+  padding: 20px;
+  border: 1px solid #2A3470;
+  border-radius: 16px;
+  background: #151B3D;
+  transition: border-color .3s;
+}
+
+.cartao:hover { border-color: #7C5CFF; }
+.cartao h2 { margin: 0 0 16px; font-size: 18px; }
+
+/* =====================================================================
+   1. BARRAS HORIZONTAIS
+   Cada <li> é um grid de 3 colunas: rótulo | trilho | valor.
+   O trilho é um fundo do próprio li; a parte cheia é o ::before.
+   ===================================================================== */
+.barras {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.barra {
+  display: grid;
+  grid-template-columns: 120px 1fr 44px;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  /* trilho cinza só na coluna do meio */
+  background: linear-gradient(#232B5C, #232B5C) no-repeat;
+  background-position: 128px center;
+  background-size: calc(100% - 120px - 44px - 16px) 14px;
+}
+
+.barra span { grid-column: 1; }
+
+/* parte cheia: largura 0 em repouso; no hover vira --v % do trilho */
+.barra::before {
+  content: "";
+  grid-column: 2;
+  grid-row: 1;
+  height: 14px;
+  width: 0;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #7C5CFF, #22D3EE);
+  transition: width .6s ease-out;
+  transition-delay: 0s;          /* ao sair, todas descem juntas */
+}
+
+/* valor no fim da linha, lido do atributo data-valor */
+.barra::after {
+  content: attr(data-valor);
+  grid-column: 3;
+  grid-row: 1;
+  text-align: right;
+  font-weight: 700;
+  color: #FFD166;
+  opacity: 0;
+  transition: opacity .3s;
+  transition-delay: 0s;
+}
+
+.cartao--barras:hover .barra::before {
+  width: calc(var(--v) * 1%);    /* --v:92 → 92% da coluna */
+  transition-delay: calc(var(--i) * .15s);   /* uma depois da outra */
+}
+
+.cartao--barras:hover .barra::after {
+  opacity: 1;
+  transition-delay: calc(var(--i) * .15s + .6s);   /* aparece quando a barra termina */
+}
+
+/* =====================================================================
+   2. ROSCA (donut)
+   As fatias saem das variáveis --a --b --c --d (porcentagens).
+   Cada fatia termina na soma das anteriores: é por isso que usamos
+   calc((a + b) * 1%) e assim por diante.
+   A máscara conic revela de 0 até --giro, a partir das 12 h.
+   ===================================================================== */
+.cartao--rosca {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.cartao--rosca h2 { grid-column: 1 / -1; }
+
+.rosca {
+  --cor-a: #7C5CFF;
+  --cor-b: #22D3EE;
+  --cor-c: #FFD166;
+  --cor-d: #FF6B8B;
+  position: relative;
+  width: 170px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    /* furo do meio desenhado por cima, na cor do cartão */
+    radial-gradient(circle, #151B3D 0 55%, transparent 56%),
+    conic-gradient(
+      var(--cor-a) 0 calc(var(--a) * 1%),
+      var(--cor-b) 0 calc((var(--a) + var(--b)) * 1%),
+      var(--cor-c) 0 calc((var(--a) + var(--b) + var(--c)) * 1%),
+      var(--cor-d) 0 100%
+    );
+  /* revela só a parte de 0 até --giro (sentido horário, começando às 12 h) */
+  -webkit-mask: conic-gradient(#000 var(--giro), transparent 0);
+          mask: conic-gradient(#000 var(--giro), transparent 0);
+  transition: --giro 1.2s ease-in-out;
+}
+
+/* total no centro, lido de data-total */
+.rosca::after {
+  content: attr(data-total);
+  max-width: 90px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cartao--rosca:hover .rosca { --giro: 360deg; }   /* volta sozinho no sentido anti-horário */
+
+.legenda {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.legenda__item { display: flex; align-items: center; gap: 8px; }
+.legenda__item::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--cor);
+}
+.legenda__item--a { --cor: #7C5CFF; }
+.legenda__item--b { --cor: #22D3EE; }
+.legenda__item--c { --cor: #FFD166; }
+.legenda__item--d { --cor: #FF6B8B; }
+
+/* =====================================================================
+   3. MEDIDOR (gauge)
+   Meia-volta = 180°. Valor 100% = 180°, então cada 1% = 1,8°.
+   --p é inteiro e animado: o ponteiro, o arco e o número usam o mesmo --p.
+   ===================================================================== */
+.cartao--medidor { display: grid; justify-items: center; }
+
+.medidor {
+  position: relative;
+  width: 240px;
+  height: 120px;                 /* metade da altura: só o semicírculo de cima */
+  overflow: hidden;
+  border-radius: 120px 120px 0 0;
+  /* arco: começa às 9 h (from -90deg), pinta até p × 1,8° */
+  background:
+    radial-gradient(circle at 50% 100%, #151B3D 0 62%, transparent 63%),
+    conic-gradient(from -90deg at 50% 100%,
+      #22D3EE 0 calc(var(--p) * 1.8deg),
+      #232B5C 0 180deg,
+      transparent 0);
+  counter-reset: valor var(--p);    /* o número mostrado é o próprio --p */
+  transition: --p 1.5s ease-out;
+}
+
+/* número no meio do semicírculo */
+.medidor::after {
+  content: counter(valor) "%";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;                    /* número fica por cima do ponteiro */
+  margin: 0 auto;
+  width: 96px;
+  padding: 4px 0 0;
+  border-radius: 48px 48px 0 0;
+  background: #151B3D;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #FFD166;
+}
+
+/* ponteiro: gira em volta da base, de -90° (0%) até +90° (100%) */
+.medidor__ponteiro {
+  position: absolute;
+  left: calc(50% - 2px);
+  bottom: 0;
+  width: 4px;
+  height: 100px;
+  border-radius: 2px;
+  background: #E8ECFF;
+  transform-origin: 50% 100%;
+  transform: rotate(calc(var(--p) * 1.8deg - 90deg));
+}
+
+.cartao--medidor:hover .medidor { --p: var(--v); }
+
+.medidor__escala {
+  width: 240px;
+  margin: 6px 0 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #8E97C8;
+}
+
+/* ---------- Menos movimento: mostra tudo pronto, sem precisar de hover ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .barra::before { width: calc(var(--v) * 1%); transition: none; }
+  .barra::after  { opacity: 1; transition: none; }
+  .rosca   { --giro: 360deg; transition: none; }
+  .medidor { --p: var(--v); transition: none; }
+}

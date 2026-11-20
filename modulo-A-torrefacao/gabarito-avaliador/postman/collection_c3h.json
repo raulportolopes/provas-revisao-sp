@@ -1,0 +1,1114 @@
+{
+  "info": {
+    "_postman_id": "0d819891-f3bf-5b42-ad97-696d5d662f9c",
+    "name": "C3-H · Programa de fidelidade (Torra Paulista Cafés Especiais)",
+    "description": "Rode na ordem (Runner ou uma a uma). Antes de começar, restaure os arquivos JSON originais da pasta assets. Ajuste baseUrl na aba Variables e salve.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 · Login Ana (espera 200)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"ana@torra.sp\",\n  \"password\": \"Cafe2026!\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.code === 200) pm.collectionVariables.set('token_ana', pm.response.json().token);"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: token, role customer, expires_in 3600"
+    },
+    {
+      "name": "02 · Login Carla (staff) (espera 200)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"carla@torra.sp\",\n  \"password\": \"Balcao@3\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.code === 200) pm.collectionVariables.set('token_carla', pm.response.json().token);"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: role staff"
+    },
+    {
+      "name": "03 · Login Bruno (espera 200)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"bruno@torra.sp\",\n  \"password\": \"Graos#88\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.code === 200) pm.collectionVariables.set('token_bruno', pm.response.json().token);"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: role customer"
+    },
+    {
+      "name": "04 · /me sem token (espera 401)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/me",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "me"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 401', () => pm.response.to.have.status(401));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Unauthenticated\"}"
+    },
+    {
+      "name": "05 · /me com token inventado (espera 401)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer abc"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/me",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "me"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 401', () => pm.response.to.have.status(401));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Unauthenticated"
+    },
+    {
+      "name": "06 · /me da Ana (espera 200)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/me",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "me"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: points 197"
+    },
+    {
+      "name": "07 · /me/history da Ana (espera 200)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/me/history",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "me",
+            "history"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: ids 5, 3, 2, 1 (mais recente primeiro), datas dd/mm/aaaa HH:MM, resgate com -80; balance 197"
+    },
+    {
+      "name": "08 · /me/history da Carla (staff) (espera 403)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_carla}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/me/history",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "me",
+            "history"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 403', () => pm.response.to.have.status(403));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Forbidden\"}"
+    },
+    {
+      "name": "09 · Ana em /purchases com corpo vazio (espera 403)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/purchases",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "purchases"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 403', () => pm.response.to.have.status(403));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: 403 antes do 400"
+    },
+    {
+      "name": "10 · Compra sem campos (espera 400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_carla}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/purchases",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "purchases"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer_id\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 400', () => pm.response.to.have.status(400));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Invalid request body"
+    },
+    {
+      "name": "11 · Compra para um staff (espera 404)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_carla}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/purchases",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "purchases"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer_id\": 3,\n  \"amount_cents\": 1000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 404', () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Customer not found\"}"
+    },
+    {
+      "name": "12 · Compra com valor inválido (espera 422)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_carla}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/purchases",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "purchases"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer_id\": 2,\n  \"amount_cents\": -5\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Invalid amount\"}"
+    },
+    {
+      "name": "13 · Compra de R$ 25,99 do Bruno (espera 201)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_carla}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/purchases",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "purchases"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer_id\": 2,\n  \"amount_cents\": 2599\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 201', () => pm.response.to.have.status(201));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: points_earned 25, balance 65"
+    },
+    {
+      "name": "14 · Carla em /redeem (espera 403)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_carla}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 403', () => pm.response.to.have.status(403));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Forbidden"
+    },
+    {
+      "name": "15 · Resgate com id em texto (espera 400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": \"1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 400', () => pm.response.to.have.status(400));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Invalid request body"
+    },
+    {
+      "name": "16 · Recompensa inexistente (espera 404)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 9\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 404', () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Reward not found\"}"
+    },
+    {
+      "name": "17 · Recompensa vencida (espera 422)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 4\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Reward expired\"}"
+    },
+    {
+      "name": "18 · Recompensa única já resgatada (espera 409)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 3\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 409', () => pm.response.to.have.status(409));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Reward already redeemed\"}"
+    },
+    {
+      "name": "19 · Pontos insuficientes (espera 422)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 5\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Insufficient points\", \"balance\": 197, \"cost\": 900}"
+    },
+    {
+      "name": "20 · Resgate válido 1 (espera 201)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 201', () => pm.response.to.have.status(201));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: balance 147; voucher no formato TP-XXXX-XXXX"
+    },
+    {
+      "name": "21 · Resgate válido 2 (espera 201)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 201', () => pm.response.to.have.status(201));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: balance 97"
+    },
+    {
+      "name": "22 · Terceiro resgate do dia (espera 422)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reward_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 422', () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: {\"error\": \"Daily limit reached\"}"
+    },
+    {
+      "name": "23 · Extrato depois dos resgates (espera 200)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/me/history",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "me",
+            "history"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: os dois resgates de hoje no topo com -50; balance 97"
+    },
+    {
+      "name": "24 · Logout da Ana (espera 204)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/logout",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "logout"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 204', () => pm.response.to.have.status(204));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: sem corpo"
+    },
+    {
+      "name": "25 · Token depois do logout (espera 401)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token_ana}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/me",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "me"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 401', () => pm.response.to.have.status(401));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Unauthenticated"
+    },
+    {
+      "name": "26 · Rota inexistente (espera 404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/rewards",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "rewards"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 404', () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Not found"
+    },
+    {
+      "name": "27 · Método errado (espera 405)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/redeem",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "redeem"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 405', () => pm.response.to.have.status(405));"
+            ]
+          }
+        }
+      ],
+      "description": "Conferir: Method not allowed"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://000.000.00.00/XXX_modulo_a/C3-H"
+    },
+    {
+      "key": "token_ana",
+      "value": ""
+    },
+    {
+      "key": "token_carla",
+      "value": ""
+    },
+    {
+      "key": "token_bruno",
+      "value": ""
+    }
+  ]
+}

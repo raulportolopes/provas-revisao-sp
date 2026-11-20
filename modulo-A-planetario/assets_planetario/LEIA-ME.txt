@@ -1,0 +1,37 @@
+Mini Projetos · Planetário Estrela Guia
+Material do competidor. Cada pasta tem os arquivos da tarefa com o mesmo ID.
+Os vídeos mostram o resultado esperado; as legendas amarelas e o círculo do cursor só explicam o efeito.
+Design.mp4 junta todos os vídeos em sequência.
+
+A1-E  Botão Órbita
+   - referencia_a1e.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+A2-M  Carrossel 3D do Sistema Solar
+   - index.html: estrutura travada, não modifique
+   - images/: 8 imagens PNG dos planetas
+   - referencia_a2m.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+A3-H  Painel do Observatório
+   - index.html: estrutura travada, não modifique
+   - referencia_a3h.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+B1-E  Inscrição na Noite de Observação
+   - referencia_b1e.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+B2-M  Catálogo de Constelações
+   - constelacoes.json: 24 constelações (id, nome, sigla, hemisferio, estacao, area, estrela, magnitude, estrelas, descricao)
+   - referencia_b2m.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+B3-H  Mapa Estelar Interativo
+   - estrelas.json: 25 estrelas de Órion, Cruzeiro do Sul e Escorpião
+   - testes/orion.json: importação válida (6 ligações)
+   - testes/invalido.json: não é JSON
+   - testes/estrela-inexistente.json: ligação com estrela 99
+   - testes/notas.txt: extensão errada
+   - referencia_b3h.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+C1-E  Conversor de registros de observação
+   - observacoes.csv: CSV do Excel (BOM, ;, CRLF, aspas, linha em branco e 3 linhas com erro)
+   - so-cabecalho.csv: só o cabeçalho
+   - notas.txt: arquivo que não é CSV
+C2-M  API de sessões com login por token
+   - users.json: 2 usuários com senha bcrypt
+   - sessions.json: 13 sessões
+   - tokens.json: vazio ([])
+C3-H  Reserva de assentos do planetário
+   - sessions.json: 5 sessões
+   - reservations.json: 6 reservas

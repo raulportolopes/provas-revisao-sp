@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Espresso grátis",
+        "cost": 50,
+        "valid_until": "2027-06-30",
+        "once": false
+    },
+    {
+        "id": 2,
+        "name": "Pacote Mantiqueira 250 g",
+        "cost": 300,
+        "valid_until": "2027-06-30",
+        "once": false
+    },
+    {
+        "id": 3,
+        "name": "Kit degustação de boas-vindas",
+        "cost": 80,
+        "valid_until": "2027-06-30",
+        "once": true
+    },
+    {
+        "id": 4,
+        "name": "Bolo de aniversário",
+        "cost": 120,
+        "valid_until": "2026-10-31",
+        "once": true
+    },
+    {
+        "id": 5,
+        "name": "Curso de barista",
+        "cost": 900,
+        "valid_until": "2027-12-31",
+        "once": true
+    }
+]

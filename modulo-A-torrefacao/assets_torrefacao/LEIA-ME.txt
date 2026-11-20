@@ -1,0 +1,35 @@
+Mini Projetos · Torra Paulista Cafés Especiais
+Material do competidor. Cada pasta tem os arquivos da tarefa com o mesmo ID.
+Os vídeos mostram o resultado esperado; as legendas amarelas e o círculo do cursor só explicam o efeito.
+Design.mp4 junta todos os vídeos em sequência.
+
+A1-E  Botão Adicionar ao carrinho
+   - index.html: estrutura travada, não modifique
+   - referencia_a1e.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+A2-M  Cartões 3D que seguem o cursor
+   - index.html: estrutura travada, não modifique
+   - images/: 3 pacotes de café em PNG
+   - referencia_a2m.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+A3-H  Página da cafeteria responsiva
+   - index.html: estrutura travada, não modifique
+   - images/: hero.jpg e 4 fotos do cardápio
+   - layout/: prints de referência em 1440, 768 e 375 px (e menu aberto)
+   - referencia_a3h.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+B1-E  Preferências de tema e texto
+   - referencia_b1e.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+B2-M  Monte seu pedido
+   - cardapio.json: categorias, tamanhos e 12 itens (preços em centavos)
+   - referencia_b2m.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+B3-H  Avaliação com fotos
+   - testes/: xicara-1.jpg, balcao-2.png, grao-3.webp, bolo-4.jpg, latte-5.jpg, vitrine-6.png, extra-7.jpg (válidas), foto-grande-1-6mb.jpg, animacao-disfarcada.jpg (GIF renomeado) e cardapio.pdf
+   - referencia_b3h.mp4: vídeo de referência (as legendas amarelas e o círculo do cursor só explicam o efeito; não fazem parte da página)
+C1-E  Relatório de vendas por dia
+   - vendas.csv: 60 linhas de vendas de 02 a 10/11/2026 (05/11 sem vendas)
+C2-M  Pedidos com máquina de estados
+   - products.json: 12 produtos
+   - orders.json: 5 pedidos
+C3-H  Programa de fidelidade
+   - users.json: 3 contas
+   - rewards.json: 5 recompensas
+   - transactions.json: extrato inicial
+   - tokens.json: vazio ([])

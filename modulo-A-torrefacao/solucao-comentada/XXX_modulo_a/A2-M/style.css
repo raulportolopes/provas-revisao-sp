@@ -1,0 +1,154 @@
+/* =====================================================================
+   A2-M · Cartões 3D que seguem o cursor (SEM JavaScript, HTML travado)
+   Como "seguir o cursor" sem JS?
+   - Cada cartão tem 9 <span class="zona"> invisíveis formando uma grade 3x3
+     por cima dele. O CSS sabe sobre qual zona o mouse está (:hover).
+   - Com :has(.zona:nth-child(k):hover) o corpo do cartão recebe uma
+     inclinação (--rx, --ry) e a posição do brilho (--bx, --by).
+   - As camadas (pacote, selo, nome) ficam em profundidades diferentes
+     com translateZ: isso cria o efeito de paralaxe.
+   ===================================================================== */
+
+/* posição do brilho registrada para poder ANIMAR o gradiente */
+@property --bx { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
+@property --by { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #1C1410;
+  color: #F5EBDD;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+.colecao { max-width: 1100px; margin: 0 auto; padding: 40px 16px; text-align: center; }
+.colecao h1 { margin: 0 0 40px; font-family: Georgia, serif; font-size: clamp(26px, 4vw, 40px); }
+
+.cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* ---------- 1. Cartão: dá a perspectiva ---------- */
+.cartao {
+  width: 280px;
+  height: 400px;
+  perspective: 900px;
+}
+
+/* ---------- 2. Corpo: é ele que inclina ---------- */
+.cartao__corpo {
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 20px;
+  background: linear-gradient(160deg, #4A2E1C, #2A1A10);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+  transform-style: preserve-3d;          /* filhos com profundidade própria */
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform .5s ease-out, box-shadow .5s, --bx .5s, --by .5s;
+}
+
+/* ---------- 3. Zonas: grade 3x3 invisível por cima de tudo ---------- */
+.zona {
+  position: absolute;
+  z-index: 5;
+  width: 33.334%;
+  height: 33.334%;
+}
+/* coluna (esquerda/meio/direita) */
+.zona:nth-child(3n + 1) { left: 0; }
+.zona:nth-child(3n + 2) { left: 33.333%; }
+.zona:nth-child(3n + 3) { left: 66.666%; }
+/* linha (cima/meio/baixo) */
+.zona:nth-child(-n + 3)       { top: 0; }
+.zona:nth-child(n + 4):nth-child(-n + 6) { top: 33.333%; }
+.zona:nth-child(n + 7)        { top: 66.666%; }
+
+/* ---------- 4. Inclinação por zona ----------
+   Regra: o lado sob o cursor AFUNDA (vai para trás).
+   rotateX positivo leva a borda de cima para trás;
+   rotateY negativo leva a borda da esquerda para trás. */
+.cartao__corpo:has(.zona:nth-child(1):hover) { --rx:  12deg; --ry: -12deg; --bx: 15%; --by: 15%; }
+.cartao__corpo:has(.zona:nth-child(2):hover) { --rx:  12deg; --ry:   0deg; --bx: 50%; --by: 15%; }
+.cartao__corpo:has(.zona:nth-child(3):hover) { --rx:  12deg; --ry:  12deg; --bx: 85%; --by: 15%; }
+.cartao__corpo:has(.zona:nth-child(4):hover) { --rx:   0deg; --ry: -12deg; --bx: 15%; --by: 50%; }
+.cartao__corpo:has(.zona:nth-child(5):hover) { --rx:   0deg; --ry:   0deg; --bx: 50%; --by: 50%; }
+.cartao__corpo:has(.zona:nth-child(6):hover) { --rx:   0deg; --ry:  12deg; --bx: 85%; --by: 50%; }
+.cartao__corpo:has(.zona:nth-child(7):hover) { --rx: -12deg; --ry: -12deg; --bx: 15%; --by: 85%; }
+.cartao__corpo:has(.zona:nth-child(8):hover) { --rx: -12deg; --ry:   0deg; --bx: 50%; --by: 85%; }
+.cartao__corpo:has(.zona:nth-child(9):hover) { --rx: -12deg; --ry:  12deg; --bx: 85%; --by: 85%; }
+
+.cartao:hover .cartao__corpo { box-shadow: 0 25px 45px rgba(0, 0, 0, .55); }
+
+/* ---------- 5. Camadas em profundidades diferentes (paralaxe) ---------- */
+.cartao__pacote {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  width: 170px;
+  transform: translateX(-50%) translateZ(60px);
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .5));
+}
+
+.cartao__selo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #C8873A;
+  color: #1C1410;
+  font-size: 12px;
+  font-weight: 800;
+  transform: translateZ(80px);
+}
+
+.cartao__nome {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  transform: translateZ(40px);
+}
+
+.cartao__notas {
+  margin: 6px 0 0;
+  color: #D9C3A5;
+  font-size: 14px;
+  transform: translateZ(30px);
+}
+
+/* ---------- 6. Brilho que acompanha a zona ---------- */
+.cartao__brilho {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--bx) var(--by), rgba(255, 236, 200, .35), transparent 55%);
+  opacity: 0;
+  transition: opacity .4s;
+}
+.cartao:hover .cartao__brilho { opacity: 1; }
+
+/* ---------- 7. Celular / telas sem mouse: sem inclinação ---------- */
+@media (max-width: 600px), (hover: none) {
+  .cartao { width: min(320px, 100%); }
+  .zona { display: none; }
+  .cartao__corpo { transform: none; }
+}
+
+/* ---------- 8. Menos movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .cartao__corpo { transition: none; transform: none !important; }
+}

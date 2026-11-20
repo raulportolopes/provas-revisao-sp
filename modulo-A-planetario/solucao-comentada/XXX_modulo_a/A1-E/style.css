@@ -1,0 +1,107 @@
+/* =====================================================================
+   A1-E · Botão Órbita (Planetário Estrela Guia)
+   Ideia central: a borda é um conic-gradient que GIRA. Para animar o
+   ângulo de um gradiente, o ângulo precisa ser uma variável registrada
+   com @property (assim o navegador sabe que é um <angle> e interpola).
+   ===================================================================== */
+
+/* 1) Registrar a variável do ângulo. Sem isto a animação "pula". */
+@property --angulo {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* 2) Fundo do céu e centralização com grid (place-items) */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 40%, #1B2350 0%, #0B1026 60%);
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+.palco { display: grid; place-items: center; }
+
+/* 3) O botão.
+   Truque da borda em degradê: dois fundos empilhados.
+   - o de cima (padding-box) é a cor sólida de dentro;
+   - o de baixo (border-box) é o conic-gradient que aparece só
+     na faixa da borda, porque a borda é transparente. */
+.btn-orbita {
+  --cor-fundo: #0B1026;
+  position: relative;
+  padding: 22px 48px;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  color: #E8ECFF;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  cursor: pointer;
+  background:
+    linear-gradient(var(--cor-fundo), var(--cor-fundo)) padding-box,
+    conic-gradient(from var(--angulo), #7C5CFF, #22D3EE, #FFD166, #7C5CFF) border-box;
+  box-shadow: 0 0 0 rgba(124, 92, 255, 0);
+  /* a borda gira sempre (4 s por volta) */
+  animation: girar 4s linear infinite;
+  /* tudo que muda no hover e no active é animado na ida e na volta */
+  transition: transform .3s ease, box-shadow .3s ease, letter-spacing .3s ease, background-color .3s;
+}
+
+@keyframes girar {
+  to { --angulo: 360deg; }
+}
+
+/* 4) Hover: sobe 4 px, brilho violeta e letras se afastam um pouco.
+   O fundo interno clareia de leve trocando a variável. */
+.btn-orbita:hover {
+  --cor-fundo: #151B3D;
+  transform: translateY(-4px);
+  letter-spacing: .08em;
+  box-shadow: 0 0 24px 4px rgba(124, 92, 255, .55), 0 10px 30px rgba(0, 0, 0, .45);
+}
+
+/* 5) Pressionado: volta para baixo, encolhe e o brilho diminui */
+.btn-orbita:active {
+  transform: translateY(0) scale(.96);
+  box-shadow: 0 0 10px 1px rgba(124, 92, 255, .4);
+}
+
+/* 6) Foco pelo teclado (Tab): contorno amarelo tracejado afastado 6 px.
+   :focus-visible só aparece com teclado, não com clique do mouse. */
+.btn-orbita:focus-visible {
+  outline: 3px dashed #FFD166;
+  outline-offset: 6px;
+}
+
+/* 7) Ponto que orbita: ::after é uma bolinha presa a um "braço"
+   invisível que gira junto com a mesma variável --angulo. */
+.btn-orbita::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: #FFD166;
+  box-shadow: 0 0 8px 2px #FFD166;
+  /* gira em volta do centro e se afasta para a borda */
+  transform: rotate(var(--angulo)) translateX(calc(50% + 120px)) scale(.9);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.btn-orbita:hover::after { opacity: 1; }
+
+/* 8) Acessibilidade: quem pede menos movimento não vê a rotação */
+@media (prefers-reduced-motion: reduce) {
+  .btn-orbita { animation: none; transition: none; }
+  .btn-orbita::after { display: none; }
+}

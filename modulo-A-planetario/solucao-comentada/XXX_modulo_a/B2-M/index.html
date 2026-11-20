@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2-M · Catálogo de Constelações</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Catálogo de Constelações</h1>
+    <p>Planetário Estrela Guia</p>
+  </header>
+
+  <main class="conteudo">
+    <!-- Filtros: todos os controles têm label (acessibilidade) -->
+    <section class="filtros" aria-label="Filtros">
+      <div class="filtro filtro--busca">
+        <label for="busca">Buscar</label>
+        <input id="busca" type="search" placeholder="Nome, sigla ou estrela">
+      </div>
+
+      <div class="filtro">
+        <span class="rotulo" id="rot-hemi">Hemisfério</span>
+        <div class="chips" role="group" aria-labelledby="rot-hemi" id="chips">
+          <button type="button" class="chip" data-hemisferio="">Todos</button>
+          <button type="button" class="chip" data-hemisferio="Norte">Norte</button>
+          <button type="button" class="chip" data-hemisferio="Sul">Sul</button>
+          <button type="button" class="chip" data-hemisferio="Equatorial">Equatorial</button>
+        </div>
+      </div>
+
+      <div class="filtro">
+        <label for="estacao">Melhor estação</label>
+        <select id="estacao">
+          <option value="">Todas</option>
+          <option>Verão</option>
+          <option>Outono</option>
+          <option>Inverno</option>
+          <option>Primavera</option>
+        </select>
+      </div>
+
+      <div class="filtro">
+        <label for="ordem">Ordenar por</label>
+        <select id="ordem">
+          <option value="nome">Nome (A–Z)</option>
+          <option value="area">Maior área</option>
+          <option value="brilho">Estrela mais brilhante</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="contador" class="contador" aria-live="polite"></p>
+    <p id="estado" class="estado" role="status">Carregando constelações…</p>
+
+    <ul id="lista" class="lista"></ul>
+
+    <div id="vazio" class="vazio" hidden>
+      <p>Nenhuma constelação encontrada.</p>
+      <button type="button" id="limpar">Limpar filtros</button>
+    </div>
+
+    <nav id="paginacao" class="paginacao" aria-label="Paginação"></nav>
+  </main>
+
+  <!-- <dialog> com showModal(): o navegador já deixa o resto da página inerte
+       e fecha com Esc. Nós cuidamos do clique no fundo, das setas e do foco. -->
+  <dialog id="modal" class="modal" aria-labelledby="m-nome">
+    <div class="modal__caixa">
+      <button type="button" class="modal__fechar" id="m-fechar" aria-label="Fechar">×</button>
+      <p class="modal__sigla" id="m-sigla"></p>
+      <h2 id="m-nome"></h2>
+      <p id="m-desc"></p>
+      <dl class="modal__dados">
+        <dt>Hemisfério</dt><dd id="m-hemi"></dd>
+        <dt>Melhor estação</dt><dd id="m-estacao"></dd>
+        <dt>Área</dt><dd id="m-area"></dd>
+        <dt>Estrela mais brilhante</dt><dd id="m-estrela"></dd>
+        <dt>Estrelas principais</dt><dd id="m-estrelas"></dd>
+      </dl>
+      <div class="modal__nav">
+        <button type="button" id="m-ant" aria-label="Constelação anterior">‹ Anterior</button>
+        <span id="m-pos"></span>
+        <button type="button" id="m-prox" aria-label="Próxima constelação">Próxima ›</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

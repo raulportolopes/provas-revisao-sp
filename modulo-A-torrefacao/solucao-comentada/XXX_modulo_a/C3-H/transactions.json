@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "type": "earn",
+        "points": 120,
+        "description": "Compra de R$ 120,00",
+        "created_at": "2026-11-02T09:10:00-03:00"
+    },
+    {
+        "id": 2,
+        "user_id": 1,
+        "type": "earn",
+        "points": 95,
+        "description": "Compra de R$ 95,40",
+        "created_at": "2026-11-08T16:22:00-03:00"
+    },
+    {
+        "id": 3,
+        "user_id": 1,
+        "type": "redeem",
+        "points": 80,
+        "description": "Resgate: Kit degustação de boas-vindas",
+        "created_at": "2026-11-09T10:05:00-03:00",
+        "reward_id": 3
+    },
+    {
+        "id": 4,
+        "user_id": 2,
+        "type": "earn",
+        "points": 40,
+        "description": "Compra de R$ 40,90",
+        "created_at": "2026-11-10T08:30:00-03:00"
+    },
+    {
+        "id": 5,
+        "user_id": 1,
+        "type": "earn",
+        "points": 62,
+        "description": "Compra de R$ 62,00",
+        "created_at": "2026-11-15T12:00:00-03:00"
+    }
+]

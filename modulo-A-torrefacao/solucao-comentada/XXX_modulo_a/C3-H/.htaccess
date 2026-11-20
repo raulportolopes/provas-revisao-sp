@@ -1,0 +1,9 @@
+RewriteEngine On
+# O Apache costuma "engolir" o cabeçalho Authorization: esta linha repassa para o PHP
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+# Os arquivos de dados não podem ser baixados direto pelo navegador
+<FilesMatch "^(users|tokens|transactions)\.json$">
+  Require all denied
+</FilesMatch>

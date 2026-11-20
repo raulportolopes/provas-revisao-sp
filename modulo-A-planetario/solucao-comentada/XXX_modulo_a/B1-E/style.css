@@ -1,0 +1,77 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background: #0B1026;
+  color: #E8ECFF;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+.caixa {
+  width: 100%;
+  max-width: 480px;
+  padding: 28px;
+  border-radius: 16px;
+  background: #151B3D;
+  border: 1px solid #2A3470;
+}
+
+h1 { margin: 0 0 4px; font-size: 26px; }
+.sub { margin: 0 0 20px; color: #B8C0E8; font-size: 14px; }
+
+.campo { margin-bottom: 14px; }
+label { display: block; margin-bottom: 6px; font-weight: 600; }
+.dica { font-weight: 400; color: #8E97C8; font-size: 13px; }
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #2A3470;      /* neutro: ainda não validado */
+  border-radius: 10px;
+  background: #0B1026;
+  color: #E8ECFF;
+  font: inherit;
+  transition: border-color .2s;
+}
+
+input:focus-visible, textarea:focus-visible, button:focus-visible {
+  outline: 3px solid #FFD166;
+  outline-offset: 2px;
+}
+
+/* estados vêm das classes que o JS coloca */
+.valido   { border-color: #2ECC71; }
+.invalido { border-color: #FF5C7A; }
+
+.erro { min-height: 1em; margin: 4px 0 0; color: #FF8FA3; font-size: 13px; }
+
+.contador { margin: 4px 0 0; text-align: right; font-size: 12px; color: #8E97C8; }
+.contador.alerta { color: #FFD166; }      /* 180 ou mais */
+.contador.estourou { color: #FF5C7A; font-weight: 700; }
+
+.acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+
+button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #7C5CFF;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:disabled { background: #3A4170; color: #8E97C8; cursor: not-allowed; }
+.secundario { background: transparent; border: 2px solid #2A3470; color: #E8ECFF; }
+
+.sucesso {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(46, 204, 113, .15);
+  border: 1px solid #2ECC71;
+}

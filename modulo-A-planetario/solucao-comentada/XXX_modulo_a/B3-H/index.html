@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B3-H · Mapa Estelar Interativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Mapa Estelar Interativo</h1>
+    <p class="ajuda">Clique em duas estrelas para ligá-las. Teclado: Tab até o mapa, ← → escolhem a estrela, Enter liga.
+      Ctrl+Z desfaz e Ctrl+Y refaz. Solte um arquivo .json sobre o mapa para importar.</p>
+
+    <div class="barra" role="toolbar" aria-label="Ações do mapa">
+      <button type="button" id="desfazer" disabled>Desfazer</button>
+      <button type="button" id="refazer" disabled>Refazer</button>
+      <button type="button" id="limpar">Limpar</button>
+      <button type="button" id="png">Exportar PNG</button>
+      <button type="button" id="json">Exportar JSON</button>
+      <label class="botao-arquivo">Importar JSON
+        <input type="file" id="arquivo" accept=".json,application/json">
+      </label>
+      <span id="contador" class="contador">0 ligações</span>
+    </div>
+
+    <div class="area" id="area">
+      <!-- tamanho LÓGICO 800 x 500; o CSS estica, então convertemos o clique -->
+      <canvas id="mapa" width="800" height="500" tabindex="0"
+              aria-label="Mapa estelar. Use as setas para escolher uma estrela e Enter para ligar."></canvas>
+      <div id="dica" class="dica" hidden></div>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

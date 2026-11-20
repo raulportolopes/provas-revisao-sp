@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Ana Clara",
+        "email": "ana@estrelaguia.sp",
+        "password": "$2y$10$PJCALRyIsd8ftAJA0c71/O/gI9Z.VptExP2lICTE7VA.DTmh/n6Ly"
+    },
+    {
+        "id": 2,
+        "name": "Bruno Lima",
+        "email": "bruno@estrelaguia.sp",
+        "password": "$2y$10$WHMu8wPAaT/b3B681mSml.sOeXM9PQOWuF51KtBobs854RPYLaZZe"
+    }
+]

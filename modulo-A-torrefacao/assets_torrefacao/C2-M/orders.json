@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "customer": "Ana Clara",
+    "items": [
+      {
+        "product_id": 2,
+        "name": "Cappuccino",
+        "size": "M",
+        "qty": 2,
+        "unit_price_cents": 1390,
+        "subtotal_cents": 2780
+      }
+    ],
+    "total_cents": 2780,
+    "status": "delivered",
+    "history": [
+      {
+        "status": "received",
+        "at": "2026-11-18T08:02:00-03:00"
+      },
+      {
+        "status": "preparing",
+        "at": "2026-11-18T08:04:00-03:00"
+      },
+      {
+        "status": "ready",
+        "at": "2026-11-18T08:10:00-03:00"
+      },
+      {
+        "status": "delivered",
+        "at": "2026-11-18T08:12:00-03:00"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "customer": "Bruno Lima",
+    "items": [
+      {
+        "product_id": 5,
+        "name": "Coado V60",
+        "size": "U",
+        "qty": 1,
+        "unit_price_cents": 1100,
+        "subtotal_cents": 1100
+      },
+      {
+        "product_id": 9,
+        "name": "Pão de queijo",
+        "size": "U",
+        "qty": 3,
+        "unit_price_cents": 650,
+        "subtotal_cents": 1950
+      }
+    ],
+    "total_cents": 3050,
+    "status": "ready",
+    "history": [
+      {
+        "status": "received",
+        "at": "2026-11-19T09:15:00-03:00"
+      },
+      {
+        "status": "preparing",
+        "at": "2026-11-19T09:16:00-03:00"
+      },
+      {
+        "status": "ready",
+        "at": "2026-11-19T09:25:00-03:00"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "customer": "Carla Souza",
+    "items": [
+      {
+        "product_id": 1,
+        "name": "Espresso",
+        "size": "P",
+        "qty": 1,
+        "unit_price_cents": 750,
+        "subtotal_cents": 750
+      }
+    ],
+    "total_cents": 750,
+    "status": "received",
+    "history": [
+      {
+        "status": "received",
+        "at": "2026-11-19T09:40:00-03:00"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "customer": "Davi Rocha",
+    "items": [
+      {
+        "product_id": 4,
+        "name": "Mocha",
+        "size": "G",
+        "qty": 1,
+        "unit_price_cents": 1890,
+        "subtotal_cents": 1890
+      }
+    ],
+    "total_cents": 1890,
+    "status": "preparing",
+    "history": [
+      {
+        "status": "received",
+        "at": "2026-11-19T09:42:00-03:00"
+      },
+      {
+        "status": "preparing",
+        "at": "2026-11-19T09:45:00-03:00"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "customer": "Elisa Prado",
+    "items": [
+      {
+        "product_id": 12,
+        "name": "Croissant",
+        "size": "U",
+        "qty": 2,
+        "unit_price_cents": 1050,
+        "subtotal_cents": 2100
+      }
+    ],
+    "total_cents": 2100,
+    "status": "cancelled",
+    "history": [
+      {
+        "status": "received",
+        "at": "2026-11-19T09:50:00-03:00"
+      },
+      {
+        "status": "cancelled",
+        "at": "2026-11-19T09:51:00-03:00"
+      }
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B1-E · Inscrição para a Noite de Observação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="caixa">
+    <h1>Noite de Observação</h1>
+    <p class="sub">Sessão de <strong>12/12/2026</strong>. Idade mínima: 12 anos na data da sessão.</p>
+
+    <!-- novalidate: a validação é nossa, em JS; o navegador não mostra os balões dele -->
+    <form id="form" novalidate>
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" aria-describedby="erro-nome">
+        <p class="erro" id="erro-nome" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="text" inputmode="email" autocomplete="email" aria-describedby="erro-email">
+        <p class="erro" id="erro-email" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="nascimento">Data de nascimento <span class="dica">(dd/mm/aaaa)</span></label>
+        <input id="nascimento" name="nascimento" type="text" inputmode="numeric" maxlength="10" placeholder="dd/mm/aaaa" aria-describedby="erro-nascimento">
+        <p class="erro" id="erro-nascimento" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="obs">Observações <span class="dica">(opcional)</span></label>
+        <textarea id="obs" name="obs" rows="3" aria-describedby="contador erro-obs"></textarea>
+        <p class="contador" id="contador">0/200</p>
+        <p class="erro" id="erro-obs" aria-live="polite"></p>
+      </div>
+
+      <div class="acoes">
+        <button type="submit" id="enviar" disabled>Confirmar inscrição</button>
+        <button type="reset" id="limpar" class="secundario">Limpar</button>
+      </div>
+    </form>
+
+    <div id="sucesso" class="sucesso" role="status" hidden></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

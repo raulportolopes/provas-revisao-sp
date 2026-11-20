@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B3-H · Avaliação com fotos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Avalie sua visita</h1>
+
+    <fieldset class="estrelas">
+      <legend>Sua nota</legend>
+      <!-- ordem invertida no HTML + flex-direction: row-reverse = o truque do ~ pinta as anteriores -->
+      <input type="radio" name="nota" id="n5" value="5"><label for="n5" title="5 estrelas">★<span class="sr">5 estrelas</span></label>
+      <input type="radio" name="nota" id="n4" value="4"><label for="n4" title="4 estrelas">★<span class="sr">4 estrelas</span></label>
+      <input type="radio" name="nota" id="n3" value="3"><label for="n3" title="3 estrelas">★<span class="sr">3 estrelas</span></label>
+      <input type="radio" name="nota" id="n2" value="2"><label for="n2" title="2 estrelas">★<span class="sr">2 estrelas</span></label>
+      <input type="radio" name="nota" id="n1" value="1"><label for="n1" title="1 estrela">★<span class="sr">1 estrela</span></label>
+    </fieldset>
+
+    <div id="zona" class="zona" tabindex="0" role="button" aria-describedby="zona-dica">
+      <p><strong>Arraste as fotos para cá</strong> ou clique para escolher</p>
+      <p id="zona-dica" class="zona__dica">JPG, PNG ou WebP · até 1,5 MB cada · no máximo 6 fotos</p>
+      <input type="file" id="arquivos" multiple accept="image/jpeg,image/png,image/webp" hidden>
+    </div>
+
+    <p id="contador" class="contador">0 de 6 fotos</p>
+    <ul id="erros" class="erros" aria-live="polite"></ul>
+
+    <ul id="fotos" class="fotos" aria-label="Fotos adicionadas"></ul>
+
+    <button type="button" id="publicar" class="publicar" disabled>Publicar avaliação</button>
+    <p id="resultado" class="resultado" role="status"></p>
+  </main>
+
+  <dialog id="lightbox" class="lightbox" aria-labelledby="lb-nome">
+    <button type="button" class="lightbox__fechar" id="lb-fechar" aria-label="Fechar">×</button>
+    <img id="lb-img" alt="">
+    <div class="lightbox__rodape">
+      <button type="button" id="lb-ant" aria-label="Foto anterior">‹</button>
+      <p><span id="lb-nome"></span> · <span id="lb-pos"></span></p>
+      <button type="button" id="lb-prox" aria-label="Próxima foto">›</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

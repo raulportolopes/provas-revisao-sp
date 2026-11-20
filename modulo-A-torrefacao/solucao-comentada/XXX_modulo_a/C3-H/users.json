@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Ana Clara",
+        "email": "ana@torra.sp",
+        "password": "$2y$10$aaoZBaLTGMzPn1FtmDJPMe0CALI/YQGse7Csp21CnWCZEGajaPkY2",
+        "role": "customer"
+    },
+    {
+        "id": 2,
+        "name": "Bruno Lima",
+        "email": "bruno@torra.sp",
+        "password": "$2y$10$nugaDhlrl./23Ge/vKuZ4OOyxJQGd64LHzayWZ7Ni8gedwya.5G8.",
+        "role": "customer"
+    },
+    {
+        "id": 3,
+        "name": "Carla Souza",
+        "email": "carla@torra.sp",
+        "password": "$2y$10$Yp0A2d.OS6kI8GI.A.JPP.Va6zHl3JhRRAhipZREU1rLt7saC2oSi",
+        "role": "staff"
+    }
+]

@@ -1,0 +1,134 @@
+/* =====================================================================
+   A1-E · Botão "Adicionar ao carrinho" (só CSS, HTML travado)
+   - estado ligado/desligado sem JS: o <label> envolve um checkbox;
+     com :has(:checked) o label sabe se está marcado;
+   - "líquido" subindo: um quadrado grande com border-radius 40% que gira
+     (keyframes) e sobe no hover: a borda arredondada girando parece onda;
+   - troca de texto: os dois textos ficam empilhados e deslizam.
+   ===================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #F5EBDD;
+  color: #3B2416;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+.produto { text-align: center; }
+.produto__nome { margin: 0; font-size: 26px; }
+.produto__preco { margin: 6px 0 24px; font-size: 20px; font-weight: 700; color: #C8873A; }
+
+/* ---------- O botão ---------- */
+.btn-add {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+  height: 60px;
+  padding: 0 24px;
+  overflow: hidden;                 /* esconde o "líquido" fora do botão */
+  border: 2px solid #3B2416;
+  border-radius: 14px;
+  background: #FFFFFF;
+  color: #3B2416;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .4s, border-color .4s, color .4s, transform .2s;
+}
+
+/* checkbox fora da tela mas FOCÁVEL (Tab + Espaço funcionam) */
+.btn-add__check {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+/* ---------- Líquido (onda) ---------- */
+.btn-add__liquido {
+  position: absolute;
+  left: -50%;
+  top: 100%;                        /* começa escondido abaixo do botão */
+  width: 200%;
+  aspect-ratio: 1;
+  border-radius: 40%;               /* quadrado arredondado: girando, a borda ondula */
+  background: #3B2416;
+  animation: onda 4s linear infinite;
+  transition: top .7s ease-in-out;
+}
+
+@keyframes onda {
+  to { transform: rotate(360deg); }
+}
+
+/* ícone e textos ficam por cima do líquido */
+.btn-add__icone, .btn-add__textos { position: relative; z-index: 1; }
+
+/* ---------- Ícone: carrinho (sacola) que vira "check" ----------
+   O check é uma caixa com só 2 bordas (baixo e direita) girada 45°. */
+.btn-add__icone {
+  width: 22px;
+  height: 22px;
+  border: 3px solid currentColor;
+  border-radius: 4px 4px 8px 8px;
+  transition: all .4s;
+}
+
+/* ---------- Textos empilhados que deslizam ---------- */
+.btn-add__textos {
+  display: grid;
+  height: 24px;
+  overflow: hidden;
+  text-align: left;
+}
+.btn-add__texto {
+  grid-area: 1 / 1;                 /* os dois na mesma célula */
+  transition: transform .4s ease, opacity .4s;
+}
+.btn-add__texto--ok { transform: translateY(100%); opacity: 0; }
+
+/* ---------- HOVER: o líquido sobe e o texto fica creme ---------- */
+.btn-add:hover .btn-add__liquido { top: -60%; }
+.btn-add:hover { color: #F5EBDD; }
+
+/* ---------- PRESSIONADO ---------- */
+.btn-add:active { transform: scale(.96); }
+
+/* ---------- MARCADO (Adicionado) ---------- */
+.btn-add:has(:checked) {
+  background: #2F5D50;
+  border-color: #2F5D50;
+  color: #FFFFFF;
+}
+.btn-add:has(:checked) .btn-add__liquido { opacity: 0; }   /* verde liso, sem onda */
+
+.btn-add:has(:checked) .btn-add__texto--add { transform: translateY(-100%); opacity: 0; }
+.btn-add:has(:checked) .btn-add__texto--ok  { transform: translateY(0); opacity: 1; }
+
+.btn-add:has(:checked) .btn-add__icone {
+  width: 12px;
+  height: 22px;
+  border-width: 0 4px 4px 0;        /* só baixo e direita: forma um "L" */
+  border-radius: 0;
+  transform: rotate(45deg) translate(-2px, -2px);
+}
+
+/* ---------- FOCO pelo teclado (o foco está no checkbox escondido) ---------- */
+.btn-add:has(:focus-visible) {
+  outline: 3px solid #C8873A;
+  outline-offset: 4px;
+}
+
+/* ---------- Menos movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn-add__liquido { animation: none; transition: none; }
+  .btn-add, .btn-add__texto, .btn-add__icone { transition: none; }
+}

@@ -1,0 +1,141 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0B1026;
+  color: #E8ECFF;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+/* rolagem travada enquanto o modal está aberto (classe posta pelo JS) */
+body.travado { overflow: hidden; }
+
+.topo { padding: 24px; text-align: center; background: #151B3D; }
+.topo h1 { margin: 0; font-size: clamp(22px, 4vw, 34px); }
+.topo p { margin: 4px 0 0; color: #8E97C8; }
+
+.conteudo { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+
+.filtros {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+@media (max-width: 900px) { .filtros { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .filtros { grid-template-columns: 1fr; } }
+
+.filtro label, .rotulo { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; }
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2A3470;
+  border-radius: 10px;
+  background: #151B3D;
+  color: inherit;
+  font: inherit;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  padding: 8px 12px;
+  border: 1px solid #2A3470;
+  border-radius: 999px;
+  background: transparent;
+  color: #B8C0E8;
+  font: inherit;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: #7C5CFF; border-color: #7C5CFF; color: #fff; }
+
+:focus-visible { outline: 3px solid #FFD166; outline-offset: 2px; }
+
+.contador { margin: 20px 0 8px; color: #B8C0E8; }
+.estado { color: #FFD166; }
+
+.lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 900px) { .lista { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .lista { grid-template-columns: 1fr; } }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 18px;
+  border: 1px solid #2A3470;
+  border-radius: 14px;
+  background: #151B3D;
+  transition: transform .2s, border-color .2s;
+}
+.card:hover { transform: translateY(-4px); border-color: #7C5CFF; }
+.card h2 { margin: 0; font-size: 20px; }
+.card p { margin: 0; font-size: 14px; color: #B8C0E8; }
+.card button { margin-top: auto; align-self: flex-start; }
+
+.sigla {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #22D3EE;
+  color: #0B1026;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #7C5CFF;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+button:disabled { background: #2A3470; color: #6B739E; cursor: not-allowed; }
+
+.vazio { padding: 32px; text-align: center; border: 1px dashed #2A3470; border-radius: 14px; }
+
+.paginacao { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 24px; }
+.paginacao button { min-width: 40px; background: #151B3D; border: 1px solid #2A3470; }
+.paginacao button[aria-current="page"] { background: #FFD166; color: #0B1026; font-weight: 800; }
+
+/* ---------- Modal ---------- */
+.modal {
+  width: min(560px, calc(100% - 32px));
+  padding: 0;
+  border: 1px solid #7C5CFF;
+  border-radius: 16px;
+  background: #151B3D;
+  color: inherit;
+}
+.modal::backdrop { background: rgba(5, 8, 20, .75); }
+/* entrada suave: o dialog aberto ganha o atributo [open] */
+.modal[open] { animation: surgir .25s ease-out; }
+@keyframes surgir { from { opacity: 0; transform: translateY(16px) scale(.97); } }
+
+.modal__caixa { position: relative; padding: 28px; }
+.modal__fechar {
+  position: absolute; top: 10px; right: 10px;
+  width: 40px; height: 40px; padding: 0;
+  font-size: 26px; line-height: 1; background: transparent;
+}
+.modal__sigla { margin: 0; color: #22D3EE; font-weight: 800; }
+.modal h2 { margin: 4px 0 8px; }
+.modal__dados { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; }
+.modal__dados dt { color: #8E97C8; }
+.modal__dados dd { margin: 0; }
+.modal__nav { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .modal[open] { animation: none; }
+  .card { transition: none; }
+}

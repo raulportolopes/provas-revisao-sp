@@ -1,0 +1,138 @@
+{
+  "categorias": [
+    {
+      "id": "cafes",
+      "nome": "Cafés"
+    },
+    {
+      "id": "metodos",
+      "nome": "Métodos"
+    },
+    {
+      "id": "acompanhamentos",
+      "nome": "Acompanhamentos"
+    }
+  ],
+  "tamanhos": {
+    "P": "Pequeno",
+    "M": "Médio",
+    "G": "Grande",
+    "U": "Único"
+  },
+  "itens": [
+    {
+      "id": 1,
+      "categoria": "cafes",
+      "nome": "Espresso",
+      "descricao": "Curto e encorpado, crema espessa.",
+      "precos": {
+        "P": 750,
+        "M": 950
+      }
+    },
+    {
+      "id": 2,
+      "categoria": "cafes",
+      "nome": "Cappuccino",
+      "descricao": "Espresso, leite vaporizado e canela.",
+      "precos": {
+        "P": 1190,
+        "M": 1390,
+        "G": 1690
+      }
+    },
+    {
+      "id": 3,
+      "categoria": "cafes",
+      "nome": "Latte",
+      "descricao": "Espresso com bastante leite cremoso.",
+      "precos": {
+        "M": 1450,
+        "G": 1750
+      }
+    },
+    {
+      "id": 4,
+      "categoria": "cafes",
+      "nome": "Mocha",
+      "descricao": "Espresso, chocolate meio amargo e leite.",
+      "precos": {
+        "M": 1590,
+        "G": 1890
+      }
+    },
+    {
+      "id": 5,
+      "categoria": "metodos",
+      "nome": "Coado V60",
+      "descricao": "Filtrado na hora, notas de frutas.",
+      "precos": {
+        "U": 1100
+      }
+    },
+    {
+      "id": 6,
+      "categoria": "metodos",
+      "nome": "Prensa francesa",
+      "descricao": "Serve 2 xícaras, corpo intenso.",
+      "precos": {
+        "U": 1800
+      }
+    },
+    {
+      "id": 7,
+      "categoria": "metodos",
+      "nome": "Aeropress",
+      "descricao": "Extração por pressão, limpo e doce.",
+      "precos": {
+        "U": 1250
+      }
+    },
+    {
+      "id": 8,
+      "categoria": "metodos",
+      "nome": "Cold brew",
+      "descricao": "Extraído a frio por 16 horas.",
+      "precos": {
+        "M": 1400,
+        "G": 1700
+      }
+    },
+    {
+      "id": 9,
+      "categoria": "acompanhamentos",
+      "nome": "Pão de queijo",
+      "descricao": "Receita mineira, assado na hora.",
+      "precos": {
+        "U": 650
+      }
+    },
+    {
+      "id": 10,
+      "categoria": "acompanhamentos",
+      "nome": "Bolo de fubá",
+      "descricao": "Fatia com goiabada.",
+      "precos": {
+        "U": 900
+      }
+    },
+    {
+      "id": 11,
+      "categoria": "acompanhamentos",
+      "nome": "Cookie",
+      "descricao": "Chocolate belga e flor de sal.",
+      "precos": {
+        "U": 780
+      }
+    },
+    {
+      "id": 12,
+      "categoria": "acompanhamentos",
+      "nome": "Croissant",
+      "descricao": "Massa folhada na manteiga.",
+      "precos": {
+        "U": 1050
+      }
+    }
+  ]
+}
