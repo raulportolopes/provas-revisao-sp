@@ -1,0 +1,154 @@
+{
+ "v60": {
+  "nome": "V60",
+  "tipo": "Coado",
+  "resumo": "Coado limpo e aromático",
+  "cafe": "15 g",
+  "agua": "250 ml",
+  "moagem": "Média-fina",
+  "temp": "93 °C",
+  "tempo": "2:30",
+  "passos": [
+   {
+    "texto": "Molhe o filtro e descarte a água",
+    "de": 0,
+    "ate": 15
+   },
+   {
+    "texto": "Pré-infusão: 40 ml e espere",
+    "de": 15,
+    "ate": 45
+   },
+   {
+    "texto": "Despeje em círculos até 150 ml",
+    "de": 45,
+    "ate": 90
+   },
+   {
+    "texto": "Complete até 250 ml",
+    "de": 90,
+    "ate": 130
+   },
+   {
+    "texto": "Deixe drenar",
+    "de": 130,
+    "ate": 150
+   }
+  ],
+  "proporcao": 16.7
+ },
+ "prensa": {
+  "nome": "Prensa francesa",
+  "tipo": "Imersão",
+  "resumo": "Encorpado e intenso",
+  "cafe": "20 g",
+  "agua": "300 ml",
+  "moagem": "Grossa",
+  "temp": "94 °C",
+  "tempo": "4:00",
+  "passos": [
+   {
+    "texto": "Café no copo e toda a água",
+    "de": 0,
+    "ate": 20
+   },
+   {
+    "texto": "Mexa 3 vezes",
+    "de": 20,
+    "ate": 30
+   },
+   {
+    "texto": "Tampe e espere",
+    "de": 30,
+    "ate": 210
+   },
+   {
+    "texto": "Quebre a crosta e retire a espuma",
+    "de": 210,
+    "ate": 225
+   },
+   {
+    "texto": "Desça o êmbolo devagar",
+    "de": 225,
+    "ate": 240
+   }
+  ],
+  "proporcao": 15.0
+ },
+ "moka": {
+  "nome": "Moka",
+  "tipo": "Pressão",
+  "resumo": "Forte, perto do espresso",
+  "cafe": "18 g",
+  "agua": "180 ml",
+  "moagem": "Fina",
+  "temp": "Água fervida",
+  "tempo": "5:00",
+  "passos": [
+   {
+    "texto": "Água quente até a válvula",
+    "de": 0,
+    "ate": 20
+   },
+   {
+    "texto": "Café no funil, sem apertar",
+    "de": 20,
+    "ate": 40
+   },
+   {
+    "texto": "Fogo médio, tampa aberta",
+    "de": 40,
+    "ate": 240
+   },
+   {
+    "texto": "Tire do fogo quando chiar",
+    "de": 240,
+    "ate": 270
+   },
+   {
+    "texto": "Esfrie a base em pano úmido",
+    "de": 270,
+    "ate": 300
+   }
+  ],
+  "proporcao": 10.0
+ },
+ "aeropress": {
+  "nome": "AeroPress",
+  "tipo": "Pressão manual",
+  "resumo": "Doce e versátil",
+  "cafe": "17 g",
+  "agua": "220 ml",
+  "moagem": "Média",
+  "temp": "85 °C",
+  "tempo": "2:00",
+  "passos": [
+   {
+    "texto": "Montagem invertida e café",
+    "de": 0,
+    "ate": 10
+   },
+   {
+    "texto": "Água até o topo",
+    "de": 10,
+    "ate": 25
+   },
+   {
+    "texto": "Mexa 10 vezes",
+    "de": 25,
+    "ate": 40
+   },
+   {
+    "texto": "Espere com a tampa",
+    "de": 40,
+    "ate": 90
+   },
+   {
+    "texto": "Vire e pressione por 30 s",
+    "de": 90,
+    "ate": 120
+   }
+  ],
+  "proporcao": 13.0
+ }
+}

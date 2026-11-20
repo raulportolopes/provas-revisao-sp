@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+  <title>Observatório Estrela da Serra</title>
+  <circle cx="28" cy="28" r="27" fill="#141B3D" stroke="#F6B54A" stroke-width="2"/>
+  <path d="M8 42 L20 28 L27 35 L36 22 L48 42 Z" fill="#8B7CF6"/>
+  <path d="M28 7 L30.6 13.6 L37.6 14.2 L32.3 18.7 L33.9 25.6 L28 21.9 L22.1 25.6 L23.7 18.7 L18.4 14.2 L25.4 13.6 Z" fill="#F6B54A"/>
+</svg>

@@ -1,0 +1,8 @@
+Assets do Módulo F – projeto de revisão (Raul Porto Lopes, Avaliador).
+
+design/      uma pasta por página: PNG em 1440, 768 e 375 px + textos.txt. Estados/ mostra hover, modal, gaveta e menu aberto.
+videos/      um MP4 por animação. Design.mp4 junta todos. Legenda amarela e círculo do cursor não fazem parte da página.
+imagens/     originais em tamanho grande (otimize para o Lighthouse).
+icones/      SVG 24 x 24, só traço (use currentColor).
+fonts/       .woff2.   dados/  JSON da página (não altere).
+DICAS.md     caminhos para os efeitos mais difíceis (não é a resposta).

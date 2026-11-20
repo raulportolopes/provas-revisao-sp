@@ -1,0 +1,170 @@
+[
+  {
+    "id": "mantiqueira-amarelo",
+    "nome": "Mantiqueira Amarelo",
+    "origem": "Serra da Mantiqueira – MG",
+    "produtor": "Sítio Boa Vista",
+    "altitude": "1.350 m",
+    "variedade": "Catuaí Amarelo",
+    "processo": "Natural",
+    "torra": "media",
+    "preco": 62.0,
+    "notaSCA": 87,
+    "perfil": {
+      "acidez": 4,
+      "corpo": 3,
+      "docura": 5,
+      "amargor": 1
+    },
+    "notas": "Mel, damasco e chocolate ao leite",
+    "descricao": "Grãos amarelos colhidos maduros e secos ao sol, com doçura alta e final longo.",
+    "imagem": "cafe-mantiqueira-amarelo.webp"
+  },
+  {
+    "id": "pedra-bela",
+    "nome": "Pedra Bela Natural",
+    "origem": "Pedra Bela – SP",
+    "produtor": "Família Rossi",
+    "altitude": "1.180 m",
+    "variedade": "Mundo Novo",
+    "processo": "Natural",
+    "torra": "escura",
+    "preco": 48.0,
+    "notaSCA": 84,
+    "perfil": {
+      "acidez": 2,
+      "corpo": 5,
+      "docura": 3,
+      "amargor": 4
+    },
+    "notas": "Cacau, castanha e rapadura",
+    "descricao": "Café encorpado para espresso e moka, com amargor equilibrado.",
+    "imagem": "cafe-pedra-bela.webp"
+  },
+  {
+    "id": "sitio-aurora",
+    "nome": "Sítio Aurora",
+    "origem": "Sul de Minas – MG",
+    "produtor": "Sítio Aurora",
+    "altitude": "1.250 m",
+    "variedade": "Bourbon Amarelo",
+    "processo": "Cereja descascado",
+    "torra": "media",
+    "preco": 56.0,
+    "notaSCA": 86,
+    "perfil": {
+      "acidez": 3,
+      "corpo": 4,
+      "docura": 4,
+      "amargor": 2
+    },
+    "notas": "Caramelo, laranja e baunilha",
+    "descricao": "Equilibrado, bom para coado e prensa francesa.",
+    "imagem": "cafe-sitio-aurora.webp"
+  },
+  {
+    "id": "vale-do-garcia",
+    "nome": "Vale do Garcia Fermentado",
+    "origem": "Serra da Mantiqueira – MG",
+    "produtor": "Fazenda Vale do Garcia",
+    "altitude": "1.420 m",
+    "variedade": "Geisha",
+    "processo": "Fermentado anaeróbico",
+    "torra": "clara",
+    "preco": 98.0,
+    "notaSCA": 90,
+    "perfil": {
+      "acidez": 5,
+      "corpo": 2,
+      "docura": 5,
+      "amargor": 1
+    },
+    "notas": "Frutas vermelhas, jasmim e vinho",
+    "descricao": "Microlote de 20 sacas, fermentado em tanque fechado por 72 horas.",
+    "imagem": "cafe-vale-do-garcia.webp"
+  },
+  {
+    "id": "mogiana-classico",
+    "nome": "Mogiana Clássico",
+    "origem": "Alta Mogiana – SP",
+    "produtor": "Cooperativa Mogiana",
+    "altitude": "1.050 m",
+    "variedade": "Catuaí Vermelho",
+    "processo": "Natural",
+    "torra": "media",
+    "preco": 42.0,
+    "notaSCA": 82,
+    "perfil": {
+      "acidez": 2,
+      "corpo": 4,
+      "docura": 3,
+      "amargor": 3
+    },
+    "notas": "Chocolate amargo e nozes",
+    "descricao": "O café do dia a dia: rende bem no coador e na cafeteira elétrica.",
+    "imagem": "cafe-mogiana-classico.webp"
+  },
+  {
+    "id": "cerrado-noturno",
+    "nome": "Cerrado Noturno",
+    "origem": "Cerrado Mineiro – MG",
+    "produtor": "Fazenda Três Lagoas",
+    "altitude": "1.100 m",
+    "variedade": "Topázio",
+    "processo": "Natural",
+    "torra": "escura",
+    "preco": 52.0,
+    "notaSCA": 83,
+    "perfil": {
+      "acidez": 1,
+      "corpo": 5,
+      "docura": 3,
+      "amargor": 5
+    },
+    "notas": "Melaço, tabaco e cacau",
+    "descricao": "Torra escura pensada para espresso com leite.",
+    "imagem": "cafe-cerrado-noturno.webp"
+  },
+  {
+    "id": "alta-paulista",
+    "nome": "Alta Paulista Lavado",
+    "origem": "Garça – SP",
+    "produtor": "Sítio São Bento",
+    "altitude": "780 m",
+    "variedade": "Obatã",
+    "processo": "Lavado",
+    "torra": "clara",
+    "preco": 58.0,
+    "notaSCA": 85,
+    "perfil": {
+      "acidez": 4,
+      "corpo": 3,
+      "docura": 4,
+      "amargor": 1
+    },
+    "notas": "Limão-siciliano, maçã verde e mel",
+    "descricao": "Lavado e secado em terreiro suspenso, com acidez brilhante.",
+    "imagem": "cafe-alta-paulista.webp"
+  },
+  {
+    "id": "descafeinado-serra",
+    "nome": "Descafeinado da Serra",
+    "origem": "Serra da Mantiqueira – MG",
+    "produtor": "Sítio Boa Vista",
+    "altitude": "1.300 m",
+    "variedade": "Catuaí Amarelo",
+    "processo": "Processo suíço (água)",
+    "torra": "media",
+    "preco": 64.0,
+    "notaSCA": 82,
+    "perfil": {
+      "acidez": 2,
+      "corpo": 3,
+      "docura": 4,
+      "amargor": 2
+    },
+    "notas": "Caramelo e biscoito",
+    "descricao": "Sem cafeína e sem solventes: a cafeína sai só com água.",
+    "imagem": "cafe-descafeinado-serra.webp"
+  }
+]

@@ -1,0 +1,149 @@
+Textos da página cafes.html, na ordem em que aparecem (dados do JSON incluídos).
+
+Pular para o conteúdo
+Torra Serrana
+Início
+Cafés
+Preparo
+Sacola
+itens na sacola:
+0
+Início
+Cafés
+8 cafés · lotes da semana
+Nossos cafés
+Passe o mouse em um café para ver o perfil sensorial e a nota SCA. Use os filtros para achar o café do seu jeito.
+Filtrar
+Buscar
+Torra Todas
+Clara
+Média
+Escura
+Ordenar por
+Maior nota SCA
+Menor preço
+Maior preço
+Nome (A–Z)
+Limpar filtros
+8 cafés encontrados
+Torra clara
+Serra da Mantiqueira – MG · 1.420 m
+Vale do Garcia Fermentado
+Frutas vermelhas, jasmim e vinho
+Acidez
+5/5
+Corpo
+2/5
+Doçura
+5/5
+Amargor
+1/5
+R$ 98,00 / 250 g
+Adicionar Vale do Garcia Fermentado à sacola
+Torra média
+Serra da Mantiqueira – MG · 1.350 m
+Mantiqueira Amarelo
+Mel, damasco e chocolate ao leite
+Acidez
+4/5
+Corpo
+3/5
+Doçura
+5/5
+Amargor
+1/5
+R$ 62,00 / 250 g
+Adicionar Mantiqueira Amarelo à sacola
+Torra média
+Sul de Minas – MG · 1.250 m
+Sítio Aurora
+Caramelo, laranja e baunilha
+Acidez
+3/5
+Corpo
+4/5
+Doçura
+4/5
+Amargor
+2/5
+R$ 56,00 / 250 g
+Adicionar Sítio Aurora à sacola
+Torra clara
+Garça – SP · 780 m
+Alta Paulista Lavado
+Limão-siciliano, maçã verde e mel
+Acidez
+4/5
+Corpo
+3/5
+Doçura
+4/5
+Amargor
+1/5
+R$ 58,00 / 250 g
+Adicionar Alta Paulista Lavado à sacola
+Torra escura
+Pedra Bela – SP · 1.180 m
+Pedra Bela Natural
+Cacau, castanha e rapadura
+Acidez
+2/5
+Corpo
+5/5
+Doçura
+3/5
+Amargor
+4/5
+R$ 48,00 / 250 g
+Adicionar Pedra Bela Natural à sacola
+Torra escura
+Cerrado Mineiro – MG · 1.100 m
+Cerrado Noturno
+Melaço, tabaco e cacau
+Acidez
+1/5
+Corpo
+5/5
+Doçura
+3/5
+Amargor
+5/5
+R$ 52,00 / 250 g
+Adicionar Cerrado Noturno à sacola
+Torra média
+Serra da Mantiqueira – MG · 1.300 m
+Descafeinado da Serra
+Caramelo e biscoito
+Acidez
+2/5
+Corpo
+3/5
+Doçura
+4/5
+Amargor
+2/5
+R$ 64,00 / 250 g
+Adicionar Descafeinado da Serra à sacola
+Torra média
+Alta Mogiana – SP · 1.050 m
+Mogiana Clássico
+Chocolate amargo e nozes
+Acidez
+2/5
+Corpo
+4/5
+Doçura
+3/5
+Amargor
+3/5
+R$ 42,00 / 250 g
+Adicionar Mogiana Clássico à sacola
+Torra Serrana
+Torrefação de cafés especiais fundada em 2019 por uma família de produtores da Serra da Mantiqueira.
+Loja e torrefação
+Rua das Araucárias, 210 · Campos da Serra – SP Seg. a sáb., das 8h às 18h
+Navegue
+Início
+Cafés
+Preparo
+© 2026 Torra Serrana · Projeto de treino SP Skills · Ilustrações originais

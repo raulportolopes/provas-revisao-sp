@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Observatório Estrela da Serra – Início</title>
+  <meta name="description" content="Observatório público na serra: noites de observação, palestras, oficinas e o céu escuro que a cidade apagou.">
+  <link rel="icon" href="img/logo-estrela-da-serra.svg" type="image/svg+xml">
+  <!-- tema.js roda ANTES do CSS pintar a tela: assim o tema salvo não "pisca" -->
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/comum.js" defer></script>
+  <script src="js/inicio.js" defer></script>
+</head>
+<body class="pagina-inicio">
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ CABEÇALHO (igual nas três páginas) ============ -->
+  <header class="cabecalho">
+    <div class="cabecalho__progresso" aria-hidden="true"></div>
+    <div class="cabecalho__dentro">
+      <a class="marca" href="index.html">
+        <img src="img/logo-estrela-da-serra.svg" alt="" width="44" height="44">
+        <span class="marca__texto"><strong>Estrela da Serra</strong><small>Observatório · SP</small></span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span class="icone icone--menu" aria-hidden="true"></span>
+      </button>
+
+      <nav class="menu" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <a class="botao botao--primario botao--pequeno" href="agenda.html">Reservar visita</a>
+      </nav>
+
+      <button class="tema-botao" type="button" aria-pressed="false" aria-label="Usar tema claro">
+        <span class="icone icone--sol" aria-hidden="true"></span>
+        <span class="icone icone--lua" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ HERO COM A "LANTERNA" ============ -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <!-- duas camadas: o céu escuro e, por cima, as constelações reveladas pela máscara -->
+      <div class="hero__ceu" aria-hidden="true"></div>
+      <div class="hero__constelacoes" aria-hidden="true"></div>
+
+      <div class="hero__conteudo container">
+        <p class="sobretitulo">Observatório público · Serra Alta – SP</p>
+        <h1 id="hero-titulo" class="hero__titulo">O céu que a cidade <span class="texto-degrade">apagou</span></h1>
+        <p class="hero__texto">A 1.600 metros de altitude e a 40 km da luz mais próxima, o Estrela da Serra abre a cúpula toda sexta e sábado para quem quer ver planetas, nebulosas e chuvas de meteoros com os próprios olhos.</p>
+        <div class="hero__acoes">
+          <a class="botao botao--primario" href="agenda.html">Ver agenda</a>
+          <a class="botao botao--contorno" href="#planetas">Conhecer os planetas</a>
+        </div>
+        <p class="hero__dica"><span class="icone icone--estrela" aria-hidden="true"></span>Mova o mouse pelo céu para revelar as constelações</p>
+      </div>
+
+      <aside class="contagem vidro" aria-labelledby="contagem-titulo">
+        <p class="contagem__rotulo">Próximo grande evento</p>
+        <h2 id="contagem-titulo" class="contagem__titulo">Chuva de meteoros Geminídeas</h2>
+        <p class="contagem__data"><span class="icone icone--calendario" aria-hidden="true"></span><time datetime="2026-12-13T23:00-03:00">13/12/2026 · 23h</time></p>
+        <!-- data-alvo é lida pelo inicio.js; o texto dos números é trocado a cada segundo -->
+        <div class="contagem__numeros" data-alvo="2026-12-13T23:00:00-03:00" role="timer" aria-live="off">
+          <div class="contagem__caixa"><span class="contagem__valor" data-unidade="dias">00</span><span class="contagem__nome">dias</span></div>
+          <div class="contagem__caixa"><span class="contagem__valor" data-unidade="horas">00</span><span class="contagem__nome">horas</span></div>
+          <div class="contagem__caixa"><span class="contagem__valor" data-unidade="minutos">00</span><span class="contagem__nome">min</span></div>
+          <div class="contagem__caixa"><span class="contagem__valor" data-unidade="segundos">00</span><span class="contagem__nome">seg</span></div>
+        </div>
+        <p class="contagem__fim" hidden>A chuva de meteoros está acontecendo agora!</p>
+      </aside>
+    </section>
+
+    <!-- ============ PLANETAS: CARTÕES 3D QUE VIRAM ============ -->
+    <section class="secao container" id="planetas" aria-labelledby="planetas-titulo">
+      <div class="secao__topo revelar">
+        <p class="sobretitulo">Pelo telescópio de 400 mm</p>
+        <h2 id="planetas-titulo">Planetas que você vai ver</h2>
+        <p class="secao__texto">Passe o mouse ou toque no cartão para virar e ver os dados de cada planeta. A barra mostra a gravidade comparada à da Terra.</p>
+      </div>
+
+      <ul class="planetas">
+        <!-- --v = gravidade ÷ 2,6 (Júpiter = 100% da barra). --i = ordem da entrada escalonada -->
+        <li class="planeta revelar" style="--i:0">
+          <button class="planeta__interno" type="button" aria-pressed="false">
+            <span class="planeta__face planeta__frente">
+              <img src="img/planeta-mercurio.webp" alt="Ilustração de Mercúrio, cinza e cheio de crateras" width="320" height="320" loading="lazy">
+              <span class="planeta__nome">Mercúrio</span>
+              <span class="planeta__quando">Visível ao entardecer em março</span>
+              <span class="planeta__virar">Ver dados <span class="icone icone--seta-direita" aria-hidden="true"></span></span>
+            </span>
+            <span class="planeta__face planeta__verso">
+              <span class="planeta__nome">Mercúrio</span>
+              <span class="dados">
+                <span class="dados__linha"><span>Distância do Sol</span><strong>58 milhões km</strong></span>
+                <span class="dados__linha"><span>Diâmetro</span><strong>4.879 km</strong></span>
+                <span class="dados__linha"><span>Duração do dia</span><strong>176 dias</strong></span>
+                <span class="dados__linha"><span>Luas</span><strong>0</strong></span>
+              </span>
+              <span class="gravidade" style="--v:.15"><span class="gravidade__rotulo">Gravidade: 0,38 g</span><span class="gravidade__barra"></span></span>
+            </span>
+          </button>
+        </li>
+        <li class="planeta revelar" style="--i:1">
+          <button class="planeta__interno" type="button" aria-pressed="false">
+            <span class="planeta__face planeta__frente">
+              <img src="img/planeta-venus.webp" alt="Ilustração de Vênus, amarelado e coberto de nuvens" width="320" height="320" loading="lazy">
+              <span class="planeta__nome">Vênus</span>
+              <span class="planeta__quando">A "estrela d'alva", antes do amanhecer</span>
+              <span class="planeta__virar">Ver dados <span class="icone icone--seta-direita" aria-hidden="true"></span></span>
+            </span>
+            <span class="planeta__face planeta__verso">
+              <span class="planeta__nome">Vênus</span>
+              <span class="dados">
+                <span class="dados__linha"><span>Distância do Sol</span><strong>108 milhões km</strong></span>
+                <span class="dados__linha"><span>Diâmetro</span><strong>12.104 km</strong></span>
+                <span class="dados__linha"><span>Duração do dia</span><strong>243 dias</strong></span>
+                <span class="dados__linha"><span>Luas</span><strong>0</strong></span>
+              </span>
+              <span class="gravidade" style="--v:.35"><span class="gravidade__rotulo">Gravidade: 0,91 g</span><span class="gravidade__barra"></span></span>
+            </span>
+          </button>
+        </li>
+        <li class="planeta revelar" style="--i:2">
+          <button class="planeta__interno" type="button" aria-pressed="false">
+            <span class="planeta__face planeta__frente">
+              <img src="img/planeta-terra.webp" alt="Ilustração da Terra, azul com continentes verdes e nuvens" width="320" height="320" loading="lazy">
+              <span class="planeta__nome">Terra</span>
+              <span class="planeta__quando">Vista daqui mesmo, do mirante</span>
+              <span class="planeta__virar">Ver dados <span class="icone icone--seta-direita" aria-hidden="true"></span></span>
+            </span>
+            <span class="planeta__face planeta__verso">
+              <span class="planeta__nome">Terra</span>
+              <span class="dados">
+                <span class="dados__linha"><span>Distância do Sol</span><strong>150 milhões km</strong></span>
+                <span class="dados__linha"><span>Diâmetro</span><strong>12.742 km</strong></span>
+                <span class="dados__linha"><span>Duração do dia</span><strong>24 horas</strong></span>
+                <span class="dados__linha"><span>Luas</span><strong>1</strong></span>
+              </span>
+              <span class="gravidade" style="--v:.38"><span class="gravidade__rotulo">Gravidade: 1,00 g</span><span class="gravidade__barra"></span></span>
+            </span>
+          </button>
+        </li>
+        <li class="planeta revelar" style="--i:3">
+          <button class="planeta__interno" type="button" aria-pressed="false">
+            <span class="planeta__face planeta__frente">
+              <img src="img/planeta-marte.webp" alt="Ilustração de Marte, avermelhado e com crateras" width="320" height="320" loading="lazy">
+              <span class="planeta__nome">Marte</span>
+              <span class="planeta__quando">Alaranjado, no céu de janeiro</span>
+              <span class="planeta__virar">Ver dados <span class="icone icone--seta-direita" aria-hidden="true"></span></span>
+            </span>
+            <span class="planeta__face planeta__verso">
+              <span class="planeta__nome">Marte</span>
+              <span class="dados">
+                <span class="dados__linha"><span>Distância do Sol</span><strong>228 milhões km</strong></span>
+                <span class="dados__linha"><span>Diâmetro</span><strong>6.779 km</strong></span>
+                <span class="dados__linha"><span>Duração do dia</span><strong>24 h 37 min</strong></span>
+                <span class="dados__linha"><span>Luas</span><strong>2</strong></span>
+              </span>
+              <span class="gravidade" style="--v:.15"><span class="gravidade__rotulo">Gravidade: 0,38 g</span><span class="gravidade__barra"></span></span>
+            </span>
+          </button>
+        </li>
+        <li class="planeta revelar" style="--i:4">
+          <button class="planeta__interno" type="button" aria-pressed="false">
+            <span class="planeta__face planeta__frente">
+              <img src="img/planeta-jupiter.webp" alt="Ilustração de Júpiter, com faixas bege e a Grande Mancha Vermelha" width="320" height="320" loading="lazy">
+              <span class="planeta__nome">Júpiter</span>
+              <span class="planeta__quando">Em oposição em 15/01/2027</span>
+              <span class="planeta__virar">Ver dados <span class="icone icone--seta-direita" aria-hidden="true"></span></span>
+            </span>
+            <span class="planeta__face planeta__verso">
+              <span class="planeta__nome">Júpiter</span>
+              <span class="dados">
+                <span class="dados__linha"><span>Distância do Sol</span><strong>778 milhões km</strong></span>
+                <span class="dados__linha"><span>Diâmetro</span><strong>139.820 km</strong></span>
+                <span class="dados__linha"><span>Duração do dia</span><strong>9 h 56 min</strong></span>
+                <span class="dados__linha"><span>Luas</span><strong>95</strong></span>
+              </span>
+              <span class="gravidade" style="--v:.97"><span class="gravidade__rotulo">Gravidade: 2,53 g</span><span class="gravidade__barra"></span></span>
+            </span>
+          </button>
+        </li>
+        <li class="planeta revelar" style="--i:5">
+          <button class="planeta__interno" type="button" aria-pressed="false">
+            <span class="planeta__face planeta__frente">
+              <img src="img/planeta-saturno.webp" alt="Ilustração de Saturno com seus anéis inclinados" width="320" height="320" loading="lazy">
+              <span class="planeta__nome">Saturno</span>
+              <span class="planeta__quando">Anéis visíveis toda noite de dezembro</span>
+              <span class="planeta__virar">Ver dados <span class="icone icone--seta-direita" aria-hidden="true"></span></span>
+            </span>
+            <span class="planeta__face planeta__verso">
+              <span class="planeta__nome">Saturno</span>
+              <span class="dados">
+                <span class="dados__linha"><span>Distância do Sol</span><strong>1,4 bilhão km</strong></span>
+                <span class="dados__linha"><span>Diâmetro</span><strong>116.460 km</strong></span>
+                <span class="dados__linha"><span>Duração do dia</span><strong>10 h 34 min</strong></span>
+                <span class="dados__linha"><span>Luas</span><strong>146</strong></span>
+              </span>
+              <span class="gravidade" style="--v:.41"><span class="gravidade__rotulo">Gravidade: 1,07 g</span><span class="gravidade__barra"></span></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ O CÉU EM NÚMEROS: GRÁFICOS SÓ COM CSS ============ -->
+    <section class="secao secao--escura" aria-labelledby="numeros-titulo">
+      <div class="container">
+        <div class="secao__topo revelar">
+          <p class="sobretitulo">Dados do observatório</p>
+          <h2 id="numeros-titulo">O céu em números</h2>
+        </div>
+
+        <div class="numeros">
+          <!-- GRÁFICO DE BARRAS: a altura vem de --v (valor ÷ 240). --i atrasa cada barra -->
+          <figure class="painel grafico-barras revelar">
+            <figcaption>
+              <strong>Horas de céu limpo por mês</strong>
+              <span>Média de 2016 a 2025</span>
+            </figcaption>
+            <ol class="barras">
+              <li class="barra" style="--v:.26;--i:0" tabindex="0" aria-label="Janeiro: 62 horas"><span class="barra__dica">62 h</span><span class="barra__coluna"></span><span class="barra__mes">Jan</span></li>
+              <li class="barra" style="--v:.29;--i:1" tabindex="0" aria-label="Fevereiro: 70 horas"><span class="barra__dica">70 h</span><span class="barra__coluna"></span><span class="barra__mes">Fev</span></li>
+              <li class="barra" style="--v:.40;--i:2" tabindex="0" aria-label="Março: 95 horas"><span class="barra__dica">95 h</span><span class="barra__coluna"></span><span class="barra__mes">Mar</span></li>
+              <li class="barra" style="--v:.58;--i:3" tabindex="0" aria-label="Abril: 140 horas"><span class="barra__dica">140 h</span><span class="barra__coluna"></span><span class="barra__mes">Abr</span></li>
+              <li class="barra" style="--v:.73;--i:4" tabindex="0" aria-label="Maio: 175 horas"><span class="barra__dica">175 h</span><span class="barra__coluna"></span><span class="barra__mes">Mai</span></li>
+              <li class="barra" style="--v:.88;--i:5" tabindex="0" aria-label="Junho: 210 horas"><span class="barra__dica">210 h</span><span class="barra__coluna"></span><span class="barra__mes">Jun</span></li>
+              <li class="barra barra--destaque" style="--v:.95;--i:6" tabindex="0" aria-label="Julho: 228 horas, o melhor mês"><span class="barra__dica">228 h</span><span class="barra__coluna"></span><span class="barra__mes">Jul</span></li>
+              <li class="barra" style="--v:.85;--i:7" tabindex="0" aria-label="Agosto: 205 horas"><span class="barra__dica">205 h</span><span class="barra__coluna"></span><span class="barra__mes">Ago</span></li>
+              <li class="barra" style="--v:.67;--i:8" tabindex="0" aria-label="Setembro: 160 horas"><span class="barra__dica">160 h</span><span class="barra__coluna"></span><span class="barra__mes">Set</span></li>
+              <li class="barra" style="--v:.49;--i:9" tabindex="0" aria-label="Outubro: 118 horas"><span class="barra__dica">118 h</span><span class="barra__coluna"></span><span class="barra__mes">Out</span></li>
+              <li class="barra" style="--v:.35;--i:10" tabindex="0" aria-label="Novembro: 84 horas"><span class="barra__dica">84 h</span><span class="barra__coluna"></span><span class="barra__mes">Nov</span></li>
+              <li class="barra" style="--v:.28;--i:11" tabindex="0" aria-label="Dezembro: 66 horas"><span class="barra__dica">66 h</span><span class="barra__coluna"></span><span class="barra__mes">Dez</span></li>
+            </ol>
+          </figure>
+
+          <!-- GRÁFICO DE ROSCA: cada fatia é um conic-gradient que começa em --ini e ocupa --p -->
+          <figure class="painel grafico-rosca revelar" style="--i:1">
+            <figcaption>
+              <strong>Como os visitantes usam as noites</strong>
+              <span>Pesquisa com 2.400 visitantes em 2025</span>
+            </figcaption>
+            <div class="rosca">
+              <div class="rosca__disco" aria-hidden="true">
+                <span class="fatia" style="--ini:0;--p:.45;--cor:var(--lilas)"></span>
+                <span class="fatia" style="--ini:.45;--p:.25;--cor:var(--ciano)"></span>
+                <span class="fatia" style="--ini:.70;--p:.18;--cor:var(--ambar)"></span>
+                <span class="fatia" style="--ini:.88;--p:.12;--cor:var(--rosa)"></span>
+                <span class="rosca__centro">
+                  <span class="rosca__total"><strong>2.400</strong> visitantes</span>
+                  <span class="rosca__item"><strong>45%</strong> observação</span>
+                  <span class="rosca__item"><strong>25%</strong> astrofotografia</span>
+                  <span class="rosca__item"><strong>18%</strong> palestras</span>
+                  <span class="rosca__item"><strong>12%</strong> oficinas</span>
+                </span>
+              </div>
+              <ul class="legenda">
+                <li tabindex="0" style="--cor:var(--lilas)">Observação no telescópio <strong>45%</strong></li>
+                <li tabindex="0" style="--cor:var(--ciano)">Astrofotografia <strong>25%</strong></li>
+                <li tabindex="0" style="--cor:var(--ambar)">Palestras <strong>18%</strong></li>
+                <li tabindex="0" style="--cor:var(--rosa)">Oficinas <strong>12%</strong></li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPARADOR ANTES / DEPOIS ============ -->
+    <section class="secao container" aria-labelledby="comparador-titulo">
+      <div class="secao__topo revelar">
+        <p class="sobretitulo">Poluição luminosa</p>
+        <h2 id="comparador-titulo">A diferença que um céu escuro faz</h2>
+        <p class="secao__texto">Arraste a linha para comparar o mesmo pedaço de céu fotografado na cidade e aqui na serra.</p>
+      </div>
+      <div class="comparador revelar" style="--pos:50%">
+        <img class="comparador__img" src="img/ceu-serra.jpg" alt="Céu da serra com a Via Láctea e milhares de estrelas sobre a cúpula" width="1600" height="900" loading="lazy">
+        <img class="comparador__img comparador__img--cima" src="img/ceu-cidade.jpg" alt="O mesmo céu na cidade: alaranjado, com prédios iluminados e poucas estrelas" width="1600" height="900" loading="lazy">
+        <span class="comparador__rotulo comparador__rotulo--esq">Cidade</span>
+        <span class="comparador__rotulo comparador__rotulo--dir">Serra</span>
+        <span class="comparador__linha" aria-hidden="true"><span class="comparador__pegador"><span class="icone icone--seta-esquerda"></span><span class="icone icone--seta-direita"></span></span></span>
+        <label class="visualmente-oculto" for="comparador-controle">Quanto da foto da cidade aparece</label>
+        <input class="comparador__controle" id="comparador-controle" type="range" min="0" max="100" value="50">
+      </div>
+    </section>
+
+    <!-- ============ CHAMADA PARA RESERVA (borda em degradê girando) ============ -->
+    <section class="secao container" aria-labelledby="chamada-titulo">
+      <div class="chamada revelar">
+        <div class="chamada__dentro">
+          <p class="sobretitulo">Sextas e sábados, das 20h à meia-noite</p>
+          <h2 id="chamada-titulo">Sua noite na cúpula começa aqui</h2>
+          <p>Vagas limitadas a 30 pessoas por sessão para todo mundo ter tempo no telescópio.</p>
+          <a class="botao botao--primario" href="agenda.html">Ver agenda completa</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ (igual nas três páginas) ============ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a class="marca" href="index.html">
+          <img src="img/logo-estrela-da-serra.svg" alt="" width="44" height="44">
+          <span class="marca__texto"><strong>Estrela da Serra</strong><small>Observatório · SP</small></span>
+        </a>
+        <p class="rodape__texto">Observatório público mantido por uma associação de astrônomos amadores desde 1998.</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Visite</h2>
+        <p class="rodape__item"><span class="icone icone--local" aria-hidden="true"></span>Estrada do Mirante, km 7 · Serra Alta – SP</p>
+        <p class="rodape__item"><span class="icone icone--relogio" aria-hidden="true"></span>Sextas e sábados, das 19h às 0h</p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Navegue</h2>
+        <ul class="rodape__links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape__direitos container">© 2026 Observatório Estrela da Serra · Projeto de treino SP Skills · Ilustrações originais</p>
+  </footer>
+</body>
+</html>
