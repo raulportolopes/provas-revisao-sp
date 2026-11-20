@@ -1,0 +1,417 @@
+{
+ "revenue_2025": [
+  {
+   "month": "2025-01",
+   "orders": 2,
+   "revenue_cents": 221856,
+   "average_ticket_cents": 110928
+  },
+  {
+   "month": "2025-02",
+   "orders": 1,
+   "revenue_cents": 28341,
+   "average_ticket_cents": 28341
+  },
+  {
+   "month": "2025-03",
+   "orders": 3,
+   "revenue_cents": 92857,
+   "average_ticket_cents": 30952
+  },
+  {
+   "month": "2025-04",
+   "orders": 0,
+   "revenue_cents": 0,
+   "average_ticket_cents": 0
+  },
+  {
+   "month": "2025-05",
+   "orders": 1,
+   "revenue_cents": 54672,
+   "average_ticket_cents": 54672
+  },
+  {
+   "month": "2025-06",
+   "orders": 2,
+   "revenue_cents": 78831,
+   "average_ticket_cents": 39416
+  },
+  {
+   "month": "2025-07",
+   "orders": 1,
+   "revenue_cents": 31530,
+   "average_ticket_cents": 31530
+  },
+  {
+   "month": "2025-08",
+   "orders": 2,
+   "revenue_cents": 106520,
+   "average_ticket_cents": 53260
+  },
+  {
+   "month": "2025-09",
+   "orders": 1,
+   "revenue_cents": 121552,
+   "average_ticket_cents": 121552
+  },
+  {
+   "month": "2025-10",
+   "orders": 2,
+   "revenue_cents": 60941,
+   "average_ticket_cents": 30471
+  },
+  {
+   "month": "2025-11",
+   "orders": 1,
+   "revenue_cents": 72680,
+   "average_ticket_cents": 72680
+  },
+  {
+   "month": "2025-12",
+   "orders": 2,
+   "revenue_cents": 153463,
+   "average_ticket_cents": 76732
+  }
+ ],
+ "revenue_2025_total": 1023243,
+ "totais": {
+  "OS-2025-0001": {
+   "parts_cents": 64680,
+   "services_cents": 15000,
+   "subtotal_cents": 79680,
+   "discount_cents": 3984,
+   "total_cents": 75696
+  },
+  "OS-2025-0002": {
+   "parts_cents": 134160,
+   "services_cents": 12000,
+   "subtotal_cents": 146160,
+   "discount_cents": 0,
+   "total_cents": 146160
+  },
+  "OS-2025-0003": {
+   "parts_cents": 3490,
+   "services_cents": 28000,
+   "subtotal_cents": 31490,
+   "discount_cents": 3149,
+   "total_cents": 28341
+  },
+  "OS-2025-0004": {
+   "parts_cents": 22950,
+   "services_cents": 9500,
+   "subtotal_cents": 32450,
+   "discount_cents": 0,
+   "total_cents": 32450
+  },
+  "OS-2025-0005": {
+   "parts_cents": 27100,
+   "services_cents": 22000,
+   "subtotal_cents": 49100,
+   "discount_cents": 3683,
+   "total_cents": 45417
+  },
+  "OS-2025-0006": {
+   "parts_cents": 3990,
+   "services_cents": 11000,
+   "subtotal_cents": 14990,
+   "discount_cents": 0,
+   "total_cents": 14990
+  },
+  "OS-2025-0007": {
+   "parts_cents": 53550,
+   "services_cents": 4000,
+   "subtotal_cents": 57550,
+   "discount_cents": 2878,
+   "total_cents": 54672
+  },
+  "OS-2025-0008": {
+   "parts_cents": 51040,
+   "services_cents": 8000,
+   "subtotal_cents": 59040,
+   "discount_cents": 0,
+   "total_cents": 59040
+  },
+  "OS-2025-0009": {
+   "parts_cents": 6990,
+   "services_cents": 15000,
+   "subtotal_cents": 21990,
+   "discount_cents": 2199,
+   "total_cents": 19791
+  },
+  "OS-2025-0010": {
+   "parts_cents": 19530,
+   "services_cents": 12000,
+   "subtotal_cents": 31530,
+   "discount_cents": 0,
+   "total_cents": 31530
+  },
+  "OS-2025-0011": {
+   "parts_cents": 73870,
+   "services_cents": 28000,
+   "subtotal_cents": 101870,
+   "discount_cents": 7640,
+   "total_cents": 94230
+  },
+  "OS-2025-0012": {
+   "parts_cents": 2790,
+   "services_cents": 9500,
+   "subtotal_cents": 12290,
+   "discount_cents": 0,
+   "total_cents": 12290
+  },
+  "OS-2025-0013": {
+   "parts_cents": 105950,
+   "services_cents": 22000,
+   "subtotal_cents": 127950,
+   "discount_cents": 6398,
+   "total_cents": 121552
+  },
+  "OS-2025-0014": {
+   "parts_cents": 41940,
+   "services_cents": 11000,
+   "subtotal_cents": 52940,
+   "discount_cents": 0,
+   "total_cents": 52940
+  },
+  "OS-2025-0015": {
+   "parts_cents": 4890,
+   "services_cents": 4000,
+   "subtotal_cents": 8890,
+   "discount_cents": 889,
+   "total_cents": 8001
+  },
+  "OS-2025-0016": {
+   "parts_cents": 64680,
+   "services_cents": 8000,
+   "subtotal_cents": 72680,
+   "discount_cents": 0,
+   "total_cents": 72680
+  },
+  "OS-2025-0017": {
+   "parts_cents": 134160,
+   "services_cents": 15000,
+   "subtotal_cents": 149160,
+   "discount_cents": 11187,
+   "total_cents": 137973
+  },
+  "OS-2025-0018": {
+   "parts_cents": 3490,
+   "services_cents": 12000,
+   "subtotal_cents": 15490,
+   "discount_cents": 0,
+   "total_cents": 15490
+  },
+  "OS-2025-0019": {
+   "parts_cents": 0,
+   "services_cents": 9500,
+   "subtotal_cents": 9500,
+   "discount_cents": 0,
+   "total_cents": 9500
+  },
+  "OS-2025-0020": {
+   "parts_cents": 0,
+   "services_cents": 0,
+   "subtotal_cents": 0,
+   "discount_cents": 0,
+   "total_cents": 0
+  },
+  "OS-2026-0001": {
+   "parts_cents": 22810,
+   "services_cents": 8000,
+   "subtotal_cents": 30810,
+   "discount_cents": 0,
+   "total_cents": 30810
+  },
+  "OS-2026-0002": {
+   "parts_cents": 3790,
+   "services_cents": 15000,
+   "subtotal_cents": 18790,
+   "discount_cents": 0,
+   "total_cents": 18790
+  },
+  "OS-2026-0003": {
+   "parts_cents": 63680,
+   "services_cents": 15000,
+   "subtotal_cents": 78680,
+   "discount_cents": 0,
+   "total_cents": 78680
+  },
+  "OS-2026-0004": {
+   "parts_cents": 27700,
+   "services_cents": 8000,
+   "subtotal_cents": 35700,
+   "discount_cents": 1785,
+   "total_cents": 33915
+  },
+  "OS-2026-0005": {
+   "parts_cents": 3990,
+   "services_cents": 11000,
+   "subtotal_cents": 14990,
+   "discount_cents": 0,
+   "total_cents": 14990
+  },
+  "OS-2026-0006": {
+   "parts_cents": 24980,
+   "services_cents": 28000,
+   "subtotal_cents": 52980,
+   "discount_cents": 0,
+   "total_cents": 52980
+  },
+  "OS-2026-0007": {
+   "parts_cents": 54900,
+   "services_cents": 4000,
+   "subtotal_cents": 58900,
+   "discount_cents": 0,
+   "total_cents": 58900
+  },
+  "OS-2026-0008": {
+   "parts_cents": 0,
+   "services_cents": 12000,
+   "subtotal_cents": 12000,
+   "discount_cents": 0,
+   "total_cents": 12000
+  },
+  "OS-2026-0009": {
+   "parts_cents": 0,
+   "services_cents": 0,
+   "subtotal_cents": 0,
+   "discount_cents": 0,
+   "total_cents": 0
+  },
+  "OS-2026-0010": {
+   "parts_cents": 0,
+   "services_cents": 9500,
+   "subtotal_cents": 9500,
+   "discount_cents": 0,
+   "total_cents": 9500
+  },
+  "OS-2026-0011": {
+   "parts_cents": 65980,
+   "services_cents": 22000,
+   "subtotal_cents": 87980,
+   "discount_cents": 0,
+   "total_cents": 87980
+  },
+  "OS-2026-0012": {
+   "parts_cents": 65980,
+   "services_cents": 22000,
+   "subtotal_cents": 87980,
+   "discount_cents": 0,
+   "total_cents": 87980
+  }
+ },
+ "brl": {
+  "OS-2025-0001": "R$ 756,96",
+  "OS-2025-0002": "R$ 1.461,60",
+  "OS-2025-0003": "R$ 283,41",
+  "OS-2025-0004": "R$ 324,50",
+  "OS-2025-0005": "R$ 454,17",
+  "OS-2025-0006": "R$ 149,90",
+  "OS-2025-0007": "R$ 546,72",
+  "OS-2025-0008": "R$ 590,40",
+  "OS-2025-0009": "R$ 197,91",
+  "OS-2025-0010": "R$ 315,30",
+  "OS-2025-0011": "R$ 942,30",
+  "OS-2025-0012": "R$ 122,90",
+  "OS-2025-0013": "R$ 1.215,52",
+  "OS-2025-0014": "R$ 529,40",
+  "OS-2025-0015": "R$ 80,01",
+  "OS-2025-0016": "R$ 726,80",
+  "OS-2025-0017": "R$ 1.379,73",
+  "OS-2025-0018": "R$ 154,90",
+  "OS-2025-0019": "R$ 95,00",
+  "OS-2025-0020": "R$ 0,00",
+  "OS-2026-0001": "R$ 308,10",
+  "OS-2026-0002": "R$ 187,90",
+  "OS-2026-0003": "R$ 786,80",
+  "OS-2026-0004": "R$ 339,15",
+  "OS-2026-0005": "R$ 149,90",
+  "OS-2026-0006": "R$ 529,80",
+  "OS-2026-0007": "R$ 589,00",
+  "OS-2026-0008": "R$ 120,00",
+  "OS-2026-0009": "R$ 0,00",
+  "OS-2026-0010": "R$ 95,00",
+  "OS-2026-0011": "R$ 879,80",
+  "OS-2026-0012": "R$ 879,80"
+ },
+ "low_stock": [
+  {
+   "sku": "LAM-H4",
+   "stock_qty": 0,
+   "min_stock": 6,
+   "suggested_purchase": 12
+  },
+  {
+   "sku": "COR-DEN01",
+   "stock_qty": 1,
+   "min_stock": 3,
+   "suggested_purchase": 5
+  },
+  {
+   "sku": "FIL-AR01",
+   "stock_qty": 3,
+   "min_stock": 8,
+   "suggested_purchase": 13
+  },
+  {
+   "sku": "PAS-DIA01",
+   "stock_qty": 2,
+   "min_stock": 5,
+   "suggested_purchase": 8
+  },
+  {
+   "sku": "ADI-RAD01",
+   "stock_qty": 5,
+   "min_stock": 6,
+   "suggested_purchase": 7
+  }
+ ],
+ "ids": {
+  "OS-2025-0001": 1,
+  "OS-2025-0002": 2,
+  "OS-2025-0003": 3,
+  "OS-2025-0004": 4,
+  "OS-2025-0005": 5,
+  "OS-2025-0006": 6,
+  "OS-2025-0007": 7,
+  "OS-2025-0008": 8,
+  "OS-2025-0009": 9,
+  "OS-2025-0010": 10,
+  "OS-2025-0011": 11,
+  "OS-2025-0012": 12,
+  "OS-2025-0013": 13,
+  "OS-2025-0014": 14,
+  "OS-2025-0015": 15,
+  "OS-2025-0016": 16,
+  "OS-2025-0017": 17,
+  "OS-2025-0018": 18,
+  "OS-2025-0019": 19,
+  "OS-2025-0020": 20,
+  "OS-2026-0001": 21,
+  "OS-2026-0002": 22,
+  "OS-2026-0003": 23,
+  "OS-2026-0004": 24,
+  "OS-2026-0005": 25,
+  "OS-2026-0006": 26,
+  "OS-2026-0007": 27,
+  "OS-2026-0008": 28,
+  "OS-2026-0009": 29,
+  "OS-2026-0010": 30,
+  "OS-2026-0011": 31,
+  "OS-2026-0012": 32
+ },
+ "cpfs": {
+  "Adriana Soares": "31800772718",
+  "Bruno Esteves": "31801545430",
+  "Célia Moraes": "31802318151",
+  "Danilo Prates": "31803090839",
+  "Érica Fonseca": "31803863552",
+  "Flávio Guedes": "31804636274",
+  "Gisele Andrade": "31805408933",
+  "Henrique Bastos": "31806181673",
+  "Íris Carvalho": "31806954397",
+  "Júlio Batista": "31807727009"
+ },
+ "orders_total": 31,
+ "parts": 15
+}

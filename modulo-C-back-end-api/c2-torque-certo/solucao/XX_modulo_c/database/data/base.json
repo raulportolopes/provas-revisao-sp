@@ -1,0 +1,2360 @@
+{
+"users": [
+{
+"id": 1,
+"name": "Raul Avaliador",
+"email": "admin@torque.test",
+"role": "admin",
+"password": "$2y$10$Zhf7FP8i4.iPJ1dUh7fseeBH48aoSwihU0b7o8n.b0FOFUXt62Lim"
+},
+{
+"id": 2,
+"name": "Bianca Atendente",
+"email": "atendente@torque.test",
+"role": "atendente",
+"password": "$2y$10$Zhf7FP8i4.iPJ1dUh7fseeBH48aoSwihU0b7o8n.b0FOFUXt62Lim"
+},
+{
+"id": 3,
+"name": "João Mecânico",
+"email": "joao@torque.test",
+"role": "mecanico",
+"password": "$2y$10$Zhf7FP8i4.iPJ1dUh7fseeBH48aoSwihU0b7o8n.b0FOFUXt62Lim"
+},
+{
+"id": 4,
+"name": "Pedro Mecânico",
+"email": "pedro@torque.test",
+"role": "mecanico",
+"password": "$2y$10$Zhf7FP8i4.iPJ1dUh7fseeBH48aoSwihU0b7o8n.b0FOFUXt62Lim"
+}
+],
+"customers": [
+{
+"id": 1,
+"name": "Adriana Soares",
+"cpf": "31800772718",
+"phone": "11987654321",
+"email": "adriana@cliente.test"
+},
+{
+"id": 2,
+"name": "Bruno Esteves",
+"cpf": "31801545430",
+"phone": "11976543210",
+"email": null
+},
+{
+"id": 3,
+"name": "Célia Moraes",
+"cpf": "31802318151",
+"phone": "1133224455",
+"email": "celia@cliente.test"
+},
+{
+"id": 4,
+"name": "Danilo Prates",
+"cpf": "31803090839",
+"phone": "11965432109",
+"email": "danilo@cliente.test"
+},
+{
+"id": 5,
+"name": "Érica Fonseca",
+"cpf": "31803863552",
+"phone": "11954321098",
+"email": null
+},
+{
+"id": 6,
+"name": "Flávio Guedes",
+"cpf": "31804636274",
+"phone": "11943210987",
+"email": "flavio@cliente.test"
+},
+{
+"id": 7,
+"name": "Gisele Andrade",
+"cpf": "31805408933",
+"phone": "11932109876",
+"email": null
+},
+{
+"id": 8,
+"name": "Henrique Bastos",
+"cpf": "31806181673",
+"phone": "11921098765",
+"email": "henrique@cliente.test"
+},
+{
+"id": 9,
+"name": "Íris Carvalho",
+"cpf": "31806954397",
+"phone": "11910987654",
+"email": null
+},
+{
+"id": 10,
+"name": "Júlio Batista",
+"cpf": "31807727009",
+"phone": "11909876543",
+"email": "julio@cliente.test"
+}
+],
+"vehicles": [
+{
+"id": 1,
+"customer_id": 1,
+"plate": "FTC3B21",
+"brand": "Fiat",
+"model": "Argo",
+"year": 2021
+},
+{
+"id": 2,
+"customer_id": 1,
+"plate": "ABC1234",
+"brand": "Volkswagen",
+"model": "Gol",
+"year": 2014
+},
+{
+"id": 3,
+"customer_id": 2,
+"plate": "GKP7E45",
+"brand": "Chevrolet",
+"model": "Onix",
+"year": 2022
+},
+{
+"id": 4,
+"customer_id": 3,
+"plate": "DEF5678",
+"brand": "Ford",
+"model": "Ka",
+"year": 2017
+},
+{
+"id": 5,
+"customer_id": 4,
+"plate": "HJK2C89",
+"brand": "Hyundai",
+"model": "HB20",
+"year": 2023
+},
+{
+"id": 6,
+"customer_id": 5,
+"plate": "LMN4D12",
+"brand": "Toyota",
+"model": "Corolla",
+"year": 2020
+},
+{
+"id": 7,
+"customer_id": 6,
+"plate": "QRS9F34",
+"brand": "Honda",
+"model": "Civic",
+"year": 2019
+},
+{
+"id": 8,
+"customer_id": 7,
+"plate": "TUV1G56",
+"brand": "Renault",
+"model": "Kwid",
+"year": 2022
+},
+{
+"id": 9,
+"customer_id": 8,
+"plate": "XYZ8H78",
+"brand": "Jeep",
+"model": "Renegade",
+"year": 2021
+},
+{
+"id": 10,
+"customer_id": 9,
+"plate": "BRA2E19",
+"brand": "Fiat",
+"model": "Mobi",
+"year": 2023
+},
+{
+"id": 11,
+"customer_id": 10,
+"plate": "GHI3456",
+"brand": "Volkswagen",
+"model": "Fox",
+"year": 2012
+},
+{
+"id": 12,
+"customer_id": 10,
+"plate": "MER4C21",
+"brand": "Nissan",
+"model": "Kicks",
+"year": 2024
+}
+],
+"parts": [
+{
+"id": 1,
+"sku": "OLE-5W30",
+"name": "Óleo 5W30 sintético (litro)",
+"price_cents": 4890,
+"stock_qty": 40,
+"min_stock": 20
+},
+{
+"id": 2,
+"sku": "FIL-OLE01",
+"name": "Filtro de óleo",
+"price_cents": 3250,
+"stock_qty": 12,
+"min_stock": 10
+},
+{
+"id": 3,
+"sku": "FIL-AR01",
+"name": "Filtro de ar",
+"price_cents": 4590,
+"stock_qty": 3,
+"min_stock": 8
+},
+{
+"id": 4,
+"sku": "FIL-CAB01",
+"name": "Filtro de cabine",
+"price_cents": 3990,
+"stock_qty": 9,
+"min_stock": 6
+},
+{
+"id": 5,
+"sku": "PAS-DIA01",
+"name": "Pastilha de freio dianteira (jogo)",
+"price_cents": 18900,
+"stock_qty": 2,
+"min_stock": 5
+},
+{
+"id": 6,
+"sku": "DIS-FRE01",
+"name": "Disco de freio (unidade)",
+"price_cents": 21500,
+"stock_qty": 6,
+"min_stock": 4
+},
+{
+"id": 7,
+"sku": "VEL-IGN01",
+"name": "Vela de ignição",
+"price_cents": 2790,
+"stock_qty": 30,
+"min_stock": 16
+},
+{
+"id": 8,
+"sku": "COR-DEN01",
+"name": "Correia dentada",
+"price_cents": 15990,
+"stock_qty": 1,
+"min_stock": 3
+},
+{
+"id": 9,
+"sku": "BAT-60AH",
+"name": "Bateria 60 Ah",
+"price_cents": 54900,
+"stock_qty": 4,
+"min_stock": 2
+},
+{
+"id": 10,
+"sku": "LAM-H4",
+"name": "Lâmpada H4",
+"price_cents": 3490,
+"stock_qty": 0,
+"min_stock": 6
+},
+{
+"id": 11,
+"sku": "AMO-DIA01",
+"name": "Amortecedor dianteiro",
+"price_cents": 32990,
+"stock_qty": 4,
+"min_stock": 4
+},
+{
+"id": 12,
+"sku": "FLU-FRE01",
+"name": "Fluido de freio DOT4",
+"price_cents": 3790,
+"stock_qty": 15,
+"min_stock": 6
+},
+{
+"id": 13,
+"sku": "PAL-LIM01",
+"name": "Palheta do limpador (par)",
+"price_cents": 6990,
+"stock_qty": 8,
+"min_stock": 5
+},
+{
+"id": 14,
+"sku": "ADI-RAD01",
+"name": "Aditivo de radiador",
+"price_cents": 2990,
+"stock_qty": 5,
+"min_stock": 6
+},
+{
+"id": 15,
+"sku": "ROL-TEN01",
+"name": "Rolamento tensor",
+"price_cents": 8990,
+"stock_qty": 7,
+"min_stock": 3
+}
+],
+"services": [
+{
+"id": 1,
+"name": "Troca de óleo e filtro",
+"price_cents": 8000,
+"minutes": 40
+},
+{
+"id": 2,
+"name": "Revisão de freios",
+"price_cents": 15000,
+"minutes": 90
+},
+{
+"id": 3,
+"name": "Alinhamento e balanceamento",
+"price_cents": 12000,
+"minutes": 60
+},
+{
+"id": 4,
+"name": "Troca de correia dentada",
+"price_cents": 28000,
+"minutes": 180
+},
+{
+"id": 5,
+"name": "Diagnóstico eletrônico",
+"price_cents": 9500,
+"minutes": 45
+},
+{
+"id": 6,
+"name": "Troca de amortecedores",
+"price_cents": 22000,
+"minutes": 150
+},
+{
+"id": 7,
+"name": "Higienização do ar-condicionado",
+"price_cents": 11000,
+"minutes": 50
+},
+{
+"id": 8,
+"name": "Troca de bateria",
+"price_cents": 4000,
+"minutes": 20
+}
+],
+"service_orders": [
+{
+"id": 1,
+"number": "OS-2025-0001",
+"vehicle_id": 2,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Revisão dos 30 mil km",
+"discount_percent": 5,
+"opened_at": "2025-01-08 08:30:00",
+"delivered_at": "2025-01-10 17:00:00",
+"deleted_at": null
+},
+{
+"id": 2,
+"number": "OS-2025-0002",
+"vehicle_id": 3,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Freio rangendo",
+"discount_percent": 0,
+"opened_at": "2025-01-13 08:30:00",
+"delivered_at": "2025-01-15 17:00:00",
+"deleted_at": null
+},
+{
+"id": 3,
+"number": "OS-2025-0003",
+"vehicle_id": 4,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Luz da injeção acesa",
+"discount_percent": 10,
+"opened_at": "2025-02-18 08:30:00",
+"delivered_at": "2025-02-20 17:00:00",
+"deleted_at": null
+},
+{
+"id": 4,
+"number": "OS-2025-0004",
+"vehicle_id": 5,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Barulho na suspensão",
+"discount_percent": 0,
+"opened_at": "2025-03-23 08:30:00",
+"delivered_at": "2025-03-25 17:00:00",
+"deleted_at": null
+},
+{
+"id": 5,
+"number": "OS-2025-0005",
+"vehicle_id": 6,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Revisão dos 30 mil km",
+"discount_percent": 7.5,
+"opened_at": "2025-03-06 08:30:00",
+"delivered_at": "2025-03-08 17:00:00",
+"deleted_at": null
+},
+{
+"id": 6,
+"number": "OS-2025-0006",
+"vehicle_id": 7,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Freio rangendo",
+"discount_percent": 0,
+"opened_at": "2025-03-11 08:30:00",
+"delivered_at": "2025-03-13 17:00:00",
+"deleted_at": null
+},
+{
+"id": 7,
+"number": "OS-2025-0007",
+"vehicle_id": 8,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Luz da injeção acesa",
+"discount_percent": 5,
+"opened_at": "2025-05-16 08:30:00",
+"delivered_at": "2025-05-18 17:00:00",
+"deleted_at": null
+},
+{
+"id": 8,
+"number": "OS-2025-0008",
+"vehicle_id": 9,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Barulho na suspensão",
+"discount_percent": 0,
+"opened_at": "2025-06-21 08:30:00",
+"delivered_at": "2025-06-23 17:00:00",
+"deleted_at": null
+},
+{
+"id": 9,
+"number": "OS-2025-0009",
+"vehicle_id": 10,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Revisão dos 30 mil km",
+"discount_percent": 10,
+"opened_at": "2025-06-04 08:30:00",
+"delivered_at": "2025-06-06 17:00:00",
+"deleted_at": null
+},
+{
+"id": 10,
+"number": "OS-2025-0010",
+"vehicle_id": 11,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Freio rangendo",
+"discount_percent": 0,
+"opened_at": "2025-07-09 08:30:00",
+"delivered_at": "2025-07-11 17:00:00",
+"deleted_at": null
+},
+{
+"id": 11,
+"number": "OS-2025-0011",
+"vehicle_id": 12,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Luz da injeção acesa",
+"discount_percent": 7.5,
+"opened_at": "2025-08-14 08:30:00",
+"delivered_at": "2025-08-16 17:00:00",
+"deleted_at": null
+},
+{
+"id": 12,
+"number": "OS-2025-0012",
+"vehicle_id": 1,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Barulho na suspensão",
+"discount_percent": 0,
+"opened_at": "2025-08-19 08:30:00",
+"delivered_at": "2025-08-21 17:00:00",
+"deleted_at": null
+},
+{
+"id": 13,
+"number": "OS-2025-0013",
+"vehicle_id": 2,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Revisão dos 30 mil km",
+"discount_percent": 5,
+"opened_at": "2025-09-24 08:30:00",
+"delivered_at": "2025-09-26 17:00:00",
+"deleted_at": null
+},
+{
+"id": 14,
+"number": "OS-2025-0014",
+"vehicle_id": 3,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Freio rangendo",
+"discount_percent": 0,
+"opened_at": "2025-10-07 08:30:00",
+"delivered_at": "2025-10-09 17:00:00",
+"deleted_at": null
+},
+{
+"id": 15,
+"number": "OS-2025-0015",
+"vehicle_id": 4,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Luz da injeção acesa",
+"discount_percent": 10,
+"opened_at": "2025-10-12 08:30:00",
+"delivered_at": "2025-10-14 17:00:00",
+"deleted_at": null
+},
+{
+"id": 16,
+"number": "OS-2025-0016",
+"vehicle_id": 5,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Barulho na suspensão",
+"discount_percent": 0,
+"opened_at": "2025-11-17 08:30:00",
+"delivered_at": "2025-11-19 17:00:00",
+"deleted_at": null
+},
+{
+"id": 17,
+"number": "OS-2025-0017",
+"vehicle_id": 6,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Revisão dos 30 mil km",
+"discount_percent": 7.5,
+"opened_at": "2025-12-22 08:30:00",
+"delivered_at": "2025-12-24 17:00:00",
+"deleted_at": null
+},
+{
+"id": 18,
+"number": "OS-2025-0018",
+"vehicle_id": 7,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Freio rangendo",
+"discount_percent": 0,
+"opened_at": "2025-12-05 08:30:00",
+"delivered_at": "2025-12-07 17:00:00",
+"deleted_at": null
+},
+{
+"id": 19,
+"number": "OS-2025-0019",
+"vehicle_id": 4,
+"mechanic_id": null,
+"status": "cancelada",
+"complaint": "Cliente desistiu do orçamento",
+"discount_percent": 0.0,
+"opened_at": "2025-04-10 09:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 20,
+"number": "OS-2025-0020",
+"vehicle_id": 7,
+"mechanic_id": null,
+"status": "cancelada",
+"complaint": "Orçamento recusado",
+"discount_percent": 0.0,
+"opened_at": "2025-11-05 10:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 21,
+"number": "OS-2026-0001",
+"vehicle_id": 1,
+"mechanic_id": 3,
+"status": "entregue",
+"complaint": "Troca de óleo",
+"discount_percent": 0.0,
+"opened_at": "2026-02-02 08:00:00",
+"delivered_at": "2026-02-02 16:00:00",
+"deleted_at": null
+},
+{
+"id": 22,
+"number": "OS-2026-0002",
+"vehicle_id": 3,
+"mechanic_id": null,
+"status": "aberta",
+"complaint": "Pedal de freio baixo",
+"discount_percent": 0.0,
+"opened_at": "2026-11-10 08:15:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 23,
+"number": "OS-2026-0003",
+"vehicle_id": 5,
+"mechanic_id": null,
+"status": "orcada",
+"complaint": "Freio fazendo barulho",
+"discount_percent": 0.0,
+"opened_at": "2026-11-11 09:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 24,
+"number": "OS-2026-0004",
+"vehicle_id": 6,
+"mechanic_id": null,
+"status": "orcada",
+"complaint": "Revisão de rotina",
+"discount_percent": 5,
+"opened_at": "2026-11-11 10:30:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 25,
+"number": "OS-2026-0005",
+"vehicle_id": 8,
+"mechanic_id": null,
+"status": "aprovada",
+"complaint": "Ar-condicionado com cheiro",
+"discount_percent": 0.0,
+"opened_at": "2026-11-12 08:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 26,
+"number": "OS-2026-0006",
+"vehicle_id": 9,
+"mechanic_id": 3,
+"status": "em_execucao",
+"complaint": "Correia com 60 mil km",
+"discount_percent": 0.0,
+"opened_at": "2026-11-12 11:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 27,
+"number": "OS-2026-0007",
+"vehicle_id": 10,
+"mechanic_id": 4,
+"status": "concluida",
+"complaint": "Carro não pega de manhã",
+"discount_percent": 0.0,
+"opened_at": "2026-11-13 08:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 28,
+"number": "OS-2026-0008",
+"vehicle_id": 11,
+"mechanic_id": 4,
+"status": "entregue",
+"complaint": "Carro puxando para a direita",
+"discount_percent": 0.0,
+"opened_at": "2026-11-03 14:00:00",
+"delivered_at": "2026-11-04 10:00:00",
+"deleted_at": null
+},
+{
+"id": 29,
+"number": "OS-2026-0009",
+"vehicle_id": 12,
+"mechanic_id": null,
+"status": "aberta",
+"complaint": "Ruído no motor",
+"discount_percent": 0.0,
+"opened_at": "2026-11-14 09:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 30,
+"number": "OS-2026-0010",
+"vehicle_id": 2,
+"mechanic_id": null,
+"status": "cancelada",
+"complaint": "Cliente vendeu o carro",
+"discount_percent": 0.0,
+"opened_at": "2026-11-05 15:00:00",
+"delivered_at": null,
+"deleted_at": null
+},
+{
+"id": 31,
+"number": "OS-2026-0011",
+"vehicle_id": 4,
+"mechanic_id": null,
+"status": "cancelada",
+"complaint": "Orçamento recusado",
+"discount_percent": 0.0,
+"opened_at": "2026-10-20 09:00:00",
+"delivered_at": null,
+"deleted_at": "2026-10-25 12:00:00"
+},
+{
+"id": 32,
+"number": "OS-2026-0012",
+"vehicle_id": 7,
+"mechanic_id": null,
+"status": "aprovada",
+"complaint": "Amortecedor vazando",
+"discount_percent": 0.0,
+"opened_at": "2026-11-14 13:00:00",
+"delivered_at": null,
+"deleted_at": null
+}
+],
+"service_order_items": [
+{
+"service_order_id": 1,
+"part_id": null,
+"service_id": 2,
+"quantity": 1,
+"unit_price_cents": 15000
+},
+{
+"service_order_id": 1,
+"part_id": 4,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 3990
+},
+{
+"service_order_id": 1,
+"part_id": 5,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 18900
+},
+{
+"service_order_id": 2,
+"part_id": null,
+"service_id": 3,
+"quantity": 1,
+"unit_price_cents": 12000
+},
+{
+"service_order_id": 2,
+"part_id": 7,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 2790
+},
+{
+"service_order_id": 2,
+"part_id": 8,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 15990
+},
+{
+"service_order_id": 2,
+"part_id": 9,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 54900
+},
+{
+"service_order_id": 3,
+"part_id": null,
+"service_id": 4,
+"quantity": 1,
+"unit_price_cents": 28000
+},
+{
+"service_order_id": 3,
+"part_id": 10,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3490
+},
+{
+"service_order_id": 4,
+"part_id": null,
+"service_id": 5,
+"quantity": 1,
+"unit_price_cents": 9500
+},
+{
+"service_order_id": 4,
+"part_id": 13,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 6990
+},
+{
+"service_order_id": 4,
+"part_id": 14,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 2990
+},
+{
+"service_order_id": 5,
+"part_id": null,
+"service_id": 6,
+"quantity": 1,
+"unit_price_cents": 22000
+},
+{
+"service_order_id": 5,
+"part_id": 1,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 4890
+},
+{
+"service_order_id": 5,
+"part_id": 2,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3250
+},
+{
+"service_order_id": 5,
+"part_id": 3,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 4590
+},
+{
+"service_order_id": 6,
+"part_id": null,
+"service_id": 7,
+"quantity": 1,
+"unit_price_cents": 11000
+},
+{
+"service_order_id": 6,
+"part_id": 4,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3990
+},
+{
+"service_order_id": 7,
+"part_id": null,
+"service_id": 8,
+"quantity": 1,
+"unit_price_cents": 4000
+},
+{
+"service_order_id": 7,
+"part_id": 7,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 2790
+},
+{
+"service_order_id": 7,
+"part_id": 8,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 15990
+},
+{
+"service_order_id": 8,
+"part_id": null,
+"service_id": 1,
+"quantity": 1,
+"unit_price_cents": 8000
+},
+{
+"service_order_id": 8,
+"part_id": 10,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 3490
+},
+{
+"service_order_id": 8,
+"part_id": 11,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 32990
+},
+{
+"service_order_id": 8,
+"part_id": 12,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 3790
+},
+{
+"service_order_id": 9,
+"part_id": null,
+"service_id": 2,
+"quantity": 1,
+"unit_price_cents": 15000
+},
+{
+"service_order_id": 9,
+"part_id": 13,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 6990
+},
+{
+"service_order_id": 10,
+"part_id": null,
+"service_id": 3,
+"quantity": 1,
+"unit_price_cents": 12000
+},
+{
+"service_order_id": 10,
+"part_id": 1,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 4890
+},
+{
+"service_order_id": 10,
+"part_id": 2,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 3250
+},
+{
+"service_order_id": 11,
+"part_id": null,
+"service_id": 4,
+"quantity": 1,
+"unit_price_cents": 28000
+},
+{
+"service_order_id": 11,
+"part_id": 4,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 3990
+},
+{
+"service_order_id": 11,
+"part_id": 5,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 18900
+},
+{
+"service_order_id": 11,
+"part_id": 6,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 21500
+},
+{
+"service_order_id": 12,
+"part_id": null,
+"service_id": 5,
+"quantity": 1,
+"unit_price_cents": 9500
+},
+{
+"service_order_id": 12,
+"part_id": 7,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 2790
+},
+{
+"service_order_id": 13,
+"part_id": null,
+"service_id": 6,
+"quantity": 1,
+"unit_price_cents": 22000
+},
+{
+"service_order_id": 13,
+"part_id": 10,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 3490
+},
+{
+"service_order_id": 13,
+"part_id": 11,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 32990
+},
+{
+"service_order_id": 14,
+"part_id": null,
+"service_id": 7,
+"quantity": 1,
+"unit_price_cents": 11000
+},
+{
+"service_order_id": 14,
+"part_id": 13,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 6990
+},
+{
+"service_order_id": 14,
+"part_id": 14,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 2990
+},
+{
+"service_order_id": 14,
+"part_id": 15,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 8990
+},
+{
+"service_order_id": 15,
+"part_id": null,
+"service_id": 8,
+"quantity": 1,
+"unit_price_cents": 4000
+},
+{
+"service_order_id": 15,
+"part_id": 1,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 4890
+},
+{
+"service_order_id": 16,
+"part_id": null,
+"service_id": 1,
+"quantity": 1,
+"unit_price_cents": 8000
+},
+{
+"service_order_id": 16,
+"part_id": 4,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 3990
+},
+{
+"service_order_id": 16,
+"part_id": 5,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 18900
+},
+{
+"service_order_id": 17,
+"part_id": null,
+"service_id": 2,
+"quantity": 1,
+"unit_price_cents": 15000
+},
+{
+"service_order_id": 17,
+"part_id": 7,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 2790
+},
+{
+"service_order_id": 17,
+"part_id": 8,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 15990
+},
+{
+"service_order_id": 17,
+"part_id": 9,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 54900
+},
+{
+"service_order_id": 18,
+"part_id": null,
+"service_id": 3,
+"quantity": 1,
+"unit_price_cents": 12000
+},
+{
+"service_order_id": 18,
+"part_id": 10,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3490
+},
+{
+"service_order_id": 19,
+"part_id": null,
+"service_id": 5,
+"quantity": 1,
+"unit_price_cents": 9500
+},
+{
+"service_order_id": 21,
+"part_id": null,
+"service_id": 1,
+"quantity": 1,
+"unit_price_cents": 8000
+},
+{
+"service_order_id": 21,
+"part_id": 1,
+"service_id": null,
+"quantity": 4,
+"unit_price_cents": 4890
+},
+{
+"service_order_id": 21,
+"part_id": 2,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3250
+},
+{
+"service_order_id": 22,
+"part_id": null,
+"service_id": 2,
+"quantity": 1,
+"unit_price_cents": 15000
+},
+{
+"service_order_id": 22,
+"part_id": 12,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3790
+},
+{
+"service_order_id": 23,
+"part_id": null,
+"service_id": 2,
+"quantity": 1,
+"unit_price_cents": 15000
+},
+{
+"service_order_id": 23,
+"part_id": 5,
+"service_id": null,
+"quantity": 3,
+"unit_price_cents": 18900
+},
+{
+"service_order_id": 23,
+"part_id": 10,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 3490
+},
+{
+"service_order_id": 24,
+"part_id": null,
+"service_id": 1,
+"quantity": 1,
+"unit_price_cents": 8000
+},
+{
+"service_order_id": 24,
+"part_id": 1,
+"service_id": null,
+"quantity": 5,
+"unit_price_cents": 4890
+},
+{
+"service_order_id": 24,
+"part_id": 2,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3250
+},
+{
+"service_order_id": 25,
+"part_id": null,
+"service_id": 7,
+"quantity": 1,
+"unit_price_cents": 11000
+},
+{
+"service_order_id": 25,
+"part_id": 4,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 3990
+},
+{
+"service_order_id": 26,
+"part_id": null,
+"service_id": 4,
+"quantity": 1,
+"unit_price_cents": 28000
+},
+{
+"service_order_id": 26,
+"part_id": 8,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 15990
+},
+{
+"service_order_id": 26,
+"part_id": 15,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 8990
+},
+{
+"service_order_id": 27,
+"part_id": null,
+"service_id": 8,
+"quantity": 1,
+"unit_price_cents": 4000
+},
+{
+"service_order_id": 27,
+"part_id": 9,
+"service_id": null,
+"quantity": 1,
+"unit_price_cents": 54900
+},
+{
+"service_order_id": 28,
+"part_id": null,
+"service_id": 3,
+"quantity": 1,
+"unit_price_cents": 12000
+},
+{
+"service_order_id": 30,
+"part_id": null,
+"service_id": 5,
+"quantity": 1,
+"unit_price_cents": 9500
+},
+{
+"service_order_id": 31,
+"part_id": null,
+"service_id": 6,
+"quantity": 1,
+"unit_price_cents": 22000
+},
+{
+"service_order_id": 31,
+"part_id": 11,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 32990
+},
+{
+"service_order_id": 32,
+"part_id": null,
+"service_id": 6,
+"quantity": 1,
+"unit_price_cents": 22000
+},
+{
+"service_order_id": 32,
+"part_id": 11,
+"service_id": null,
+"quantity": 2,
+"unit_price_cents": 32990
+}
+],
+"service_order_events": [
+{
+"service_order_id": 1,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-01-08 08:30:00"
+},
+{
+"service_order_id": 1,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-01-08 09:30:00"
+},
+{
+"service_order_id": 1,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-01-08 10:30:00"
+},
+{
+"service_order_id": 1,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-01-08 11:30:00"
+},
+{
+"service_order_id": 1,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-01-08 12:30:00"
+},
+{
+"service_order_id": 1,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-01-10 17:00:00"
+},
+{
+"service_order_id": 2,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-01-13 08:30:00"
+},
+{
+"service_order_id": 2,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-01-13 09:30:00"
+},
+{
+"service_order_id": 2,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-01-13 10:30:00"
+},
+{
+"service_order_id": 2,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-01-13 11:30:00"
+},
+{
+"service_order_id": 2,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-01-13 12:30:00"
+},
+{
+"service_order_id": 2,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-01-15 17:00:00"
+},
+{
+"service_order_id": 3,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-02-18 08:30:00"
+},
+{
+"service_order_id": 3,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-02-18 09:30:00"
+},
+{
+"service_order_id": 3,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-02-18 10:30:00"
+},
+{
+"service_order_id": 3,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-02-18 11:30:00"
+},
+{
+"service_order_id": 3,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-02-18 12:30:00"
+},
+{
+"service_order_id": 3,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-02-20 17:00:00"
+},
+{
+"service_order_id": 4,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-03-23 08:30:00"
+},
+{
+"service_order_id": 4,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-03-23 09:30:00"
+},
+{
+"service_order_id": 4,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-03-23 10:30:00"
+},
+{
+"service_order_id": 4,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-03-23 11:30:00"
+},
+{
+"service_order_id": 4,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-03-23 12:30:00"
+},
+{
+"service_order_id": 4,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-03-25 17:00:00"
+},
+{
+"service_order_id": 5,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-03-06 08:30:00"
+},
+{
+"service_order_id": 5,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-03-06 09:30:00"
+},
+{
+"service_order_id": 5,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-03-06 10:30:00"
+},
+{
+"service_order_id": 5,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-03-06 11:30:00"
+},
+{
+"service_order_id": 5,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-03-06 12:30:00"
+},
+{
+"service_order_id": 5,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-03-08 17:00:00"
+},
+{
+"service_order_id": 6,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-03-11 08:30:00"
+},
+{
+"service_order_id": 6,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-03-11 09:30:00"
+},
+{
+"service_order_id": 6,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-03-11 10:30:00"
+},
+{
+"service_order_id": 6,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-03-11 11:30:00"
+},
+{
+"service_order_id": 6,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-03-11 12:30:00"
+},
+{
+"service_order_id": 6,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-03-13 17:00:00"
+},
+{
+"service_order_id": 7,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-05-16 08:30:00"
+},
+{
+"service_order_id": 7,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-05-16 09:30:00"
+},
+{
+"service_order_id": 7,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-05-16 10:30:00"
+},
+{
+"service_order_id": 7,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-05-16 11:30:00"
+},
+{
+"service_order_id": 7,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-05-16 12:30:00"
+},
+{
+"service_order_id": 7,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-05-18 17:00:00"
+},
+{
+"service_order_id": 8,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-06-21 08:30:00"
+},
+{
+"service_order_id": 8,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-06-21 09:30:00"
+},
+{
+"service_order_id": 8,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-06-21 10:30:00"
+},
+{
+"service_order_id": 8,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-06-21 11:30:00"
+},
+{
+"service_order_id": 8,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-06-21 12:30:00"
+},
+{
+"service_order_id": 8,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-06-23 17:00:00"
+},
+{
+"service_order_id": 9,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-06-04 08:30:00"
+},
+{
+"service_order_id": 9,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-06-04 09:30:00"
+},
+{
+"service_order_id": 9,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-06-04 10:30:00"
+},
+{
+"service_order_id": 9,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-06-04 11:30:00"
+},
+{
+"service_order_id": 9,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-06-04 12:30:00"
+},
+{
+"service_order_id": 9,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-06-06 17:00:00"
+},
+{
+"service_order_id": 10,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-07-09 08:30:00"
+},
+{
+"service_order_id": 10,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-07-09 09:30:00"
+},
+{
+"service_order_id": 10,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-07-09 10:30:00"
+},
+{
+"service_order_id": 10,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-07-09 11:30:00"
+},
+{
+"service_order_id": 10,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-07-09 12:30:00"
+},
+{
+"service_order_id": 10,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-07-11 17:00:00"
+},
+{
+"service_order_id": 11,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-08-14 08:30:00"
+},
+{
+"service_order_id": 11,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-08-14 09:30:00"
+},
+{
+"service_order_id": 11,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-08-14 10:30:00"
+},
+{
+"service_order_id": 11,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-08-14 11:30:00"
+},
+{
+"service_order_id": 11,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-08-14 12:30:00"
+},
+{
+"service_order_id": 11,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-08-16 17:00:00"
+},
+{
+"service_order_id": 12,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-08-19 08:30:00"
+},
+{
+"service_order_id": 12,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-08-19 09:30:00"
+},
+{
+"service_order_id": 12,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-08-19 10:30:00"
+},
+{
+"service_order_id": 12,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-08-19 11:30:00"
+},
+{
+"service_order_id": 12,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-08-19 12:30:00"
+},
+{
+"service_order_id": 12,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-08-21 17:00:00"
+},
+{
+"service_order_id": 13,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-09-24 08:30:00"
+},
+{
+"service_order_id": 13,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-09-24 09:30:00"
+},
+{
+"service_order_id": 13,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-09-24 10:30:00"
+},
+{
+"service_order_id": 13,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-09-24 11:30:00"
+},
+{
+"service_order_id": 13,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-09-24 12:30:00"
+},
+{
+"service_order_id": 13,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-09-26 17:00:00"
+},
+{
+"service_order_id": 14,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-10-07 08:30:00"
+},
+{
+"service_order_id": 14,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-10-07 09:30:00"
+},
+{
+"service_order_id": 14,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-10-07 10:30:00"
+},
+{
+"service_order_id": 14,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-10-07 11:30:00"
+},
+{
+"service_order_id": 14,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-10-07 12:30:00"
+},
+{
+"service_order_id": 14,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-10-09 17:00:00"
+},
+{
+"service_order_id": 15,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-10-12 08:30:00"
+},
+{
+"service_order_id": 15,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-10-12 09:30:00"
+},
+{
+"service_order_id": 15,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-10-12 10:30:00"
+},
+{
+"service_order_id": 15,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-10-12 11:30:00"
+},
+{
+"service_order_id": 15,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-10-12 12:30:00"
+},
+{
+"service_order_id": 15,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-10-14 17:00:00"
+},
+{
+"service_order_id": 16,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-11-17 08:30:00"
+},
+{
+"service_order_id": 16,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-11-17 09:30:00"
+},
+{
+"service_order_id": 16,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-11-17 10:30:00"
+},
+{
+"service_order_id": 16,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-11-17 11:30:00"
+},
+{
+"service_order_id": 16,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-11-17 12:30:00"
+},
+{
+"service_order_id": 16,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-11-19 17:00:00"
+},
+{
+"service_order_id": 17,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-12-22 08:30:00"
+},
+{
+"service_order_id": 17,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-12-22 09:30:00"
+},
+{
+"service_order_id": 17,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-12-22 10:30:00"
+},
+{
+"service_order_id": 17,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-12-22 11:30:00"
+},
+{
+"service_order_id": 17,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2025-12-22 12:30:00"
+},
+{
+"service_order_id": 17,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-12-24 17:00:00"
+},
+{
+"service_order_id": 18,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-12-05 08:30:00"
+},
+{
+"service_order_id": 18,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2025-12-05 09:30:00"
+},
+{
+"service_order_id": 18,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2025-12-05 10:30:00"
+},
+{
+"service_order_id": 18,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2025-12-05 11:30:00"
+},
+{
+"service_order_id": 18,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2025-12-05 12:30:00"
+},
+{
+"service_order_id": 18,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2025-12-07 17:00:00"
+},
+{
+"service_order_id": 19,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-04-10 09:00:00"
+},
+{
+"service_order_id": 19,
+"from_status": "aberta",
+"to_status": "cancelada",
+"user_id": 2,
+"created_at": "2025-04-10 12:00:00"
+},
+{
+"service_order_id": 20,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2025-11-05 10:00:00"
+},
+{
+"service_order_id": 20,
+"from_status": "aberta",
+"to_status": "cancelada",
+"user_id": 2,
+"created_at": "2025-11-05 13:00:00"
+},
+{
+"service_order_id": 21,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-02-02 08:00:00"
+},
+{
+"service_order_id": 21,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-02-02 09:00:00"
+},
+{
+"service_order_id": 21,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2026-02-02 10:00:00"
+},
+{
+"service_order_id": 21,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2026-02-02 11:00:00"
+},
+{
+"service_order_id": 21,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 3,
+"created_at": "2026-02-02 12:00:00"
+},
+{
+"service_order_id": 21,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2026-02-02 16:00:00"
+},
+{
+"service_order_id": 22,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-10 08:15:00"
+},
+{
+"service_order_id": 23,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-11 09:00:00"
+},
+{
+"service_order_id": 23,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-11-11 10:00:00"
+},
+{
+"service_order_id": 24,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-11 10:30:00"
+},
+{
+"service_order_id": 24,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-11-11 11:30:00"
+},
+{
+"service_order_id": 25,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-12 08:00:00"
+},
+{
+"service_order_id": 25,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-11-12 09:00:00"
+},
+{
+"service_order_id": 25,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2026-11-12 10:00:00"
+},
+{
+"service_order_id": 26,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-12 11:00:00"
+},
+{
+"service_order_id": 26,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-11-12 12:00:00"
+},
+{
+"service_order_id": 26,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2026-11-12 13:00:00"
+},
+{
+"service_order_id": 26,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2026-11-12 14:00:00"
+},
+{
+"service_order_id": 27,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-13 08:00:00"
+},
+{
+"service_order_id": 27,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-11-13 09:00:00"
+},
+{
+"service_order_id": 27,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2026-11-13 10:00:00"
+},
+{
+"service_order_id": 27,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2026-11-13 11:00:00"
+},
+{
+"service_order_id": 27,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2026-11-13 12:00:00"
+},
+{
+"service_order_id": 28,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-03 14:00:00"
+},
+{
+"service_order_id": 28,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-11-03 15:00:00"
+},
+{
+"service_order_id": 28,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2026-11-03 16:00:00"
+},
+{
+"service_order_id": 28,
+"from_status": "aprovada",
+"to_status": "em_execucao",
+"user_id": 2,
+"created_at": "2026-11-03 17:00:00"
+},
+{
+"service_order_id": 28,
+"from_status": "em_execucao",
+"to_status": "concluida",
+"user_id": 4,
+"created_at": "2026-11-03 18:00:00"
+},
+{
+"service_order_id": 28,
+"from_status": "concluida",
+"to_status": "entregue",
+"user_id": 2,
+"created_at": "2026-11-04 10:00:00"
+},
+{
+"service_order_id": 29,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-14 09:00:00"
+},
+{
+"service_order_id": 30,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-05 15:00:00"
+},
+{
+"service_order_id": 30,
+"from_status": "aberta",
+"to_status": "cancelada",
+"user_id": 2,
+"created_at": "2026-11-05 18:00:00"
+},
+{
+"service_order_id": 31,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-10-20 09:00:00"
+},
+{
+"service_order_id": 31,
+"from_status": "aberta",
+"to_status": "cancelada",
+"user_id": 2,
+"created_at": "2026-10-20 12:00:00"
+},
+{
+"service_order_id": 32,
+"from_status": null,
+"to_status": "aberta",
+"user_id": 2,
+"created_at": "2026-11-14 13:00:00"
+},
+{
+"service_order_id": 32,
+"from_status": "aberta",
+"to_status": "orcada",
+"user_id": 2,
+"created_at": "2026-11-14 14:00:00"
+},
+{
+"service_order_id": 32,
+"from_status": "orcada",
+"to_status": "aprovada",
+"user_id": 2,
+"created_at": "2026-11-14 15:00:00"
+}
+]
+}

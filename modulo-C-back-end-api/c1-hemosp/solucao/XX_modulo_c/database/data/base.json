@@ -1,0 +1,2966 @@
+{
+"users": [
+{
+"id": 1,
+"name": "Raul Avaliador",
+"email": "admin@hemosp.test",
+"role": "admin",
+"password": "$2y$10$ENQ0B2xm32z3XT6PNxtnSe8ZnJtHuurOhudf/o4U1QuEGAjJZqTpC"
+},
+{
+"id": 2,
+"name": "Tânia Triagem",
+"email": "triagem@hemosp.test",
+"role": "triagem",
+"password": "$2y$10$ENQ0B2xm32z3XT6PNxtnSe8ZnJtHuurOhudf/o4U1QuEGAjJZqTpC"
+}
+],
+"blood_types": [
+{
+"id": 1,
+"code": "A+",
+"stock_goal_ml": 15000
+},
+{
+"id": 2,
+"code": "A-",
+"stock_goal_ml": 5000
+},
+{
+"id": 3,
+"code": "B+",
+"stock_goal_ml": 6000
+},
+{
+"id": 4,
+"code": "B-",
+"stock_goal_ml": 3000
+},
+{
+"id": 5,
+"code": "AB+",
+"stock_goal_ml": 3000
+},
+{
+"id": 6,
+"code": "AB-",
+"stock_goal_ml": 2000
+},
+{
+"id": 7,
+"code": "O+",
+"stock_goal_ml": 20000
+},
+{
+"id": 8,
+"code": "O-",
+"stock_goal_ml": 8000
+}
+],
+"centers": [
+{
+"id": 1,
+"name": "Hemocentro Paulista",
+"neighborhood": "Cerqueira César",
+"address": "Av. Dr. Enéas Carvalho de Aguiar, 155",
+"weekday_opens_at": "07:00",
+"weekday_closes_at": "18:00",
+"saturday_opens_at": "08:00",
+"saturday_closes_at": "12:00",
+"slot_capacity": 3,
+"active": 1
+},
+{
+"id": 2,
+"name": "Posto de Coleta Mooca",
+"neighborhood": "Mooca",
+"address": "Rua da Mooca, 2100",
+"weekday_opens_at": "08:00",
+"weekday_closes_at": "17:00",
+"saturday_opens_at": null,
+"saturday_closes_at": null,
+"slot_capacity": 2,
+"active": 1
+},
+{
+"id": 3,
+"name": "Posto de Coleta Santo Amaro",
+"neighborhood": "Santo Amaro",
+"address": "Av. Adolfo Pinheiro, 820",
+"weekday_opens_at": "08:00",
+"weekday_closes_at": "16:00",
+"saturday_opens_at": "08:00",
+"saturday_closes_at": "12:00",
+"slot_capacity": 2,
+"active": 1
+},
+{
+"id": 4,
+"name": "Posto de Coleta Itaquera",
+"neighborhood": "Itaquera",
+"address": "Av. Itaquera, 4500",
+"weekday_opens_at": "08:00",
+"weekday_closes_at": "17:00",
+"saturday_opens_at": null,
+"saturday_closes_at": null,
+"slot_capacity": 2,
+"active": 0
+}
+],
+"closures": [
+{
+"id": 1,
+"center_id": null,
+"date": "2026-11-20",
+"reason": "Consciência Negra"
+},
+{
+"id": 2,
+"center_id": null,
+"date": "2026-12-25",
+"reason": "Natal"
+},
+{
+"id": 3,
+"center_id": 2,
+"date": "2026-12-08",
+"reason": "Dedetização da unidade"
+},
+{
+"id": 4,
+"center_id": null,
+"date": "2027-01-01",
+"reason": "Confraternização Universal"
+},
+{
+"id": 5,
+"center_id": null,
+"date": "2027-01-25",
+"reason": "Aniversário de São Paulo"
+},
+{
+"id": 6,
+"center_id": null,
+"date": "2027-02-08",
+"reason": "Carnaval"
+},
+{
+"id": 7,
+"center_id": null,
+"date": "2027-02-09",
+"reason": "Carnaval"
+},
+{
+"id": 8,
+"center_id": null,
+"date": "2027-03-26",
+"reason": "Sexta-feira Santa"
+},
+{
+"id": 9,
+"center_id": null,
+"date": "2027-04-21",
+"reason": "Tiradentes"
+},
+{
+"id": 10,
+"center_id": null,
+"date": "2027-05-01",
+"reason": "Dia do Trabalho"
+},
+{
+"id": 11,
+"center_id": null,
+"date": "2027-05-27",
+"reason": "Corpus Christi"
+},
+{
+"id": 12,
+"center_id": null,
+"date": "2027-07-09",
+"reason": "Revolução Constitucionalista"
+},
+{
+"id": 13,
+"center_id": null,
+"date": "2027-09-07",
+"reason": "Independência"
+},
+{
+"id": 14,
+"center_id": null,
+"date": "2027-10-12",
+"reason": "Nossa Senhora Aparecida"
+},
+{
+"id": 15,
+"center_id": null,
+"date": "2027-11-02",
+"reason": "Finados"
+},
+{
+"id": 16,
+"center_id": null,
+"date": "2027-11-15",
+"reason": "Proclamação da República"
+},
+{
+"id": 17,
+"center_id": null,
+"date": "2027-11-20",
+"reason": "Consciência Negra"
+},
+{
+"id": 18,
+"center_id": null,
+"date": "2027-12-25",
+"reason": "Natal"
+},
+{
+"id": 19,
+"center_id": 3,
+"date": "2027-01-15",
+"reason": "Manutenção elétrica"
+}
+],
+"donors": [
+{
+"id": 1,
+"name": "Ana Beatriz Souza",
+"cpf": "23110472996",
+"email": "ana@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+28,
+40
+],
+"weight_kg": 62.0,
+"blood_type_id": 7,
+"guardian_document_path": null
+},
+{
+"id": 2,
+"name": "Bruno Carvalho",
+"cpf": "23120945846",
+"email": "bruno@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+35,
+10
+],
+"weight_kg": 80.5,
+"blood_type_id": 1,
+"guardian_document_path": null
+},
+{
+"id": 3,
+"name": "Camila Ferreira",
+"cpf": "23131418702",
+"email": "camila@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+41,
+200
+],
+"weight_kg": 58.0,
+"blood_type_id": 8,
+"guardian_document_path": null
+},
+{
+"id": 4,
+"name": "Diego Martins",
+"cpf": "23141891672",
+"email": "diego@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+45,
+90
+],
+"weight_kg": 90.0,
+"blood_type_id": 3,
+"guardian_document_path": null
+},
+{
+"id": 5,
+"name": "Eduarda Lima",
+"cpf": "23152364520",
+"email": "eduarda@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+17,
+100
+],
+"weight_kg": 55.0,
+"blood_type_id": null,
+"guardian_document_path": null
+},
+{
+"id": 6,
+"name": "Felipe Rocha",
+"cpf": "23162837480",
+"email": "felipe@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+17,
+150
+],
+"weight_kg": 68.0,
+"blood_type_id": null,
+"guardian_document_path": "guardians/felipe-rocha-autorizacao.pdf"
+},
+{
+"id": 7,
+"name": "Gabriela Nunes",
+"cpf": "23173310373",
+"email": "gabriela@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+25,
+60
+],
+"weight_kg": 48.0,
+"blood_type_id": 2,
+"guardian_document_path": null
+},
+{
+"id": 8,
+"name": "Heitor Alves",
+"cpf": "23183783207",
+"email": "heitor@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+63,
+20
+],
+"weight_kg": 75.0,
+"blood_type_id": null,
+"guardian_document_path": null
+},
+{
+"id": 9,
+"name": "Isabel Prado",
+"cpf": "23194256165",
+"email": "isabel@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+66,
+120
+],
+"weight_kg": 60.0,
+"blood_type_id": 4,
+"guardian_document_path": null
+},
+{
+"id": 10,
+"name": "João Pedro Teixeira",
+"cpf": "23204729087",
+"email": "joao@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+70,
+30
+],
+"weight_kg": 77.0,
+"blood_type_id": 7,
+"guardian_document_path": null
+},
+{
+"id": 11,
+"name": "Karina Duarte",
+"cpf": "23215201917",
+"email": "karina@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+30,
+15
+],
+"weight_kg": 65.0,
+"blood_type_id": 5,
+"guardian_document_path": null
+},
+{
+"id": 12,
+"name": "Lucas Andrade",
+"cpf": "23225674850",
+"email": "lucas@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+22,
+5
+],
+"weight_kg": 72.0,
+"blood_type_id": 2,
+"guardian_document_path": null
+},
+{
+"id": 13,
+"name": "Marcos Vinícius Lopes",
+"cpf": "23236147709",
+"email": "marcos@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+50,
+70
+],
+"weight_kg": 85.0,
+"blood_type_id": 7,
+"guardian_document_path": null
+},
+{
+"id": 14,
+"name": "Natália Ribeiro",
+"cpf": "23246620601",
+"email": "natalia@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+33,
+33
+],
+"weight_kg": 59.0,
+"blood_type_id": 4,
+"guardian_document_path": null
+},
+{
+"id": 15,
+"name": "Otávio Mendes",
+"cpf": "23257093535",
+"email": "otavio@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+29,
+300
+],
+"weight_kg": 77.0,
+"blood_type_id": null,
+"guardian_document_path": null
+},
+{
+"id": 16,
+"name": "Paula Castro",
+"cpf": "23267566495",
+"email": "paula@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+38,
+180
+],
+"weight_kg": 61.0,
+"blood_type_id": 1,
+"guardian_document_path": null
+},
+{
+"id": 17,
+"name": "Rafael Moreira",
+"cpf": "23278039343",
+"email": "rafael17@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+22,
+0
+],
+"weight_kg": 60.0,
+"blood_type_id": 7,
+"guardian_document_path": null
+},
+{
+"id": 18,
+"name": "Sabrina Gomes",
+"cpf": "23288512238",
+"email": "sabrina18@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+29,
+37
+],
+"weight_kg": 63.0,
+"blood_type_id": 7,
+"guardian_document_path": null
+},
+{
+"id": 19,
+"name": "Tiago Barros",
+"cpf": "23298985171",
+"email": "tiago19@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+36,
+74
+],
+"weight_kg": 66.0,
+"blood_type_id": 1,
+"guardian_document_path": null
+},
+{
+"id": 20,
+"name": "Úrsula Campos",
+"cpf": "23309458091",
+"email": "ursula20@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+43,
+111
+],
+"weight_kg": 69.0,
+"blood_type_id": 1,
+"guardian_document_path": null
+},
+{
+"id": 21,
+"name": "Vinícius Pires",
+"cpf": "23319930923",
+"email": "vinicius21@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+50,
+148
+],
+"weight_kg": 72.0,
+"blood_type_id": 3,
+"guardian_document_path": null
+},
+{
+"id": 22,
+"name": "Wesley Santana",
+"cpf": "23330403861",
+"email": "wesley22@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+22,
+185
+],
+"weight_kg": 75.0,
+"blood_type_id": 8,
+"guardian_document_path": null
+},
+{
+"id": 23,
+"name": "Yara Fontes",
+"cpf": "23340876703",
+"email": "yara23@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+29,
+222
+],
+"weight_kg": 78.0,
+"blood_type_id": 2,
+"guardian_document_path": null
+},
+{
+"id": 24,
+"name": "Zeca Antunes",
+"cpf": "23351349653",
+"email": "zeca24@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+36,
+259
+],
+"weight_kg": 81.0,
+"blood_type_id": 5,
+"guardian_document_path": null
+},
+{
+"id": 25,
+"name": "Alícia Mota",
+"cpf": "23361822548",
+"email": "alicia25@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+43,
+296
+],
+"weight_kg": 84.0,
+"blood_type_id": 4,
+"guardian_document_path": null
+},
+{
+"id": 26,
+"name": "Bernardo Reis",
+"cpf": "23372295480",
+"email": "bernardo26@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+50,
+33
+],
+"weight_kg": 87.0,
+"blood_type_id": 7,
+"guardian_document_path": null
+},
+{
+"id": 27,
+"name": "Cecília Araújo",
+"cpf": "23382768330",
+"email": "cecilia27@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+22,
+70
+],
+"weight_kg": 60.0,
+"blood_type_id": 1,
+"guardian_document_path": null
+},
+{
+"id": 28,
+"name": "Davi Moura",
+"cpf": "23393241222",
+"email": "davi28@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+29,
+107
+],
+"weight_kg": 63.0,
+"blood_type_id": 3,
+"guardian_document_path": null
+},
+{
+"id": 29,
+"name": "Elisa Batista",
+"cpf": "23403714144",
+"email": "elisa29@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+36,
+144
+],
+"weight_kg": 66.0,
+"blood_type_id": 8,
+"guardian_document_path": null
+},
+{
+"id": 30,
+"name": "Fábio Cunha",
+"cpf": "23414187086",
+"email": "fabio30@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+43,
+181
+],
+"weight_kg": 69.0,
+"blood_type_id": 1,
+"guardian_document_path": null
+},
+{
+"id": 31,
+"name": "Giovana Freitas",
+"cpf": "23424659983",
+"email": "giovana31@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+50,
+218
+],
+"weight_kg": 72.0,
+"blood_type_id": 5,
+"guardian_document_path": null
+},
+{
+"id": 32,
+"name": "Hugo Sales",
+"cpf": "23435132876",
+"email": "hugo32@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+22,
+255
+],
+"weight_kg": 75.0,
+"blood_type_id": 3,
+"guardian_document_path": null
+},
+{
+"id": 33,
+"name": "Ingrid Melo",
+"cpf": "23445605726",
+"email": "ingrid33@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+29,
+292
+],
+"weight_kg": 78.0,
+"blood_type_id": 8,
+"guardian_document_path": null
+},
+{
+"id": 34,
+"name": "Júlio Cesar Dias",
+"cpf": "23456078668",
+"email": "julio34@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+36,
+29
+],
+"weight_kg": 81.0,
+"blood_type_id": 1,
+"guardian_document_path": null
+},
+{
+"id": 35,
+"name": "Larissa Pacheco",
+"cpf": "23466551552",
+"email": "larissa35@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+43,
+66
+],
+"weight_kg": 84.0,
+"blood_type_id": 3,
+"guardian_document_path": null
+},
+{
+"id": 36,
+"name": "Mateus Viana",
+"cpf": "23477024400",
+"email": "mateus36@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+50,
+103
+],
+"weight_kg": 87.0,
+"blood_type_id": 2,
+"guardian_document_path": null
+},
+{
+"id": 37,
+"name": "Nicole Arruda",
+"cpf": "23487497344",
+"email": "nicole37@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+22,
+140
+],
+"weight_kg": 60.0,
+"blood_type_id": 5,
+"guardian_document_path": null
+},
+{
+"id": 38,
+"name": "Orlando Brito",
+"cpf": "23497970239",
+"email": "orlando38@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+29,
+177
+],
+"weight_kg": 63.0,
+"blood_type_id": 3,
+"guardian_document_path": null
+},
+{
+"id": 39,
+"name": "Priscila Lacerda",
+"cpf": "23508443159",
+"email": "priscila39@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "F",
+"birth": [
+36,
+214
+],
+"weight_kg": 66.0,
+"blood_type_id": 8,
+"guardian_document_path": null
+},
+{
+"id": 40,
+"name": "Renan Siqueira",
+"cpf": "23518916009",
+"email": "renan40@doador.test",
+"password": "$2y$10$R2c.iX0F1jVxPqZSC14/CeMOCrQm0T5VMAeroqheWNuRdRer4C.0K",
+"sex": "M",
+"birth": [
+43,
+251
+],
+"weight_kg": 69.0,
+"blood_type_id": 1,
+"guardian_document_path": null
+}
+],
+"appointments": [
+{
+"id": 1,
+"n": 1,
+"donor_id": 17,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 08:00"
+],
+"created": [
+"abs",
+"2025-05-30 08:00"
+],
+"status": "donated",
+"volume_ml": 439,
+"unfit_reason": null
+},
+{
+"id": 2,
+"n": 2,
+"donor_id": 28,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 08:20"
+],
+"created": [
+"abs",
+"2025-05-30 08:20"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 3,
+"n": 3,
+"donor_id": 31,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 08:40"
+],
+"created": [
+"abs",
+"2025-05-30 08:40"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 4,
+"n": 4,
+"donor_id": 35,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 09:00"
+],
+"created": [
+"abs",
+"2025-05-30 09:00"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 5,
+"n": 5,
+"donor_id": 27,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 09:20"
+],
+"created": [
+"abs",
+"2025-05-30 09:20"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 6,
+"n": 6,
+"donor_id": 32,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 09:40"
+],
+"created": [
+"abs",
+"2025-05-30 09:40"
+],
+"status": "donated",
+"volume_ml": 457,
+"unfit_reason": null
+},
+{
+"id": 7,
+"n": 7,
+"donor_id": 22,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 10:00"
+],
+"created": [
+"abs",
+"2025-05-30 10:00"
+],
+"status": "donated",
+"volume_ml": 426,
+"unfit_reason": null
+},
+{
+"id": 8,
+"n": 8,
+"donor_id": 31,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 10:40"
+],
+"created": [
+"abs",
+"2025-05-30 10:40"
+],
+"status": "donated",
+"volume_ml": 427,
+"unfit_reason": null
+},
+{
+"id": 9,
+"n": 9,
+"donor_id": 35,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 11:00"
+],
+"created": [
+"abs",
+"2025-05-30 11:00"
+],
+"status": "donated",
+"volume_ml": 455,
+"unfit_reason": null
+},
+{
+"id": 10,
+"n": 10,
+"donor_id": 23,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 11:20"
+],
+"created": [
+"abs",
+"2025-05-30 11:20"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 11,
+"n": 11,
+"donor_id": 30,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 11:40"
+],
+"created": [
+"abs",
+"2025-05-30 11:40"
+],
+"status": "donated",
+"volume_ml": 456,
+"unfit_reason": null
+},
+{
+"id": 12,
+"n": 12,
+"donor_id": 37,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 12:00"
+],
+"created": [
+"abs",
+"2025-05-30 12:00"
+],
+"status": "donated",
+"volume_ml": 432,
+"unfit_reason": null
+},
+{
+"id": 13,
+"n": 13,
+"donor_id": 19,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 12:20"
+],
+"created": [
+"abs",
+"2025-05-30 12:20"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 14,
+"n": 14,
+"donor_id": 39,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 12:40"
+],
+"created": [
+"abs",
+"2025-05-30 12:40"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 15,
+"n": 15,
+"donor_id": 32,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 13:20"
+],
+"created": [
+"abs",
+"2025-05-30 13:20"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 16,
+"n": 16,
+"donor_id": 38,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 13:40"
+],
+"created": [
+"abs",
+"2025-05-30 13:40"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 17,
+"n": 17,
+"donor_id": 23,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 14:00"
+],
+"created": [
+"abs",
+"2025-05-30 14:00"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 18,
+"n": 18,
+"donor_id": 31,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 14:20"
+],
+"created": [
+"abs",
+"2025-05-30 14:20"
+],
+"status": "donated",
+"volume_ml": 478,
+"unfit_reason": null
+},
+{
+"id": 19,
+"n": 19,
+"donor_id": 17,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-02 14:40"
+],
+"created": [
+"abs",
+"2025-05-30 14:40"
+],
+"status": "donated",
+"volume_ml": 442,
+"unfit_reason": null
+},
+{
+"id": 20,
+"n": 20,
+"donor_id": 33,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-10 08:20"
+],
+"created": [
+"abs",
+"2025-06-07 08:20"
+],
+"status": "donated",
+"volume_ml": 461,
+"unfit_reason": null
+},
+{
+"id": 21,
+"n": 21,
+"donor_id": 26,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-10 08:40"
+],
+"created": [
+"abs",
+"2025-06-07 08:40"
+],
+"status": "donated",
+"volume_ml": 438,
+"unfit_reason": null
+},
+{
+"id": 22,
+"n": 22,
+"donor_id": 28,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-10 09:20"
+],
+"created": [
+"abs",
+"2025-06-07 09:20"
+],
+"status": "donated",
+"volume_ml": 479,
+"unfit_reason": null
+},
+{
+"id": 23,
+"n": 23,
+"donor_id": 33,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-10 10:20"
+],
+"created": [
+"abs",
+"2025-06-07 10:20"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 24,
+"n": 24,
+"donor_id": 36,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-10 11:00"
+],
+"created": [
+"abs",
+"2025-06-07 11:00"
+],
+"status": "donated",
+"volume_ml": 425,
+"unfit_reason": null
+},
+{
+"id": 25,
+"n": 25,
+"donor_id": 37,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-10 11:00"
+],
+"created": [
+"abs",
+"2025-06-07 11:00"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 26,
+"n": 26,
+"donor_id": 30,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-10 12:40"
+],
+"created": [
+"abs",
+"2025-06-07 12:40"
+],
+"status": "donated",
+"volume_ml": 470,
+"unfit_reason": null
+},
+{
+"id": 27,
+"n": 27,
+"donor_id": 40,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-10 12:40"
+],
+"created": [
+"abs",
+"2025-06-07 12:40"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 28,
+"n": 28,
+"donor_id": 27,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-10 13:00"
+],
+"created": [
+"abs",
+"2025-06-07 13:00"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 29,
+"n": 29,
+"donor_id": 27,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-10 13:20"
+],
+"created": [
+"abs",
+"2025-06-07 13:20"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 30,
+"n": 30,
+"donor_id": 26,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-10 13:40"
+],
+"created": [
+"abs",
+"2025-06-07 13:40"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 31,
+"n": 31,
+"donor_id": 24,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-10 14:00"
+],
+"created": [
+"abs",
+"2025-06-07 14:00"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 32,
+"n": 32,
+"donor_id": 17,
+"center_id": 1,
+"when": [
+"abs",
+"2025-06-10 14:00"
+],
+"created": [
+"abs",
+"2025-06-07 14:00"
+],
+"status": "donated",
+"volume_ml": 472,
+"unfit_reason": null
+},
+{
+"id": 33,
+"n": 33,
+"donor_id": 35,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-10 14:20"
+],
+"created": [
+"abs",
+"2025-06-07 14:20"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 34,
+"n": 34,
+"donor_id": 35,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 08:20"
+],
+"created": [
+"abs",
+"2025-06-08 08:20"
+],
+"status": "donated",
+"volume_ml": 459,
+"unfit_reason": null
+},
+{
+"id": 35,
+"n": 35,
+"donor_id": 30,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 08:40"
+],
+"created": [
+"abs",
+"2025-06-08 08:40"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 36,
+"n": 36,
+"donor_id": 18,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 09:00"
+],
+"created": [
+"abs",
+"2025-06-08 09:00"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 37,
+"n": 37,
+"donor_id": 25,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 09:20"
+],
+"created": [
+"abs",
+"2025-06-08 09:20"
+],
+"status": "donated",
+"volume_ml": 449,
+"unfit_reason": null
+},
+{
+"id": 38,
+"n": 38,
+"donor_id": 39,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 09:40"
+],
+"created": [
+"abs",
+"2025-06-08 09:40"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 39,
+"n": 39,
+"donor_id": 40,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 10:00"
+],
+"created": [
+"abs",
+"2025-06-08 10:00"
+],
+"status": "donated",
+"volume_ml": 474,
+"unfit_reason": null
+},
+{
+"id": 40,
+"n": 40,
+"donor_id": 19,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 10:20"
+],
+"created": [
+"abs",
+"2025-06-08 10:20"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 41,
+"n": 41,
+"donor_id": 31,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 10:40"
+],
+"created": [
+"abs",
+"2025-06-08 10:40"
+],
+"status": "donated",
+"volume_ml": 452,
+"unfit_reason": null
+},
+{
+"id": 42,
+"n": 42,
+"donor_id": 33,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 11:00"
+],
+"created": [
+"abs",
+"2025-06-08 11:00"
+],
+"status": "donated",
+"volume_ml": 471,
+"unfit_reason": null
+},
+{
+"id": 43,
+"n": 43,
+"donor_id": 21,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 11:20"
+],
+"created": [
+"abs",
+"2025-06-08 11:20"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 44,
+"n": 44,
+"donor_id": 17,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 11:40"
+],
+"created": [
+"abs",
+"2025-06-08 11:40"
+],
+"status": "donated",
+"volume_ml": 456,
+"unfit_reason": null
+},
+{
+"id": 45,
+"n": 45,
+"donor_id": 33,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 12:00"
+],
+"created": [
+"abs",
+"2025-06-08 12:00"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 46,
+"n": 46,
+"donor_id": 25,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 12:40"
+],
+"created": [
+"abs",
+"2025-06-08 12:40"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 47,
+"n": 47,
+"donor_id": 29,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 13:00"
+],
+"created": [
+"abs",
+"2025-06-08 13:00"
+],
+"status": "donated",
+"volume_ml": 422,
+"unfit_reason": null
+},
+{
+"id": 48,
+"n": 48,
+"donor_id": 34,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 13:20"
+],
+"created": [
+"abs",
+"2025-06-08 13:20"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 49,
+"n": 49,
+"donor_id": 34,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 13:40"
+],
+"created": [
+"abs",
+"2025-06-08 13:40"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 50,
+"n": 50,
+"donor_id": 39,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 14:00"
+],
+"created": [
+"abs",
+"2025-06-08 14:00"
+],
+"status": "donated",
+"volume_ml": 465,
+"unfit_reason": null
+},
+{
+"id": 51,
+"n": 51,
+"donor_id": 23,
+"center_id": 2,
+"when": [
+"abs",
+"2025-06-11 14:20"
+],
+"created": [
+"abs",
+"2025-06-08 14:20"
+],
+"status": "donated",
+"volume_ml": 438,
+"unfit_reason": null
+},
+{
+"id": 52,
+"n": 52,
+"donor_id": 35,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 08:00"
+],
+"created": [
+"abs",
+"2025-06-17 08:00"
+],
+"status": "donated",
+"volume_ml": 454,
+"unfit_reason": null
+},
+{
+"id": 53,
+"n": 53,
+"donor_id": 27,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 08:20"
+],
+"created": [
+"abs",
+"2025-06-17 08:20"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Hemoglobina baixa"
+},
+{
+"id": 54,
+"n": 54,
+"donor_id": 28,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 08:40"
+],
+"created": [
+"abs",
+"2025-06-17 08:40"
+],
+"status": "donated",
+"volume_ml": 449,
+"unfit_reason": null
+},
+{
+"id": 55,
+"n": 55,
+"donor_id": 18,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 09:00"
+],
+"created": [
+"abs",
+"2025-06-17 09:00"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 56,
+"n": 56,
+"donor_id": 19,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 09:20"
+],
+"created": [
+"abs",
+"2025-06-17 09:20"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 57,
+"n": 57,
+"donor_id": 22,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 09:40"
+],
+"created": [
+"abs",
+"2025-06-17 09:40"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 58,
+"n": 58,
+"donor_id": 27,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 10:00"
+],
+"created": [
+"abs",
+"2025-06-17 10:00"
+],
+"status": "donated",
+"volume_ml": 462,
+"unfit_reason": null
+},
+{
+"id": 59,
+"n": 59,
+"donor_id": 22,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 10:20"
+],
+"created": [
+"abs",
+"2025-06-17 10:20"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 60,
+"n": 60,
+"donor_id": 38,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 10:40"
+],
+"created": [
+"abs",
+"2025-06-17 10:40"
+],
+"status": "donated",
+"volume_ml": 439,
+"unfit_reason": null
+},
+{
+"id": 61,
+"n": 61,
+"donor_id": 24,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 11:00"
+],
+"created": [
+"abs",
+"2025-06-17 11:00"
+],
+"status": "donated",
+"volume_ml": 474,
+"unfit_reason": null
+},
+{
+"id": 62,
+"n": 62,
+"donor_id": 31,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 11:20"
+],
+"created": [
+"abs",
+"2025-06-17 11:20"
+],
+"status": "donated",
+"volume_ml": 431,
+"unfit_reason": null
+},
+{
+"id": 63,
+"n": 63,
+"donor_id": 17,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 12:00"
+],
+"created": [
+"abs",
+"2025-06-17 12:00"
+],
+"status": "donated",
+"volume_ml": 426,
+"unfit_reason": null
+},
+{
+"id": 64,
+"n": 64,
+"donor_id": 30,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 12:20"
+],
+"created": [
+"abs",
+"2025-06-17 12:20"
+],
+"status": "donated",
+"volume_ml": 462,
+"unfit_reason": null
+},
+{
+"id": 65,
+"n": 65,
+"donor_id": 18,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 12:40"
+],
+"created": [
+"abs",
+"2025-06-17 12:40"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 66,
+"n": 66,
+"donor_id": 25,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 13:00"
+],
+"created": [
+"abs",
+"2025-06-17 13:00"
+],
+"status": "donated",
+"volume_ml": 447,
+"unfit_reason": null
+},
+{
+"id": 67,
+"n": 67,
+"donor_id": 20,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 13:40"
+],
+"created": [
+"abs",
+"2025-06-17 13:40"
+],
+"status": "donated",
+"volume_ml": 470,
+"unfit_reason": null
+},
+{
+"id": 68,
+"n": 68,
+"donor_id": 35,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 14:00"
+],
+"created": [
+"abs",
+"2025-06-17 14:00"
+],
+"status": "donated",
+"volume_ml": 453,
+"unfit_reason": null
+},
+{
+"id": 69,
+"n": 69,
+"donor_id": 18,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 14:20"
+],
+"created": [
+"abs",
+"2025-06-17 14:20"
+],
+"status": "donated",
+"volume_ml": 429,
+"unfit_reason": null
+},
+{
+"id": 70,
+"n": 70,
+"donor_id": 32,
+"center_id": 3,
+"when": [
+"abs",
+"2025-06-20 14:40"
+],
+"created": [
+"abs",
+"2025-06-17 14:40"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 71,
+"n": 71,
+"donor_id": 10,
+"center_id": 1,
+"when": [
+"day",
+-400,
+"09:00"
+],
+"created": [
+"day",
+-403,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 72,
+"n": 72,
+"donor_id": 4,
+"center_id": 3,
+"when": [
+"day",
+-300,
+"09:20"
+],
+"created": [
+"day",
+-303,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 73,
+"n": 73,
+"donor_id": 1,
+"center_id": 1,
+"when": [
+"day",
+-260,
+"10:20"
+],
+"created": [
+"day",
+-263,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 440,
+"unfit_reason": null
+},
+{
+"id": 74,
+"n": 74,
+"donor_id": 4,
+"center_id": 3,
+"when": [
+"day",
+-230,
+"09:20"
+],
+"created": [
+"day",
+-233,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 75,
+"n": 75,
+"donor_id": 9,
+"center_id": 1,
+"when": [
+"day",
+-200,
+"11:00"
+],
+"created": [
+"day",
+-203,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 76,
+"n": 76,
+"donor_id": 4,
+"center_id": 3,
+"when": [
+"day",
+-160,
+"09:20"
+],
+"created": [
+"day",
+-163,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 77,
+"n": 77,
+"donor_id": 1,
+"center_id": 1,
+"when": [
+"day",
+-120,
+"09:00"
+],
+"created": [
+"day",
+-123,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 78,
+"n": 78,
+"donor_id": 4,
+"center_id": 3,
+"when": [
+"day",
+-75,
+"09:20"
+],
+"created": [
+"day",
+-78,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 79,
+"n": 79,
+"donor_id": 3,
+"center_id": 1,
+"when": [
+"day",
+-70,
+"14:00"
+],
+"created": [
+"day",
+-73,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 430,
+"unfit_reason": null
+},
+{
+"id": 80,
+"n": 80,
+"donor_id": 7,
+"center_id": 2,
+"when": [
+"day",
+-40,
+"15:00"
+],
+"created": [
+"day",
+-43,
+"10:00"
+],
+"status": "unfit",
+"volume_ml": null,
+"unfit_reason": "Peso abaixo do mínimo na triagem"
+},
+{
+"id": 81,
+"n": 81,
+"donor_id": 18,
+"center_id": 2,
+"when": [
+"day",
+-33,
+"09:20"
+],
+"created": [
+"day",
+-36,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 433,
+"unfit_reason": null
+},
+{
+"id": 82,
+"n": 82,
+"donor_id": 33,
+"center_id": 3,
+"when": [
+"day",
+-33,
+"10:40"
+],
+"created": [
+"day",
+-36,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 446,
+"unfit_reason": null
+},
+{
+"id": 83,
+"n": 83,
+"donor_id": 36,
+"center_id": 2,
+"when": [
+"day",
+-32,
+"09:20"
+],
+"created": [
+"day",
+-35,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 433,
+"unfit_reason": null
+},
+{
+"id": 84,
+"n": 84,
+"donor_id": 32,
+"center_id": 3,
+"when": [
+"day",
+-32,
+"10:40"
+],
+"created": [
+"day",
+-35,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 446,
+"unfit_reason": null
+},
+{
+"id": 85,
+"n": 85,
+"donor_id": 40,
+"center_id": 3,
+"when": [
+"day",
+-31,
+"13:40"
+],
+"created": [
+"day",
+-34,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 425,
+"unfit_reason": null
+},
+{
+"id": 86,
+"n": 86,
+"donor_id": 25,
+"center_id": 1,
+"when": [
+"day",
+-31,
+"08:00"
+],
+"created": [
+"day",
+-34,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 87,
+"n": 87,
+"donor_id": 2,
+"center_id": 2,
+"when": [
+"day",
+-30,
+"08:40"
+],
+"created": [
+"day",
+-33,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 460,
+"unfit_reason": null
+},
+{
+"id": 88,
+"n": 88,
+"donor_id": 27,
+"center_id": 3,
+"when": [
+"day",
+-28,
+"10:40"
+],
+"created": [
+"day",
+-31,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 446,
+"unfit_reason": null
+},
+{
+"id": 89,
+"n": 89,
+"donor_id": 32,
+"center_id": 2,
+"when": [
+"day",
+-26,
+"15:20"
+],
+"created": [
+"day",
+-29,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 451,
+"unfit_reason": null
+},
+{
+"id": 90,
+"n": 90,
+"donor_id": 31,
+"center_id": 2,
+"when": [
+"day",
+-24,
+"09:20"
+],
+"created": [
+"day",
+-27,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 433,
+"unfit_reason": null
+},
+{
+"id": 91,
+"n": 91,
+"donor_id": 38,
+"center_id": 2,
+"when": [
+"day",
+-23,
+"12:20"
+],
+"created": [
+"day",
+-26,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 472,
+"unfit_reason": null
+},
+{
+"id": 92,
+"n": 92,
+"donor_id": 17,
+"center_id": 1,
+"when": [
+"day",
+-21,
+"08:00"
+],
+"created": [
+"day",
+-24,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 93,
+"n": 93,
+"donor_id": 29,
+"center_id": 2,
+"when": [
+"day",
+-21,
+"09:20"
+],
+"created": [
+"day",
+-24,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 433,
+"unfit_reason": null
+},
+{
+"id": 94,
+"n": 94,
+"donor_id": 5,
+"center_id": 3,
+"when": [
+"day",
+-20,
+"09:00"
+],
+"created": [
+"day",
+-23,
+"10:00"
+],
+"status": "cancelled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 95,
+"n": 95,
+"donor_id": 23,
+"center_id": 1,
+"when": [
+"day",
+-20,
+"08:00"
+],
+"created": [
+"day",
+-23,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 96,
+"n": 96,
+"donor_id": 28,
+"center_id": 2,
+"when": [
+"day",
+-20,
+"09:20"
+],
+"created": [
+"day",
+-23,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 433,
+"unfit_reason": null
+},
+{
+"id": 97,
+"n": 97,
+"donor_id": 34,
+"center_id": 2,
+"when": [
+"day",
+-19,
+"12:20"
+],
+"created": [
+"day",
+-22,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 472,
+"unfit_reason": null
+},
+{
+"id": 98,
+"n": 98,
+"donor_id": 20,
+"center_id": 2,
+"when": [
+"day",
+-16,
+"09:20"
+],
+"created": [
+"day",
+-19,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 433,
+"unfit_reason": null
+},
+{
+"id": 99,
+"n": 99,
+"donor_id": 8,
+"center_id": 3,
+"when": [
+"day",
+-15,
+"10:00"
+],
+"created": [
+"day",
+-18,
+"10:00"
+],
+"status": "no_show",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 100,
+"n": 100,
+"donor_id": 24,
+"center_id": 1,
+"when": [
+"day",
+-15,
+"11:00"
+],
+"created": [
+"day",
+-18,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 459,
+"unfit_reason": null
+},
+{
+"id": 101,
+"n": 101,
+"donor_id": 28,
+"center_id": 1,
+"when": [
+"day",
+-14,
+"14:00"
+],
+"created": [
+"day",
+-17,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 438,
+"unfit_reason": null
+},
+{
+"id": 102,
+"n": 102,
+"donor_id": 26,
+"center_id": 3,
+"when": [
+"day",
+-12,
+"10:40"
+],
+"created": [
+"day",
+-15,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 446,
+"unfit_reason": null
+},
+{
+"id": 103,
+"n": 103,
+"donor_id": 39,
+"center_id": 1,
+"when": [
+"day",
+-12,
+"11:00"
+],
+"created": [
+"day",
+-15,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 459,
+"unfit_reason": null
+},
+{
+"id": 104,
+"n": 104,
+"donor_id": 24,
+"center_id": 1,
+"when": [
+"day",
+-12,
+"08:00"
+],
+"created": [
+"day",
+-15,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 105,
+"n": 105,
+"donor_id": 23,
+"center_id": 3,
+"when": [
+"day",
+-11,
+"10:40"
+],
+"created": [
+"day",
+-14,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 446,
+"unfit_reason": null
+},
+{
+"id": 106,
+"n": 106,
+"donor_id": 35,
+"center_id": 1,
+"when": [
+"day",
+-11,
+"11:00"
+],
+"created": [
+"day",
+-14,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 459,
+"unfit_reason": null
+},
+{
+"id": 107,
+"n": 107,
+"donor_id": 16,
+"center_id": 2,
+"when": [
+"day",
+-10,
+"13:00"
+],
+"created": [
+"day",
+-13,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 450,
+"unfit_reason": null
+},
+{
+"id": 108,
+"n": 108,
+"donor_id": 19,
+"center_id": 1,
+"when": [
+"day",
+-10,
+"14:00"
+],
+"created": [
+"day",
+-13,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 438,
+"unfit_reason": null
+},
+{
+"id": 109,
+"n": 109,
+"donor_id": 25,
+"center_id": 2,
+"when": [
+"day",
+-10,
+"09:20"
+],
+"created": [
+"day",
+-13,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 433,
+"unfit_reason": null
+},
+{
+"id": 110,
+"n": 110,
+"donor_id": 22,
+"center_id": 1,
+"when": [
+"day",
+-9,
+"08:00"
+],
+"created": [
+"day",
+-12,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 111,
+"n": 111,
+"donor_id": 21,
+"center_id": 1,
+"when": [
+"day",
+-8,
+"08:00"
+],
+"created": [
+"day",
+-11,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 112,
+"n": 112,
+"donor_id": 30,
+"center_id": 1,
+"when": [
+"day",
+-7,
+"11:00"
+],
+"created": [
+"day",
+-10,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 459,
+"unfit_reason": null
+},
+{
+"id": 113,
+"n": 113,
+"donor_id": 19,
+"center_id": 1,
+"when": [
+"day",
+-4,
+"08:00"
+],
+"created": [
+"day",
+-7,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 420,
+"unfit_reason": null
+},
+{
+"id": 114,
+"n": 114,
+"donor_id": 37,
+"center_id": 3,
+"when": [
+"day",
+-3,
+"10:40"
+],
+"created": [
+"day",
+-6,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 446,
+"unfit_reason": null
+},
+{
+"id": 115,
+"n": 115,
+"donor_id": 21,
+"center_id": 3,
+"when": [
+"day",
+-2,
+"13:40"
+],
+"created": [
+"day",
+-5,
+"10:00"
+],
+"status": "donated",
+"volume_ml": 425,
+"unfit_reason": null
+},
+{
+"id": 116,
+"n": 116,
+"donor_id": 11,
+"center_id": 1,
+"when": [
+"day",
+3,
+"10:00"
+],
+"created": [
+"day",
+0,
+"10:00"
+],
+"status": "scheduled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 117,
+"n": 117,
+"donor_id": 12,
+"center_id": 1,
+"when": [
+"min",
+60
+],
+"created": [
+"day",
+-1,
+"10:00"
+],
+"status": "scheduled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 118,
+"n": 118,
+"donor_id": 13,
+"center_id": 1,
+"when": [
+"min",
+-120
+],
+"created": [
+"day",
+-1,
+"10:00"
+],
+"status": "scheduled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 119,
+"n": 119,
+"donor_id": 14,
+"center_id": 1,
+"when": [
+"min",
+10
+],
+"created": [
+"day",
+-1,
+"10:00"
+],
+"status": "scheduled",
+"volume_ml": null,
+"unfit_reason": null
+},
+{
+"id": 120,
+"n": 120,
+"donor_id": 15,
+"center_id": 1,
+"when": [
+"min",
+-5
+],
+"created": [
+"day",
+-1,
+"10:00"
+],
+"status": "attended",
+"volume_ml": null,
+"unfit_reason": null
+}
+]
+}

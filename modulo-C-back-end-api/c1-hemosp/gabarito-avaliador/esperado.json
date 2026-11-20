@@ -1,0 +1,127 @@
+{
+ "estoque": [
+  {
+   "blood_type": "AB-",
+   "volume_ml": 0,
+   "goal_ml": 2000,
+   "percent": 0.0,
+   "level": "critico"
+  },
+  {
+   "blood_type": "O+",
+   "volume_ml": 1299,
+   "goal_ml": 20000,
+   "percent": 6.5,
+   "level": "critico"
+  },
+  {
+   "blood_type": "O-",
+   "volume_ml": 1758,
+   "goal_ml": 8000,
+   "percent": 22.0,
+   "level": "critico"
+  },
+  {
+   "blood_type": "A-",
+   "volume_ml": 1299,
+   "goal_ml": 5000,
+   "percent": 26.0,
+   "level": "alerta"
+  },
+  {
+   "blood_type": "A+",
+   "volume_ml": 4003,
+   "goal_ml": 15000,
+   "percent": 26.7,
+   "level": "alerta"
+  },
+  {
+   "blood_type": "B-",
+   "volume_ml": 853,
+   "goal_ml": 3000,
+   "percent": 28.4,
+   "level": "alerta"
+  },
+  {
+   "blood_type": "AB+",
+   "volume_ml": 1758,
+   "goal_ml": 3000,
+   "percent": 58.6,
+   "level": "ok"
+  },
+  {
+   "blood_type": "B+",
+   "volume_ml": 3544,
+   "goal_ml": 6000,
+   "percent": 59.1,
+   "level": "ok"
+  }
+ ],
+ "relatorio_2025_06": [
+  {
+   "center_id": 1,
+   "center": "Hemocentro Paulista",
+   "total": 24,
+   "donated": 12,
+   "unfit": 3,
+   "no_show": 3,
+   "cancelled": 6,
+   "no_show_rate": 16.7,
+   "volume_liters": 5.39
+  },
+  {
+   "center_id": 2,
+   "center": "Posto de Coleta Mooca",
+   "total": 23,
+   "donated": 9,
+   "unfit": 5,
+   "no_show": 7,
+   "cancelled": 2,
+   "no_show_rate": 33.3,
+   "volume_liters": 4.09
+  },
+  {
+   "center_id": 3,
+   "center": "Posto de Coleta Santo Amaro",
+   "total": 23,
+   "donated": 17,
+   "unfit": 1,
+   "no_show": 0,
+   "cancelled": 5,
+   "no_show_rate": 0.0,
+   "volume_liters": 7.63
+  },
+  {
+   "center_id": 4,
+   "center": "Posto de Coleta Itaquera",
+   "total": 0,
+   "donated": 0,
+   "unfit": 0,
+   "no_show": 0,
+   "cancelled": 0,
+   "no_show_rate": 0.0,
+   "volume_liters": 0.0
+  }
+ ],
+ "total_10_06": 14,
+ "primeiro_10_06": 20,
+ "maior_numero": 120,
+ "cpfs": {
+  "Ana Beatriz Souza": "23110472996",
+  "Bruno Carvalho": "23120945846",
+  "Camila Ferreira": "23131418702",
+  "Diego Martins": "23141891672",
+  "Eduarda Lima": "23152364520",
+  "Felipe Rocha": "23162837480",
+  "Gabriela Nunes": "23173310373",
+  "Heitor Alves": "23183783207",
+  "Isabel Prado": "23194256165",
+  "João Pedro Teixeira": "23204729087",
+  "Karina Duarte": "23215201917",
+  "Lucas Andrade": "23225674850",
+  "Marcos Vinícius Lopes": "23236147709",
+  "Natália Ribeiro": "23246620601",
+  "Otávio Mendes": "23257093535",
+  "Paula Castro": "23267566495"
+ }
+}

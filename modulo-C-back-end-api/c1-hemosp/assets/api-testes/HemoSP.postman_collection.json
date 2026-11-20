@@ -1,0 +1,462 @@
+{
+ "info": {
+  "name": "HemoSP API – prova de revisão (Módulo C)",
+  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+ },
+ "variable": [
+  {
+   "key": "base_url",
+   "value": "http://localhost/XX_modulo_c/public/api"
+  },
+  {
+   "key": "token_doador",
+   "value": ""
+  },
+  {
+   "key": "token_equipe",
+   "value": ""
+  },
+  {
+   "key": "data",
+   "value": "2026-12-01"
+  }
+ ],
+ "item": [
+  {
+   "name": "1. Público",
+   "item": [
+    {
+     "name": "Índice",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}"
+     }
+    },
+    {
+     "name": "Estoque",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/blood-stock"
+     }
+    },
+    {
+     "name": "Unidades",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/centers"
+     }
+    },
+    {
+     "name": "Unidades por bairro",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/centers?neighborhood=mooca"
+     }
+    },
+    {
+     "name": "Unidades abertas no dia",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/centers?open_on={{data}}"
+     }
+    },
+    {
+     "name": "Vagas do dia",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/centers/1/slots?date={{data}}"
+     }
+    }
+   ]
+  },
+  {
+   "name": "2. Cadastro e login",
+   "item": [
+    {
+     "name": "Cadastro",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/register",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"name\": \"Maria Lima\",\n \"cpf\": \"529.982.247-25\",\n \"email\": \"maria@email.com\",\n \"password\": \"Senha1234\",\n \"birth_date\": \"1990-05-10\",\n \"sex\": \"F\",\n \"weight_kg\": 64.5,\n \"blood_type\": \"AB-\"\n}"
+      }
+     }
+    },
+    {
+     "name": "Login doadora (Ana)",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/login",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"email\": \"ana@doador.test\",\n \"password\": \"Doador@2026\"\n}"
+      }
+     },
+     "event": [
+      {
+       "listen": "test",
+       "script": {
+        "exec": [
+         "pm.collectionVariables.set('token_doador', pm.response.json().token);"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "name": "Login equipe (admin)",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/staff/login",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"email\": \"admin@hemosp.test\",\n \"password\": \"Hemo@2026\"\n}"
+      }
+     },
+     "event": [
+      {
+       "listen": "test",
+       "script": {
+        "exec": [
+         "pm.collectionVariables.set('token_equipe', pm.response.json().token);"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "name": "Logout",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_doador}}"
+       }
+      ],
+      "url": "{{base_url}}/logout"
+     }
+    }
+   ]
+  },
+  {
+   "name": "3. Doador",
+   "item": [
+    {
+     "name": "Meu perfil e elegibilidade",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_doador}}"
+       }
+      ],
+      "url": "{{base_url}}/me"
+     }
+    },
+    {
+     "name": "Agendar",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_doador}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/me/appointments",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"center_id\": 1,\n \"starts_at\": \"{{data}} 08:20\"\n}"
+      }
+     }
+    },
+    {
+     "name": "Meus agendamentos",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_doador}}"
+       }
+      ],
+      "url": "{{base_url}}/me/appointments?page=1"
+     }
+    },
+    {
+     "name": "Cancelar",
+     "request": {
+      "method": "DELETE",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_doador}}"
+       }
+      ],
+      "url": "{{base_url}}/me/appointments/121"
+     }
+    },
+    {
+     "name": "Enviar autorização (menor de 18)",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_doador}}"
+       }
+      ],
+      "url": "{{base_url}}/me/guardian-document",
+      "body": {
+       "mode": "formdata",
+       "formdata": [
+        {
+         "key": "document",
+         "type": "file",
+         "src": ""
+        }
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "4. Equipe",
+   "item": [
+    {
+     "name": "Lista do dia",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_equipe}}"
+       }
+      ],
+      "url": "{{base_url}}/staff/appointments?date=2025-06-10&sort=donor&page=1"
+     }
+    },
+    {
+     "name": "Busca por nome ou CPF",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_equipe}}"
+       }
+      ],
+      "url": "{{base_url}}/staff/appointments?search=natalia"
+     }
+    },
+    {
+     "name": "Registrar presença",
+     "request": {
+      "method": "PATCH",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_equipe}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/staff/appointments/119/status",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"status\": \"attended\"\n}"
+      }
+     }
+    },
+    {
+     "name": "Registrar doação",
+     "request": {
+      "method": "PATCH",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_equipe}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/staff/appointments/119/status",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"status\": \"donated\",\n \"volume_ml\": 450\n}"
+      }
+     }
+    },
+    {
+     "name": "Histórico",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_equipe}}"
+       }
+      ],
+      "url": "{{base_url}}/staff/appointments/119/history"
+     }
+    },
+    {
+     "name": "Exportar CSV",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_equipe}}"
+       }
+      ],
+      "url": "{{base_url}}/staff/appointments/export?date=2025-06-10"
+     }
+    },
+    {
+     "name": "Relatório mensal",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token_equipe}}"
+       }
+      ],
+      "url": "{{base_url}}/staff/reports/monthly?month=2025-06"
+     }
+    }
+   ]
+  }
+ ]
+}

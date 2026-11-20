@@ -1,0 +1,588 @@
+{
+ "info": {
+  "name": "Torque Certo API – prova de revisão (Módulo C)",
+  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+ },
+ "variable": [
+  {
+   "key": "base_url",
+   "value": "http://localhost/XX_modulo_c/public/api"
+  },
+  {
+   "key": "token",
+   "value": ""
+  },
+  {
+   "key": "os",
+   "value": "22"
+  }
+ ],
+ "item": [
+  {
+   "name": "1. Login (escolha o perfil)",
+   "item": [
+    {
+     "name": "Login admin",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/login",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"email\": \"admin@torque.test\",\n \"password\": \"Torque@2026\"\n}"
+      }
+     },
+     "event": [
+      {
+       "listen": "test",
+       "script": {
+        "exec": [
+         "pm.collectionVariables.set('token', pm.response.json().token);"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "name": "Login atendente",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/login",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"email\": \"atendente@torque.test\",\n \"password\": \"Torque@2026\"\n}"
+      }
+     },
+     "event": [
+      {
+       "listen": "test",
+       "script": {
+        "exec": [
+         "pm.collectionVariables.set('token', pm.response.json().token);"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "name": "Login mecânico João",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/login",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"email\": \"joao@torque.test\",\n \"password\": \"Torque@2026\"\n}"
+      }
+     },
+     "event": [
+      {
+       "listen": "test",
+       "script": {
+        "exec": [
+         "pm.collectionVariables.set('token', pm.response.json().token);"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "name": "Eu",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/me"
+     }
+    },
+    {
+     "name": "Logout",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/logout"
+     }
+    }
+   ]
+  },
+  {
+   "name": "2. Cadastros",
+   "item": [
+    {
+     "name": "Clientes (busca)",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/customers?search=adriana"
+     }
+    },
+    {
+     "name": "Novo cliente",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/customers",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"name\": \"Lara Lima\",\n \"cpf\": \"529.982.247-25\",\n \"phone\": \"(11) 99876-5432\",\n \"email\": \"lara@cliente.test\"\n}"
+      }
+     }
+    },
+    {
+     "name": "Novo veículo",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/customers/1/vehicles",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"plate\": \"rev-1a23\",\n \"brand\": \"Fiat\",\n \"model\": \"Pulse\",\n \"year\": 2024\n}"
+      }
+     }
+    },
+    {
+     "name": "Peças",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/parts?sort=-price&page=1"
+     }
+    },
+    {
+     "name": "Peças com estoque baixo",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/parts?low_stock=1"
+     }
+    }
+   ]
+  },
+  {
+   "name": "3. Ordens de serviço",
+   "item": [
+    {
+     "name": "Lista",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/orders?status=&search=&from=2026-11-10&to=2026-11-12&sort=-total"
+     }
+    },
+    {
+     "name": "Abrir OS",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/orders",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"vehicle_id\": 1,\n \"complaint\": \"Barulho na roda dianteira\"\n}"
+      }
+     }
+    },
+    {
+     "name": "Detalhe",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}"
+     }
+    },
+    {
+     "name": "Adicionar peça",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}/items",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"type\": \"part\",\n \"item_id\": 2,\n \"quantity\": 2\n}"
+      }
+     }
+    },
+    {
+     "name": "Adicionar serviço",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}/items",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"type\": \"service\",\n \"item_id\": 1,\n \"quantity\": 1\n}"
+      }
+     }
+    },
+    {
+     "name": "Remover item",
+     "request": {
+      "method": "DELETE",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}/items/1"
+     }
+    },
+    {
+     "name": "Desconto",
+     "request": {
+      "method": "PATCH",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}/discount",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"percent\": 10\n}"
+      }
+     }
+    },
+    {
+     "name": "Mudar situação",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}/transition",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"to\": \"orcada\"\n}"
+      }
+     }
+    },
+    {
+     "name": "Colocar em execução",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       },
+       {
+        "key": "Content-Type",
+        "value": "application/json"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}/transition",
+      "body": {
+       "mode": "raw",
+       "raw": "{\n \"to\": \"em_execucao\",\n \"mechanic_id\": 3\n}"
+      }
+     }
+    },
+    {
+     "name": "Enviar foto",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/orders/{{os}}/photos",
+      "body": {
+       "mode": "formdata",
+       "formdata": [
+        {
+         "key": "photo",
+         "type": "file",
+         "src": ""
+        }
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "4. Lixeira (admin)",
+   "item": [
+    {
+     "name": "Excluir",
+     "request": {
+      "method": "DELETE",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/orders/30"
+     }
+    },
+    {
+     "name": "Lixeira",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/orders/trash"
+     }
+    },
+    {
+     "name": "Restaurar",
+     "request": {
+      "method": "POST",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/orders/30/restore"
+     }
+    }
+   ]
+  },
+  {
+   "name": "5. Relatórios",
+   "item": [
+    {
+     "name": "Faturamento do ano (admin)",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/reports/revenue?year=2025"
+     }
+    },
+    {
+     "name": "Estoque baixo",
+     "request": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "Accept",
+        "value": "application/json"
+       },
+       {
+        "key": "Authorization",
+        "value": "Bearer {{token}}"
+       }
+      ],
+      "url": "{{base_url}}/reports/low-stock"
+     }
+    }
+   ]
+  }
+ ]
+}
